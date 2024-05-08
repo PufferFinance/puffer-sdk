@@ -4,12 +4,25 @@ Library for interacting with puffer smart contract interface.
 
 > Note: The library is not published to any repository yet.
 
-## Usage
+## Setup
 
-Install dependencies and link this package so it can used by other projects.
+Install dependencies.
 
 ```sh
 pnpm install
+```
+
+Start the package in watch mode.
+
+```sh
+pnpm dev
+```
+
+## Usage
+
+Link this package so it can used by other projects.
+
+```sh
 pnpm link --global
 ```
 
