@@ -2,6 +2,19 @@
   "name": "puffer-smart-contract-lib",
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/main.cjs",
+  "module": "./dist/main.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.js",
+      "require": "./dist/main.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -18,6 +31,7 @@
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.8.0",
-    "vite": "^5.2.11"
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^3.9.1"
   }
 }
