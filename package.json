@@ -16,9 +16,8 @@
     "dist"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "build": "vite build",
+    "dev": "pnpm build --watch",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
