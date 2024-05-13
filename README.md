@@ -1,8 +1,8 @@
 # puffer-smart-contract-lib
 
-Library for interacting with puffer smart contract interface.
-
 > Note: The library is not published to any repository yet.
+
+Library for interacting with puffer smart contract interface.
 
 ## Setup
 
