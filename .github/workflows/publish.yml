@@ -1,7 +1,6 @@
 name: Publish Package
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       increment:
@@ -50,7 +49,7 @@ jobs:
         run: pnpm build
 
       - name: Publish package
-        run: pnpm release --increment prepatch
+        run: pnpm release --increment ${{ inputs.increment }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
