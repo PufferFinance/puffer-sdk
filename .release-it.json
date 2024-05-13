@@ -7,9 +7,5 @@
     "web": true,
     "autoGenerate": true,
     "releaseName": "v${version}"
-  },
-  "publishConfig": {
-    "access": "private",
-    "registry": "https://npm.pkg.github.com"
   }
 }
