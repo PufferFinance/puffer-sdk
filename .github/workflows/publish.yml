@@ -1,8 +1,18 @@
 name: Publish Package
 
 on:
-  push:
   workflow_dispatch:
+    inputs:
+      increment:
+        type: choice
+        description: Version increment (defaults to minor)
+        options:
+          - major
+          - minor
+          - patch
+          - premajor
+          - preminor
+          - prepatch
 
 jobs:
   build:
@@ -39,7 +49,7 @@ jobs:
 
       - name: Publish package
         # The `--ci` option generates a URL for creating a release.
-        run: pnpm release --increment prepatch --ci
+        run: pnpm release --increment ${{ inputs.increment }} --ci
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
