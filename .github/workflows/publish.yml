@@ -29,7 +29,7 @@ jobs:
           version: latest
           run_install: true
 
-      - name: Setup Git
+      - name: Setup git
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
@@ -37,7 +37,8 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Publish Package
-        run: pnpm release --increment prepatch
+      - name: Publish package
+        # The `--ci` option generates a URL for creating a release.
+        run: pnpm release --increment prepatch --ci
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
