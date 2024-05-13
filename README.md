@@ -6,11 +6,15 @@ Library for interacting with puffer smart contract interface.
 
 There are multiple ways to use the package.
 
+- [GitHub (Recommended)](#github-recommended)
+- [GitHub Packages](#github-packages)
+- [Local](#local)
+
 ### GitHub (Recommended)
 
 > Note: You must have access to the [PufferFinance](https://github.com/PufferFinance) GitHub organization and [SSH setup for GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) for this to work.
 
-Add the dependency to your `package.json` with connection through SSH using the package manager of your choice.
+Install the dependency through GitHub URL.
 
 ```sh
 npm install github:pufferfinance/puffer-smart-contract-lib
@@ -22,7 +26,7 @@ Add `#<tag>` (for example, `github:pufferfinance/puffer-smart-contract-lib#1.0.0
 
 ### GitHub Packages
 
-The package is published as private to GitHub Packages. It can be installed by authenticating to GitHub Packages. Please check [GitHub guide for installing a private package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package).
+The package is published privately to GitHub Packages. It can be installed by authenticating to GitHub Packages. Please check [GitHub guide for installing a private package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package).
 
 Use `@pufferfinance` as the organization name and `@pufferfinance/smart-contract-lib` as the complete dependency name.
 
@@ -56,4 +60,4 @@ pnpm dev
 
 ## Release
 
-The release is automated using [release-it](https://github.com/release-it/release-it) and the [`publish.yml`](./.github/workflows/publish.yml) GitHub action.
+The release is automated using [release-it](https://github.com/release-it/release-it) and the [`publish.yml`](./.github/workflows/publish.yml) GitHub action. The action can be [dispatched manually](https://github.com/PufferFinance/puffer-smart-contract-lib/actions/workflows/publish.yml) to make the release.
