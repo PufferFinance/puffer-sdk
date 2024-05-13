@@ -1,4 +1,4 @@
-# puffer-smart-contract-lib
+# @pufferfinance/smart-contract-lib
 
 > Note: The library is not published to any repository yet.
 
@@ -29,5 +29,5 @@ pnpm link --global
 In the project where you want to use this package as a dependency, run the following command.
 
 ```sh
-pnpm link --global puffer-smart-contract-lib
+pnpm link --global @pufferfinance/smart-contract-lib
 ```
