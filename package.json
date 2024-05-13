@@ -1,6 +1,6 @@
 {
   "name": "@pufferfinance/smart-contract-lib",
-  "version": "0.0.0",
+  "version": "0.0.1-0",
   "repository": {
     "type": "git",
     "url": "https://github.com/PufferFinance/puffer-smart-contract-lib.git"
