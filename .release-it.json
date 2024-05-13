@@ -1,0 +1,15 @@
+{
+  "git": {
+    "commitMessage": "Release v${version}"
+  },
+  "github": {
+    "release": true,
+    "web": true,
+    "autoGenerate": true,
+    "releaseName": "v${version}"
+  },
+  "publishConfig": {
+    "access": "private",
+    "registry": "https://npm.pkg.github.com"
+  }
+}
