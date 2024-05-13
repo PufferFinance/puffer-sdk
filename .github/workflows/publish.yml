@@ -48,8 +48,7 @@ jobs:
         run: pnpm build
 
       - name: Publish package
-        # The `--ci` option generates a URL for creating a release.
-        run: pnpm release --increment ${{ inputs.increment }} --ci
+        run: pnpm release --increment ${{ inputs.increment }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
