@@ -23,7 +23,12 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           # scope: '@pufferfinance'
 
-      - run: pnpm install
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: latest
+          run_install: true
+
       - run: pnpm release --increment prepatch
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
