@@ -31,3 +31,7 @@ In the project where you want to use this package as a dependency, run the follo
 ```sh
 pnpm link --global @pufferfinance/smart-contract-lib
 ```
+
+## Release
+
+The release is automated using [release-it](https://github.com/release-it/release-it).

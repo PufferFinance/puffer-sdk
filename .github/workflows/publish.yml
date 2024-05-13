@@ -1,11 +1,13 @@
 name: Publish Package
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       increment:
         type: choice
         description: Version increment (defaults to minor)
+        default: minor
         options:
           - major
           - minor
@@ -41,14 +43,14 @@ jobs:
 
       - name: Setup git
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Build
         run: pnpm build
 
       - name: Publish package
-        run: pnpm release --increment ${{ inputs.increment }}
+        run: pnpm release --increment prepatch
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
