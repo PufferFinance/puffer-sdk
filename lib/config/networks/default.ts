@@ -13,4 +13,3 @@ const defaultConfig = {
 };
 
 export default defaultConfig;
-// export default defaultConfig;

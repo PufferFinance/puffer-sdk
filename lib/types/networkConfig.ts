@@ -1,0 +1,8 @@
+export type NetworkConfig = {
+  sirenApiBaseUrl: string;
+  PUFFER_VAULT_CONTRACT_ADDRESS: string;
+  PUFFER_PROTOCOL_CONTRACT_ADDRESS: string;
+  VALIDATOR_TICKET_CONTRACT_ADDRESS: string;
+  PUFFER_ORACLE_CONTRACT_ADDRESS: string;
+  GUARDIAN_MODULE_ADDRESS: string;
+};
