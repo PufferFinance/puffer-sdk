@@ -9,19 +9,19 @@ importers:
   .:
     dependencies:
       '@chainsafe/bls':
-        specifier: '>= 7'
+        specifier: ^8.1.0
         version: 8.1.0
       '@chainsafe/ssz':
-        specifier: '>= 0.12.0'
+        specifier: ^0.16.0
         version: 0.16.0
       ethers:
-        specifier: '>= 6'
+        specifier: ^6.12.1
         version: 6.12.1
       react:
         specifier: '>= 16'
         version: 18.3.1
       web3:
-        specifier: '>= 4'
+        specifier: ^4.8.0
         version: 4.8.0(typescript@5.4.5)(zod@3.23.8)
     devDependencies:
       '@eslint/js':
