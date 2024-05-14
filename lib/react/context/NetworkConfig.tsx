@@ -43,4 +43,13 @@ export const NetworkConfigProvider: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-export const useNetworkConfig = () => useContext(NetworkConfigContext);
+export const useNetworkConfig = () => {
+  const config = useContext(NetworkConfigContext);
+  if (config === null) {
+    throw new Error(
+      'Cannot use useNetworkConfig without the NetworkConfigProvider.',
+    );
+  }
+
+  return config;
+};
