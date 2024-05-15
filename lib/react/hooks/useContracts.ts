@@ -4,7 +4,8 @@ import { Network, networkEnumToString } from '../../config/networks';
 import { useNetworkConfig } from '../context/NetworkConfig';
 import { useWeb3 } from '../context/Web3Context';
 
-const useContracts = (web3: Web3, selector: Network) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const useContracts = (web3: Web3, _selector: Network) => {
   const { networkName } = useWeb3();
   const config = useNetworkConfig();
 
@@ -19,7 +20,6 @@ const useContracts = (web3: Web3, selector: Network) => {
     const path = `../constants/abis/${network}/${contractName}.json`;
 
     try {
-      // eslint-disable-next-line @next/next/no-assign-module-variable
       const module = await import(
         `../constants/abis/${network}/${contractName}.json`
       );

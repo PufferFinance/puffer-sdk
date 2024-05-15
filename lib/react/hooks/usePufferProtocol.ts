@@ -13,7 +13,6 @@ import { useNetworkConfig } from '../context/NetworkConfig';
 import { ErrorProps } from '../../types/error';
 import { NodeInfo } from '../../types/node';
 import { ValidatorKeyData } from '../../types/registration';
-import { ValidatorProp, findValidatorStatus } from '../../types/validator';
 import { getPermitSignature } from '../../utils/ERC20Permit';
 import { shortenString } from '../../utils/ErrorPrepration';
 import { add0xPrefix } from '../../utils/Key';
@@ -77,7 +76,7 @@ const usePufferProtocol = (
   > => {
     try {
       // Returns the index of the next PufferModule to be provisioned
-      const nextModuleSelect: BigInt = await (
+      const nextModuleSelect: bigint = await (
         await pufferProtocolContract()
       ).methods
         .getModuleSelectIndex()
@@ -91,7 +90,7 @@ const usePufferProtocol = (
         .call();
 
       // Get the moduleName
-      var moduleName: string = '';
+      let moduleName: string = '';
       if (moduleWeights.length > 0) {
         moduleName =
           moduleWeights[Number(nextModuleSelect) % moduleWeights.length];
@@ -130,7 +129,7 @@ const usePufferProtocol = (
 
   const getValidatorTicketBalanceInProtocol = async (
     walletAddress: any,
-  ): Promise<BigInt | null> => {
+  ): Promise<bigint | null> => {
     try {
       return (await pufferProtocolContract()).methods
         .getValidatorTicketsBalance(walletAddress)
@@ -243,7 +242,7 @@ const usePufferProtocol = (
       );
 
       // Construct pufETH permit
-      let { signature, deadline } = await getPermitSignature(
+      const { signature, deadline } = await getPermitSignature(
         web3,
         ethersProvider,
         await pufETHContract(),
@@ -284,7 +283,7 @@ const usePufferProtocol = (
       const vtAmount = BigInt(numDays) * BigInt(1e18);
 
       // Construct VT permit
-      let { signature: vtSignatureString, deadline: vtDeadline } =
+      const { signature: vtSignatureString, deadline: vtDeadline } =
         await getPermitSignature(
           web3,
           ethersProvider,
@@ -316,7 +315,7 @@ const usePufferProtocol = (
     }
   };
 
-  const nodeRequiredVTAmount = async (walletAddress: any): Promise<BigInt> => {
+  const nodeRequiredVTAmount = async (walletAddress: any): Promise<bigint> => {
     const minVTPerValidator: bigint = await (
       await pufferProtocolContract()
     ).methods

@@ -1,15 +1,17 @@
-import bls from "@chainsafe/bls/herumi";
-import { ContainerType, ByteVectorType, UintNumberType } from "@chainsafe/ssz";
-import { ethers } from "ethers";
-import { useState } from "react";
+import bls from '@chainsafe/bls/herumi';
+import { ContainerType, ByteVectorType, UintNumberType } from '@chainsafe/ssz';
+import { ethers } from 'ethers';
+import { useState } from 'react';
 
-import { ErrorProps } from "../../types/error";
-import { ValidatorRegistrationData } from "../../types/registration";
-import { bufferHex } from "../../utils/Key";
-import { useWeb3 } from "../context/Web3Context";
+import { ErrorProps } from '../../types/error';
+import { ValidatorRegistrationData } from '../../types/registration';
+import { bufferHex } from '../../utils/Key';
+import { useWeb3 } from '../context/Web3Context';
 
-const HOLESKY_DEPOSIT_DOMAIN = "030000005b83a23759c560b2d0c64576e1dcfc34ea94c4988f3e0d9f77f05387"
-const MAINNET_DEPOSIT_DOMAIN = "03000000f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a9"
+const HOLESKY_DEPOSIT_DOMAIN =
+  '030000005b83a23759c560b2d0c64576e1dcfc34ea94c4988f3e0d9f77f05387';
+const MAINNET_DEPOSIT_DOMAIN =
+  '03000000f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a9';
 
 const useVerifySignature = () => {
   const [signatureError, setError] = useState<ErrorProps | null>(null);
@@ -39,11 +41,11 @@ const useVerifySignature = () => {
   });
 
   const buildDepositMessage = (
-    jsonObject: ValidatorRegistrationData
+    jsonObject: ValidatorRegistrationData,
   ): Uint8Array => {
     const bls_pubkey_bytes = bufferHex(jsonObject.bls_pub_key);
     const withdrawal_credentials_bytes = bufferHex(
-      jsonObject.withdrawal_credentials
+      jsonObject.withdrawal_credentials,
     );
 
     // DepositMessage
@@ -70,13 +72,13 @@ const useVerifySignature = () => {
 
   const validateBLSSignature = async (
     jsonObject: ValidatorRegistrationData,
-    deposit_message_root: Uint8Array
+    deposit_message_root: Uint8Array,
   ): Promise<boolean> => {
     try {
       const bls_pubkey_bytes = bufferHex(jsonObject.bls_pub_key);
       const signature_bytes = bufferHex(jsonObject.signature);
       const withdrawal_credentials_bytes = bufferHex(
-        jsonObject.withdrawal_credentials
+        jsonObject.withdrawal_credentials,
       );
       const deposit_data_root_bytes = bufferHex(jsonObject.deposit_data_root);
 
@@ -84,7 +86,7 @@ const useVerifySignature = () => {
       const sigValid = bls.verify(
         bls_pubkey_bytes,
         deposit_message_root,
-        signature_bytes
+        signature_bytes,
       );
 
       // Construct expected DepositDataRoot
@@ -103,21 +105,21 @@ const useVerifySignature = () => {
       if (sigValid && depositDataRootValid) {
         return true;
       } else {
-        addError({ message: "Invalid Signature.", type: "ChainError" });
+        addError({ message: 'Invalid Signature.', type: 'ChainError' });
         return false;
       }
     } catch (error) {
-      let errorMessage = "Error during signature verification: Unknown error";
+      let errorMessage = 'Error during signature verification: Unknown error';
       if (error instanceof Error) {
         errorMessage = `Error during signature verification: ${error.message}`;
       }
-      addError({ message: errorMessage, type: "ChainError" });
+      addError({ message: errorMessage, type: 'ChainError' });
       return false;
     }
   };
 
   const handleSignatureVerification = async (
-    jsonObject?: ValidatorRegistrationData | null
+    jsonObject?: ValidatorRegistrationData | null,
   ): Promise<boolean> => {
     if (jsonObject === null) {
       return false;
@@ -131,11 +133,11 @@ const useVerifySignature = () => {
       const isValidSignature = validateBLSSignature(json, deposit_message);
       return isValidSignature;
     } catch (error) {
-      let errorMessage = "Error during signature verification: Unknown error";
+      let errorMessage = 'Error during signature verification: Unknown error';
       if (error instanceof Error) {
         errorMessage = `Error during signature verification: ${error.message}`;
       }
-      addError({ message: errorMessage, type: "ChainError" });
+      addError({ message: errorMessage, type: 'ChainError' });
       return false;
     }
   };

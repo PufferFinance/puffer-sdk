@@ -13,7 +13,10 @@ export const get = (key: string) => {
   }
 };
 export const set = (key: string, value: unknown) => {
-  localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value));
+  localStorage.setItem(
+    key,
+    typeof value === 'string' ? value : JSON.stringify(value),
+  );
 };
 export const del = (key: string) => {
   localStorage.removeItem(key);

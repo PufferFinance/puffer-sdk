@@ -20,7 +20,7 @@ export enum ValidatorStatus {
   FROZEN = 4,
 }
 
-export const findValidatorStatus = (status: BigInt): ValidatorStatus => {
+export const findValidatorStatus = (status: bigint): ValidatorStatus => {
   switch (status) {
     case BigInt(0):
       return ValidatorStatus.UNINITIALIZED;

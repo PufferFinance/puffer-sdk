@@ -23,7 +23,7 @@ const usePufETHModule = (web3: Web3, selector: Network) => {
   const canAffordPufETH = async (
     walletAddress: any,
     ethDeposit: bigint,
-  ): Promise<[boolean, BigInt]> => {
+  ): Promise<[boolean, bigint]> => {
     setLoading(true);
     try {
       const ethBalance = await web3.eth.getBalance(walletAddress);
@@ -126,7 +126,7 @@ const usePufETHModule = (web3: Web3, selector: Network) => {
           .convertToShares(enclaveValidatorEthBond)
           .call(),
       );
-      const scaledBondInPufETH: BigInt = bondInPufETH;
+      const scaledBondInPufETH: bigint = bondInPufETH;
       const balance = await getPufETHBalance(walletAddress);
       return balance >= scaledBondInPufETH;
     } catch (error) {
@@ -143,7 +143,7 @@ const usePufETHModule = (web3: Web3, selector: Network) => {
 
   const purchasePufETH = async (
     walletAddress: any,
-    ethAmount: BigInt,
+    ethAmount: bigint,
   ): Promise<any> => {
     setLoading(true);
     try {
