@@ -7,6 +7,11 @@ export default [
   ...tseslint.configs.recommended,
   eslintPluginPrettierRecommended,
   {
-    ignores: ['dist'],
+    ignores: ['dist/'],
+  },
+  {
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
   },
 ];

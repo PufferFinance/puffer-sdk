@@ -28,6 +28,7 @@
     "build": "vite build",
     "dev": "pnpm build --watch",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "echo 'No tests'",
     "format": "prettier --write .",
     "release": "release-it"

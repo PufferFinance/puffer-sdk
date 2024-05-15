@@ -19,7 +19,7 @@ const useVTModule = (web3: Web3, selector: Network) => {
   };
 
   // ETH cost paid mint VTs
-  const getValidatorTicketPrice = async (): Promise<BigInt | null> => {
+  const getValidatorTicketPrice = async (): Promise<bigint | null> => {
     setLoading(true);
     try {
       return BigInt(
@@ -40,7 +40,9 @@ const useVTModule = (web3: Web3, selector: Network) => {
   };
 
   // Amount of gas to call mint VT tx
-  const getValidatorTicketGas = async (walletAddress: any): Promise<BigInt | null> => {
+  const getValidatorTicketGas = async (
+    walletAddress: any,
+  ): Promise<bigint | null> => {
     setLoading(true);
     try {
       return await (await validatorTicketContract()).methods
@@ -61,7 +63,7 @@ const useVTModule = (web3: Web3, selector: Network) => {
   // The requesting wallet addresses's ValidatorTicket ERC20 balance (18 decimals)
   const getValidatorTicketBalance = async (
     walletAddress: any,
-  ): Promise<BigInt | null> => {
+  ): Promise<bigint | null> => {
     setLoading(true);
     try {
       return (await validatorTicketContract()).methods
@@ -112,10 +114,10 @@ const useVTModule = (web3: Web3, selector: Network) => {
   ): Promise<boolean | null> => {
     setLoading(true);
     try {
-      const balance: BigInt = await (await validatorTicketContract()).methods
+      const balance: bigint = await (await validatorTicketContract()).methods
         .balanceOf(walletAddress)
         .call();
-      const required: BigInt = BigInt(numDays) * BigInt(1e18);
+      const required: bigint = BigInt(numDays) * BigInt(1e18);
       return balance >= required;
     } catch (error) {
       let errorMessage = `Can not calculate if user has enough VTs: Unknown error`;

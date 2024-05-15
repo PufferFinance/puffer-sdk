@@ -5,7 +5,6 @@ import React, {
   useState,
   useEffect,
   ReactNode,
-  useCallback,
 } from 'react';
 import Web3 from 'web3';
 
@@ -108,22 +107,6 @@ export const Web3Provider: React.FC<Web3ProviderProps> = ({
     }
   };
 
-  const switchNetwork = useCallback(
-    async (chainId: bigint) => {
-      if (web3) {
-        try {
-          await (window as any).ethereum.request({
-            method: 'wallet_switchEthereumChain',
-            params: [{ chainId: web3.utils.toHex(chainId) }],
-          });
-        } catch (error: any) {
-          console.error('Error switching network:', error);
-        }
-      }
-    },
-    [web3],
-  );
-
   const connectWallet = async () => {
     if (web3) {
       try {
@@ -148,10 +131,6 @@ export const Web3Provider: React.FC<Web3ProviderProps> = ({
     setWalletAddress('');
     del('account');
     setIsConnected(false);
-  };
-
-  const handleReload = () => {
-    switchNetwork(BigInt(17000));
   };
 
   return (

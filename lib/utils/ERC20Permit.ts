@@ -15,7 +15,7 @@ export const getPermitSignature = async (
   spender: string,
 ) => {
   const tokenName = await tokenContract.methods.name().call();
-  let permitVersion = '1'; // todo - get from contract
+  const permitVersion = '1'; // todo - get from contract
   const tokenAddress = tokenContract._address;
   const permitNonce = await tokenContract.methods.nonces(walletAddress).call();
 
