@@ -9,25 +9,33 @@ import {
   http,
 } from 'viem';
 import { PufferVaultV2 } from '../contracts/abis/holesky/PufferVaultV2';
-import { Chain, VIEM_CHAINS } from '../chains/constants';
+import { Chain, VIEM_CHAINS, ViemChain } from '../chains/constants';
 import { CHAIN_ADDRESSES } from '../contracts/addresses/addresses';
 
 export class PufferClient {
   private chain: Chain;
+  private viemChain: ViemChain;
   private walletClient: WalletClient;
   private publicClient: PublicClient;
 
   constructor(chain: Chain) {
+    this.validateEnvironment();
+
     this.chain = chain;
+    this.viemChain = VIEM_CHAINS[this.chain];
 
     this.walletClient = createWalletClient({
-      chain: VIEM_CHAINS[this.chain],
+      chain: this.viemChain,
       transport: custom(window.ethereum!),
     });
     this.publicClient = createPublicClient({
-      chain: VIEM_CHAINS[this.chain],
+      chain: this.viemChain,
       transport: http(),
     });
+  }
+
+  public async requestAddresses() {
+    return await this.walletClient.requestAddresses();
   }
 
   public async depositETH(walletAddress: Address, value: bigint) {
@@ -41,13 +49,19 @@ export class PufferClient {
       },
     });
 
-    // Simulating the contract to make sure everything works.
-    const { request } = await contract.simulate.depositETH([walletAddress], {
+    return await contract.write.depositETH([walletAddress], {
       account: walletAddress,
-      chain: VIEM_CHAINS[this.chain],
+      chain: this.viemChain,
       value,
     });
+  }
 
-    return await contract.write.depositETH([walletAddress], request);
+  /**
+   * Validates that the browser environment is correct.
+   */
+  private validateEnvironment() {
+    if (!window.ethereum) {
+      throw new Error('JSON-RPC account not accessible.');
+    }
   }
 }
