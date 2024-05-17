@@ -7,8 +7,10 @@ export enum Chain {
   Anvil = 'anvil',
 }
 
-export const Chains: { [key in Chain]: ViemChain } = {
+export const VIEM_CHAINS: { [key in Chain]: ViemChain } = {
   [Chain.Mainnet]: mainnet,
   [Chain.Holesky]: holesky,
   [Chain.Anvil]: anvil,
 };
+
+export { type ViemChain };
