@@ -5,6 +5,7 @@ import {
   createPublicClient,
   createWalletClient,
   custom,
+  getContract,
   http,
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../chains/constants';
@@ -41,27 +42,30 @@ export class PufferClient {
     return await this.walletClient.requestAddresses();
   }
 
-  public async estimateGas(walletAddress: Address, value: bigint) {
-    return await this.publicClient.estimateContractGas({
+  public depositETH(walletAddress: Address) {
+    const contract = getContract({
       address: this.chainAddresses.PufferVault as Address,
-      account: walletAddress,
       abi: this.chainAbis.PufferVaultV2,
-      functionName: 'depositETH',
-      args: [walletAddress],
-      value,
+      client: {
+        wallet: this.walletClient,
+        // Public client is needed for simulation.
+        public: this.publicClient,
+      },
     });
-  }
 
-  public async depositETH(walletAddress: Address, value: bigint) {
-    return await this.walletClient.writeContract({
-      address: this.chainAddresses.PufferVault as Address,
-      account: walletAddress,
-      abi: this.chainAbis.PufferVaultV2,
-      chain: this.viemChain,
-      functionName: 'depositETH',
-      args: [walletAddress],
-      value,
-    });
+    const transact = async (value: bigint) =>
+      await contract.write.depositETH([walletAddress], {
+        account: walletAddress,
+        chain: this.viemChain,
+        value,
+      });
+
+    const estimate = async () =>
+      await contract.estimateGas.depositETH([walletAddress], {
+        account: walletAddress,
+      });
+
+    return { transact, estimate };
   }
 
   /**
