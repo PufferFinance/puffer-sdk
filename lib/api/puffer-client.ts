@@ -5,15 +5,17 @@ import {
   createPublicClient,
   createWalletClient,
   custom,
-  getContract,
   http,
 } from 'viem';
-import { PufferVaultV2 } from '../contracts/abis/holesky/PufferVaultV2';
 import { Chain, VIEM_CHAINS, ViemChain } from '../chains/constants';
 import { CHAIN_ADDRESSES } from '../contracts/addresses/addresses';
+import { ValueOf } from '../utils/types';
+import { CHAIN_ABIS } from '../contracts/abis/abis';
 
 export class PufferClient {
-  private chain: Chain;
+  private chainAddresses: ValueOf<typeof CHAIN_ADDRESSES>;
+  private chainAbis: ValueOf<typeof CHAIN_ABIS>;
+
   private viemChain: ViemChain;
   private walletClient: WalletClient;
   private publicClient: PublicClient;
@@ -21,8 +23,9 @@ export class PufferClient {
   constructor(chain: Chain) {
     this.validateEnvironment();
 
-    this.chain = chain;
-    this.viemChain = VIEM_CHAINS[this.chain];
+    this.chainAddresses = CHAIN_ADDRESSES[chain];
+    this.chainAbis = CHAIN_ABIS[chain];
+    this.viemChain = VIEM_CHAINS[chain];
 
     this.walletClient = createWalletClient({
       chain: this.viemChain,
@@ -38,20 +41,25 @@ export class PufferClient {
     return await this.walletClient.requestAddresses();
   }
 
-  public async depositETH(walletAddress: Address, value: bigint) {
-    const contract = getContract({
-      address: CHAIN_ADDRESSES[this.chain].PufferVault as Address,
-      abi: PufferVaultV2,
-      client: {
-        wallet: this.walletClient,
-        // Public client is needed for simulation.
-        public: this.publicClient,
-      },
-    });
-
-    return await contract.write.depositETH([walletAddress], {
+  public async estimateGas(walletAddress: Address, value: bigint) {
+    return await this.publicClient.estimateContractGas({
+      address: this.chainAddresses.PufferVault as Address,
       account: walletAddress,
+      abi: this.chainAbis.PufferVaultV2,
+      functionName: 'depositETH',
+      args: [walletAddress],
+      value,
+    });
+  }
+
+  public async depositETH(walletAddress: Address, value: bigint) {
+    return await this.walletClient.writeContract({
+      address: this.chainAddresses.PufferVault as Address,
+      account: walletAddress,
+      abi: this.chainAbis.PufferVaultV2,
       chain: this.viemChain,
+      functionName: 'depositETH',
+      args: [walletAddress],
       value,
     });
   }
