@@ -17,12 +17,12 @@ There are multiple ways to use the package.
 Install the dependency through GitHub URL.
 
 ```sh
-npm install github:pufferfinance/puffer-smart-contract-lib
-pnpm install github:pufferfinance/puffer-smart-contract-lib
-yarn add github:pufferfinance/puffer-smart-contract-lib
+npm install github:pufferfinance/puffer-sdk
+pnpm install github:pufferfinance/puffer-sdk
+yarn add github:pufferfinance/puffer-sdk
 ```
 
-Add `#<tag>` (for example, `github:pufferfinance/puffer-smart-contract-lib#1.0.0`) at the end to use a different published tag from GitHub (<https://github.com/PufferFinance/puffer-smart-contract-lib/tags>).
+Add `#<tag>` (for example, `github:pufferfinance/puffer-sdk#1.0.0`) at the end to use a different published tag from GitHub (<https://github.com/PufferFinance/puffer-sdk/tags>).
 
 ### GitHub Packages
 
@@ -60,4 +60,4 @@ pnpm dev
 
 ## Release
 
-The release is automated using [release-it](https://github.com/release-it/release-it) and the [`publish.yml`](./.github/workflows/publish.yml) GitHub action. The action can be [dispatched manually](https://github.com/PufferFinance/puffer-smart-contract-lib/actions/workflows/publish.yml) to make the release.
+The release is automated using [release-it](https://github.com/release-it/release-it) and the [`publish.yml`](./.github/workflows/publish.yml) GitHub action. The action can be [dispatched manually](https://github.com/PufferFinance/puffer-sdk/actions/workflows/publish.yml) to make the release.
