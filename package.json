@@ -1,10 +1,10 @@
 {
-  "name": "@pufferfinance/smart-contract-lib",
+  "name": "@pufferfinance/puffer-sdk",
   "description": "Library for Puffer smart contract interactions",
   "version": "0.0.4-0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PufferFinance/puffer-smart-contract-lib.git"
+    "url": "https://github.com/PufferFinance/puffer-sdk.git"
   },
   "type": "module",
   "main": "./dist/main.cjs",

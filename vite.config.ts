@@ -4,8 +4,9 @@ import dts from 'vite-plugin-dts';
 
 export default defineConfig({
   build: {
+    sourcemap: true,
     lib: {
-      name: 'puffer-smart-contract-lib',
+      name: 'puffer-sdk',
       entry: resolve(__dirname, './lib/main.ts'),
       fileName: 'main',
       formats: ['es', 'cjs'],
