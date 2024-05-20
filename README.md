@@ -1,4 +1,4 @@
-# @pufferfinance/smart-contract-lib
+# @pufferfinance/puffer-sdk
 
 Library for interacting with puffer smart contract interface.
 
@@ -28,7 +28,7 @@ Add `#<tag>` (for example, `github:pufferfinance/puffer-sdk#1.0.0`) at the end t
 
 The package is published privately to GitHub Packages. It can be installed by authenticating to GitHub Packages. Please check [GitHub guide for installing a private package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package).
 
-Use `@pufferfinance` as the organization name and `@pufferfinance/smart-contract-lib` as the complete dependency name.
+Use `@pufferfinance` as the organization name and `@pufferfinance/puffer-sdk` as the complete dependency name.
 
 ### Local
 
@@ -41,7 +41,7 @@ pnpm link --global
 In the project where you want to use this package as a dependency, run the following command.
 
 ```sh
-pnpm link --global @pufferfinance/smart-contract-lib
+pnpm link --global @pufferfinance/puffer-sdk
 ```
 
 ## Setup
