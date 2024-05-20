@@ -9,9 +9,10 @@ import {
   http,
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../chains/constants';
-import { CHAIN_ADDRESSES } from '../contracts/addresses/addresses';
+import { CHAIN_ADDRESSES } from '../contracts/addresses';
 import { ValueOf } from '../utils/types';
 import { CHAIN_ABIS } from '../contracts/abis/abis';
+import { AccountError } from '../errors/validation-errors';
 
 export class PufferClient {
   private chainAddresses: ValueOf<typeof CHAIN_ADDRESSES>;
@@ -73,7 +74,9 @@ export class PufferClient {
    */
   private validateEnvironment() {
     if (!window.ethereum) {
-      throw new Error('JSON-RPC account not accessible.');
+      throw new AccountError('JSON-RPC account not accessible.', {
+        fixMessage: 'Make sure a JSON-RPC wallet is set up in the browser.',
+      });
     }
   }
 }
