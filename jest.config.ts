@@ -4,7 +4,12 @@ import type { Config } from 'jest';
 const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/lib/testing/setup-tests.ts'],
+  testPathIgnorePatterns: ['<rootDir>/dist/'],
+  globals: {
+    TextEncoder,
+    TextDecoder,
+    Uint8Array,
+  },
 };
 
 export default config;

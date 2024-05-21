@@ -22,21 +22,31 @@ export class PufferClient {
   private walletClient: WalletClient;
   private publicClient: PublicClient;
 
-  constructor(chain: Chain) {
-    this.validateEnvironment();
+  constructor(
+    chain: Chain,
+    walletClient?: WalletClient,
+    publicClient?: PublicClient,
+  ) {
+    if (!walletClient) {
+      this.validateEnvironment();
+    }
 
     this.chainAddresses = CHAIN_ADDRESSES[chain];
     this.chainAbis = CHAIN_ABIS[chain];
     this.viemChain = VIEM_CHAINS[chain];
 
-    this.walletClient = createWalletClient({
-      chain: this.viemChain,
-      transport: custom(window.ethereum!),
-    });
-    this.publicClient = createPublicClient({
-      chain: this.viemChain,
-      transport: http(),
-    });
+    this.walletClient =
+      walletClient ??
+      createWalletClient({
+        chain: this.viemChain,
+        transport: custom(window.ethereum!),
+      });
+    this.publicClient =
+      publicClient ??
+      createPublicClient({
+        chain: this.viemChain,
+        transport: http(),
+      });
   }
 
   public async requestAddresses() {
