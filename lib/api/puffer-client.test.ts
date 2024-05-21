@@ -1,7 +1,7 @@
-import { Chain } from '../../chains/constants';
-import { AccountError } from '../../errors/validation-errors';
-import { setupTestWalletClient } from '../../test/utills/setup-test-client';
-import { PufferClient } from '../puffer-client';
+import { Chain } from '../chains/constants';
+import { AccountError } from '../errors/validation-errors';
+import { setupTestWalletClient } from '../../test/utills/setup-test-clients';
+import { PufferClient } from './puffer-client';
 
 describe('PufferClient', () => {
   it('should throw error if the environment is invalid', async () => {
@@ -10,7 +10,7 @@ describe('PufferClient', () => {
 
   describe('PufferClient Valid Environment', () => {
     it('should request addresses', async () => {
-      const mockAddress = '0xf770bF9384c5aaD8b8a6EFAb5951CF089656A371';
+      const mockAddress = '0xEB77D02f8122B32273444a1b544C147Fb559CB41';
 
       const walletRequest = jest.fn().mockReturnValue([mockAddress]);
       const walletClient = setupTestWalletClient(walletRequest);

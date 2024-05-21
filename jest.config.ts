@@ -5,6 +5,17 @@ const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['<rootDir>/dist/'],
+  collectCoverageFrom: ['lib/**/*.{ts,js}'],
+  collectCoverage: true,
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 90,
+      lines: 90,
+      statements: 90,
+    },
+  },
+  // Global APIs not available in the test environment by default.
   globals: {
     TextEncoder,
     TextDecoder,

@@ -17,12 +17,16 @@ export const setupTestClient = (requestMock: EIP1193RequestFn = jest.fn()) => {
   });
 };
 
-export const setupTestWalletClient = (requestMock: EIP1193RequestFn = jest.fn()) => {
+export const setupTestWalletClient = (
+  requestMock: EIP1193RequestFn = jest.fn(),
+) => {
   const client = setupTestClient(requestMock);
   return client.extend(walletActions) as WalletClient;
 };
 
-export const setupTestPublicClient = (requestMock: EIP1193RequestFn = jest.fn()) => {
+export const setupTestPublicClient = (
+  requestMock: EIP1193RequestFn = jest.fn(),
+) => {
   const client = setupTestClient(requestMock);
   return client.extend(publicActions) as PublicClient;
 };
