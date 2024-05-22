@@ -7,9 +7,11 @@ import {
   PublicClient,
 } from 'viem';
 import { anvil } from 'viem/chains';
-import { MockRequestFn } from '../utils/types';
+import { TransportProvider } from '../../lib/utils/types';
 
-export const setupMockClient = (requestMock: MockRequestFn = jest.fn()) => {
+export const setupMockClient = (
+  requestMock: TransportProvider['request'] = jest.fn(),
+) => {
   return createTestClient({
     mode: 'anvil',
     chain: anvil,
@@ -26,14 +28,14 @@ export const setupMockClient = (requestMock: MockRequestFn = jest.fn()) => {
 };
 
 export const setupMockWalletClient = (
-  requestMock: MockRequestFn = jest.fn(),
+  requestMock: TransportProvider['request'] = jest.fn(),
 ) => {
   const client = setupMockClient(requestMock);
   return client.extend(walletActions) as WalletClient;
 };
 
 export const setupMockPublicClient = (
-  requestMock: MockRequestFn = jest.fn(),
+  requestMock: TransportProvider['request'] = jest.fn(),
 ) => {
   const client = setupMockClient(requestMock);
   return client.extend(publicActions) as PublicClient;

@@ -8,7 +8,7 @@ import {
   Transport,
 } from 'viem';
 import { Chain, VIEM_CHAINS } from '../chains/constants';
-import { TransportProvider } from './types';
+import { TransportProvider } from '../utils/types';
 
 export type ClientConfig = {
   chain: Chain;
