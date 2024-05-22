@@ -12,6 +12,12 @@ describe('PufferClient', () => {
     expect(() => new PufferClient(Chain.Anvil)).toThrow(AccountError);
   });
 
+  it('should use the default wallet client', () => {
+    window.ethereum = {} as any;
+    expect(() => new PufferClient(Chain.Anvil)).not.toThrow(AccountError);
+    window.ethereum = undefined;
+  });
+
   describe('PufferClient Valid Environment', () => {
     it('should request addresses', async () => {
       const mockAddress = '0xEB77D02f8122B32273444a1b544C147Fb559CB41';
