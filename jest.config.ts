@@ -5,6 +5,7 @@ const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   testPathIgnorePatterns: ['<rootDir>/dist/'],
+  prettierPath: null,
   collectCoverageFrom: ['lib/**/*.{ts,js}'],
   collectCoverage: true,
   coverageThreshold: {

@@ -16,13 +16,11 @@ export abstract class BaseError<
 
     return [
       message,
-      // New Line
-      ...(hasParams ? [''] : []),
+      ...(hasParams ? [''] : []), // New line to make log more readable.
       ...(hasParams
         ? Object.entries(params).map(([key, value]) => `${key}: ${value}`)
         : []),
-      // New Line
-      '',
+      '', // New line to make log more readable.
       `v${version}`,
     ].join('\n');
   }
