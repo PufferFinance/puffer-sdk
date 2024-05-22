@@ -1,6 +1,6 @@
-# @pufferfinance/puffer-sdk
+<h1 align="center">Puffer SDK</h1>
 
-Library for interacting with puffer smart contract interface.
+<p align="center">SDK for interacting with puffer smart contracts.<p>
 
 ## Usage
 
