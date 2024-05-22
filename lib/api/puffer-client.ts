@@ -4,7 +4,6 @@ import {
   WalletClient,
   createPublicClient,
   createWalletClient,
-  custom,
   getContract,
   http,
 } from 'viem';
@@ -12,7 +11,6 @@ import { Chain, VIEM_CHAINS, ViemChain } from '../chains/constants';
 import { CHAIN_ADDRESSES } from '../contracts/addresses';
 import { ValueOf } from '../utils/types';
 import { CHAIN_ABIS } from '../contracts/abis/abis';
-import { AccountError } from '../errors/validation-errors';
 
 export class PufferClient {
   private chainAddresses: ValueOf<typeof CHAIN_ADDRESSES>;
@@ -27,10 +25,6 @@ export class PufferClient {
     walletClient?: WalletClient,
     publicClient?: PublicClient,
   ) {
-    if (!walletClient) {
-      this.validateEnvironment();
-    }
-
     this.chainAddresses = CHAIN_ADDRESSES[chain];
     this.chainAbis = CHAIN_ABIS[chain];
     this.viemChain = VIEM_CHAINS[chain];
@@ -39,7 +33,7 @@ export class PufferClient {
       walletClient ??
       createWalletClient({
         chain: this.viemChain,
-        transport: custom(window.ethereum!),
+        transport: http(),
       });
     this.publicClient =
       publicClient ??
@@ -77,16 +71,5 @@ export class PufferClient {
       });
 
     return { transact, estimate };
-  }
-
-  /**
-   * Validates that the browser environment is correct.
-   */
-  private validateEnvironment() {
-    if (!window.ethereum) {
-      throw new AccountError('JSON-RPC account not accessible.', {
-        fixMessage: 'Make sure a JSON-RPC wallet is set up in the browser.',
-      });
-    }
   }
 }
