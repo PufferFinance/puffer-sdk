@@ -3,7 +3,7 @@ import type { Config } from 'jest';
 // https://jestjs.io/docs/configuration
 const config: Config = {
   preset: 'ts-jest',
-  testEnvironment: 'jsdom',
+  testEnvironment: 'node',
   testPathIgnorePatterns: ['<rootDir>/dist/'],
   collectCoverageFrom: ['lib/**/*.{ts,js}'],
   collectCoverage: true,
@@ -17,12 +17,6 @@ const config: Config = {
   },
   // Coverage is not collected for these.
   coveragePathIgnorePatterns: ['lib/errors', 'lib/main.ts'],
-  // Global APIs not available in the test environment by default.
-  globals: {
-    TextEncoder,
-    TextDecoder,
-    Uint8Array,
-  },
 };
 
 export default config;
