@@ -15,6 +15,8 @@ const config: Config = {
       statements: 90,
     },
   },
+  // Coverage is not collected for these.
+  coveragePathIgnorePatterns: ['lib/errors', 'lib/main.ts'],
   // Global APIs not available in the test environment by default.
   globals: {
     TextEncoder,

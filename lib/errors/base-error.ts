@@ -12,12 +12,16 @@ export abstract class BaseError<
   }
 
   protected compileMessage(message: string, params: T) {
+    const hasParams = params && Object.keys(params).length > 0;
+
     return [
       message,
-      ...(params ? [''] : []),
-      ...(params
+      // New Line
+      ...(hasParams ? [''] : []),
+      ...(hasParams
         ? Object.entries(params).map(([key, value]) => `${key}: ${value}`)
         : []),
+      // New Line
       '',
       `v${version}`,
     ].join('\n');
