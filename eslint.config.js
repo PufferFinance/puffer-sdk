@@ -7,7 +7,7 @@ export default [
   ...tseslint.configs.recommended,
   eslintPluginPrettierRecommended,
   {
-    ignores: ['dist/'],
+    ignores: ['dist/', 'docs/.docusaurus'],
   },
   {
     rules: {
