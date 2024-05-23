@@ -1,6 +1,6 @@
 <h1 align="center">Puffer SDK</h1>
 
-<p align="center">SDK for interacting with puffer smart contracts.<p>
+<p align="center">SDK for interacting with the puffer smart contracts<p>
 
 ## Usage
 

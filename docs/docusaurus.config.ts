@@ -1,5 +1,5 @@
 import { themes as prismThemes } from 'prism-react-renderer';
-import type { Config } from '@docusaurus/types';
+import type { Config, PluginConfig } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -34,6 +34,7 @@ const config: Config = {
       'classic',
       {
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -114,10 +115,12 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Puffer Finance`,
     },
     prism: {
+      additionalLanguages: ['bash', 'javascript', 'typescript'],
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  plugins: ['@easyops-cn/docusaurus-search-local'],
 };
 
 export default config;
