@@ -57,7 +57,7 @@ const config: Config = {
       },
       items: [
         {
-          href: 'https://github.com/PufferFinance',
+          href: 'https://github.com/PufferFinance/puffer-sdk',
           label: 'GitHub',
           position: 'right',
         },
@@ -70,16 +70,12 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Installation',
-              to: '/docs/installation',
-            },
-            {
               label: 'Getting Started',
-              to: '/docs/getting-started',
+              to: '/getting-started',
             },
             {
-              label: 'Reference',
-              to: '/docs/reference',
+              label: 'Guides',
+              to: '/guides',
             },
           ],
         },
@@ -110,8 +106,8 @@ const config: Config = {
     },
     prism: {
       additionalLanguages: ['bash', 'javascript', 'typescript'],
-      theme: prismThemes.oneLight,
-      darkTheme: prismThemes.oneDark,
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
   plugins: ['@easyops-cn/docusaurus-search-local'],
