@@ -1,0 +1,85 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Getting Started
+
+Get up and running with the Puffer SDK in just a few steps.
+
+---
+
+## Overview
+
+Puffer SDK is a TypeScript library for interacting with Puffer smart contracts. It provides an API and helper functions to execute smart contracts in the browser.
+
+The SDK is focused on providing a smooth developer experience.
+
+## Installation
+
+<Tabs groupId="package-managers">
+  <TabItem value="npm" label="npm">
+
+    ```bash
+    npm install @pufferfinance/puffer-sdk
+    ```
+
+  </TabItem>
+  <TabItem value="yarn" label="yarn">
+
+    ```bash
+    yarn add @pufferfinance/puffer-sdk
+    ```
+
+  </TabItem>
+  <TabItem value="pnpm" label="pnpm">
+
+    ```bash
+    pnpm install @pufferfinance/puffer-sdk
+    ```
+
+  </TabItem>
+</Tabs>
+
+## Quick Start
+
+### 1. Setup the Puffer Client
+
+`PufferClient` is the main entry point of the SDK and contains the core functionality provided by the SDK.
+
+```ts
+import {
+  PufferClientHelpers,
+  PufferClient,
+  Chain,
+} from '@pufferfinance/puffer-sdk';
+
+// highlight-start
+const walletClient = PufferClientHelpers.createWalletClient({
+  chain: Chain.Holesky,
+  provider: window.ethereum,
+});
+const pufferClient = new PufferClient(Chain.Holesky);
+// highlight-end
+```
+
+### 2. Connect to the Wallet
+
+A wallet can be connected to by requesting its address from the SDK.
+
+```ts
+const [walletAddress] = await pufferClient.requestAddresses();
+```
+
+### 3. Interact with the Contract
+
+```ts
+const { transact, estimate } = pufferClient.depositETH(walletAddress);
+
+// Returns gas estimate of the transaction.
+const gasEstimate = await estimate();
+// Execute the transaction for depositing ETH.
+const address = await transact(new BigInt(1));
+```

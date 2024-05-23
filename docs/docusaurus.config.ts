@@ -38,7 +38,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/pufferfinance/puffer-sdk',
+          editUrl: 'https://github.com/pufferfinance/puffer-sdk/tree/main/docs',
         },
         blog: false,
         theme: {
@@ -116,8 +116,8 @@ const config: Config = {
     },
     prism: {
       additionalLanguages: ['bash', 'javascript', 'typescript'],
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.oneLight,
+      darkTheme: prismThemes.oneDark,
     },
   } satisfies Preset.ThemeConfig,
   plugins: ['@easyops-cn/docusaurus-search-local'],
