@@ -61,7 +61,7 @@ const walletClient = PufferClientHelpers.createWalletClient({
   chain: Chain.Holesky,
   provider: window.ethereum,
 });
-const pufferClient = new PufferClient(Chain.Holesky);
+const pufferClient = new PufferClient(Chain.Holesky, walletClient);
 // highlight-end
 ```
 
