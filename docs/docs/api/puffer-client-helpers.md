@@ -32,7 +32,7 @@
 
 ###### Source
 
-[lib/api/puffer-client-helpers.ts:21](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/02707b039bbcaa57636b9b81b3f22c8a7c977da7/lib/api/puffer-client-helpers.ts#L21)
+[lib/api/puffer-client-helpers.ts:21](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/b42b48e3e859b7356dd285f776ef9f575bf1ffe0/lib/api/puffer-client-helpers.ts#L21)
 
 ##### createWalletClient()
 
@@ -50,7 +50,7 @@
 
 ###### Source
 
-[lib/api/puffer-client-helpers.ts:28](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/02707b039bbcaa57636b9b81b3f22c8a7c977da7/lib/api/puffer-client-helpers.ts#L28)
+[lib/api/puffer-client-helpers.ts:28](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/b42b48e3e859b7356dd285f776ef9f575bf1ffe0/lib/api/puffer-client-helpers.ts#L28)
 
 ##### extractTransportConfig()
 
@@ -68,7 +68,7 @@
 
 ###### Source
 
-[lib/api/puffer-client-helpers.ts:35](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/02707b039bbcaa57636b9b81b3f22c8a7c977da7/lib/api/puffer-client-helpers.ts#L35)
+[lib/api/puffer-client-helpers.ts:35](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/b42b48e3e859b7356dd285f776ef9f575bf1ffe0/lib/api/puffer-client-helpers.ts#L35)
 
 ## Type Aliases
 
@@ -84,4 +84,4 @@
 
 #### Source
 
-[lib/api/puffer-client-helpers.ts:13](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/02707b039bbcaa57636b9b81b3f22c8a7c977da7/lib/api/puffer-client-helpers.ts#L13)
+[lib/api/puffer-client-helpers.ts:13](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/b42b48e3e859b7356dd285f776ef9f575bf1ffe0/lib/api/puffer-client-helpers.ts#L13)
