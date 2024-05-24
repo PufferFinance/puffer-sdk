@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Depositing ETH
 
-Using the Puffer SDK to deposit ETH is simple. First, setup the `PufferClient`.
+Using the Puffer SDK to mint pufETH is simple. First, setup the `PufferClient`.
 
 ```ts
 import {
@@ -20,21 +20,35 @@ const walletClient = PufferClientHelpers.createWalletClient({
 const pufferClient = new PufferClient(Chain.Holesky, walletClient);
 ```
 
-Then connect to the wallet or use an existing wallet address.
+Then connect to the wallet to fetch your address.
 
 ```ts
 const [walletAddress] = await pufferClient.requestAddresses();
 ```
 
-With the wallet address at hand, make the transacation.
+With your address at hand, make the transaction to deposit ETH to mint pufETH.
 
 ```ts
 const { transact, estimate } = pufferClient.depositETH(walletAddress);
 
-const ethValue = new BigInt(1);
+const weiAmount = new BigInt(1e18);
 
 // Returns gas estimate of the transaction.
 const gasEstimate = await estimate();
 // Execute the transaction for depositing ETH.
-const address = await transact(ethValue);
+const txHash = await transact(weiAmount);
+```
+
+
+Alternatively, you can set the pufETH recipient to a different address.
+
+```ts
+const { transact, estimate } = pufferClient.depositETH(recipientAddress);
+
+const weiAmount = new BigInt(1e18);
+
+// Returns gas estimate of the transaction.
+const gasEstimate = await estimate();
+// Execute the transaction for depositing ETH.
+const txHash = await transact(weiAmount);
 ```

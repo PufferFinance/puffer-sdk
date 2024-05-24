@@ -75,11 +75,13 @@ const [walletAddress] = await pufferClient.requestAddresses();
 
 ### 3. Interact with the Contract
 
+Mint pufETH to your `walletAddress` or set a target recipient:
+
 ```ts
 const { transact, estimate } = pufferClient.depositETH(walletAddress);
 
 // Returns gas estimate of the transaction.
 const gasEstimate = await estimate();
 // Execute the transaction for depositing ETH.
-const address = await transact(new BigInt(1));
+const txHash = await transact(new BigInt(1e18));
 ```
