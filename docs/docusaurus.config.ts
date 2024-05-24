@@ -29,6 +29,10 @@ const config: Config = {
     locales: ['en'],
   },
 
+  markdown: {
+    format: 'detect',
+  },
+
   presets: [
     [
       'classic',
@@ -110,7 +114,28 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
-  plugins: ['@easyops-cn/docusaurus-search-local'],
+  plugins: [
+    '@easyops-cn/docusaurus-search-local',
+    [
+      'docusaurus-plugin-typedoc',
+      // https://typedoc.org/options/input/
+      // https://typedoc-plugin-markdown.org/plugins/docusaurus/options
+      {
+        entryPoints: '../lib/api',
+        exclude: '**/*+(test|spec|index).ts',
+        entryPointStrategy: 'expand',
+        tsconfig: '../tsconfig.json',
+        readme: 'none',
+        sidebar: { autoConfiguration: false },
+        textContentMappings: {
+          'title.indexPage': 'API Reference',
+          'title.memberPage': '{name}',
+        },
+        parametersFormat: 'table',
+        enumMembersFormat: 'table',
+      },
+    ],
+  ],
 };
 
 export default config;
