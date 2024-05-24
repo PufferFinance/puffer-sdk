@@ -32,7 +32,10 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "format": "prettier --write .",
-    "release": "release-it"
+    "release": "release-it",
+    "docs:start": "pnpm --filter docs run start",
+    "docs:build": "pnpm --filter docs run build",
+    "docs:deploy": "pnpm --filter docs run deploy"
   },
   "dependencies": {
     "viem": "^2.10.8"

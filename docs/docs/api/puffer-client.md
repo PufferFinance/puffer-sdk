@@ -4,19 +4,23 @@
 
 ### PufferClient
 
+The core class and the main entry point of the Puffer SDK.
+
 #### Constructors
 
 ##### new PufferClient()
 
 > **new PufferClient**(`chain`, `walletClient`?, `publicClient`?): [`PufferClient`](puffer-client.md#pufferclient)
 
+Create the Puffer Client.
+
 ###### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `chain` | `Chain` |
-| `walletClient`? | `object` |
-| `publicClient`? | `object` |
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `chain` | `Chain` | Chain to use for the client. |
+| `walletClient`? | `object` | The wallet client to use for wallet interactions. |
+| `publicClient`? | `object` | The public client to use for public interactions. |
 
 ###### Returns
 
@@ -24,7 +28,7 @@
 
 ###### Source
 
-[lib/api/puffer-client.ts:23](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/02707b039bbcaa57636b9b81b3f22c8a7c977da7/lib/api/puffer-client.ts#L23)
+[lib/api/puffer-client.ts:32](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/b42b48e3e859b7356dd285f776ef9f575bf1ffe0/lib/api/puffer-client.ts#L32)
 
 #### Properties
 
@@ -42,15 +46,25 @@
 
 > **depositETH**(`walletAddress`): `object`
 
+Deposit ETH to the given wallet address. This doesn't make the
+transaction but returns two methods namely `transact` and
+`estimate`.
+
 ###### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `walletAddress` | \`0x$\{string\}\` |
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `walletAddress` | \`0x$\{string\}\` | Wallet address to get the ETH from. |
 
 ###### Returns
 
 `object`
+
+`transact: (value: bigint) => Promise<Address>` - Used to
+make the transaction with the given value.
+
+`estimate: () => Promise<bigint>` - Gas estimate of the
+transaction.
 
 ###### estimate()
 
@@ -76,16 +90,20 @@
 
 ###### Source
 
-[lib/api/puffer-client.ts:50](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/02707b039bbcaa57636b9b81b3f22c8a7c977da7/lib/api/puffer-client.ts#L50)
+[lib/api/puffer-client.ts:76](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/b42b48e3e859b7356dd285f776ef9f575bf1ffe0/lib/api/puffer-client.ts#L76)
 
 ##### requestAddresses()
 
 > **requestAddresses**(): `Promise`\<`RequestAddressesReturnType`\>
 
+Request addresses from the wallet.
+
 ###### Returns
 
 `Promise`\<`RequestAddressesReturnType`\>
 
+An array of wallet addresses.
+
 ###### Source
 
-[lib/api/puffer-client.ts:46](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/02707b039bbcaa57636b9b81b3f22c8a7c977da7/lib/api/puffer-client.ts#L46)
+[lib/api/puffer-client.ts:60](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/b42b48e3e859b7356dd285f776ef9f575bf1ffe0/lib/api/puffer-client.ts#L60)
