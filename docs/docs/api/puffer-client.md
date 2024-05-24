@@ -28,7 +28,7 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:32](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/04d3cf08e4a224e4d187c438d5041e962c4cdfb2/lib/api/puffer-client.ts#L32)
+[lib/api/puffer-client.ts:32](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/7435e1fb1bddb7203930f076ca6a2db2b0c715f9/lib/api/puffer-client.ts#L32)
 
 #### Properties
 
@@ -90,7 +90,7 @@ transaction.
 
 ###### Source
 
-[lib/api/puffer-client.ts:76](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/04d3cf08e4a224e4d187c438d5041e962c4cdfb2/lib/api/puffer-client.ts#L76)
+[lib/api/puffer-client.ts:76](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/7435e1fb1bddb7203930f076ca6a2db2b0c715f9/lib/api/puffer-client.ts#L76)
 
 ##### requestAddresses()
 
@@ -106,4 +106,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:60](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/04d3cf08e4a224e4d187c438d5041e962c4cdfb2/lib/api/puffer-client.ts#L60)
+[lib/api/puffer-client.ts:60](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/7435e1fb1bddb7203930f076ca6a2db2b0c715f9/lib/api/puffer-client.ts#L60)
