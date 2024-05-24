@@ -17,7 +17,17 @@ export type ClientConfig = {
   | { provider: TransportProvider; config?: CustomTransportConfig }
 );
 
+/**
+ * Helper methods for the main `PufferClient`.
+ */
 export class PufferClientHelpers {
+  /**
+   * Helper method for creating a public client based on the
+   * configuration
+   *
+   * @param config Configuration for the public client.
+   * @returns The public client created with viem.
+   */
   public static createPublicClient(config: ClientConfig) {
     return createPublicClientViem({
       chain: VIEM_CHAINS[config.chain],
@@ -25,6 +35,13 @@ export class PufferClientHelpers {
     });
   }
 
+  /**
+   * Helper method for creating a wallet client based on the
+   * configuration
+   *
+   * @param config Configuration for the wallet client.
+   * @returns The wallet client created with viem.
+   */
   public static createWalletClient(config: ClientConfig) {
     return createWalletClientViem({
       chain: VIEM_CHAINS[config.chain],

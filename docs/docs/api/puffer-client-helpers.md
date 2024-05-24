@@ -4,6 +4,8 @@
 
 ### PufferClientHelpers
 
+Helper methods for the main `PufferClient`.
+
 #### Constructors
 
 ##### new PufferClientHelpers()
@@ -20,37 +22,47 @@
 
 > `static` **createPublicClient**(`config`): `object`
 
+Helper method for creating a public client based on the
+configuration
+
 ###### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `config` | [`ClientConfig`](puffer-client-helpers.md#clientconfig) |
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `config` | [`ClientConfig`](puffer-client-helpers.md#clientconfig) | Configuration for the public client. |
 
 ###### Returns
 
 `object`
 
+The public client created with viem.
+
 ###### Source
 
-[lib/api/puffer-client-helpers.ts:21](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/b42b48e3e859b7356dd285f776ef9f575bf1ffe0/lib/api/puffer-client-helpers.ts#L21)
+[lib/api/puffer-client-helpers.ts:31](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/04d3cf08e4a224e4d187c438d5041e962c4cdfb2/lib/api/puffer-client-helpers.ts#L31)
 
 ##### createWalletClient()
 
 > `static` **createWalletClient**(`config`): `object`
 
+Helper method for creating a wallet client based on the
+configuration
+
 ###### Parameters
 
-| Parameter | Type |
-| :------ | :------ |
-| `config` | [`ClientConfig`](puffer-client-helpers.md#clientconfig) |
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `config` | [`ClientConfig`](puffer-client-helpers.md#clientconfig) | Configuration for the wallet client. |
 
 ###### Returns
 
 `object`
 
+The wallet client created with viem.
+
 ###### Source
 
-[lib/api/puffer-client-helpers.ts:28](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/b42b48e3e859b7356dd285f776ef9f575bf1ffe0/lib/api/puffer-client-helpers.ts#L28)
+[lib/api/puffer-client-helpers.ts:45](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/04d3cf08e4a224e4d187c438d5041e962c4cdfb2/lib/api/puffer-client-helpers.ts#L45)
 
 ##### extractTransportConfig()
 
@@ -68,7 +80,7 @@
 
 ###### Source
 
-[lib/api/puffer-client-helpers.ts:35](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/b42b48e3e859b7356dd285f776ef9f575bf1ffe0/lib/api/puffer-client-helpers.ts#L35)
+[lib/api/puffer-client-helpers.ts:52](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/04d3cf08e4a224e4d187c438d5041e962c4cdfb2/lib/api/puffer-client-helpers.ts#L52)
 
 ## Type Aliases
 
@@ -84,4 +96,4 @@
 
 #### Source
 
-[lib/api/puffer-client-helpers.ts:13](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/b42b48e3e859b7356dd285f776ef9f575bf1ffe0/lib/api/puffer-client-helpers.ts#L13)
+[lib/api/puffer-client-helpers.ts:13](https://github.com/PufferFinance/puffer-smart-contract-lib/blob/04d3cf08e4a224e4d187c438d5041e962c4cdfb2/lib/api/puffer-client-helpers.ts#L13)
