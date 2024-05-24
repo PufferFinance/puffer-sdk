@@ -39,7 +39,6 @@ const gasEstimate = await estimate();
 const txHash = await transact(weiAmount);
 ```
 
-
 Alternatively, you can set the pufETH recipient to a different address.
 
 ```ts
