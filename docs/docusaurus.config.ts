@@ -65,6 +65,24 @@ const config: Config = {
       },
       items: [
         {
+          type: 'doc',
+          position: 'left',
+          docId: 'getting-started',
+          label: 'Getting Started',
+        },
+        {
+          type: 'doc',
+          position: 'left',
+          docId: 'guides/index',
+          label: 'Guides',
+        },
+        {
+          type: 'doc',
+          position: 'left',
+          docId: 'api/index',
+          label: 'API Reference',
+        },
+        {
           href: 'https://github.com/PufferFinance/puffer-sdk',
           label: 'GitHub',
           position: 'right',
