@@ -12,6 +12,9 @@ import { CHAIN_ADDRESSES } from '../contracts/addresses';
 import { ValueOf } from '../utils/types';
 import { CHAIN_ABIS } from '../contracts/abis/abis';
 
+/**
+ * The core class and the main entry point of the Puffer SDK.
+ */
 export class PufferClient {
   private chainAddresses: ValueOf<typeof CHAIN_ADDRESSES>;
   private chainAbis: ValueOf<typeof CHAIN_ABIS>;
@@ -20,6 +23,12 @@ export class PufferClient {
   private walletClient: WalletClient;
   private publicClient: PublicClient;
 
+  /**
+   * Create the Puffer Client.
+   * @param chain Chain to use for the client.
+   * @param walletClient The wallet client to use for wallet interactions.
+   * @param publicClient The public client to use for public interactions.
+   */
   constructor(
     chain: Chain,
     walletClient?: WalletClient,
@@ -43,10 +52,27 @@ export class PufferClient {
       });
   }
 
+  /**
+   * Request addresses from the wallet.
+   *
+   * @returns An array of wallet addresses.
+   */
   public async requestAddresses() {
     return await this.walletClient.requestAddresses();
   }
 
+  /**
+   * Deposit ETH to the given wallet address. This doesn't make the
+   * transaction but returns two methods namely `transact` and
+   * `estimate`.
+   *
+   * @param walletAddress Wallet address to get the ETH from.
+   * @returns `transact: (value: bigint) => Promise<Address>` - Used to
+   * make the transaction with the given value.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
   public depositETH(walletAddress: Address) {
     const contract = getContract({
       address: this.chainAddresses.PufferVault as Address,
