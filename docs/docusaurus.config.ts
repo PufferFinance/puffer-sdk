@@ -118,14 +118,16 @@ const config: Config = {
     '@easyops-cn/docusaurus-search-local',
     [
       'docusaurus-plugin-typedoc',
-      // https://typedoc.org/options/input/
       // https://typedoc-plugin-markdown.org/plugins/docusaurus/options
+      // https://typedoc-plugin-markdown.org/docs/options
       {
         entryPoints: '../lib/api',
         exclude: '**/*+(test|spec|index).ts',
         entryPointStrategy: 'expand',
         tsconfig: '../tsconfig.json',
         readme: 'none',
+        outputFileStrategy: 'modules',
+        excludeExternals: true,
         sidebar: { autoConfiguration: false },
         textContentMappings: {
           'title.indexPage': 'API Reference',
@@ -133,6 +135,7 @@ const config: Config = {
         },
         parametersFormat: 'table',
         enumMembersFormat: 'table',
+        propertiesFormat: 'table',
       },
     ],
   ],
