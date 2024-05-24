@@ -53,6 +53,10 @@ const config: Config = {
   ],
 
   themeConfig: {
+    tableOfContents: {
+      // For API docs generated method headings.
+      maxHeadingLevel: 5,
+    },
     navbar: {
       title: 'Puffer SDK Docs',
       logo: {
@@ -116,6 +120,7 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
   plugins: [
     '@easyops-cn/docusaurus-search-local',
+    // Plugin for generating API docs.
     [
       'docusaurus-plugin-typedoc',
       // https://typedoc-plugin-markdown.org/plugins/docusaurus/options
@@ -131,7 +136,6 @@ const config: Config = {
         sidebar: { autoConfiguration: false },
         textContentMappings: {
           'title.indexPage': 'API Reference',
-          'title.memberPage': '{name}',
         },
         parametersFormat: 'table',
         enumMembersFormat: 'table',
