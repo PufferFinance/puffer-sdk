@@ -6,7 +6,7 @@ import {
   http,
 } from 'viem';
 import { Chain, VIEM_CHAINS } from '../chains/constants';
-import { PufferVaultHandler } from '../contracts/puffer-vault-handler';
+import { PufferVaultHandler } from '../contracts/handlers/puffer-vault-handler';
 
 /**
  * The core class and the main entry point of the Puffer SDK.
