@@ -76,26 +76,6 @@ export class PufferVaultHandler {
   }
 
   /**
-   * Check the pufETH balance of the wallet.
-   *
-   * @param walletAddress Wallet address to check the balance of.
-   * @returns pufETH balance in wei.
-   */
-  public async balanceOf(walletAddress: Address) {
-    return await this.getContract().read.balanceOf([walletAddress]);
-  }
-
-  /**
-   * Get the rate of pufETH compared to ETH.
-   *
-   * @returns Rate of 1 pufETH compared to 1 ETH.
-   */
-  public async pufETHRate() {
-    const oneWei = BigInt(1e18);
-    return await this.getContract().read.previewDeposit([oneWei]);
-  }
-
-  /**
    * Deposit stETH to the given wallet address. This doesn't make the
    * transaction but returns two methods namely `transact` and
    * `estimate`.
@@ -108,7 +88,7 @@ export class PufferVaultHandler {
    * `estimate: () => Promise<bigint>` - Gas estimate of the
    * transaction.
    */
-  public async depositStETH(walletAddress: Address, value: bigint) {
+  public depositStETH(walletAddress: Address, value: bigint) {
     const transact = async () =>
       await this.getContract().write.depositStETH([value, walletAddress], {
         account: walletAddress,
@@ -124,6 +104,26 @@ export class PufferVaultHandler {
       );
 
     return { transact, estimate };
+  }
+
+  /**
+   * Check the pufETH balance of the wallet.
+   *
+   * @param walletAddress Wallet address to check the balance of.
+   * @returns pufETH balance in wei.
+   */
+  public async balanceOf(walletAddress: Address) {
+    return await this.getContract().read.balanceOf([walletAddress]);
+  }
+
+  /**
+   * Get the rate of pufETH compared to ETH.
+   *
+   * @returns Rate of pufETH compared to 1 ETH.
+   */
+  public async getPufETHRate() {
+    const oneWei = BigInt(1e18);
+    return await this.getContract().read.previewDeposit([oneWei]);
   }
 
   /**
