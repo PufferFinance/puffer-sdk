@@ -39,7 +39,8 @@ export class ContractHandler {
   public getContract<const TAbi extends Abi | readonly unknown[]>(
     address: Address,
     abi: TAbi,
-  ) {
+  ): GetContractReturnType<TAbi, KeyedClient, Address> {
+    // TODO: Should memoization be removed?
     if (address in this.memoizedContracts) {
       return this.memoizedContracts[address] as GetContractReturnType<
         TAbi,
@@ -59,6 +60,6 @@ export class ContractHandler {
 
     this.memoizedContracts[address] = contract;
 
-    return contract;
+    return contract as GetContractReturnType<TAbi, KeyedClient, Address>;
   }
 }
