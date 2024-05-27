@@ -6,8 +6,5 @@
     "release": true,
     "autoGenerate": true,
     "releaseName": "v${version}"
-  },
-  "hooks": {
-    "after:git:bump": "git add dist -f"
   }
 }
