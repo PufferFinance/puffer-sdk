@@ -102,11 +102,46 @@ export class PufferClient {
     return await contract.read.balanceOf([walletAddress]);
   }
 
+  /**
+   * Get the rate of pufETH compared to ETH.
+   *
+   * @returns Rate of 1 pufETH compared to 1 ETH.
+   */
   public async pufETHRate() {
-    const onePufETH = BigInt(1e18);
+    const oneWei = BigInt(1e18);
     const contract = this.getPufferVaultContract();
 
-    return await contract.read.previewDeposit([onePufETH]);
+    return await contract.read.previewDeposit([oneWei]);
+  }
+
+  /**
+   * Deposit stETH to the given wallet address. This doesn't make the
+   * transaction but returns two methods namely `transact` and
+   * `estimate`.
+   *
+   * @param walletAddress Wallet address to get the ETH from.
+   * @param value Value in wei of the stETH to deposit.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction with the given value.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public async depositStETH(walletAddress: Address, value: bigint) {
+    const contract = this.getPufferVaultContract();
+
+    const transact = async () =>
+      await contract.write.depositStETH([value, walletAddress], {
+        account: walletAddress,
+        chain: this.viemChain,
+      });
+
+    const estimate = async () =>
+      await contract.estimateGas.depositStETH([value, walletAddress], {
+        account: walletAddress,
+      });
+
+    return { transact, estimate };
   }
 
   private getPufferVaultContract() {
@@ -115,7 +150,6 @@ export class PufferClient {
       abi: this.chainAbis.PufferVaultV2,
       client: {
         wallet: this.walletClient,
-        // Public client is needed for simulation.
         public: this.publicClient,
       },
     });
