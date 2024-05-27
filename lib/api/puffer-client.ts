@@ -74,15 +74,7 @@ export class PufferClient {
    * transaction.
    */
   public depositETH(walletAddress: Address) {
-    const contract = getContract({
-      address: this.chainAddresses.PufferVault as Address,
-      abi: this.chainAbis.PufferVaultV2,
-      client: {
-        wallet: this.walletClient,
-        // Public client is needed for simulation.
-        public: this.publicClient,
-      },
-    });
+    const contract = this.getPufferVaultContract();
 
     const transact = async (value: bigint) =>
       await contract.write.depositETH([walletAddress], {
@@ -97,5 +89,35 @@ export class PufferClient {
       });
 
     return { transact, estimate };
+  }
+
+  /**
+   * Check the pufETH balance of the wallet.
+   *
+   * @param walletAddress Wallet address to check the balance of.
+   * @returns pufETH balance in wei.
+   */
+  public async balanceOf(walletAddress: Address) {
+    const contract = this.getPufferVaultContract();
+    return await contract.read.balanceOf([walletAddress]);
+  }
+
+  public async pufETHRate() {
+    const onePufETH = BigInt(1e18);
+    const contract = this.getPufferVaultContract();
+
+    return await contract.read.previewDeposit([onePufETH]);
+  }
+
+  private getPufferVaultContract() {
+    return getContract({
+      address: this.chainAddresses.PufferVault,
+      abi: this.chainAbis.PufferVaultV2,
+      client: {
+        wallet: this.walletClient,
+        // Public client is needed for simulation.
+        public: this.publicClient,
+      },
+    });
   }
 }
