@@ -78,7 +78,7 @@ const [walletAddress] = await pufferClient.requestAddresses();
 Mint pufETH to your `walletAddress` or set a target recipient:
 
 ```ts
-const { transact, estimate } = pufferClient.depositETH(walletAddress);
+const { transact, estimate } = pufferClient.vault.depositETH(walletAddress);
 
 // Returns gas estimate of the transaction.
 const gasEstimate = await estimate();
