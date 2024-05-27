@@ -1,50 +1,56 @@
-<h1 align="center">Puffer SDK</h1>
+<div align="center">
+  <h1>Puffer SDK</h1>
 
-<p align="center">SDK for interacting with the puffer smart contracts<p>
+  <img alt="GitHub license" src="https://img.shields.io/github/license/pufferfinance/puffer-sdk?color=limegreen">
+  <img alt="Downloads npm" src="https://img.shields.io/npm/dm/@pufferfinance/puffer-sdk?color=limegreen">
+  <img alt="Version npm" src="https://img.shields.io/npm/v/@pufferfinance/puffer-sdk?label=version">
+  <!-- ADD COVERAGE -->
+  
+  <p>SDK to seamlessly interact with puffer smart contracts<p>
+</div>
 
 ## Usage
 
-There are multiple ways to use the package.
-
-- [GitHub (Recommended)](#github-recommended)
-- [GitHub Packages](#github-packages)
-- [Local](#local)
-
-### GitHub (Recommended)
-
-> Note: You must have access to the [PufferFinance](https://github.com/PufferFinance) GitHub organization and [SSH setup for GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) for this to work.
-
-Install the dependency through GitHub URL.
+Install the package.
 
 ```sh
-npm install github:pufferfinance/puffer-sdk
-pnpm install github:pufferfinance/puffer-sdk
-yarn add github:pufferfinance/puffer-sdk
+npm install @pufferfinance/puffer-sdk
 ```
 
-Add `#<tag>` (for example, `github:pufferfinance/puffer-sdk#1.0.0`) at the end to use a different published tag from GitHub (<https://github.com/PufferFinance/puffer-sdk/tags>).
+Example code to check pufETH balance.
 
-### GitHub Packages
+```ts
+import {
+  PufferClientHelpers,
+  PufferClient,
+  Chain,
+} from '@pufferfinance/puffer-sdk';
 
-The package is published privately to GitHub Packages. It can be installed by authenticating to GitHub Packages. Please check [GitHub guide for installing a private package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package).
+const walletClient = PufferClientHelpers.createWalletClient({
+  chain: Chain.Holesky,
+  provider: window.ethereum,
+});
+const pufferClient = new PufferClient(Chain.Holesky, walletClient);
+const [walletAddress] = await pufferClient.requestAddresses();
 
-Use `@pufferfinance` as the organization name and `@pufferfinance/puffer-sdk` as the complete dependency name.
-
-### Local
-
-Clone this repository and locally link this package so it can used by other projects.
-
-```sh
-pnpm link --global
+const balance = await pufferClient.vault.balanceOf(walletAddress);
 ```
 
-In the project where you want to use this package as a dependency, run the following command.
+## Features
 
-```sh
-pnpm link --global @pufferfinance/puffer-sdk
-```
+- Interact with puffer smart contracts.
+- Deposit ETH to mint pufETH.
+- Deposit stETH to mint pufETH.
+- Check pufETH balance.
+- Get latest rate of pufETH compared to ETH.
+- and much more.
 
-## Setup
+## Documentation
+
+- Getting started
+- Guides
+
+## Development
 
 Install dependencies.
 
