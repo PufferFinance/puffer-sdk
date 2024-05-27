@@ -1,9 +1,8 @@
-import { Address } from 'viem';
 import { Chain } from '../chains/constants';
 
 // Source of truth:
 // https://github.com/PufferFinance/Deployments-and-ACL/tree/main/docs/deployments
-export const CHAIN_ADDRESSES: { [key in Chain]: { [key: string]: Address } } = {
+export const CHAIN_ADDRESSES = {
   [Chain.Mainnet]: {
     PufferVault: '0xD9A442856C234a39a81a089C06451EBAa4306a72',
   },
