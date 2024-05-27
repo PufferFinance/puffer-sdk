@@ -38,7 +38,7 @@ describe('PufferClient', () => {
       walletClient,
       publicClient,
     );
-    const { transact, estimate } = pufferClient.depositETH(mockAddress);
+    const { transact, estimate } = pufferClient.vault.depositETH(mockAddress);
 
     expect(await transact(BigInt(1))).toBe(mockAddress);
     expect(await estimate()).toBe(mockGas);

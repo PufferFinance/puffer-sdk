@@ -5,9 +5,9 @@ import {
   WalletClient,
   getContract,
 } from 'viem';
-import { CHAIN_ABIS } from './abis/abis';
-import { Chain, VIEM_CHAINS } from '../chains/constants';
-import { CHAIN_ADDRESSES } from './addresses';
+import { CHAIN_ABIS } from '../abis/abis';
+import { Chain, VIEM_CHAINS } from '../../chains/constants';
+import { CHAIN_ADDRESSES } from '../addresses';
 
 /**
  * Handler for the `PufferVaultV2` contract exposing methods to interact
