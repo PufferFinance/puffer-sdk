@@ -1,4 +1,4 @@
-name: Publish Package
+name: publish-package
 
 on:
   workflow_dispatch:
@@ -16,7 +16,7 @@ on:
           - prepatch
 
 jobs:
-  build:
+  publish-package:
     runs-on: ubuntu-latest
 
     permissions:

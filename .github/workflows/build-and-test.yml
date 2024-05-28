@@ -1,10 +1,11 @@
-name: Build and Test
+# This name appears on the "build" badge on README.
+name: build
 
 on:
   pull_request:
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:

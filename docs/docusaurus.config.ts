@@ -137,7 +137,13 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
   plugins: [
-    '@easyops-cn/docusaurus-search-local',
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        // For docs-only mode.
+        docsRouteBasePath: '/',
+      },
+    ],
     // Plugin for generating API docs.
     [
       'docusaurus-plugin-typedoc',
