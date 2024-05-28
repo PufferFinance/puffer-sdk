@@ -48,8 +48,7 @@ const balance = await pufferClient.vault.balanceOf(walletAddress);
 
 ## Documentation
 
-- Getting started
-- Guides
+Check the [documentation website](https://pufferfinance.github.io/puffer-sdk/) for detailed documentation and guides.
 
 ## Development
 
@@ -65,6 +64,18 @@ Start the package in watch mode.
 pnpm dev
 ```
 
+Setup linking so the package can be linked to other projects locally.
+
+```sh
+pnpm link --global
+```
+
+To link the package to a local project, run the following command.
+
+```sh
+pnpm link --global @pufferfinance/puffer-sdk
+```
+
 ## Release
 
-The release is automated using [release-it](https://github.com/release-it/release-it) and the [`publish.yml`](./.github/workflows/publish.yml) GitHub action. The action can be [dispatched manually](https://github.com/PufferFinance/puffer-sdk/actions/workflows/publish.yml) to make the release.
+The release is automated using [release-it](https://github.com/release-it/release-it) and the [publish.yml](./.github/workflows/publish.yml) GitHub action. The action can be [dispatched manually](https://github.com/PufferFinance/puffer-sdk/actions/workflows/publish.yml) to make the release.

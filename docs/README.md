@@ -30,16 +30,4 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-Using SSH:
-
-```sh
-USE_SSH=true pnpm docs:deploy
-```
-
-Not using SSH:
-
-```sh
-GIT_USER=<Your GitHub username> pnpm docs:deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The deployment of the docs is automated with each release. See the [deploy-docs.yml](../.github/workflows/deploy-docs.yml) GitHub action.
