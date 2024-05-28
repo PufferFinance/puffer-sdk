@@ -144,7 +144,8 @@ const config: Config = {
       // https://typedoc-plugin-markdown.org/plugins/docusaurus/options
       // https://typedoc-plugin-markdown.org/docs/options
       {
-        entryPoints: '../lib/api',
+        // Consider all files in subdirectories of the `lib` directory.
+        entryPoints: '../lib/*/**',
         exclude: '**/*+(test|spec|index).ts',
         entryPointStrategy: 'expand',
         tsconfig: '../tsconfig.json',

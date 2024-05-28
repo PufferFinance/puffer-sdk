@@ -1,10 +1,11 @@
 <div align="center">
   <h1>Puffer SDK</h1>
 
-  <img alt="GitHub license" src="https://img.shields.io/github/license/pufferfinance/puffer-sdk?color=limegreen">
-  <img alt="Downloads npm" src="https://img.shields.io/npm/dm/@pufferfinance/puffer-sdk?color=limegreen">
-  <img alt="Version npm" src="https://img.shields.io/npm/v/@pufferfinance/puffer-sdk?label=version">
-  <!-- ADD COVERAGE -->
+  <img alt="build" src="https://github.com/pufferfinance/puffer-sdk/actions/workflows/build-and-test.yml/badge.svg?branch=main" />
+  <img alt="license" src="https://img.shields.io/github/license/pufferfinance/puffer-sdk?color=limegreen" />
+  <img alt="npm downloads" src="https://img.shields.io/npm/dm/@pufferfinance/puffer-sdk?color=limegreen&logo=npm" />
+  <img alt="npm version" src="https://img.shields.io/npm/v/@pufferfinance/puffer-sdk?label=version&logo=npm" />
+  <!-- TODO: ADD COVERAGE BADGE -->
   
   <p>SDK to seamlessly interact with puffer smart contracts<p>
 </div>
