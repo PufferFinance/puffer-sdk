@@ -45,8 +45,11 @@ jobs:
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
-      - name: Build
+      - name: Build package
         run: pnpm build
+
+      - name: Build docs
+        run: pnpm docs:build
 
       - name: Publish package
         run: pnpm release --increment ${{ inputs.increment }}
