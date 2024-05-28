@@ -3,6 +3,7 @@ name: Deploy Docs
 on:
   release:
     types: [published]
+  push:
   workflow_dispatch:
 
 jobs:

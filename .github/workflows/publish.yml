@@ -48,6 +48,7 @@ jobs:
       - name: Build package
         run: pnpm build
 
+        # This makes the API reference docs part of the release commit.
       - name: Build docs
         run: pnpm docs:build
 
