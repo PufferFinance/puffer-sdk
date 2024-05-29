@@ -2,7 +2,7 @@ name: deploy-docs
 
 on:
   release:
-    types: [published]
+    types: [published, released]
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
