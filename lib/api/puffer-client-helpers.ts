@@ -6,6 +6,8 @@ import {
   fallback,
   custom,
   Transport,
+  PublicClient,
+  WalletClient,
 } from 'viem';
 import { Chain, VIEM_CHAINS } from '../chains/constants';
 import { TransportProvider } from '../utils/types';
@@ -28,7 +30,7 @@ export class PufferClientHelpers {
    * @param config Configuration for the public client.
    * @returns The public client created with viem.
    */
-  public static createPublicClient(config: ClientConfig) {
+  public static createPublicClient(config: ClientConfig): PublicClient {
     return createPublicClientViem({
       chain: VIEM_CHAINS[config.chain],
       transport: PufferClientHelpers.extractTransportConfig(config),
@@ -42,7 +44,7 @@ export class PufferClientHelpers {
    * @param config Configuration for the wallet client.
    * @returns The wallet client created with viem.
    */
-  public static createWalletClient(config: ClientConfig) {
+  public static createWalletClient(config: ClientConfig): WalletClient {
     return createWalletClientViem({
       chain: VIEM_CHAINS[config.chain],
       transport: PufferClientHelpers.extractTransportConfig(config),
