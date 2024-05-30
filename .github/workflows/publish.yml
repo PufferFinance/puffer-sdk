@@ -1,6 +1,7 @@
 name: publish-package
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       increment:
@@ -17,9 +18,9 @@ on:
       prerelease:
         type: choice
         description: Option to make the release a beta or alpha prerelease
-        default: no
+        default: 'no'
         options:
-          - no
+          - 'no'
           - beta
           - alpha
 
@@ -64,12 +65,12 @@ jobs:
         if: "${{ inputs.prerelease == 'no' }}"
         run: pnpm release --increment ${{ inputs.increment }}
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Prepublish package
         if: "${{ inputs.prerelease != 'no' }}"
         run: pnpm release ${{ inputs.increment }} --preRelease ${{ inputs.prerelease }}
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
