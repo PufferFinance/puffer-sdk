@@ -10,8 +10,5 @@
   },
   "hooks": {
     "after:npm:bump": "git add -A"
-  },
-  "npm": {
-    "publish": false
   }
 }
