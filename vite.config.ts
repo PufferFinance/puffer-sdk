@@ -12,5 +12,5 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
   },
-  plugins: [dts()],
+  plugins: [dts({ entryRoot: './lib' })],
 });
