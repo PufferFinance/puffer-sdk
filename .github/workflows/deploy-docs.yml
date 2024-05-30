@@ -1,9 +1,14 @@
 name: deploy-docs
 
 on:
-  release:
-    types: [published, released]
   workflow_dispatch:
+
+  # Deployment of docs is a part of the publish.yml workflow because the
+  # release trigger doesn't work for automated releases. See
+  # https://github.com/orgs/community/discussions/25281.
+  # ---
+  # release:
+  #   types: [published, released]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
