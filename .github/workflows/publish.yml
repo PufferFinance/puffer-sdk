@@ -16,10 +16,10 @@ on:
           - prepatch
       prerelease:
         type: choice
-        description: Option to make the release a beta or alpha prerelease
-        default: no
+        description: Make the release a beta or alpha prerelease
+        default: 'no'
         options:
-          - no
+          - 'no'
           - beta
           - alpha
 
@@ -66,14 +66,14 @@ jobs:
           path: docs/build
 
       - name: Publish package
-        if: "${{ inputs.prerelease == 'no' }}"
+        if: "${{ inputs.prerelease == 'no' || inputs.prerelease == '' }}"
         run: pnpm release --increment ${{ inputs.increment }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Prepublish package
-        if: "${{ inputs.prerelease != 'no' }}"
+        if: "${{ inputs.prerelease != 'no' && inputs.prerelease != '' }}"
         run: pnpm release ${{ inputs.increment }} --preRelease ${{ inputs.prerelease }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
