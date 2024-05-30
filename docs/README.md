@@ -30,4 +30,4 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-The deployment of the docs is automated with each release. See the [deploy-docs.yml](../.github/workflows/deploy-docs.yml) GitHub action.
+The deployment of the docs is automated with each release. See the [publish.yml](../.github/workflows/publish.yml) GitHub action.
