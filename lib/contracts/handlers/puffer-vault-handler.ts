@@ -5,9 +5,9 @@ import {
   WalletClient,
   getContract,
 } from 'viem';
-import { CHAIN_ABIS } from '../abis/abis';
 import { Chain, VIEM_CHAINS } from '../../chains/constants';
 import { CHAIN_ADDRESSES } from '../addresses';
+import { PUFFER_VAULT_ABIS } from '../abis/puffer-vault-abis';
 
 /**
  * Handler for the `PufferVaultV2` contract exposing methods to interact
@@ -39,7 +39,7 @@ export class PufferVaultHandler {
   private getContract() {
     return getContract({
       address: CHAIN_ADDRESSES[this.chain].PufferVault as Address,
-      abi: CHAIN_ABIS[this.chain].PufferVaultV2,
+      abi: PUFFER_VAULT_ABIS[this.chain].PufferVaultV2,
       client: {
         wallet: this.walletClient,
         public: this.publicClient,
