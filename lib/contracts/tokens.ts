@@ -7,7 +7,7 @@ export enum Token {
   pufETH = 'pufETH',
 }
 
-export const tokenAddresses: {
+export const TOKENS_ADDRESSES: {
   [key in Token]: { [chain in Chain]: Address };
 } = {
   [Token.stETH]: {
