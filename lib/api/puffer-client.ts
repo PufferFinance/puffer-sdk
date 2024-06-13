@@ -16,6 +16,7 @@ export class PufferClient {
   private publicClient: PublicClient;
 
   // Contract Handlers
+  /** Handler for the `PufferVaultV2` contract. */
   public vault: PufferVaultHandler;
 
   /**

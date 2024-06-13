@@ -2,9 +2,9 @@ import { Chain as ViemChain } from 'viem';
 import { mainnet, anvil, holesky } from 'viem/chains';
 
 export enum Chain {
-  Mainnet = 'mainnet',
-  Holesky = 'holesky',
-  Anvil = 'anvil',
+  Mainnet = mainnet.id,
+  Holesky = holesky.id,
+  Anvil = anvil.id,
 }
 
 export const VIEM_CHAINS: { [key in Chain]: ViemChain } = {
