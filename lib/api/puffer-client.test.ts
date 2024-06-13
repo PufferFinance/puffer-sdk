@@ -15,7 +15,7 @@ describe('PufferClient', () => {
     });
     const walletClient = setupMockWalletClient(walletRequest);
 
-    const pufferClient = new PufferClient(Chain.Anvil, walletClient);
+    const pufferClient = new PufferClient(Chain.Holesky, walletClient);
     const [address] = await pufferClient.requestAddresses();
 
     expect(address).toBe(mockAddress);
@@ -34,7 +34,7 @@ describe('PufferClient', () => {
     const publicClient = setupMockPublicClient(publicRequest);
 
     const pufferClient = new PufferClient(
-      Chain.Anvil,
+      Chain.Holesky,
       walletClient,
       publicClient,
     );

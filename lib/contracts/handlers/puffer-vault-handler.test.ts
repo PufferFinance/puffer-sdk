@@ -20,7 +20,7 @@ describe('PufferVaultHandler', () => {
     const publicClient = setupMockPublicClient(publicRequest);
 
     const handler = new PufferVaultHandler(
-      Chain.Anvil,
+      Chain.Holesky,
       walletClient,
       publicClient,
     );
@@ -43,7 +43,7 @@ describe('PufferVaultHandler', () => {
     const publicClient = setupMockPublicClient(publicRequest);
 
     const handler = new PufferVaultHandler(
-      Chain.Anvil,
+      Chain.Holesky,
       walletClient,
       publicClient,
     );
@@ -63,7 +63,7 @@ describe('PufferVaultHandler', () => {
     const publicClient = setupMockPublicClient(publicRequest);
 
     const handler = new PufferVaultHandler(
-      Chain.Anvil,
+      Chain.Holesky,
       walletClient,
       publicClient,
     );
@@ -81,7 +81,7 @@ describe('PufferVaultHandler', () => {
     const publicClient = setupMockPublicClient(publicRequest);
 
     const handler = new PufferVaultHandler(
-      Chain.Anvil,
+      Chain.Holesky,
       walletClient,
       publicClient,
     );
@@ -99,7 +99,7 @@ describe('PufferVaultHandler', () => {
     const publicClient = setupMockPublicClient(publicRequest);
 
     const handler = new PufferVaultHandler(
-      Chain.Anvil,
+      Chain.Holesky,
       walletClient,
       publicClient,
     );
