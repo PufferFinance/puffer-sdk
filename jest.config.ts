@@ -6,9 +6,8 @@ const config: Config = {
   testEnvironment: 'node',
   testPathIgnorePatterns: ['<rootDir>/dist/'],
   prettierPath: null,
-  collectCoverageFrom: ['lib/**/*.{ts,js}'],
-  setupFilesAfterEnv: ['lib/testing/setup-tests.ts'],
-  collectCoverage: true,
+  collectCoverageFrom: ['<rootDir>/lib/**/*.{ts,js}'],
+  setupFilesAfterEnv: ['<rootDir>/test/setup-tests.ts'],
   coverageThreshold: {
     global: {
       branches: 80,

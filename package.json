@@ -29,6 +29,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "jest",
+    "test:coverage": "jest --collectCoverage",
     "test:watch": "jest --watch",
     "format": "prettier --write .",
     "release": "release-it",
