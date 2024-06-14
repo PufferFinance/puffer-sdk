@@ -1,4 +1,10 @@
-import { WalletClient, PublicClient, getContract, Address } from 'viem';
+import {
+  WalletClient,
+  PublicClient,
+  getContract,
+  Address,
+  parseSignature,
+} from 'viem';
 import { Chain } from '../../chains/constants';
 import { ERC20PERMIT_ABI } from '../abis/tokens-abis';
 import { TOKENS_ADDRESSES, Token } from '../tokens';
@@ -35,6 +41,15 @@ export class TokensHandler {
     });
   }
 
+  /**
+   * Process and get permit signature for the given token to perform
+   * transactions through the `PufferDepositor` contract.
+   *
+   * @param token Token for which to get the permit signature.
+   * @param walletAddress Wallet address making the transaction.
+   * @param value Value of the transaction.
+   * @returns Permit signature in the form `{ r, s, v?, yParity }`.
+   */
   public async getPermitSignature(
     token: Token,
     walletAddress: Address,
@@ -59,6 +74,8 @@ export class TokensHandler {
         { name: 'deadline', type: 'uint256' },
       ],
     };
+    // Valid for 2 hours.
+    const deadline = BigInt(getTimestampInSeconds() + 60 * 60 * 2);
 
     const signature = await this.walletClient.signTypedData({
       account: walletAddress,
@@ -70,12 +87,11 @@ export class TokensHandler {
         spender: CHAIN_ADDRESSES[this.chain].PufferDepositor as Address,
         value,
         nonce: permitNonces,
-        // Valid for 2 hours.
-        deadline: BigInt(getTimestampInSeconds() + 60 * 60 * 2),
+        deadline,
       },
     });
 
-    return signature;
+    return { ...parseSignature(signature), deadline };
   }
 
   private getPermitVersion(token: Token): string {
