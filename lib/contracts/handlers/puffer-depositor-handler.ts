@@ -11,6 +11,10 @@ import { CHAIN_ADDRESSES } from '../addresses';
 import { TokensHandler } from './tokens-handler';
 import { Token } from '../tokens';
 
+/**
+ * Handler for the `PufferDepositor` contract exposing methods to
+ * interact with the contract.
+ */
 export class PufferDepositorHandler {
   private viemChain: ViemChain;
   public tokensHandler: TokensHandler;
@@ -45,6 +49,19 @@ export class PufferDepositorHandler {
     });
   }
 
+  /**
+   * Deposit stETH in exchange for pufETH. This doesn't make the
+   * transaction but returns two methods namely `transact` and
+   * `estimate`.
+   *
+   * @param walletAddress Wallet address to get the stETH from.
+   * @param value Value in wei of the stETH to deposit.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
   public async depositStETH(walletAddress: Address, value: bigint) {
     const { r, s, v, yParity, deadline } =
       await this.tokensHandler.getPermitSignature(
@@ -67,6 +84,51 @@ export class PufferDepositorHandler {
       });
     const estimate = async () =>
       await this.getContract().estimateGas.depositStETH(
+        [permitData, walletAddress],
+        { account: walletAddress },
+      );
+
+    return { transact, estimate };
+  }
+
+  /**
+   * Deposit wstETH in exchange for pufETH. This doesn't make the
+   * transaction but returns two methods namely `transact` and
+   * `estimate`.
+   *
+   * @param walletAddress Wallet address to get the stETH from.
+   * @param value Value in wei of the wstETH to deposit.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public async depositWstETH(walletAddress: Address, value: bigint) {
+    const { r, s, v, yParity, deadline } =
+      await this.tokensHandler.getPermitSignature(
+        Token.wstETH,
+        walletAddress,
+        value,
+      );
+    const permitData = {
+      r,
+      s,
+      v: Number(v ?? yParity),
+      deadline,
+      amount: value,
+    };
+
+    const transact = async () =>
+      await this.getContract().write.depositWstETH(
+        [permitData, walletAddress],
+        {
+          account: walletAddress,
+          chain: this.viemChain,
+        },
+      );
+    const estimate = async () =>
+      await this.getContract().estimateGas.depositWstETH(
         [permitData, walletAddress],
         { account: walletAddress },
       );
