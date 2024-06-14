@@ -2,6 +2,7 @@ import { Address } from 'viem';
 import { Chain } from '../chains/constants';
 
 export enum Token {
+  ETH = 'ETH',
   stETH = 'stETH',
   wstETH = 'wstETH',
   pufETH = 'pufETH',
@@ -22,4 +23,5 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0xd9a442856c234a39a81a089c06451ebaa4306a72',
     [Chain.Holesky]: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
   },
+  [Token.ETH]: {},
 };
