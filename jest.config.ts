@@ -7,6 +7,7 @@ const config: Config = {
   testPathIgnorePatterns: ['<rootDir>/dist/'],
   prettierPath: null,
   collectCoverageFrom: ['lib/**/*.{ts,js}'],
+  setupFilesAfterEnv: ['lib/testing/setup-tests.ts'],
   collectCoverage: true,
   coverageThreshold: {
     global: {
