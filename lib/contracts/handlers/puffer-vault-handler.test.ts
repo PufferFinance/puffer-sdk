@@ -2,7 +2,7 @@ import { toHex } from 'viem';
 import {
   setupTestWalletClient,
   setupTestPublicClient,
-} from '../../../test/mocks/setup-mock-clients';
+} from '../../../test/setup-test-clients';
 import { Chain } from '../../chains/constants';
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { PUFFER_VAULT_ABIS } from '../abis/puffer-vault-abis';

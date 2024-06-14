@@ -1,46 +1,36 @@
 import { Chain } from '../chains/constants';
 import {
-  setupMockPublicClient,
-  setupMockWalletClient,
-} from '../../test/mocks/setup-mock-clients';
+  setupTestPublicClient,
+  setupTestWalletClient,
+} from '../../test/setup-test-clients';
+import { mockAccount, testingUtils } from '../../test/setup-tests';
 import { PufferClient } from './puffer-client';
-import { mockRpcRequest } from '../../test/mocks/mock-request';
+import { toHex } from 'viem';
 
 describe('PufferClient', () => {
   it('should request addresses', async () => {
-    const mockAddress = '0xEB77D02f8122B32273444a1b544C147Fb559CB41';
-
-    const walletRequest = mockRpcRequest({
-      eth_requestAccounts: [mockAddress],
-    });
-    const walletClient = setupMockWalletClient(walletRequest);
+    const walletClient = setupTestWalletClient();
 
     const pufferClient = new PufferClient(Chain.Holesky, walletClient);
     const [address] = await pufferClient.requestAddresses();
 
-    expect(address).toBe(mockAddress);
-    expect(walletRequest).toHaveBeenCalled();
+    expect(address).toBe(mockAccount);
   });
 
   it('should deposit ETH', async () => {
-    const mockAddress = '0xEB77D02f8122B32273444a1b544C147Fb559CB41';
     const mockGas = BigInt(1);
+    const mockTxHash = '0x123';
 
-    const walletRequest = mockRpcRequest({
-      eth_sendTransaction: mockAddress,
-    });
-    const walletClient = setupMockWalletClient(walletRequest);
-    const publicRequest = mockRpcRequest({ eth_estimateGas: mockGas });
-    const publicClient = setupMockPublicClient(publicRequest);
+    testingUtils.lowLevel.mockRequest('eth_sendTransaction', mockTxHash);
+    testingUtils.lowLevel.mockRequest('eth_estimateGas', toHex(mockGas));
 
-    const pufferClient = new PufferClient(
-      Chain.Holesky,
-      walletClient,
-      publicClient,
-    );
-    const { transact, estimate } = pufferClient.vault.depositETH(mockAddress);
+    const walletClient = setupTestWalletClient();
+    const publicClient = setupTestPublicClient();
 
-    expect(await transact(BigInt(1))).toBe(mockAddress);
+    const client = new PufferClient(Chain.Holesky, walletClient, publicClient);
+    const { transact, estimate } = client.vault.depositETH(mockAccount);
+
+    expect(await transact(BigInt(1))).toBe(mockTxHash);
     expect(await estimate()).toBe(mockGas);
   });
 });
