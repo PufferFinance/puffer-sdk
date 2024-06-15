@@ -44,7 +44,7 @@ const balance = await pufferClient.vault.balanceOf(walletAddress);
 - Deposit ETH to mint pufETH.
 - Deposit stETH to mint pufETH.
 - Check pufETH balance.
-- Get latest rate of pufETH compared to ETH.
+- Get the latest rate of pufETH compared to ETH.
 - and much more.
 
 ## Documentation
