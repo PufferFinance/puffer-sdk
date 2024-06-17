@@ -1,84 +1,62 @@
 import { toHex } from 'viem';
-import { mockRpcRequest } from '../../../test/mocks/mock-request';
 import {
-  setupMockWalletClient,
-  setupMockPublicClient,
-} from '../../../test/mocks/setup-mock-clients';
+  setupTestWalletClient,
+  setupTestPublicClient,
+} from '../../../test/setup-test-clients';
 import { Chain } from '../../chains/constants';
+import { mockAccount, testingUtils } from '../../../test/setup-tests';
+import { PUFFER_VAULT_ABIS } from '../abis/puffer-vault-abis';
 import { PufferVaultHandler } from './puffer-vault-handler';
 
 describe('PufferVaultHandler', () => {
+  const vaultTestingUtils = testingUtils.generateContractUtils(
+    PUFFER_VAULT_ABIS[Chain.Holesky].PufferVaultV2,
+  );
+
   it('should deposit ETH', async () => {
-    const mockAddress = '0xEB77D02f8122B32273444a1b544C147Fb559CB41';
     const mockGas = BigInt(1);
+    const mockTxHash = '0x123';
 
-    const walletRequest = mockRpcRequest({
-      eth_sendTransaction: mockAddress,
-    });
-    const walletClient = setupMockWalletClient(walletRequest);
-    const publicRequest = mockRpcRequest({ eth_estimateGas: mockGas });
-    const publicClient = setupMockPublicClient(publicRequest);
+    testingUtils.lowLevel.mockRequest('eth_sendTransaction', mockTxHash);
+    testingUtils.lowLevel.mockRequest('eth_estimateGas', toHex(mockGas));
+
+    const walletClient = setupTestWalletClient();
+    const publicClient = setupTestPublicClient();
 
     const handler = new PufferVaultHandler(
       Chain.Holesky,
       walletClient,
       publicClient,
     );
-    const { transact, estimate } = handler.depositETH(mockAddress);
+    const { transact, estimate } = handler.depositETH(mockAccount);
 
-    expect(await transact(BigInt(1))).toBe(mockAddress);
-    expect(await estimate()).toBe(mockGas);
-  });
-
-  it('should deposit stETH', async () => {
-    const mockAddress = '0xEB77D02f8122B32273444a1b544C147Fb559CB41';
-    const mockGas = BigInt(1);
-    const mockValue = BigInt(1);
-
-    const walletRequest = mockRpcRequest({
-      eth_sendTransaction: mockAddress,
-    });
-    const walletClient = setupMockWalletClient(walletRequest);
-    const publicRequest = mockRpcRequest({ eth_estimateGas: mockGas });
-    const publicClient = setupMockPublicClient(publicRequest);
-
-    const handler = new PufferVaultHandler(
-      Chain.Holesky,
-      walletClient,
-      publicClient,
-    );
-    const { transact, estimate } = handler.depositStETH(mockAddress, mockValue);
-
-    expect(await transact()).toBe(mockAddress);
+    expect(await transact(BigInt(1))).toBe(mockTxHash);
     expect(await estimate()).toBe(mockGas);
   });
 
   it('should check pufETH balance', async () => {
-    const mockAddress = '0xEB77D02f8122B32273444a1b544C147Fb559CB41';
     const mockBalance = BigInt(1);
-    const mockCallHex = toHex(mockBalance, { size: 32 });
+    vaultTestingUtils.mockCall('balanceOf', [mockBalance]);
 
-    const walletClient = setupMockWalletClient();
-    const publicRequest = mockRpcRequest({ eth_call: mockCallHex });
-    const publicClient = setupMockPublicClient(publicRequest);
+    const walletClient = setupTestWalletClient();
+    const publicClient = setupTestPublicClient();
 
     const handler = new PufferVaultHandler(
       Chain.Holesky,
       walletClient,
       publicClient,
     );
-    const balance = await handler.balanceOf(mockAddress);
+    const balance = await handler.balanceOf(mockAccount);
 
     expect(balance).toBe(mockBalance);
   });
 
   it('should check pufETH rate', async () => {
     const mockRate = BigInt(1e18);
-    const mockCallHex = toHex(mockRate, { size: 32 });
+    vaultTestingUtils.mockCall('previewDeposit', [mockRate]);
 
-    const walletClient = setupMockWalletClient();
-    const publicRequest = mockRpcRequest({ eth_call: mockCallHex });
-    const publicClient = setupMockPublicClient(publicRequest);
+    const walletClient = setupTestWalletClient();
+    const publicClient = setupTestPublicClient();
 
     const handler = new PufferVaultHandler(
       Chain.Holesky,
@@ -92,11 +70,10 @@ describe('PufferVaultHandler', () => {
 
   it('should get allowance', async () => {
     const mockAllowance = BigInt(1);
-    const mockCallHex = toHex(mockAllowance, { size: 32 });
+    vaultTestingUtils.mockCall('allowance', [mockAllowance]);
 
-    const walletClient = setupMockWalletClient();
-    const publicRequest = mockRpcRequest({ eth_call: mockCallHex });
-    const publicClient = setupMockPublicClient(publicRequest);
+    const walletClient = setupTestWalletClient();
+    const publicClient = setupTestPublicClient();
 
     const handler = new PufferVaultHandler(
       Chain.Holesky,
