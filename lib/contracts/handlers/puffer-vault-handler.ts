@@ -5,9 +5,9 @@ import {
   WalletClient,
   getContract,
 } from 'viem';
-import { CHAIN_ABIS } from '../abis/abis';
 import { Chain, VIEM_CHAINS } from '../../chains/constants';
 import { CHAIN_ADDRESSES } from '../addresses';
+import { PUFFER_VAULT_ABIS } from '../abis/puffer-vault-abis';
 
 /**
  * Handler for the `PufferVaultV2` contract exposing methods to interact
@@ -39,7 +39,7 @@ export class PufferVaultHandler {
   private getContract() {
     return getContract({
       address: CHAIN_ADDRESSES[this.chain].PufferVault as Address,
-      abi: CHAIN_ABIS[this.chain].PufferVaultV2,
+      abi: PUFFER_VAULT_ABIS[this.chain].PufferVaultV2,
       client: {
         wallet: this.walletClient,
         public: this.publicClient,
@@ -48,7 +48,7 @@ export class PufferVaultHandler {
   }
 
   /**
-   * Deposit ETH to the given wallet address. This doesn't make the
+   * Deposit ETH in exchange for pufETH. This doesn't make the
    * transaction but returns two methods namely `transact` and
    * `estimate`.
    *
@@ -71,37 +71,6 @@ export class PufferVaultHandler {
       await this.getContract().estimateGas.depositETH([walletAddress], {
         account: walletAddress,
       });
-
-    return { transact, estimate };
-  }
-
-  /**
-   * Deposit stETH to the given wallet address. This doesn't make the
-   * transaction but returns two methods namely `transact` and
-   * `estimate`.
-   *
-   * @param walletAddress Wallet address to get the ETH from.
-   * @param value Value in wei of the stETH to deposit.
-   * @returns `transact: () => Promise<Address>` - Used to make the
-   * transaction with the given value.
-   *
-   * `estimate: () => Promise<bigint>` - Gas estimate of the
-   * transaction.
-   */
-  public depositStETH(walletAddress: Address, value: bigint) {
-    const transact = async () =>
-      await this.getContract().write.depositStETH([value, walletAddress], {
-        account: walletAddress,
-        chain: this.viemChain,
-      });
-
-    const estimate = async () =>
-      await this.getContract().estimateGas.depositStETH(
-        [value, walletAddress],
-        {
-          account: walletAddress,
-        },
-      );
 
     return { transact, estimate };
   }
