@@ -35,7 +35,7 @@ configuration
 
 `object`
 
-The public client was created with viem.
+The public client created with viem.
 
 ###### Source
 
