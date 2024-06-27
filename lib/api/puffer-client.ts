@@ -8,6 +8,7 @@ import {
 import { Chain, VIEM_CHAINS } from '../chains/constants';
 import { PufferVaultHandler } from '../contracts/handlers/puffer-vault-handler';
 import { PufferDepositorHandler } from '../contracts/handlers/puffer-depositor-handler';
+import { PufTokenHandler } from '../contracts/handlers/puf-token-handler';
 
 /**
  * The core class and the main entry point of the Puffer SDK.
@@ -21,6 +22,8 @@ export class PufferClient {
   public vault: PufferVaultHandler;
   /** Handler for the `PufferDepositor` contract. */
   public depositor: PufferDepositorHandler;
+  /** Handler for the `PufToken` contract. */
+  public pufToken: PufTokenHandler;
 
   /**
    * Create the Puffer Client.
@@ -58,6 +61,12 @@ export class PufferClient {
     );
 
     this.depositor = new PufferDepositorHandler(
+      chain,
+      this.walletClient,
+      this.publicClient,
+    );
+
+    this.pufToken = new PufTokenHandler(
       chain,
       this.walletClient,
       this.publicClient,
