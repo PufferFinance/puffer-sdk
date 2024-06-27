@@ -15,6 +15,8 @@ import { getTimestampInSeconds } from '../../utils/time';
  * Handler for performing operations for and with tokens.
  */
 export class TokensHandler {
+  private token: Token;
+
   /**
    * Create the handler for processing tokens.
    *
@@ -28,11 +30,24 @@ export class TokensHandler {
     private chain: Chain,
     private walletClient: WalletClient,
     private publicClient: PublicClient,
-  ) {}
+  ) {
+    this.token = Token.ETH;
+  }
 
-  private getContract(token: Token) {
+  /**
+   * Set the token to use for executing transactions on the contract.
+   *
+   * @param token Token to use for the handler.
+   * @returns The handler.
+   */
+  public withToken(token: Token) {
+    this.token = token;
+    return this;
+  }
+
+  private getContract() {
     return getContract({
-      address: TOKENS_ADDRESSES[token][this.chain],
+      address: TOKENS_ADDRESSES[this.token][this.chain],
       abi: ERC20PERMIT_ABI,
       client: {
         wallet: this.walletClient,
@@ -45,25 +60,20 @@ export class TokensHandler {
    * Process and get permit signature for the given token to perform
    * transactions through the `PufferDepositor` contract.
    *
-   * @param token Token for which to get the permit signature.
    * @param walletAddress Wallet address making the transaction.
    * @param value Value of the transaction.
    * @returns Permit signature in the form `{ r, s, v?, yParity }`.
    */
-  public async getPermitSignature(
-    token: Token,
-    walletAddress: Address,
-    value: bigint,
-  ) {
-    const contract = this.getContract(token);
+  public async getPermitSignature(walletAddress: Address, value: bigint) {
+    const contract = this.getContract();
 
     const permitNonces = await contract.read.nonces([walletAddress]);
     const name = await contract.read.name();
     const domain = <const>{
       name,
-      version: this.getPermitVersion(token),
+      version: this.getPermitVersion(this.token),
       chainId: this.chain,
-      verifyingContract: TOKENS_ADDRESSES[token][this.chain],
+      verifyingContract: TOKENS_ADDRESSES[this.token][this.chain],
     };
     const types = <const>{
       Permit: [
