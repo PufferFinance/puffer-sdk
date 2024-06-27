@@ -1,11 +1,5 @@
-import {
-  Address,
-  PublicClient,
-  Chain as ViemChain,
-  WalletClient,
-  getContract,
-} from 'viem';
-import { Chain, VIEM_CHAINS } from '../../chains/constants';
+import { Address, PublicClient, WalletClient, getContract } from 'viem';
+import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUFFER_DEPOSITOR_ABIS } from '../abis/puffer-depositor-abis';
 import { CHAIN_ADDRESSES } from '../addresses';
 import { TokensHandler } from './tokens-handler';
