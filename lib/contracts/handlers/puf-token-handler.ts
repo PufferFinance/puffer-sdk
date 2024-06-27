@@ -35,9 +35,11 @@ export class PufTokenHandler {
    * Set the PufToken to use for executing transactions on the contract.
    *
    * @param pufToken The PufToken to use for the handler.
+   * @returns The handler.
    */
   public withPufToken(pufToken: PufToken) {
     this.pufToken = pufToken;
+    return this;
   }
 
   // This is a method because the typings are complex and lost when
@@ -120,8 +122,8 @@ export class PufTokenHandler {
   }
 
   /**
-   * Deposits the underlying token in exchange for the PufToken. This
-   * doesn't make the transaction but returns two methods namely
+   * Deposits the underlying token in exchange for the wrapped PufToken.
+   * This doesn't make the transaction but returns two methods namely
    * `transact` and `estimate`.
    *
    * @param depositorAddress Depositor of the underlying token.
@@ -150,6 +152,44 @@ export class PufTokenHandler {
     const estimate = () =>
       this.getContract().estimateGas.deposit(
         [depositorAddress, walletAddress, value],
+        {
+          account: walletAddress,
+        },
+      );
+
+    return { transact, estimate };
+  }
+
+  /**
+   * Migrate tokens using an allowed `migratorContract` to the given
+   * wallet address. This doesn't make the transaction but returns two
+   * methods namely `transact` and `estimate`.
+   *
+   * @param walletAddress Address to migrate the tokens to.
+   * @param migratorContract Address of the migrator contract.
+   * @param value Value of the tokens to migrate.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public migrate(
+    walletAddress: Address,
+    migratorContract: Address,
+    value: bigint,
+  ) {
+    const transact = () =>
+      this.getContract().write.migrate(
+        [value, migratorContract, walletAddress],
+        {
+          account: walletAddress,
+          chain: this.viemChain,
+        },
+      );
+    const estimate = () =>
+      this.getContract().estimateGas.migrate(
+        [value, migratorContract, walletAddress],
         {
           account: walletAddress,
         },

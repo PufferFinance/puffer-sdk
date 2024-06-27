@@ -37,11 +37,9 @@ describe('TokensHandler', () => {
       walletClient,
       publicClient,
     );
-    const signature = await handler.getPermitSignature(
-      Token.stETH,
-      mockAccount,
-      1n,
-    );
+    const signature = await handler
+      .withToken(Token.stETH)
+      .getPermitSignature(mockAccount, 1n);
 
     const { r, s, v, yParity, deadline } = signature;
     expect(isHex(r)).toBeTruthy();
