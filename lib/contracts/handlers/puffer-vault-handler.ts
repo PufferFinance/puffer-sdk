@@ -1,11 +1,5 @@
-import {
-  Address,
-  Chain as ViemChain,
-  PublicClient,
-  WalletClient,
-  getContract,
-} from 'viem';
-import { Chain, VIEM_CHAINS } from '../../chains/constants';
+import { Address, PublicClient, WalletClient, getContract } from 'viem';
+import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { CHAIN_ADDRESSES } from '../addresses';
 import { PUFFER_VAULT_ABIS } from '../abis/puffer-vault-abis';
 
@@ -107,5 +101,44 @@ export class PufferVaultHandler {
       ownerAddress,
       spenderAddress,
     ]);
+  }
+
+  /**
+   * Withdraw pufETH to the given wallet address. This doesn't make the
+   * transaction but returns two methods namely `transact` and
+   * `estimate`.
+   *
+   * @param value Value of pufETH to withdraw.
+   * @param walletAddress Address of the receiver.
+   * @param ownerAddress Address of the owner.
+   * @returns `transact: (value: bigint) => Promise<Address>` - Used to
+   * make the transaction with the given value.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public async withdraw(
+    value: bigint,
+    walletAddress: Address,
+    ownerAddress: Address,
+  ) {
+    const transact = async () =>
+      await this.getContract().write.withdraw(
+        [value, walletAddress, ownerAddress],
+        {
+          account: walletAddress,
+          chain: this.viemChain,
+        },
+      );
+
+    const estimate = async () =>
+      await this.getContract().estimateGas.withdraw(
+        [value, walletAddress, ownerAddress],
+        {
+          account: walletAddress,
+        },
+      );
+
+    return { transact, estimate };
   }
 }
