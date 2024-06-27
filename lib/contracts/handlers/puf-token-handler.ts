@@ -59,8 +59,8 @@ export class PufTokenHandler {
    * @param walletAddress Wallet address to check the balance of.
    * @returns The wrapped token's (PufToken) balance in wei.
    */
-  public balanceOf(address: Address) {
-    return this.getContract().read.balanceOf([address]);
+  public balanceOf(walletAddress: Address) {
+    return this.getContract().read.balanceOf([walletAddress]);
   }
 
   /**
