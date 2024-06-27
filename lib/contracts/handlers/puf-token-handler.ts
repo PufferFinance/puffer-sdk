@@ -3,6 +3,11 @@ import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUF_TOKEN_ABIS } from '../abis/puf-token-abis';
 import { PUF_TOKEN_ADDRESSES, PufToken } from '../puf-tokens';
 
+/**
+ * Handler for the `PufToken` contract exposing methods to interact with
+ * the contract for each of the wrapped PufTokens (like pufWETH,
+ * pufStETH, pufWstETH etc.).
+ */
 export class PufTokenHandler {
   private viemChain: ViemChain;
   private pufToken: PufToken;
@@ -26,7 +31,12 @@ export class PufTokenHandler {
     this.viemChain = VIEM_CHAINS[chain];
   }
 
-  withPufToken(pufToken: PufToken) {
+  /**
+   * Set the PufToken to use for executing transactions on the contract.
+   *
+   * @param pufToken The PufToken to use for the handler.
+   */
+  public withPufToken(pufToken: PufToken) {
     this.pufToken = pufToken;
   }
 
@@ -43,14 +53,52 @@ export class PufTokenHandler {
     });
   }
 
-  public allowance(ownerAddress: Address, spenderAddress: Address) {
+  /**
+   * Check the wrapped token (PufToken) balance of the wallet.
+   *
+   * @param walletAddress Wallet address to check the balance of.
+   * @returns The wrapped token's (PufToken) balance in wei.
+   */
+  public balanceOf(address: Address) {
+    return this.getContract().read.balanceOf([address]);
+  }
+
+  /**
+   * Get the allowance for the spender to spend the owner's tokens.
+   *
+   * @param ownerAddress Address of the owner.
+   * @param spenderAddress Address of the spender.
+   * @returns Allowance that can be used by the spender.
+   */
+  public getAllowance(ownerAddress: Address, spenderAddress: Address) {
     return this.getContract().read.allowance([ownerAddress, spenderAddress]);
   }
 
-  public totalDepositCap() {
+  /**
+   * Get the total cap of the PufToken that can be deposited.
+   *
+   * @returns Total cap of the PufToken that can be deposited.
+   */
+  public getTotalDepositCap() {
     return this.getContract().read.totalDepositCap();
   }
 
+  /**
+   * Get the total supply of the PufToken.
+   *
+   * @returns Total supply of the PufToken.
+   */
+  public getTotalSupply() {
+    return this.getContract().read.totalSupply();
+  }
+
+  /**
+   * Withdraw the pufETH from the wallet back to the PufToken.
+   *
+   * @param walletAddress Wallet address to withdraw the pufETH from.
+   * @param value Value of the withdrawal.
+   * @returns Hash of the transaction.
+   */
   public withdraw(walletAddress: Address, value: bigint) {
     return this.getContract().write.withdraw([walletAddress, value], {
       account: walletAddress,
