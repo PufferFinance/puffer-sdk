@@ -93,16 +93,68 @@ export class PufTokenHandler {
   }
 
   /**
-   * Withdraw the pufETH from the wallet back to the PufToken.
+   * Withdraws the PufToken and returns the underlying token to the
+   * given wallet. This doesn't make the transaction but returns two
+   * methods namely `transact` and `estimate`.
    *
-   * @param walletAddress Wallet address to withdraw the pufETH from.
+   * @param walletAddress Wallet address to withdraw the PufToken from.
    * @param value Value of the withdrawal.
-   * @returns Hash of the transaction.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
    */
   public withdraw(walletAddress: Address, value: bigint) {
-    return this.getContract().write.withdraw([walletAddress, value], {
-      account: walletAddress,
-      chain: this.viemChain,
-    });
+    const transact = () =>
+      this.getContract().write.withdraw([walletAddress, value], {
+        account: walletAddress,
+        chain: this.viemChain,
+      });
+    const estimate = () =>
+      this.getContract().estimateGas.withdraw([walletAddress, value], {
+        account: walletAddress,
+      });
+
+    return { transact, estimate };
+  }
+
+  /**
+   * Deposits the underlying token in exchange for the PufToken. This
+   * doesn't make the transaction but returns two methods namely
+   * `transact` and `estimate`.
+   *
+   * @param depositorAddress Depositor of the underlying token.
+   * @param walletAddress Wallet address of the recipient of the
+   * deposit.
+   * @param value Value of the deposit.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public deposit(
+    depositorAddress: Address,
+    walletAddress: Address,
+    value: bigint,
+  ) {
+    const transact = () =>
+      this.getContract().write.deposit(
+        [depositorAddress, walletAddress, value],
+        {
+          account: walletAddress,
+          chain: this.viemChain,
+        },
+      );
+    const estimate = () =>
+      this.getContract().estimateGas.deposit(
+        [depositorAddress, walletAddress, value],
+        {
+          account: walletAddress,
+        },
+      );
+
+    return { transact, estimate };
   }
 }
