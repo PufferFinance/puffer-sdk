@@ -14,7 +14,7 @@ describe('PufferVaultHandler', () => {
   );
 
   it('should deposit ETH', async () => {
-    const mockGas = BigInt(1);
+    const mockGas = 1n;
     const mockTxHash = '0x123';
 
     testingUtils.lowLevel.mockRequest('eth_sendTransaction', mockTxHash);
@@ -30,12 +30,12 @@ describe('PufferVaultHandler', () => {
     );
     const { transact, estimate } = handler.depositETH(mockAccount);
 
-    expect(await transact(BigInt(1))).toBe(mockTxHash);
+    expect(await transact(1n)).toBe(mockTxHash);
     expect(await estimate()).toBe(mockGas);
   });
 
   it('should check pufETH balance', async () => {
-    const mockBalance = BigInt(1);
+    const mockBalance = 1n;
     vaultTestingUtils.mockCall('balanceOf', [mockBalance]);
 
     const walletClient = setupTestWalletClient();
@@ -69,7 +69,7 @@ describe('PufferVaultHandler', () => {
   });
 
   it('should get allowance', async () => {
-    const mockAllowance = BigInt(1);
+    const mockAllowance = 1n;
     vaultTestingUtils.mockCall('allowance', [mockAllowance]);
 
     const walletClient = setupTestWalletClient();

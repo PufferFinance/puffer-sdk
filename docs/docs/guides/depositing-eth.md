@@ -31,7 +31,7 @@ With your address at hand, make the transaction to deposit ETH to mint pufETH.
 ```ts
 const { transact, estimate } = pufferClient.vault.depositETH(walletAddress);
 
-const weiAmount = new BigInt(1e18);
+const weiAmount = BigInt(1e18);
 
 // Returns gas estimate of the transaction.
 const gasEstimate = await estimate();
@@ -44,7 +44,7 @@ Alternatively, you can set the pufETH recipient to a different address.
 ```ts
 const { transact, estimate } = pufferClient.vault.depositETH(recipientAddress);
 
-const weiAmount = new BigInt(1e18);
+const weiAmount = BigInt(1e18);
 
 // Returns gas estimate of the transaction.
 const gasEstimate = await estimate();

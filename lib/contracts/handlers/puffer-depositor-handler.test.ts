@@ -9,7 +9,7 @@ import { PufferDepositorHandler } from './puffer-depositor-handler';
 
 describe('PufferDepositorHandler', () => {
   it('should deposit stETH in exchange for pufETH', async () => {
-    const mockGas = BigInt(1);
+    const mockGas = 1n;
     const mockTxHash = '0x123';
 
     testingUtils.lowLevel.mockRequest('eth_sendTransaction', mockTxHash);
@@ -27,25 +27,22 @@ describe('PufferDepositorHandler', () => {
     const mockPermitSignature = {
       r: `0x${new Array(64).fill(0).join('')}` as Address,
       s: `0x${new Array(64).fill(0).join('')}` as Address,
-      v: BigInt(0),
+      v: 0n,
       yParity: 1,
-      deadline: BigInt(0),
+      deadline: 0n,
     };
     jest
       .spyOn(handler.tokensHandler, 'getPermitSignature')
       .mockReturnValue(Promise.resolve(mockPermitSignature));
 
-    const { transact, estimate } = await handler.depositStETH(
-      mockAccount,
-      BigInt(1),
-    );
+    const { transact, estimate } = await handler.depositStETH(mockAccount, 1n);
 
     expect(await transact()).toBe(mockTxHash);
     expect(await estimate()).toBe(mockGas);
   });
 
   it('should deposit wstETH in exchange for pufETH', async () => {
-    const mockGas = BigInt(1);
+    const mockGas = 1n;
     const mockTxHash = '0x123';
 
     testingUtils.lowLevel.mockRequest('eth_sendTransaction', mockTxHash);
@@ -63,18 +60,15 @@ describe('PufferDepositorHandler', () => {
     const mockPermitSignature = {
       r: `0x${new Array(64).fill(0).join('')}` as Address,
       s: `0x${new Array(64).fill(0).join('')}` as Address,
-      v: BigInt(0),
+      v: 0n,
       yParity: 1,
-      deadline: BigInt(0),
+      deadline: 0n,
     };
     jest
       .spyOn(handler.tokensHandler, 'getPermitSignature')
       .mockReturnValue(Promise.resolve(mockPermitSignature));
 
-    const { transact, estimate } = await handler.depositWstETH(
-      mockAccount,
-      BigInt(1),
-    );
+    const { transact, estimate } = await handler.depositWstETH(mockAccount, 1n);
 
     expect(await transact()).toBe(mockTxHash);
     expect(await estimate()).toBe(mockGas);

@@ -83,5 +83,5 @@ const { transact, estimate } = pufferClient.vault.depositETH(walletAddress);
 // Returns gas estimate of the transaction.
 const gasEstimate = await estimate();
 // Execute the transaction for depositing ETH.
-const txHash = await transact(new BigInt(1e18));
+const txHash = await transact(BigInt(1e18));
 ```

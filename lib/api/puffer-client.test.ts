@@ -18,7 +18,7 @@ describe('PufferClient', () => {
   });
 
   it('should deposit ETH', async () => {
-    const mockGas = BigInt(1);
+    const mockGas = 1n;
     const mockTxHash = '0x123';
 
     testingUtils.lowLevel.mockRequest('eth_sendTransaction', mockTxHash);
@@ -30,7 +30,7 @@ describe('PufferClient', () => {
     const client = new PufferClient(Chain.Holesky, walletClient, publicClient);
     const { transact, estimate } = client.vault.depositETH(mockAccount);
 
-    expect(await transact(BigInt(1))).toBe(mockTxHash);
+    expect(await transact(1n)).toBe(mockTxHash);
     expect(await estimate()).toBe(mockGas);
   });
 });

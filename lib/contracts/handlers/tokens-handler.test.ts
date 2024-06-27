@@ -25,7 +25,7 @@ describe('TokensHandler', () => {
     const mockSignature = serializeSignature({
       r: '0x1',
       s: '0x1',
-      v: BigInt(0),
+      v: 0n,
       yParity: 1,
     });
     jest
@@ -40,7 +40,7 @@ describe('TokensHandler', () => {
     const signature = await handler.getPermitSignature(
       Token.stETH,
       mockAccount,
-      BigInt(1),
+      1n,
     );
 
     const { r, s, v, yParity, deadline } = signature;
