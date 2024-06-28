@@ -10,6 +10,7 @@ export enum PufToken {
 }
 
 // TODO: Update the addresses once the contracts are deployed on chain.
+// See https://dev.azure.com/pufferfi/Frontend/_workitems/edit/1797.
 export const PUF_TOKEN_ADDRESSES: {
   [key in PufToken]: { [chain in Chain]: Address };
 } = {
