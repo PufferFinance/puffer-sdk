@@ -108,19 +108,19 @@ export class PufferVaultHandler {
    * transaction but returns two methods namely `transact` and
    * `estimate`.
    *
-   * @param value Value of pufETH to withdraw.
-   * @param walletAddress Address of the receiver.
    * @param ownerAddress Address of the owner.
+   * @param walletAddress Address of the receiver.
+   * @param value Value of pufETH to withdraw.
    * @returns `transact: (value: bigint) => Promise<Address>` - Used to
    * make the transaction with the given value.
    *
    * `estimate: () => Promise<bigint>` - Gas estimate of the
    * transaction.
    */
-  public async withdraw(
-    value: bigint,
-    walletAddress: Address,
+  public withdraw(
     ownerAddress: Address,
+    walletAddress: Address,
+    value: bigint,
   ) {
     const transact = async () =>
       await this.getContract().write.withdraw(

@@ -1,3 +1,4 @@
+import { isHash } from 'viem';
 import {
   setupTestWalletClient,
   setupTestPublicClient,
@@ -28,7 +29,7 @@ describe('PufTokenHandler', () => {
     expect(balance).toBe(mockBalance);
   });
 
-  it('should get the allownace of the given token', async () => {
+  it('should get the allowance of the given token', async () => {
     const mockAllowance = 10n;
     contractTestingUtils.mockCall('allowance', [mockAllowance]);
 
@@ -53,5 +54,41 @@ describe('PufTokenHandler', () => {
 
     const totalSupply = await handler.getTotalSupply();
     expect(totalSupply).toBe(mockSupply);
+  });
+
+  it('should withdraw the given token', async () => {
+    contractTestingUtils.mockTransaction('withdraw');
+
+    const { transact, estimate } = handler.withdraw(mockAccount, 10n);
+
+    expect(typeof (await estimate())).toBe('bigint');
+    expect(isHash(await transact())).toBe(true);
+  });
+
+  it('should deposit the given token', async () => {
+    contractTestingUtils.mockTransaction('deposit');
+
+    const { transact, estimate } = handler.deposit(
+      mockAccount,
+      mockAccount,
+      10n,
+    );
+
+    expect(typeof (await estimate())).toBe('bigint');
+    expect(isHash(await transact())).toBe(true);
+  });
+
+  it('should migrate token using the given migrator contract', async () => {
+    const mockMigratorContract = '0x1234567890123456789012345678901234567890';
+    contractTestingUtils.mockTransaction('migrate');
+
+    const { transact, estimate } = handler.migrate(
+      mockAccount,
+      mockMigratorContract,
+      10n,
+    );
+
+    expect(typeof (await estimate())).toBe('bigint');
+    expect(isHash(await transact())).toBe(true);
   });
 });
