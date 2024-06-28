@@ -30,7 +30,7 @@ export class PufferVaultHandler {
 
   // This is a method because the typings are complex and lost when
   // trying to make it a member.
-  private getContract() {
+  public getContract() {
     return getContract({
       address: CHAIN_ADDRESSES[this.chain].PufferVault as Address,
       abi: PUFFER_VAULT_ABIS[this.chain].PufferVaultV2,

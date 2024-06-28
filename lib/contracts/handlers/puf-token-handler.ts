@@ -44,7 +44,7 @@ export class PufTokenHandler {
 
   // This is a method because the typings are complex and lost when
   // trying to make it a member.
-  private getContract() {
+  public getContract() {
     return getContract({
       address: PUF_TOKEN_ADDRESSES[this.pufToken][this.chain],
       abi: PUF_TOKEN_ABIS[this.chain].PufToken,
@@ -141,6 +141,7 @@ export class PufTokenHandler {
     walletAddress: Address,
     value: bigint,
   ) {
+    console.log(this.getContract().address);
     const transact = () =>
       this.getContract().write.deposit(
         [depositorAddress, walletAddress, value],

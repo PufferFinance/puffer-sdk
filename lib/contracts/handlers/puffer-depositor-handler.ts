@@ -32,7 +32,7 @@ export class PufferDepositorHandler {
     this.tokensHandler = new TokensHandler(chain, walletClient, publicClient);
   }
 
-  private getContract() {
+  public getContract() {
     return getContract({
       address: CHAIN_ADDRESSES[this.chain].PufferDepositor as Address,
       abi: PUFFER_DEPOSITOR_ABIS[this.chain].PufferDepositor,
