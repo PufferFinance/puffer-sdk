@@ -5,7 +5,7 @@ import {
   Address,
   parseSignature,
 } from 'viem';
-import { Chain } from '../../chains/constants';
+import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { ERC20PERMIT_ABI } from '../abis/tokens-abis';
 import { TOKENS_ADDRESSES, Token } from '../tokens';
 import { CHAIN_ADDRESSES } from '../addresses';
@@ -15,6 +15,7 @@ import { getTimestampInSeconds } from '../../utils/time';
  * Handler for performing operations for and with ERC20Permit tokens.
  */
 export class ERC20PermitHandler {
+  private viemChain: ViemChain;
   private token: Token;
 
   /**
@@ -31,6 +32,7 @@ export class ERC20PermitHandler {
     private walletClient: WalletClient,
     private publicClient: PublicClient,
   ) {
+    this.viemChain = VIEM_CHAINS[chain];
     this.token = Token.ETH;
   }
 
@@ -117,5 +119,19 @@ export class ERC20PermitHandler {
     }
 
     return '1';
+  }
+
+  /**
+   * Approve transaction for the spender to spend the owner's tokens.
+   *
+   * @param spenderAddress Address of the spender.
+   * @param value Value to approve for the spender.
+   * @returns Hash of the transaction.
+   */
+  public approve(spenderAddress: Address, value: bigint) {
+    return this.getContract().write.approve([spenderAddress, value], {
+      account: spenderAddress,
+      chain: this.viemChain,
+    });
   }
 }

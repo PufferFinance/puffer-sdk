@@ -139,4 +139,31 @@ export class PufferL2Depositor {
 
     return { transact, estimate };
   }
+
+  /**
+   * Deposit ETH in exchange for pufETH. This doesn't make the
+   * transaction but returns two methods namely `transact` and
+   * `estimate`.
+   *
+   * @param walletAddress Wallet address to take the token from.
+   * @param referralCode Referral code.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public async depositETH(walletAddress: Address, referralCode: bigint) {
+    const transact = () =>
+      this.getContract().write.depositETH([walletAddress, referralCode], {
+        account: walletAddress,
+        chain: this.viemChain,
+      });
+    const estimate = () =>
+      this.getContract().estimateGas.depositETH([walletAddress, referralCode], {
+        account: walletAddress,
+      });
+
+    return { transact, estimate };
+  }
 }
