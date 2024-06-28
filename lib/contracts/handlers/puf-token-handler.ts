@@ -198,4 +198,18 @@ export class PufTokenHandler {
 
     return { transact, estimate };
   }
+
+  /**
+   * Approve transaction for the spender to spend the owner's tokens.
+   *
+   * @param spenderAddress Address of the spender.
+   * @param value Value to approve for the spender.
+   * @returns Hash of the transaction.
+   */
+  public approve(spenderAddress: Address, value: bigint) {
+    return this.getContract().write.approve([spenderAddress, value], {
+      account: spenderAddress,
+      chain: this.viemChain,
+    });
+  }
 }

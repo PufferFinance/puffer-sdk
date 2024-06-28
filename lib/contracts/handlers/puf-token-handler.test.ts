@@ -93,6 +93,13 @@ describe('PufTokenHandler', () => {
     expect(isHash(await transact())).toBe(true);
   });
 
+  it('should request for approval', async () => {
+    contractTestingUtils.mockTransaction('approve');
+    const txHash = await handler.approve(mockAccount, 10n);
+
+    expect(isHash(txHash)).toBe(true);
+  });
+
   it('should use the contract of the selected token', () => {
     const contract = handler.withPufToken(PufToken.pufALT).getContract();
 
