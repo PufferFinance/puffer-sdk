@@ -45,7 +45,7 @@ export class TokensHandler {
     return this;
   }
 
-  private getContract() {
+  public getContract() {
     return getContract({
       address: TOKENS_ADDRESSES[this.token][this.chain],
       abi: ERC20PERMIT_ABI,
