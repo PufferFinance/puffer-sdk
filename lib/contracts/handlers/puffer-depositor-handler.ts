@@ -32,6 +32,12 @@ export class PufferDepositorHandler {
     this.tokensHandler = new TokensHandler(chain, walletClient, publicClient);
   }
 
+  /**
+   * Get the contract. This is a method because the typings are complex
+   * and lost when trying to make it a member.
+   *
+   * @returns The viem contract.
+   */
   public getContract() {
     return getContract({
       address: CHAIN_ADDRESSES[this.chain].PufferDepositor as Address,

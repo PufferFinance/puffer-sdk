@@ -45,6 +45,12 @@ export class TokensHandler {
     return this;
   }
 
+  /**
+   * Get the contract. This is a method because the typings are complex
+   * and lost when trying to make it a member.
+   *
+   * @returns The viem contract.
+   */
   public getContract() {
     return getContract({
       address: TOKENS_ADDRESSES[this.token][this.chain],
