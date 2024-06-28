@@ -11,7 +11,7 @@ import { Token } from '../tokens';
  */
 export class PufferDepositorHandler {
   private viemChain: ViemChain;
-  public tokensHandler: ERC20PermitHandler;
+  private tokensHandler: ERC20PermitHandler;
 
   /**
    * Create the handler for the `PufferDepositor` contract exposing

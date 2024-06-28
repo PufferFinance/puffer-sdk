@@ -32,7 +32,7 @@ describe('PufferDepositorHandler', () => {
       deadline: 0n,
     };
     jest
-      .spyOn(handler.tokensHandler, 'getPermitSignature')
+      .spyOn((handler as any).tokensHandler, 'getPermitSignature')
       .mockReturnValue(Promise.resolve(mockPermitSignature));
 
     const { transact, estimate } = await handler.depositStETH(mockAccount, 1n);
@@ -65,7 +65,7 @@ describe('PufferDepositorHandler', () => {
       deadline: 0n,
     };
     jest
-      .spyOn(handler.tokensHandler, 'getPermitSignature')
+      .spyOn((handler as any).tokensHandler, 'getPermitSignature')
       .mockReturnValue(Promise.resolve(mockPermitSignature));
 
     const { transact, estimate } = await handler.depositWstETH(mockAccount, 1n);

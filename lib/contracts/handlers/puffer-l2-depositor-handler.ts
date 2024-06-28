@@ -5,9 +5,13 @@ import { CHAIN_ADDRESSES } from '../addresses';
 import { NonPufToken, TOKENS_ADDRESSES } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
 
-export class PufferL2Depositor {
+/**
+ * Handler for the `PufferL2Depositor` contract exposing methods to
+ * interact with the contract.
+ */
+export class PufferL2DepositorHandler {
   private viemChain: ViemChain;
-  public tokensHandler: ERC20PermitHandler;
+  private tokensHandler: ERC20PermitHandler;
 
   /**
    * Create the handler for the `PufferL2Depositor` contract exposing
@@ -153,7 +157,7 @@ export class PufferL2Depositor {
    * `estimate: () => Promise<bigint>` - Gas estimate of the
    * transaction.
    */
-  public async depositETH(walletAddress: Address, referralCode: bigint) {
+  public depositETH(walletAddress: Address, referralCode: bigint) {
     const transact = () =>
       this.getContract().write.depositETH([walletAddress, referralCode], {
         account: walletAddress,

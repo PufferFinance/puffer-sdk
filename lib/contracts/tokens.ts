@@ -3,6 +3,7 @@ import { Chain } from '../chains/constants';
 
 export enum Token {
   ETH = 'ETH',
+  wETH = 'wETH',
   stETH = 'stETH',
   wstETH = 'wstETH',
   pufETH = 'pufETH',
@@ -15,7 +16,10 @@ export enum Token {
   pufEETH = 'pufEETH',
 }
 
-export type NonPufToken = Extract<Token, 'ETH' | 'stETH' | 'wstETH' | 'pufETH'>;
+export type NonPufToken = Extract<
+  Token,
+  'ETH' | 'wETH' | 'stETH' | 'wstETH' | 'pufETH'
+>;
 
 export type PufToken = Extract<
   Token,
@@ -25,6 +29,10 @@ export type PufToken = Extract<
 export const TOKENS_ADDRESSES: {
   [key in Token]: { [chain in Chain]: Address };
 } = {
+  [Token.wETH]: {
+    [Chain.Mainnet]: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+    [Chain.Holesky]: '0x94373a4919b3240d86ea41593d5eba789fef3848',
+  },
   [Token.stETH]: {
     [Chain.Mainnet]: '0xae7ab96520de3a18e5e111b5eaab095312d7fe84',
     [Chain.Holesky]: '0x3F1c547b21f65e10480dE3ad8E19fAAC46C95034',
