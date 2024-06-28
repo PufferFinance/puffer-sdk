@@ -5,14 +5,17 @@ export enum Token {
   ETH = 'ETH',
   stETH = 'stETH',
   wstETH = 'wstETH',
-  // Wrapped PufTokens.
   pufETH = 'pufETH',
+  // Wrapped PufTokens.
+  pufpufETH = 'pufpufETH',
   pufWETH = 'pufWETH',
   pufStETH = 'pufStETH',
   pufWstETH = 'pufWstETH',
   pufALT = 'pufALT',
   pufEETH = 'pufEETH',
 }
+
+export type NonPufToken = Extract<Token, 'ETH' | 'stETH' | 'wstETH' | 'pufETH'>;
 
 export type PufToken = Extract<
   Token,
@@ -38,6 +41,10 @@ export const TOKENS_ADDRESSES: {
   // TODO: Update the addresses once the contracts are deployed on chain.
   // See https://dev.azure.com/pufferfi/Frontend/_workitems/edit/1797.
   // Wrapper PufTokens.
+  [Token.pufpufETH]: {
+    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
   [Token.pufWETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0xfcf6c4e0387a523b73691d5604e5a6da1607c8a0',
