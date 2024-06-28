@@ -6,7 +6,7 @@ import {
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { Token } from '../tokens';
 import { ERC20PERMIT_ABI } from '../abis/tokens-abis';
-import { TokensHandler } from './tokens-handler';
+import { ERC20PermitHandler } from './erc20-permit-handler';
 import { isHex, serializeSignature } from 'viem';
 
 describe('TokensHandler', () => {
@@ -32,7 +32,7 @@ describe('TokensHandler', () => {
       .spyOn(walletClient, 'signTypedData')
       .mockReturnValue(Promise.resolve(mockSignature));
 
-    const handler = new TokensHandler(
+    const handler = new ERC20PermitHandler(
       Chain.Holesky,
       walletClient,
       publicClient,

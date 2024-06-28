@@ -2,7 +2,7 @@ import { Address, PublicClient, WalletClient, getContract } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUFFER_DEPOSITOR_ABIS } from '../abis/puffer-depositor-abis';
 import { CHAIN_ADDRESSES } from '../addresses';
-import { TokensHandler } from './tokens-handler';
+import { ERC20PermitHandler } from './erc20-permit-handler';
 import { Token } from '../tokens';
 
 /**
@@ -11,7 +11,7 @@ import { Token } from '../tokens';
  */
 export class PufferDepositorHandler {
   private viemChain: ViemChain;
-  public tokensHandler: TokensHandler;
+  public tokensHandler: ERC20PermitHandler;
 
   /**
    * Create the handler for the `PufferDepositor` contract exposing
@@ -29,7 +29,11 @@ export class PufferDepositorHandler {
     private publicClient: PublicClient,
   ) {
     this.viemChain = VIEM_CHAINS[chain];
-    this.tokensHandler = new TokensHandler(chain, walletClient, publicClient);
+    this.tokensHandler = new ERC20PermitHandler(
+      chain,
+      walletClient,
+      publicClient,
+    );
   }
 
   /**

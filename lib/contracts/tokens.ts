@@ -5,8 +5,19 @@ export enum Token {
   ETH = 'ETH',
   stETH = 'stETH',
   wstETH = 'wstETH',
+  // Wrapped PufTokens.
   pufETH = 'pufETH',
+  pufWETH = 'pufWETH',
+  pufStETH = 'pufStETH',
+  pufWstETH = 'pufWstETH',
+  pufALT = 'pufALT',
+  pufEETH = 'pufEETH',
 }
+
+export type PufToken = Extract<
+  Token,
+  'pufWETH' | 'pufStETH' | 'pufWstETH' | 'pufALT' | 'pufEETH'
+>;
 
 export const TOKENS_ADDRESSES: {
   [key in Token]: { [chain in Chain]: Address };
@@ -24,4 +35,27 @@ export const TOKENS_ADDRESSES: {
     [Chain.Holesky]: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
   },
   [Token.ETH]: {},
+  // TODO: Update the addresses once the contracts are deployed on chain.
+  // See https://dev.azure.com/pufferfi/Frontend/_workitems/edit/1797.
+  // Wrapper PufTokens.
+  [Token.pufWETH]: {
+    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
+    [Chain.Holesky]: '0xfcf6c4e0387a523b73691d5604e5a6da1607c8a0',
+  },
+  [Token.pufStETH]: {
+    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
+  [Token.pufWstETH]: {
+    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
+  [Token.pufALT]: {
+    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
+  [Token.pufEETH]: {
+    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
 };

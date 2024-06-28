@@ -12,9 +12,9 @@ import { CHAIN_ADDRESSES } from '../addresses';
 import { getTimestampInSeconds } from '../../utils/time';
 
 /**
- * Handler for performing operations for and with tokens.
+ * Handler for performing operations for and with ERC20Permit tokens.
  */
-export class TokensHandler {
+export class ERC20PermitHandler {
   private token: Token;
 
   /**
