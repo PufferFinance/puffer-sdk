@@ -9,6 +9,7 @@ export const CHAIN_ADDRESSES = {
     // TODO: Update the addresses once the contracts are deployed on chain.
     // See https://dev.azure.com/pufferfi/Frontend/_workitems/edit/1797.
     PufferL2Depositor: '0x0000000000000000000000000000000000000000',
+    PufLocker: '0x0000000000000000000000000000000000000000',
   },
   [Chain.Holesky]: {
     PufferVault: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
@@ -16,5 +17,6 @@ export const CHAIN_ADDRESSES = {
     // TODO: Update the addresses once the contracts are deployed on chain.
     // See https://dev.azure.com/pufferfi/Frontend/_workitems/edit/1797.
     PufferL2Depositor: '0x03D8bE7CaAD9A95cef9800249eC663Aa28A2F776',
+    PufLocker: '0xf7C6B760A6B8274dB69D7c689eb84F80223D2abD',
   },
 };

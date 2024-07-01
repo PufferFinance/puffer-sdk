@@ -11,7 +11,7 @@ import { ERC20PermitHandler } from './erc20-permit-handler';
  */
 export class PufferL2DepositorHandler {
   private viemChain: ViemChain;
-  private tokensHandler: ERC20PermitHandler;
+  private erc20PermitHandler: ERC20PermitHandler;
 
   /**
    * Create the handler for the `PufferL2Depositor` contract exposing
@@ -29,7 +29,7 @@ export class PufferL2DepositorHandler {
     private publicClient: PublicClient,
   ) {
     this.viemChain = VIEM_CHAINS[chain];
-    this.tokensHandler = new ERC20PermitHandler(
+    this.erc20PermitHandler = new ERC20PermitHandler(
       chain,
       walletClient,
       publicClient,
@@ -113,7 +113,7 @@ export class PufferL2DepositorHandler {
     walletAddress: Address,
     value: bigint,
   ) {
-    const { r, s, v, yParity, deadline } = await this.tokensHandler
+    const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
       .withToken(token)
       .getPermitSignature(walletAddress, value);
     const permitData = {

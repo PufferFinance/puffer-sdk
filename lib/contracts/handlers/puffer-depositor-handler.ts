@@ -11,7 +11,7 @@ import { Token } from '../tokens';
  */
 export class PufferDepositorHandler {
   private viemChain: ViemChain;
-  private tokensHandler: ERC20PermitHandler;
+  private erc20PermitHandler: ERC20PermitHandler;
 
   /**
    * Create the handler for the `PufferDepositor` contract exposing
@@ -29,7 +29,7 @@ export class PufferDepositorHandler {
     private publicClient: PublicClient,
   ) {
     this.viemChain = VIEM_CHAINS[chain];
-    this.tokensHandler = new ERC20PermitHandler(
+    this.erc20PermitHandler = new ERC20PermitHandler(
       chain,
       walletClient,
       publicClient,
@@ -67,7 +67,7 @@ export class PufferDepositorHandler {
    * transaction.
    */
   public async depositStETH(walletAddress: Address, value: bigint) {
-    const { r, s, v, yParity, deadline } = await this.tokensHandler
+    const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
       .withToken(Token.stETH)
       .getPermitSignature(walletAddress, value);
     const permitData = {
@@ -106,7 +106,7 @@ export class PufferDepositorHandler {
    * transaction.
    */
   public async depositWstETH(walletAddress: Address, value: bigint) {
-    const { r, s, v, yParity, deadline } = await this.tokensHandler
+    const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
       .withToken(Token.wstETH)
       .getPermitSignature(walletAddress, value);
     const permitData = {

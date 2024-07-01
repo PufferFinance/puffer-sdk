@@ -145,7 +145,6 @@ export class PufTokenHandler {
     walletAddress: Address,
     value: bigint,
   ) {
-    console.log(this.getContract().address);
     const transact = () =>
       this.getContract().write.deposit(
         [depositorAddress, walletAddress, value],
