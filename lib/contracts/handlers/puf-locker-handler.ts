@@ -68,7 +68,7 @@ export class PufLockerHandler {
   }
 
   /**
-   * Get the user address's deposits for the given token.
+   * Get the user's deposits for the given token and deposit index.
    *
    * @param userAddress User address to get the deposits for.
    * @param pufToken PufToken to get the deposits of.
@@ -103,15 +103,15 @@ export class PufLockerHandler {
   /**
    * Deposit the given PufToken into the locker.
    *
-   * @param walletAddress Wallet address of the depositor.
    * @param pufToken PufToken to deposit.
+   * @param walletAddress Wallet address of the depositor.
    * @param value Amount of the deposit.
    * @param lockPeriod The period for the deposit.
    * @returns The transaction hash of the deposit.
    */
   public async deposit(
-    walletAddress: Address,
     pufToken: PufToken,
+    walletAddress: Address,
     value: bigint,
     lockPeriod: bigint,
   ) {
@@ -126,13 +126,23 @@ export class PufLockerHandler {
       amount: value,
     };
 
-    return await this.getContract().write.deposit(
-      [TOKENS_ADDRESSES[pufToken][this.chain], lockPeriod, permitData],
-      {
+    const depositArgs = <const>[
+      TOKENS_ADDRESSES[pufToken][this.chain],
+      lockPeriod,
+      permitData,
+    ];
+
+    const transact = () =>
+      this.getContract().write.deposit(depositArgs, {
         account: walletAddress,
         chain: this.viemChain,
-      },
-    );
+      });
+    const estimate = () =>
+      this.getContract().estimateGas.deposit(depositArgs, {
+        account: walletAddress,
+      });
+
+    return { transact, estimate };
   }
 
   /**
@@ -140,21 +150,31 @@ export class PufLockerHandler {
    * locker.
    *
    * @param pufToken PufToken to withdraw.
-   * @param depositIndexes Deposit indexes to withdraw.
    * @param recipient Recipient of the withdrawal.
+   * @param depositIndexes Deposit indexes to withdraw.
    * @returns Hash of the withdrawal transaction.
    */
   public withdraw(
     pufToken: PufToken,
-    depositIndexes: bigint[],
     recipient: Address,
+    depositIndexes: bigint[],
   ) {
-    return this.getContract().write.withdraw(
-      [TOKENS_ADDRESSES[pufToken][this.chain], depositIndexes, recipient],
-      {
+    const withdrawArgs = <const>[
+      TOKENS_ADDRESSES[pufToken][this.chain],
+      depositIndexes,
+      recipient,
+    ];
+
+    const transact = () =>
+      this.getContract().write.withdraw(withdrawArgs, {
         account: recipient,
         chain: this.viemChain,
-      },
-    );
+      });
+    const estimate = () =>
+      this.getContract().estimateGas.withdraw(withdrawArgs, {
+        account: recipient,
+      });
+
+    return { transact, estimate };
   }
 }
