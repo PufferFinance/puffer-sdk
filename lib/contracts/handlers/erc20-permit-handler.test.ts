@@ -7,16 +7,29 @@ import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { Token } from '../tokens';
 import { ERC20PERMIT_ABI } from '../abis/tokens-abis';
 import { ERC20PermitHandler } from './erc20-permit-handler';
-import { isHex, serializeSignature } from 'viem';
+import {
+  PublicClient,
+  WalletClient,
+  isHash,
+  isHex,
+  serializeSignature,
+} from 'viem';
 
 describe('ERC20PermitHandler', () => {
   const contractTestingUtils =
     testingUtils.generateContractUtils(ERC20PERMIT_ABI);
+  let handler: ERC20PermitHandler;
+  let walletClient: WalletClient;
+  let publicClient: PublicClient;
+
+  beforeEach(() => {
+    walletClient = setupTestWalletClient();
+    publicClient = setupTestPublicClient();
+
+    handler = new ERC20PermitHandler(Chain.Holesky, walletClient, publicClient);
+  });
 
   it('should get the permit signature for the given token', async () => {
-    const walletClient = setupTestWalletClient();
-    const publicClient = setupTestPublicClient();
-
     contractTestingUtils.mockCall('nonces', [10n]);
     contractTestingUtils.mockCall('name', ['Ethereum Staking Mock']);
 
@@ -32,11 +45,6 @@ describe('ERC20PermitHandler', () => {
       .spyOn(walletClient, 'signTypedData')
       .mockReturnValue(Promise.resolve(mockSignature));
 
-    const handler = new ERC20PermitHandler(
-      Chain.Holesky,
-      walletClient,
-      publicClient,
-    );
     const signature = await handler
       .withToken(Token.stETH)
       .getPermitSignature(mockAccount, 1n);
@@ -47,5 +55,12 @@ describe('ERC20PermitHandler', () => {
     expect(typeof v).toBe('bigint');
     expect(yParity).toBeTruthy();
     expect(typeof deadline).toBe('bigint');
+  });
+
+  it('should approve the usage of token for a spender', async () => {
+    contractTestingUtils.mockTransaction('approve');
+
+    const txHash = await handler.approve(mockAccount, 1n);
+    expect(isHash(txHash)).toBeTruthy();
   });
 });
