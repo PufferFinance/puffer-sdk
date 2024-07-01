@@ -9,7 +9,7 @@ import { ERC20PERMIT_ABI } from '../abis/tokens-abis';
 import { ERC20PermitHandler } from './erc20-permit-handler';
 import { isHex, serializeSignature } from 'viem';
 
-describe('TokensHandler', () => {
+describe('ERC20PermitHandler', () => {
   const contractTestingUtils =
     testingUtils.generateContractUtils(ERC20PERMIT_ABI);
 

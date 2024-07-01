@@ -52,7 +52,7 @@ describe('PufferL2DepositorHandler', () => {
       deadline: 0n,
     };
     jest
-      .spyOn((handler as any).tokensHandler, 'getPermitSignature')
+      .spyOn((handler as any).erc20PermitHandler, 'getPermitSignature')
       .mockReturnValue(Promise.resolve(mockPermitSignature));
 
     const { transact, estimate } = await handler.deposit(
