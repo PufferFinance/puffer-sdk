@@ -40,8 +40,8 @@ describe('PufTokenHandler', () => {
     contractTestingUtils.mockCall('getDeposits', [[mockDeposit]]);
 
     const allDeposits = await handler.getDeposits(
-      mockAccount,
       Token.pufWETH,
+      mockAccount,
       0n,
       1n,
     );

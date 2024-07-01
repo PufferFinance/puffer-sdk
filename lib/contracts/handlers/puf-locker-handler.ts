@@ -70,15 +70,15 @@ export class PufLockerHandler {
   /**
    * Get the user's deposits for the given token and deposit index.
    *
-   * @param userAddress User address to get the deposits for.
    * @param pufToken PufToken to get the deposits of.
+   * @param userAddress User address to get the deposits for.
    * @param start The starting index of the deposits.
    * @param limit The maximum number of deposits to retrieve.
    * @returns The amount and release time of the deposits.
    */
   public getDeposits(
-    userAddress: Address,
     pufToken: PufToken,
+    userAddress: Address,
     start: bigint,
     limit: bigint,
   ) {

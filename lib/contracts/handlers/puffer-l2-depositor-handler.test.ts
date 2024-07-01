@@ -1,9 +1,10 @@
-import { Address, isHash } from 'viem';
+import { isHash } from 'viem';
 import {
   setupTestWalletClient,
   setupTestPublicClient,
 } from '../../../test/setup-test-clients';
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
+import { mockPermitSignature } from '../../../test/mocks/permit-signature';
 import { Chain } from '../../chains/constants';
 import { PUFFER_L2_DEPOSITOR_ABIS } from '../abis/puffer-depositor-abis';
 import { PufferL2DepositorHandler } from './puffer-l2-depositor-handler';
@@ -44,13 +45,6 @@ describe('PufferL2DepositorHandler', () => {
 
   it('should deposit token after requesting permit', async () => {
     contractTestingUtils.mockTransaction('deposit');
-    const mockPermitSignature = {
-      r: `0x${new Array(64).fill(0).join('')}` as Address,
-      s: `0x${new Array(64).fill(0).join('')}` as Address,
-      v: 0n,
-      yParity: 1,
-      deadline: 0n,
-    };
     jest
       .spyOn((handler as any).erc20PermitHandler, 'getPermitSignature')
       .mockReturnValue(Promise.resolve(mockPermitSignature));
