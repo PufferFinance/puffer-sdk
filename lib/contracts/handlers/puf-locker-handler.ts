@@ -53,6 +53,13 @@ export class PufLockerHandler {
     });
   }
 
+  /**
+   * Get all deposits of the given account address.
+   *
+   * @param pufToken The PufToken to get the deposits for.
+   * @param walletAddress The wallet address to get the deposits for.
+   * @returns The amount and deposits of the given account address.
+   */
   public getAllDeposits(pufToken: PufToken, walletAddress: Address) {
     return this.getContract().read.getAllDeposits([
       TOKENS_ADDRESSES[pufToken][this.chain],
@@ -60,6 +67,15 @@ export class PufLockerHandler {
     ]);
   }
 
+  /**
+   * Get the user address's deposits for the given token.
+   *
+   * @param userAddress User address to get the deposits for.
+   * @param pufToken PufToken to get the deposits of.
+   * @param start The starting index of the deposits.
+   * @param limit The maximum number of deposits to retrieve.
+   * @returns The amount and release time of the deposits.
+   */
   public getDeposits(
     userAddress: Address,
     pufToken: PufToken,
@@ -74,10 +90,25 @@ export class PufLockerHandler {
     ]);
   }
 
+  /**
+   * Get the minimum and maximum lock periods allowed for deposits.
+   *
+   * @returns The minimum and maximum lock period. (`[minLock,
+   * maxLock]`)
+   */
   public getLockPeriods() {
     return this.getContract().read.getLockPeriods();
   }
 
+  /**
+   * Deposit the given PufToken into the locker.
+   *
+   * @param walletAddress Wallet address of the depositor.
+   * @param pufToken PufToken to deposit.
+   * @param value Amount of the deposit.
+   * @param lockPeriod The period for the deposit.
+   * @returns The transaction hash of the deposit.
+   */
   public async deposit(
     walletAddress: Address,
     pufToken: PufToken,
@@ -95,7 +126,7 @@ export class PufLockerHandler {
       amount: value,
     };
 
-    this.getContract().write.deposit(
+    return await this.getContract().write.deposit(
       [TOKENS_ADDRESSES[pufToken][this.chain], lockPeriod, permitData],
       {
         account: walletAddress,
@@ -104,24 +135,15 @@ export class PufLockerHandler {
     );
   }
 
-  public initialize(accessManager: Address, account: Address = accessManager) {
-    return this.getContract().write.initialize([accessManager], {
-      account,
-      chain: this.viemChain,
-    });
-  }
-
-  public setLockPeriods(
-    walletAddress: Address,
-    minLock: bigint,
-    maxLock: bigint,
-  ) {
-    return this.getContract().write.setLockPeriods([minLock, maxLock], {
-      account: walletAddress,
-      chain: this.viemChain,
-    });
-  }
-
+  /**
+   * Withdraw the deposits identified by the deposit indexes from the
+   * locker.
+   *
+   * @param pufToken PufToken to withdraw.
+   * @param depositIndexes Deposit indexes to withdraw.
+   * @param recipient Recipient of the withdrawal.
+   * @returns Hash of the withdrawal transaction.
+   */
   public withdraw(
     pufToken: PufToken,
     depositIndexes: bigint[],
