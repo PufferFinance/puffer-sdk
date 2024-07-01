@@ -28,8 +28,12 @@ export class PufferVaultHandler {
     this.viemChain = VIEM_CHAINS[chain];
   }
 
-  // This is a method because the typings are complex and lost when
-  // trying to make it a member.
+  /**
+   * Get the contract. This is a method because the typings are complex
+   * and lost when trying to make it a member.
+   *
+   * @returns The viem contract.
+   */
   public getContract() {
     return getContract({
       address: CHAIN_ADDRESSES[this.chain].PufferVault as Address,
