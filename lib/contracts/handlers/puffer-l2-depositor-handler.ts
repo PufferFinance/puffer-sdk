@@ -151,17 +151,18 @@ export class PufferL2DepositorHandler {
    *
    * @param walletAddress Wallet address to take the token from.
    * @param referralCode Referral code.
-   * @returns `transact: () => Promise<Address>` - Used to make the
-   * transaction.
+   * @returns `transact: (value: bigint) => Promise<Address>` - Used to
+   * make the transaction.
    *
    * `estimate: () => Promise<bigint>` - Gas estimate of the
    * transaction.
    */
   public depositETH(walletAddress: Address, referralCode: bigint) {
-    const transact = () =>
+    const transact = (value: bigint) =>
       this.getContract().write.depositETH([walletAddress, referralCode], {
         account: walletAddress,
         chain: this.viemChain,
+        value,
       });
     const estimate = () =>
       this.getContract().estimateGas.depositETH([walletAddress, referralCode], {

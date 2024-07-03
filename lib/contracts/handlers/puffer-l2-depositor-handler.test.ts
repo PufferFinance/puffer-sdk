@@ -65,6 +65,6 @@ describe('PufferL2DepositorHandler', () => {
     const { transact, estimate } = handler.depositETH(mockAccount, 123n);
 
     expect(typeof (await estimate())).toBe('bigint');
-    expect(isHash(await transact())).toBe(true);
+    expect(isHash(await transact(1n))).toBe(true);
   });
 });
