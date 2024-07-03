@@ -150,12 +150,14 @@ export class PufLockerHandler {
    * locker.
    *
    * @param pufToken PufToken to withdraw.
+   * @param walletAddress Address of the account making the transaction.
    * @param recipient Recipient of the withdrawal.
    * @param depositIndexes Deposit indexes to withdraw.
    * @returns Hash of the withdrawal transaction.
    */
   public withdraw(
     pufToken: PufToken,
+    walletAddress: Address,
     recipient: Address,
     depositIndexes: bigint[],
   ) {
@@ -167,12 +169,12 @@ export class PufLockerHandler {
 
     const transact = () =>
       this.getContract().write.withdraw(withdrawArgs, {
-        account: recipient,
+        account: walletAddress,
         chain: this.viemChain,
       });
     const estimate = () =>
       this.getContract().estimateGas.withdraw(withdrawArgs, {
-        account: recipient,
+        account: walletAddress,
       });
 
     return { transact, estimate };
