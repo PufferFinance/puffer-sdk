@@ -58,13 +58,4 @@ describe('PufferL2DepositorHandler', () => {
     expect(typeof (await estimate())).toBe('bigint');
     expect(isHash(await transact())).toBe(true);
   });
-
-  it('should deposit ETH', async () => {
-    contractTestingUtils.mockTransaction('depositETH');
-
-    const { transact, estimate } = handler.depositETH(mockAccount, 123n);
-
-    expect(typeof (await estimate())).toBe('bigint');
-    expect(isHash(await transact(1n))).toBe(true);
-  });
 });
