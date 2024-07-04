@@ -1,8 +1,9 @@
-import { Address, toHex } from 'viem';
+import { toHex } from 'viem';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
 } from '../../../test/setup-test-clients';
+import { mockPermitSignature } from '../../../test/mocks/permit-signature';
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { Chain } from '../../chains/constants';
 import { PufferDepositorHandler } from './puffer-depositor-handler';
@@ -24,15 +25,8 @@ describe('PufferDepositorHandler', () => {
       publicClient,
     );
 
-    const mockPermitSignature = {
-      r: `0x${new Array(64).fill(0).join('')}` as Address,
-      s: `0x${new Array(64).fill(0).join('')}` as Address,
-      v: 0n,
-      yParity: 1,
-      deadline: 0n,
-    };
     jest
-      .spyOn(handler.tokensHandler, 'getPermitSignature')
+      .spyOn((handler as any).erc20PermitHandler, 'getPermitSignature')
       .mockReturnValue(Promise.resolve(mockPermitSignature));
 
     const { transact, estimate } = await handler.depositStETH(mockAccount, 1n);
@@ -57,15 +51,8 @@ describe('PufferDepositorHandler', () => {
       publicClient,
     );
 
-    const mockPermitSignature = {
-      r: `0x${new Array(64).fill(0).join('')}` as Address,
-      s: `0x${new Array(64).fill(0).join('')}` as Address,
-      v: 0n,
-      yParity: 1,
-      deadline: 0n,
-    };
     jest
-      .spyOn(handler.tokensHandler, 'getPermitSignature')
+      .spyOn((handler as any).erc20PermitHandler, 'getPermitSignature')
       .mockReturnValue(Promise.resolve(mockPermitSignature));
 
     const { transact, estimate } = await handler.depositWstETH(mockAccount, 1n);

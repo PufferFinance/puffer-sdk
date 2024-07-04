@@ -2,7 +2,7 @@ import { Address, PublicClient, WalletClient, getContract } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUFFER_DEPOSITOR_ABIS } from '../abis/puffer-depositor-abis';
 import { CHAIN_ADDRESSES } from '../addresses';
-import { TokensHandler } from './tokens-handler';
+import { ERC20PermitHandler } from './erc20-permit-handler';
 import { Token } from '../tokens';
 
 /**
@@ -11,7 +11,7 @@ import { Token } from '../tokens';
  */
 export class PufferDepositorHandler {
   private viemChain: ViemChain;
-  public tokensHandler: TokensHandler;
+  private erc20PermitHandler: ERC20PermitHandler;
 
   /**
    * Create the handler for the `PufferDepositor` contract exposing
@@ -29,9 +29,19 @@ export class PufferDepositorHandler {
     private publicClient: PublicClient,
   ) {
     this.viemChain = VIEM_CHAINS[chain];
-    this.tokensHandler = new TokensHandler(chain, walletClient, publicClient);
+    this.erc20PermitHandler = new ERC20PermitHandler(
+      chain,
+      walletClient,
+      publicClient,
+    );
   }
 
+  /**
+   * Get the contract. This is a method because the typings are complex
+   * and lost when trying to make it a member.
+   *
+   * @returns The viem contract.
+   */
   public getContract() {
     return getContract({
       address: CHAIN_ADDRESSES[this.chain].PufferDepositor as Address,
@@ -57,7 +67,7 @@ export class PufferDepositorHandler {
    * transaction.
    */
   public async depositStETH(walletAddress: Address, value: bigint) {
-    const { r, s, v, yParity, deadline } = await this.tokensHandler
+    const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
       .withToken(Token.stETH)
       .getPermitSignature(walletAddress, value);
     const permitData = {
@@ -96,7 +106,7 @@ export class PufferDepositorHandler {
    * transaction.
    */
   public async depositWstETH(walletAddress: Address, value: bigint) {
-    const { r, s, v, yParity, deadline } = await this.tokensHandler
+    const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
       .withToken(Token.wstETH)
       .getPermitSignature(walletAddress, value);
     const permitData = {

@@ -1,7 +1,7 @@
 import { WalletClient, PublicClient, getContract, Address } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUF_TOKEN_ABIS } from '../abis/puf-token-abis';
-import { PUF_TOKEN_ADDRESSES, PufToken } from '../puf-tokens';
+import { PufToken, Token, TOKENS_ADDRESSES } from '../tokens';
 
 /**
  * Handler for the `PufToken` contract exposing methods to interact with
@@ -27,7 +27,7 @@ export class PufTokenHandler {
     private walletClient: WalletClient,
     private publicClient: PublicClient,
   ) {
-    this.pufToken = PufToken.pufWETH;
+    this.pufToken = Token.pufWETH;
     this.viemChain = VIEM_CHAINS[chain];
   }
 
@@ -42,11 +42,15 @@ export class PufTokenHandler {
     return this;
   }
 
-  // This is a method because the typings are complex and lost when
-  // trying to make it a member.
+  /**
+   * Get the contract. This is a method because the typings are complex
+   * and lost when trying to make it a member.
+   *
+   * @returns The viem contract.
+   */
   public getContract() {
     return getContract({
-      address: PUF_TOKEN_ADDRESSES[this.pufToken][this.chain],
+      address: TOKENS_ADDRESSES[this.pufToken][this.chain],
       abi: PUF_TOKEN_ABIS[this.chain].PufToken,
       client: {
         wallet: this.walletClient,
@@ -141,7 +145,6 @@ export class PufTokenHandler {
     walletAddress: Address,
     value: bigint,
   ) {
-    console.log(this.getContract().address);
     const transact = () =>
       this.getContract().write.deposit(
         [depositorAddress, walletAddress, value],
