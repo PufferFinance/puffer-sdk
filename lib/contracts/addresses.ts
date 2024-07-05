@@ -17,6 +17,6 @@ export const CHAIN_ADDRESSES = {
     // TODO: Update the addresses once the contracts are deployed on chain.
     // See https://dev.azure.com/pufferfi/Frontend/_workitems/edit/1797.
     PufferL2Depositor: '0x03D8bE7CaAD9A95cef9800249eC663Aa28A2F776',
-    PufLocker: '0xf7C6B760A6B8274dB69D7c689eb84F80223D2abD',
+    PufLocker: '0x3fc7a526de9fc3c5e3a28f33d24d4401a6a7b65d',
   },
 };
