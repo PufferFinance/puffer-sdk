@@ -1,4 +1,4 @@
-import { WalletClient, PublicClient, getContract, Address } from 'viem';
+import { WalletClient, PublicClient, getContract, Address, padHex } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUFFER_L2_DEPOSITOR_ABIS } from '../abis/puffer-depositor-abis';
 import { CHAIN_ADDRESSES } from '../addresses';
@@ -77,9 +77,10 @@ export class PufferL2DepositorHandler {
       TOKENS_ADDRESSES[token][this.chain],
       walletAddress,
       // Only `amount` is needed if `token.approve()` is already called.
+      // So using mock values for other properties.
       {
-        r: '0x0000000000000000000000000000000000000000000000000000000000000000',
-        s: '0x0000000000000000000000000000000000000000000000000000000000000000',
+        r: padHex('0x', { size: 32 }),
+        s: padHex('0x', { size: 32 }),
         v: 0,
         deadline: 0n,
         amount: value,
