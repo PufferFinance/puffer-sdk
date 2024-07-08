@@ -112,6 +112,7 @@ export class PufferL2DepositorHandler {
    * @param token Token to deposit.
    * @param walletAddress Wallet address to take the token from.
    * @param value Value in wei of the token to deposit.
+   * @param referralCode Referral code for the deposit.
    * @returns `transact: () => Promise<Address>` - Used to make the
    * transaction.
    *
@@ -122,6 +123,7 @@ export class PufferL2DepositorHandler {
     token: NonPufToken,
     walletAddress: Address,
     value: bigint,
+    referralCode: bigint = 0n,
   ) {
     const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
       .withToken(token)
@@ -142,7 +144,7 @@ export class PufferL2DepositorHandler {
       TOKENS_ADDRESSES[token][this.chain],
       walletAddress,
       permitData,
-      value,
+      referralCode,
     ];
 
     const transact = () =>
