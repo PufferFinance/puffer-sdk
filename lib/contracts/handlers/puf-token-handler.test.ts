@@ -1,4 +1,4 @@
-import { isHash } from 'viem';
+import { isHash, padHex } from 'viem';
 import {
   setupTestWalletClient,
   setupTestPublicClient,
@@ -95,8 +95,9 @@ describe('PufTokenHandler', () => {
 
   it('should request for approval', async () => {
     contractTestingUtils.mockTransaction('approve');
-    const txHash = await handler.approve(mockAccount, 10n);
+    const mockSpender = padHex('0x', { size: 20 });
 
+    const txHash = await handler.approve(mockAccount, mockSpender, 10n);
     expect(isHash(txHash)).toBe(true);
   });
 

@@ -93,8 +93,8 @@ export class PufLockerHandler {
   /**
    * Get the minimum and maximum lock periods allowed for deposits.
    *
-   * @returns The minimum and maximum lock period. (`[minLock,
-   * maxLock]`)
+   * @returns The minimum and maximum lock period in seconds.
+   * (`[minLock, maxLock]`)
    */
   public getLockPeriods() {
     return this.getContract().read.getLockPeriods();
@@ -106,7 +106,7 @@ export class PufLockerHandler {
    * @param pufToken PufToken to deposit.
    * @param walletAddress Wallet address of the depositor.
    * @param value Amount of the deposit.
-   * @param lockPeriod The period for the deposit.
+   * @param lockPeriod The period for the deposit in seconds.
    * @returns The transaction hash of the deposit.
    */
   public async deposit(
@@ -117,7 +117,11 @@ export class PufLockerHandler {
   ) {
     const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
       .withToken(pufToken)
-      .getPermitSignature(walletAddress, value);
+      .getPermitSignature(
+        walletAddress,
+        CHAIN_ADDRESSES[this.chain].PufLocker as Address,
+        value,
+      );
     const permitData = {
       r,
       s,

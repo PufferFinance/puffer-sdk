@@ -5,7 +5,7 @@ export enum Token {
   USDC = 'USDC',
   DAI = 'DAI',
   ETH = 'ETH',
-  wETH = 'wETH',
+  WETH = 'wETH',
   stETH = 'stETH',
   wstETH = 'wstETH',
   pufETH = 'pufETH',
@@ -22,7 +22,7 @@ export enum Token {
 
 export type NonPufToken = Extract<
   Token,
-  'USDC' | 'DAI' | 'ETH' | 'wETH' | 'stETH' | 'wstETH' | 'pufETH'
+  'USDC' | 'DAI' | 'ETH' | 'WETH' | 'stETH' | 'wstETH' | 'pufETH'
 >;
 
 export type PufToken = Extract<
@@ -49,7 +49,8 @@ export const TOKENS_ADDRESSES: {
     [Chain.Holesky]: '0x4478905505ddfb7eA1c8A9f46eAEC3695cE542ac',
   },
   [Token.ETH]: {},
-  [Token.wETH]: {
+  // Does not support permit signatures (ERC20Permit).
+  [Token.WETH]: {
     [Chain.Mainnet]: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
     [Chain.Holesky]: '0x94373a4919b3240d86ea41593d5eba789fef3848',
   },

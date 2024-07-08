@@ -8,7 +8,6 @@ import {
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { ERC20PERMIT_ABI } from '../abis/tokens-abis';
 import { TOKENS_ADDRESSES, Token } from '../tokens';
-import { CHAIN_ADDRESSES } from '../addresses';
 import { getTimestampInSeconds } from '../../utils/time';
 
 /**
@@ -68,14 +67,19 @@ export class ERC20PermitHandler {
    * Process and get permit signature for the given token to perform
    * transactions through the `PufferDepositor` contract.
    *
-   * @param walletAddress Wallet address making the transaction.
+   * @param ownerAddress Address of the token awner.
+   * @param spenderAddress Address of the spender who needs the permit.
    * @param value Value of the transaction.
    * @returns Permit signature in the form `{ r, s, v?, yParity }`.
    */
-  public async getPermitSignature(walletAddress: Address, value: bigint) {
+  public async getPermitSignature(
+    ownerAddress: Address,
+    spenderAddress: Address,
+    value: bigint,
+  ) {
     const contract = this.getContract();
 
-    const permitNonces = await contract.read.nonces([walletAddress]);
+    const permitNonces = await contract.read.nonces([ownerAddress]);
     const name = await contract.read.name();
     const domain = <const>{
       name,
@@ -96,13 +100,13 @@ export class ERC20PermitHandler {
     const deadline = BigInt(getTimestampInSeconds() + 60 * 60 * 2);
 
     const signature = await this.walletClient.signTypedData({
-      account: walletAddress,
+      account: ownerAddress,
       domain,
       types,
       primaryType: 'Permit',
       message: {
-        owner: walletAddress,
-        spender: CHAIN_ADDRESSES[this.chain].PufferDepositor as Address,
+        owner: ownerAddress,
+        spender: spenderAddress,
         value,
         nonce: permitNonces,
         deadline,
@@ -124,13 +128,18 @@ export class ERC20PermitHandler {
   /**
    * Approve transaction for the spender to spend the owner's tokens.
    *
+   * @param ownerAddress Address of the caller of the transaction.
    * @param spenderAddress Address of the spender.
    * @param value Value to approve for the spender.
    * @returns Hash of the transaction.
    */
-  public approve(spenderAddress: Address, value: bigint) {
+  public approve(
+    ownerAddress: Address,
+    spenderAddress: Address,
+    value: bigint,
+  ) {
     return this.getContract().write.approve([spenderAddress, value], {
-      account: spenderAddress,
+      account: ownerAddress,
       chain: this.viemChain,
     });
   }

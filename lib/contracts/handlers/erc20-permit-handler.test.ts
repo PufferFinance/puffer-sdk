@@ -12,6 +12,7 @@ import {
   WalletClient,
   isHash,
   isHex,
+  padHex,
   serializeSignature,
 } from 'viem';
 
@@ -33,6 +34,7 @@ describe('ERC20PermitHandler', () => {
     contractTestingUtils.mockCall('nonces', [10n]);
     contractTestingUtils.mockCall('name', ['Ethereum Staking Mock']);
 
+    const mockSpender = padHex('0x', { size: 20 });
     // Mocking the wallet client since couldn't find a way to mock
     // through eth-testing.
     const mockSignature = serializeSignature({
@@ -47,7 +49,7 @@ describe('ERC20PermitHandler', () => {
 
     const signature = await handler
       .withToken(Token.stETH)
-      .getPermitSignature(mockAccount, 1n);
+      .getPermitSignature(mockAccount, mockSpender, 1n);
 
     const { r, s, v, yParity, deadline } = signature;
     expect(isHex(r)).toBeTruthy();
@@ -59,8 +61,9 @@ describe('ERC20PermitHandler', () => {
 
   it('should approve the usage of token for a spender', async () => {
     contractTestingUtils.mockTransaction('approve');
+    const mockSpender = padHex('0x', { size: 20 });
 
-    const txHash = await handler.approve(mockAccount, 1n);
+    const txHash = await handler.approve(mockAccount, mockSpender, 1n);
     expect(isHash(txHash)).toBeTruthy();
   });
 });
