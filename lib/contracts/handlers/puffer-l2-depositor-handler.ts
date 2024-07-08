@@ -77,7 +77,13 @@ export class PufferL2DepositorHandler {
       TOKENS_ADDRESSES[token][this.chain],
       walletAddress,
       // Only `amount` is needed if `token.approve()` is already called.
-      { amount: 0n } as any,
+      {
+        r: '0x0000000000000000000000000000000000000000000000000000000000000000',
+        s: '0x0000000000000000000000000000000000000000000000000000000000000000',
+        v: 0,
+        deadline: 0n,
+        amount: value,
+      },
       value,
     ];
 
@@ -99,6 +105,10 @@ export class PufferL2DepositorHandler {
    * the transaction but returns two methods namely `transact` and
    * `estimate`.
    *
+   * Not that not all token contracts support permit signatures. If the
+   * token contract doesn't support permit signatures, use
+   * `depositAfterApproval` instead.
+   *
    * @param token Token to deposit.
    * @param walletAddress Wallet address to take the token from.
    * @param value Value in wei of the token to deposit.
@@ -115,7 +125,11 @@ export class PufferL2DepositorHandler {
   ) {
     const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
       .withToken(token)
-      .getPermitSignature(walletAddress, value);
+      .getPermitSignature(
+        walletAddress,
+        CHAIN_ADDRESSES[this.chain].PufferL2Depositor as Address,
+        value,
+      );
     const permitData = {
       r,
       s,

@@ -69,7 +69,11 @@ export class PufferDepositorHandler {
   public async depositStETH(walletAddress: Address, value: bigint) {
     const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
       .withToken(Token.stETH)
-      .getPermitSignature(walletAddress, value);
+      .getPermitSignature(
+        walletAddress,
+        CHAIN_ADDRESSES[this.chain].PufferDepositor as Address,
+        value,
+      );
     const permitData = {
       r,
       s,
@@ -108,7 +112,11 @@ export class PufferDepositorHandler {
   public async depositWstETH(walletAddress: Address, value: bigint) {
     const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
       .withToken(Token.wstETH)
-      .getPermitSignature(walletAddress, value);
+      .getPermitSignature(
+        walletAddress,
+        CHAIN_ADDRESSES[this.chain].PufferDepositor as Address,
+        value,
+      );
     const permitData = {
       r,
       s,
