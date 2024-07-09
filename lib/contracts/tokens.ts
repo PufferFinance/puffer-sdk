@@ -9,7 +9,8 @@ export enum Token {
   stETH = 'stETH',
   wstETH = 'wstETH',
   pufETH = 'pufETH',
-  // Wrapped PufTokens.
+
+  // Wrapped PufTokens
   pufUSDC = 'pufUSDC',
   pufDAI = 'pufDAI',
   pufpufETH = 'pufpufETH',
@@ -41,15 +42,15 @@ export const TOKENS_ADDRESSES: {
   [key in Token]: { [chain in Chain]: Address };
 } = {
   [Token.USDC]: {
-    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
+    [Chain.Mainnet]: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
     [Chain.Holesky]: '0x64Cc0de0429bcb87e875905a0c313ec88f6d1d3E',
   },
   [Token.DAI]: {
-    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
+    [Chain.Mainnet]: '0x6b175474e89094c44da98b954eedeac495271d0f',
     [Chain.Holesky]: '0x4478905505ddfb7eA1c8A9f46eAEC3695cE542ac',
   },
   [Token.ETH]: {},
-  // Does not support permit signatures (ERC20Permit).
+  // WETH does not support permit signatures (ERC20Permit).
   [Token.WETH]: {
     [Chain.Mainnet]: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
     [Chain.Holesky]: '0x94373a4919b3240d86ea41593d5eba789fef3848',
@@ -66,8 +67,10 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0xd9a442856c234a39a81a089c06451ebaa4306a72',
     [Chain.Holesky]: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
   },
+
   // TODO: Update the addresses once the contracts are deployed on chain.
   // See https://dev.azure.com/pufferfi/Frontend/_workitems/edit/1797.
+
   // Wrapped PufTokens.
   [Token.pufUSDC]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
@@ -77,9 +80,9 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0x3aDeeC5151FA881e76A3F42256CD78052372b362',
   },
-  [Token.pufpufETH]: {
+  [Token.pufEETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x083b6321F213C993B81a54BF4D6Cb38e175EFE68',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
   [Token.pufWETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
@@ -97,8 +100,31 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
-  [Token.pufEETH]: {
+  [Token.pufpufETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+    [Chain.Holesky]: '0x083b6321F213C993B81a54BF4D6Cb38e175EFE68',
   },
+};
+
+export const TOKENS_PERMIT_VERSION = {
+  // USDC does not support permit signatures (ERC20Permit).
+  [Token.USDC]: '2',
+  [Token.DAI]: '1',
+  [Token.ETH]: '',
+  // WETH does not support permit signatures (ERC20Permit).
+  [Token.WETH]: '',
+  [Token.stETH]: '2',
+  // Puffer Quest v1 uses version 1 for wstETH.
+  [Token.wstETH]: '1',
+  [Token.pufETH]: '1',
+
+  // Wrapped PufTokens
+  [Token.pufUSDC]: '1',
+  [Token.pufDAI]: '1',
+  [Token.pufEETH]: '1',
+  [Token.pufWETH]: '1',
+  [Token.pufStETH]: '1',
+  [Token.pufWstETH]: '1',
+  [Token.pufALT]: '1',
+  [Token.pufpufETH]: '1',
 };

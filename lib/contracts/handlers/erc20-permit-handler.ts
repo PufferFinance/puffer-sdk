@@ -7,7 +7,7 @@ import {
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { ERC20PERMIT_ABI } from '../abis/tokens-abis';
-import { TOKENS_ADDRESSES, Token } from '../tokens';
+import { TOKENS_ADDRESSES, TOKENS_PERMIT_VERSION, Token } from '../tokens';
 import { getTimestampInSeconds } from '../../utils/time';
 
 /**
@@ -117,12 +117,7 @@ export class ERC20PermitHandler {
   }
 
   private getPermitVersion(token: Token): string {
-    // stETH and USDC have permit version 2.
-    if (token === Token.stETH) {
-      return '2';
-    }
-
-    return '1';
+    return TOKENS_PERMIT_VERSION[token];
   }
 
   /**
