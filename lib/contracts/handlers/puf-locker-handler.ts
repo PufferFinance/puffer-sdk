@@ -1,4 +1,4 @@
-import { WalletClient, PublicClient, getContract, Address } from 'viem';
+import { WalletClient, PublicClient, getContract, Address, padHex } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUF_LOCKER_ABIS } from '../abis/puf-locker-abis';
 import { CHAIN_ADDRESSES } from '../addresses';
@@ -101,13 +101,68 @@ export class PufLockerHandler {
   }
 
   /**
-   * Deposit the given PufToken into the locker.
+   * Deposit the given pre-approved PufToken into the locker. A token
+   * can be pre-approved using `Token.approve()`, This doesn't make the
+   * transaction but returns two methods namely `transact` and
+   * `estimate`.
    *
    * @param pufToken PufToken to deposit.
    * @param walletAddress Wallet address of the depositor.
    * @param value Amount of the deposit.
    * @param lockPeriod The period for the deposit in seconds.
-   * @returns The transaction hash of the deposit.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public async depositPreApproved(
+    pufToken: PufToken,
+    walletAddress: Address,
+    value: bigint,
+    lockPeriod: bigint,
+  ) {
+    const depositArgs = <const>[
+      TOKENS_ADDRESSES[pufToken][this.chain],
+      lockPeriod,
+      // Only `amount` is needed if `Token.approve()` is already called.
+      // So using mock values for other properties.
+      {
+        r: padHex('0x', { size: 32 }),
+        s: padHex('0x', { size: 32 }),
+        v: 0,
+        deadline: 0n,
+        amount: value,
+      },
+    ];
+
+    const transact = () =>
+      this.getContract().write.deposit(depositArgs, {
+        account: walletAddress,
+        chain: this.viemChain,
+      });
+    const estimate = () =>
+      this.getContract().estimateGas.deposit(depositArgs, {
+        account: walletAddress,
+      });
+
+    return { transact, estimate };
+  }
+
+  /**
+   * Deposit the given PufToken into the locker. This doesn't make the
+   * transaction but returns two methods namely `transact` and
+   * `estimate`.
+   *
+   * @param pufToken PufToken to deposit.
+   * @param walletAddress Wallet address of the depositor.
+   * @param value Amount of the deposit.
+   * @param lockPeriod The period for the deposit in seconds.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
    */
   public async deposit(
     pufToken: PufToken,
