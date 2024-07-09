@@ -27,21 +27,18 @@ describe('PufferL2DepositorHandler', () => {
     );
   });
 
-  // TODO: This test is not working because the suggested parameters
-  // from the PufferL2Depositor contract are not exactly correct. See
-  // https://github.com/PufferFinance/puffer-contracts/blob/d3e318f3c45d744bfa2dbadfa1abe998fa49d4b5/mainnet-contracts/src/interface/IPufferL2Depositor.sol#L51-L57
-  // it('should deposit pre-approved token', async () => {
-  // contractTestingUtils.mockTransaction('deposit');
+  it('should deposit pre-approved token', async () => {
+    contractTestingUtils.mockTransaction('deposit');
 
-  //   const { transact, estimate } = handler.depositAfterApproval(
-  //     Token.stETH,
-  //     mockAccount,
-  //     10n,
-  //   );
+    const { transact, estimate } = handler.depositAfterApproval(
+      Token.stETH,
+      mockAccount,
+      10n,
+    );
 
-  //   expect(typeof (await estimate())).toBe('bigint');
-  //   expect(isHash(await transact())).toBe(true);
-  // });
+    expect(typeof (await estimate())).toBe('bigint');
+    expect(isHash(await transact())).toBe(true);
+  });
 
   it('should deposit token after requesting permit', async () => {
     contractTestingUtils.mockTransaction('deposit');

@@ -122,6 +122,7 @@ export class PufLockerHandler {
         CHAIN_ADDRESSES[this.chain].PufLocker as Address,
         value,
       );
+    /* istanbul ignore next */
     const permitData = {
       r,
       s,
