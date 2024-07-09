@@ -59,6 +59,23 @@ describe('PufTokenHandler', () => {
     expect(maxLock).toBe(lockPeriods[1]);
   });
 
+  it('should deposit the given pre-approved token into the locker', async () => {
+    contractTestingUtils.mockTransaction('deposit');
+    jest
+      .spyOn((handler as any).erc20PermitHandler, 'getPermitSignature')
+      .mockReturnValue(Promise.resolve(mockPermitSignature));
+
+    const { transact, estimate } = await handler.depositPreApproved(
+      Token.pufWETH,
+      mockAccount,
+      1n,
+      10n,
+    );
+
+    expect(typeof (await estimate())).toBe('bigint');
+    expect(isHash(await transact())).toBe(true);
+  });
+
   it('should deposit the given token into the locker', async () => {
     contractTestingUtils.mockTransaction('deposit');
     jest
