@@ -30,7 +30,7 @@ describe('PufferL2DepositorHandler', () => {
   it('should deposit pre-approved token', async () => {
     contractTestingUtils.mockTransaction('deposit');
 
-    const { transact, estimate } = handler.depositAfterApproval(
+    const { transact, estimate } = handler.depositPreApproved(
       Token.stETH,
       mockAccount,
       10n,

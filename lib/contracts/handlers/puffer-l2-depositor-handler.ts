@@ -55,8 +55,8 @@ export class PufferL2DepositorHandler {
 
   /**
    * Deposit the given token which is pre-approved using
-   * `token.approve()` in exchange for pufETH. This doesn't make the
-   * transaction but returns two methods namely `transact` and
+   * `Token.approve()` in exchange for wrapped PufToken. This doesn't
+   * make the transaction but returns two methods namely `transact` and
    * `estimate`.
    *
    * @param token Token to deposit.
@@ -68,7 +68,7 @@ export class PufferL2DepositorHandler {
    * `estimate: () => Promise<bigint>` - Gas estimate of the
    * transaction.
    */
-  public depositAfterApproval(
+  public depositPreApproved(
     token: NonPufToken,
     walletAddress: Address,
     value: bigint,
@@ -76,7 +76,7 @@ export class PufferL2DepositorHandler {
     const depositArgs = <const>[
       TOKENS_ADDRESSES[token][this.chain],
       walletAddress,
-      // Only `amount` is needed if `token.approve()` is already called.
+      // Only `amount` is needed if `Token.approve()` is already called.
       // So using mock values for other properties.
       {
         r: padHex('0x', { size: 32 }),
@@ -102,13 +102,13 @@ export class PufferL2DepositorHandler {
   }
 
   /**
-   * Deposit the given token in exchange for pufETH. This doesn't make
-   * the transaction but returns two methods namely `transact` and
-   * `estimate`.
+   * Deposit the given token in exchange for the wrapped PufToken. This
+   * doesn't make the transaction but returns two methods namely
+   * `transact` and `estimate`.
    *
    * Note that not all token contracts support permit signatures (e.g.
    * USDC). If a token's contract doesn't support permit signatures, use
-   * `Token.approve()` and call `depositAfterApproval()` instead.
+   * `Token.approve()` and call `this.depositPreApproved()` instead.
    *
    * @param token Token to deposit.
    * @param walletAddress Wallet address to take the token from.
