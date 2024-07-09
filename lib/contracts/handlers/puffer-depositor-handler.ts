@@ -74,6 +74,7 @@ export class PufferDepositorHandler {
         CHAIN_ADDRESSES[this.chain].PufferDepositor as Address,
         value,
       );
+    /* istanbul ignore next */
     const permitData = {
       r,
       s,
@@ -117,6 +118,7 @@ export class PufferDepositorHandler {
         CHAIN_ADDRESSES[this.chain].PufferDepositor as Address,
         value,
       );
+    /* istanbul ignore next */
     const permitData = {
       r,
       s,

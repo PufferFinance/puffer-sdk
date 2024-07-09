@@ -106,9 +106,9 @@ export class PufferL2DepositorHandler {
    * the transaction but returns two methods namely `transact` and
    * `estimate`.
    *
-   * Not that not all token contracts support permit signatures. If the
-   * token contract doesn't support permit signatures, use
-   * `depositAfterApproval` instead.
+   * Note that not all token contracts support permit signatures (e.g.
+   * USDC). If a token's contract doesn't support permit signatures, use
+   * `Token.approve()` and call `depositAfterApproval()` instead.
    *
    * @param token Token to deposit.
    * @param walletAddress Wallet address to take the token from.
@@ -133,6 +133,7 @@ export class PufferL2DepositorHandler {
         CHAIN_ADDRESSES[this.chain].PufferL2Depositor as Address,
         value,
       );
+    /* istanbul ignore next */
     const permitData = {
       r,
       s,

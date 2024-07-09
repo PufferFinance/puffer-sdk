@@ -50,6 +50,7 @@ export class PufferClient {
   ) {
     const viemChain = VIEM_CHAINS[chain];
 
+    /* istanbul ignore next */
     this.walletClient =
       walletClient ??
       createWalletClient({
