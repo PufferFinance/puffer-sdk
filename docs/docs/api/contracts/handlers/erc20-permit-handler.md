@@ -28,7 +28,7 @@ Create the handler for processing tokens.
 
 ###### Source
 
-[lib/contracts/handlers/erc20-permit-handler.ts:29](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/erc20-permit-handler.ts#L29)
+[lib/contracts/handlers/erc20-permit-handler.ts:29](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/erc20-permit-handler.ts#L29)
 
 #### Properties
 
@@ -64,7 +64,7 @@ Hash of the transaction.
 
 ###### Source
 
-[lib/contracts/handlers/erc20-permit-handler.ts:136](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/erc20-permit-handler.ts#L136)
+[lib/contracts/handlers/erc20-permit-handler.ts:131](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/erc20-permit-handler.ts#L131)
 
 ##### getContract()
 
@@ -81,7 +81,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/erc20-permit-handler.ts:55](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/erc20-permit-handler.ts#L55)
+[lib/contracts/handlers/erc20-permit-handler.ts:55](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/erc20-permit-handler.ts#L55)
 
 ##### getPermitSignature()
 
@@ -106,7 +106,7 @@ Permit signature in the form `{ r, s, v?, yParity }`.
 
 ###### Source
 
-[lib/contracts/handlers/erc20-permit-handler.ts:75](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/erc20-permit-handler.ts#L75)
+[lib/contracts/handlers/erc20-permit-handler.ts:75](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/erc20-permit-handler.ts#L75)
 
 ##### getPermitVersion()
 
@@ -124,7 +124,7 @@ Permit signature in the form `{ r, s, v?, yParity }`.
 
 ###### Source
 
-[lib/contracts/handlers/erc20-permit-handler.ts:119](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/erc20-permit-handler.ts#L119)
+[lib/contracts/handlers/erc20-permit-handler.ts:119](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/erc20-permit-handler.ts#L119)
 
 ##### withToken()
 
@@ -146,4 +146,4 @@ The handler.
 
 ###### Source
 
-[lib/contracts/handlers/erc20-permit-handler.ts:44](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/erc20-permit-handler.ts#L44)
+[lib/contracts/handlers/erc20-permit-handler.ts:44](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/erc20-permit-handler.ts#L44)

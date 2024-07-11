@@ -30,7 +30,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:26](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L26)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:26](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L26)
 
 #### Properties
 
@@ -48,13 +48,13 @@ methods to interact with the contract.
 
 > **deposit**(`token`, `walletAddress`, `value`, `referralCode`): `Promise`\<`object`\>
 
-Deposit the given token in exchange for pufETH. This doesn't make
-the transaction but returns two methods namely `transact` and
-`estimate`.
+Deposit the given token in exchange for the wrapped PufToken. This
+doesn't make the transaction but returns two methods namely
+`transact` and `estimate`.
 
 Note that not all token contracts support permit signatures (e.g.
 USDC). If a token's contract doesn't support permit signatures, use
-`Token.approve()` and call `depositAfterApproval()` instead.
+`Token.approve()` and call `this.depositPreApproved()` instead.
 
 ###### Parameters
 
@@ -93,15 +93,15 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L123)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L123)
 
-##### depositAfterApproval()
+##### depositPreApproved()
 
-> **depositAfterApproval**(`token`, `walletAddress`, `value`): `object`
+> **depositPreApproved**(`token`, `walletAddress`, `value`): `object`
 
 Deposit the given token which is pre-approved using
-`token.approve()` in exchange for pufETH. This doesn't make the
-transaction but returns two methods namely `transact` and
+`Token.approve()` in exchange for wrapped PufToken. This doesn't
+make the transaction but returns two methods namely `transact` and
 `estimate`.
 
 ###### Parameters
@@ -140,7 +140,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L71)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L71)
 
 ##### getContract()
 
@@ -157,4 +157,4 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L45)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L45)

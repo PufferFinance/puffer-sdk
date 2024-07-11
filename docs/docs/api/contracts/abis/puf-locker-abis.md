@@ -8,4 +8,4 @@
 
 #### Source
 
-[lib/contracts/abis/puf-locker-abis.ts:4](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/abis/puf-locker-abis.ts#L4)
+[lib/contracts/abis/puf-locker-abis.ts:4](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/abis/puf-locker-abis.ts#L4)
