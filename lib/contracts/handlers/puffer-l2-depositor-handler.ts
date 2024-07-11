@@ -2,7 +2,7 @@ import { WalletClient, PublicClient, getContract, Address, padHex } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUFFER_L2_DEPOSITOR_ABIS } from '../abis/puffer-depositor-abis';
 import { CHAIN_ADDRESSES } from '../addresses';
-import { NonPufToken, TOKENS_ADDRESSES } from '../tokens';
+import { TOKENS_ADDRESSES, Token } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
 
 /**
@@ -69,7 +69,7 @@ export class PufferL2DepositorHandler {
    * transaction.
    */
   public depositPreApproved(
-    token: NonPufToken,
+    token: Token,
     walletAddress: Address,
     value: bigint,
   ) {
@@ -121,7 +121,7 @@ export class PufferL2DepositorHandler {
    * transaction.
    */
   public async deposit(
-    token: NonPufToken,
+    token: Token,
     walletAddress: Address,
     value: bigint,
     referralCode: bigint = 0n,

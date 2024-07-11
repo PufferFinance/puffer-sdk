@@ -7,7 +7,12 @@ import {
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { ERC20PERMIT_ABI } from '../abis/tokens-abis';
-import { TOKENS_ADDRESSES, TOKENS_PERMIT_VERSION, Token } from '../tokens';
+import {
+  AnyToken,
+  TOKENS_ADDRESSES,
+  TOKENS_PERMIT_VERSION,
+  Token,
+} from '../tokens';
 import { getTimestampInSeconds } from '../../utils/time';
 
 /**
@@ -15,7 +20,7 @@ import { getTimestampInSeconds } from '../../utils/time';
  */
 export class ERC20PermitHandler {
   private viemChain: ViemChain;
-  private token: Token;
+  private token: AnyToken;
 
   /**
    * Create the handler for processing tokens.
@@ -41,7 +46,7 @@ export class ERC20PermitHandler {
    * @param token Token to use for the handler.
    * @returns The handler.
    */
-  public withToken(token: Token) {
+  public withToken(token: AnyToken) {
     this.token = token;
     return this;
   }
@@ -67,7 +72,7 @@ export class ERC20PermitHandler {
    * Process and get permit signature for the given token to perform
    * transactions through the `PufferDepositor` contract.
    *
-   * @param ownerAddress Address of the token awner.
+   * @param ownerAddress Address of the token owner.
    * @param spenderAddress Address of the spender who needs the permit.
    * @param value Value of the transaction.
    * @returns Permit signature in the form `{ r, s, v?, yParity }`.
@@ -116,7 +121,7 @@ export class ERC20PermitHandler {
     return { ...parseSignature(signature), deadline };
   }
 
-  private getPermitVersion(token: Token): string {
+  private getPermitVersion(token: AnyToken): string {
     return TOKENS_PERMIT_VERSION[token];
   }
 
