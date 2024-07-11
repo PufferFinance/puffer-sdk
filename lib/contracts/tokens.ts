@@ -10,8 +10,9 @@ export enum Token {
   stETH = 'stETH',
   wstETH = 'wstETH',
   pufETH = 'pufETH',
+}
 
-  // Wrapped PufTokens
+export enum PufToken {
   pufUSDT = 'pufUSDT',
   pufUSDC = 'pufUSDC',
   pufDAI = 'pufDAI',
@@ -23,26 +24,21 @@ export enum Token {
   pufEETH = 'pufEETH',
 }
 
-export type NonPufToken = Extract<
-  Token,
-  'USDT' | 'USDC' | 'DAI' | 'ETH' | 'WETH' | 'stETH' | 'wstETH' | 'pufETH'
->;
+export type AnyToken = Token | PufToken;
 
-export type PufToken = Extract<
-  Token,
-  | 'pufUSDT'
-  | 'pufUSDC'
-  | 'pufDAI'
-  | 'pufpufETH'
-  | 'pufWETH'
-  | 'pufStETH'
-  | 'pufWstETH'
-  | 'pufALT'
-  | 'pufEETH'
->;
+export const TOKEN_TO_PUF_TOKEN_MAP = {
+  [Token.USDT]: PufToken.pufUSDT,
+  [Token.USDC]: PufToken.pufUSDC,
+  [Token.DAI]: PufToken.pufDAI,
+  [Token.ETH]: PufToken.pufEETH,
+  [Token.WETH]: PufToken.pufWETH,
+  [Token.stETH]: PufToken.pufStETH,
+  [Token.wstETH]: PufToken.pufWstETH,
+  [Token.pufETH]: PufToken.pufpufETH,
+};
 
 export const TOKENS_ADDRESSES: {
-  [key in Token]: { [chain in Chain]: Address };
+  [key in Token | PufToken]: { [chain in Chain]: Address };
 } = {
   [Token.USDT]: {
     [Chain.Mainnet]: '0xdac17f958d2ee523a2206206994597c13d831ec7',
@@ -79,45 +75,45 @@ export const TOKENS_ADDRESSES: {
   // See https://dev.azure.com/pufferfi/Frontend/_workitems/edit/1797.
 
   // Wrapped PufTokens.
-  [Token.pufUSDT]: {
+  [PufToken.pufUSDT]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0x61e7C87c387178D6e0aE6c04748b7FF753fC9b81',
   },
-  [Token.pufUSDC]: {
+  [PufToken.pufUSDC]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0xC4731029b6F4fEd5930A56F0FFa3E8Ae688f9dA8',
   },
-  [Token.pufDAI]: {
+  [PufToken.pufDAI]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0xcA1C3DBC6Ea41f018B8d91C3AbE6FacDBDd4F63e',
   },
-  [Token.pufEETH]: {
+  [PufToken.pufEETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
-  [Token.pufWETH]: {
+  [PufToken.pufWETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0x2207119500757bDD269F98d86Dca6356535b876E',
   },
-  [Token.pufStETH]: {
+  [PufToken.pufStETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
-  [Token.pufWstETH]: {
+  [PufToken.pufWstETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
-  [Token.pufALT]: {
+  [PufToken.pufALT]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
-  [Token.pufpufETH]: {
+  [PufToken.pufpufETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0xECa244cBBe52A68EB6c4fdC266c2c50D568bcd22',
   },
 };
 
-export const TOKENS_PERMIT_VERSION = {
+export const TOKENS_PERMIT_VERSION: { [key in Token | PufToken]: string } = {
   [Token.USDT]: '2',
   // USDC does not support permit signatures (ERC20Permit).
   [Token.USDC]: '2',
@@ -131,13 +127,13 @@ export const TOKENS_PERMIT_VERSION = {
   [Token.pufETH]: '1',
 
   // Wrapped PufTokens
-  [Token.pufUSDT]: '1',
-  [Token.pufUSDC]: '1',
-  [Token.pufDAI]: '1',
-  [Token.pufEETH]: '1',
-  [Token.pufWETH]: '1',
-  [Token.pufStETH]: '1',
-  [Token.pufWstETH]: '1',
-  [Token.pufALT]: '1',
-  [Token.pufpufETH]: '1',
+  [PufToken.pufUSDT]: '1',
+  [PufToken.pufUSDC]: '1',
+  [PufToken.pufDAI]: '1',
+  [PufToken.pufEETH]: '1',
+  [PufToken.pufWETH]: '1',
+  [PufToken.pufStETH]: '1',
+  [PufToken.pufWstETH]: '1',
+  [PufToken.pufALT]: '1',
+  [PufToken.pufpufETH]: '1',
 };

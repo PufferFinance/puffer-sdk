@@ -7,7 +7,7 @@ import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { Chain } from '../../chains/constants';
 import { PUF_TOKEN_ABIS } from '../abis/puf-token-abis';
 import { PufTokenHandler } from './puf-token-handler';
-import { TOKENS_ADDRESSES, Token } from '../tokens';
+import { PufToken, TOKENS_ADDRESSES } from '../tokens';
 
 describe('PufTokenHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(
@@ -102,10 +102,10 @@ describe('PufTokenHandler', () => {
   });
 
   it('should use the contract of the selected token', () => {
-    const contract = handler.withPufToken(Token.pufALT).getContract();
+    const contract = handler.withPufToken(PufToken.pufALT).getContract();
 
     expect(contract.address).toBe(
-      TOKENS_ADDRESSES[Token.pufALT][Chain.Holesky],
+      TOKENS_ADDRESSES[PufToken.pufALT][Chain.Holesky],
     );
   });
 });
