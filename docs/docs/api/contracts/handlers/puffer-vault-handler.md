@@ -30,7 +30,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:29](https://github.com/PufferFinance/puffer-sdk/blob/49289dd3a68f3eafb8bf707b94cb3a9f817f71ef/lib/contracts/handlers/puffer-vault-handler.ts#L29)
+[lib/contracts/handlers/puffer-vault-handler.ts:23](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-vault-handler.ts#L23)
 
 #### Properties
 
@@ -63,7 +63,7 @@ pufETH balance in wei.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:84](https://github.com/PufferFinance/puffer-sdk/blob/49289dd3a68f3eafb8bf707b94cb3a9f817f71ef/lib/contracts/handlers/puffer-vault-handler.ts#L84)
+[lib/contracts/handlers/puffer-vault-handler.ts:82](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-vault-handler.ts#L82)
 
 ##### depositETH()
 
@@ -113,7 +113,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:62](https://github.com/PufferFinance/puffer-sdk/blob/49289dd3a68f3eafb8bf707b94cb3a9f817f71ef/lib/contracts/handlers/puffer-vault-handler.ts#L62)
+[lib/contracts/handlers/puffer-vault-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-vault-handler.ts#L60)
 
 ##### getAllowance()
 
@@ -136,19 +136,24 @@ Allowance for the given owner and spender.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:105](https://github.com/PufferFinance/puffer-sdk/blob/49289dd3a68f3eafb8bf707b94cb3a9f817f71ef/lib/contracts/handlers/puffer-vault-handler.ts#L105)
+[lib/contracts/handlers/puffer-vault-handler.ts:103](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-vault-handler.ts#L103)
 
 ##### getContract()
 
-> `private` **getContract**(): `object`
+> **getContract**(): `object`
+
+Get the contract. This is a method because the typings are complex
+and lost when trying to make it a member.
 
 ###### Returns
 
 `object`
 
+The viem contract.
+
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:39](https://github.com/PufferFinance/puffer-sdk/blob/49289dd3a68f3eafb8bf707b94cb3a9f817f71ef/lib/contracts/handlers/puffer-vault-handler.ts#L39)
+[lib/contracts/handlers/puffer-vault-handler.ts:37](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-vault-handler.ts#L37)
 
 ##### getPufETHRate()
 
@@ -164,4 +169,50 @@ Rate of pufETH compared to 1 ETH.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:93](https://github.com/PufferFinance/puffer-sdk/blob/49289dd3a68f3eafb8bf707b94cb3a9f817f71ef/lib/contracts/handlers/puffer-vault-handler.ts#L93)
+[lib/contracts/handlers/puffer-vault-handler.ts:91](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-vault-handler.ts#L91)
+
+##### withdraw()
+
+> **withdraw**(`ownerAddress`, `walletAddress`, `value`): `object`
+
+Withdraw pufETH to the given wallet address. This doesn't make the
+transaction but returns two methods namely `transact` and
+`estimate`.
+
+###### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `ownerAddress` | \`0x$\{string\}\` | Address of the owner. |
+| `walletAddress` | \`0x$\{string\}\` | Address of the receiver. |
+| `value` | `bigint` | Value of pufETH to withdraw. |
+
+###### Returns
+
+`object`
+
+`transact: (value: bigint) => Promise<Address>` - Used to
+make the transaction with the given value.
+
+`estimate: () => Promise<bigint>` - Gas estimate of the
+transaction.
+
+###### estimate()
+
+> **estimate**: () => `Promise`\<`bigint`\>
+
+###### Returns
+
+`Promise`\<`bigint`\>
+
+###### transact()
+
+> **transact**: () => `Promise`\<\`0x$\{string\}\`\>
+
+###### Returns
+
+`Promise`\<\`0x$\{string\}\`\>
+
+###### Source
+
+[lib/contracts/handlers/puffer-vault-handler.ts:124](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-vault-handler.ts#L124)

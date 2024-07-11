@@ -30,15 +30,15 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-depositor-handler.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/49289dd3a68f3eafb8bf707b94cb3a9f817f71ef/lib/contracts/handlers/puffer-depositor-handler.ts#L32)
+[lib/contracts/handlers/puffer-depositor-handler.ts:26](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-depositor-handler.ts#L26)
 
 #### Properties
 
 | Property | Modifier | Type | Description |
 | :------ | :------ | :------ | :------ |
 | `chain` | `private` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
+| `erc20PermitHandler` | `private` | [`ERC20PermitHandler`](erc20-permit-handler.md#erc20permithandler) | - |
 | `publicClient` | `private` | `object` | The public client to use for public interactions. |
-| `tokensHandler` | `public` | [`TokensHandler`](tokens-handler.md#tokenshandler) | - |
 | `viemChain` | `private` | `Chain` | - |
 | `walletClient` | `private` | `object` | The wallet client to use for wallet interactions. |
 
@@ -87,7 +87,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-depositor-handler.ts:65](https://github.com/PufferFinance/puffer-sdk/blob/49289dd3a68f3eafb8bf707b94cb3a9f817f71ef/lib/contracts/handlers/puffer-depositor-handler.ts#L65)
+[lib/contracts/handlers/puffer-depositor-handler.ts:69](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-depositor-handler.ts#L69)
 
 ##### depositWstETH()
 
@@ -132,16 +132,21 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-depositor-handler.ts:107](https://github.com/PufferFinance/puffer-sdk/blob/49289dd3a68f3eafb8bf707b94cb3a9f817f71ef/lib/contracts/handlers/puffer-depositor-handler.ts#L107)
+[lib/contracts/handlers/puffer-depositor-handler.ts:113](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-depositor-handler.ts#L113)
 
 ##### getContract()
 
-> `private` **getContract**(): `object`
+> **getContract**(): `object`
+
+Get the contract. This is a method because the typings are complex
+and lost when trying to make it a member.
 
 ###### Returns
 
 `object`
 
+The viem contract.
+
 ###### Source
 
-[lib/contracts/handlers/puffer-depositor-handler.ts:41](https://github.com/PufferFinance/puffer-sdk/blob/49289dd3a68f3eafb8bf707b94cb3a9f817f71ef/lib/contracts/handlers/puffer-depositor-handler.ts#L41)
+[lib/contracts/handlers/puffer-depositor-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/contracts/handlers/puffer-depositor-handler.ts#L45)

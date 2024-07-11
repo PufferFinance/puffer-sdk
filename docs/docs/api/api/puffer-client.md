@@ -28,14 +28,18 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:34](https://github.com/PufferFinance/puffer-sdk/blob/49289dd3a68f3eafb8bf707b94cb3a9f817f71ef/lib/api/puffer-client.ts#L34)
+[lib/api/puffer-client.ts:46](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/api/puffer-client.ts#L46)
 
 #### Properties
 
 | Property | Modifier | Type | Description |
 | :------ | :------ | :------ | :------ |
 | `depositor` | `public` | [`PufferDepositorHandler`](../contracts/handlers/puffer-depositor-handler.md#pufferdepositorhandler) | Handler for the `PufferDepositor` contract. |
+| `erc20Permit` | `public` | [`ERC20PermitHandler`](../contracts/handlers/erc20-permit-handler.md#erc20permithandler) | Handler for the `ERC20Permit` contract. |
+| `l2Depositor` | `public` | [`PufferL2DepositorHandler`](../contracts/handlers/puffer-l2-depositor-handler.md#pufferl2depositorhandler) | Handler for the `PufferL2Depositor` contract. |
 | `publicClient` | `private` | `object` | - |
+| `pufLocker` | `public` | [`PufLockerHandler`](../contracts/handlers/puf-locker-handler.md#puflockerhandler) | Handler for the `PufLocker` contract. |
+| `pufToken` | `public` | [`PufTokenHandler`](../contracts/handlers/puf-token-handler.md#puftokenhandler) | Handler for the `PufToken` contract. |
 | `vault` | `public` | [`PufferVaultHandler`](../contracts/handlers/puffer-vault-handler.md#puffervaulthandler) | Handler for the `PufferVaultV2` contract. |
 | `walletClient` | `private` | `object` | - |
 
@@ -55,4 +59,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:72](https://github.com/PufferFinance/puffer-sdk/blob/49289dd3a68f3eafb8bf707b94cb3a9f817f71ef/lib/api/puffer-client.ts#L72)
+[lib/api/puffer-client.ts:104](https://github.com/PufferFinance/puffer-sdk/blob/5b8e95e55759b0a70f69b5a76cb4e3fcff78f807/lib/api/puffer-client.ts#L104)
