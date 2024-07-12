@@ -1,7 +1,7 @@
 import { WalletClient, PublicClient, getContract, Address, padHex } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUF_LOCKER_ABIS } from '../abis/puf-locker-abis';
-import { CHAIN_ADDRESSES } from '../addresses';
+import { CONTRACT_ADDRESSES } from '../addresses';
 import { PufToken, TOKENS_ADDRESSES } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
 
@@ -44,7 +44,7 @@ export class PufLockerHandler {
    */
   public getContract() {
     return getContract({
-      address: CHAIN_ADDRESSES[this.chain].PufLocker as Address,
+      address: CONTRACT_ADDRESSES[this.chain].PufLocker as Address,
       abi: PUF_LOCKER_ABIS[this.chain].PufLocker,
       client: {
         wallet: this.walletClient,
@@ -174,7 +174,7 @@ export class PufLockerHandler {
       .withToken(pufToken)
       .getPermitSignature(
         walletAddress,
-        CHAIN_ADDRESSES[this.chain].PufLocker as Address,
+        CONTRACT_ADDRESSES[this.chain].PufLocker as Address,
         value,
       );
     /* istanbul ignore next */

@@ -1,7 +1,7 @@
 import { WalletClient, PublicClient, getContract, Address, padHex } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUFFER_L2_DEPOSITOR_ABIS } from '../abis/puffer-depositor-abis';
-import { CHAIN_ADDRESSES } from '../addresses';
+import { CONTRACT_ADDRESSES } from '../addresses';
 import { TOKENS_ADDRESSES, Token } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
 
@@ -44,7 +44,7 @@ export class PufferL2DepositorHandler {
    */
   public getContract() {
     return getContract({
-      address: CHAIN_ADDRESSES[this.chain].PufferL2Depositor as Address,
+      address: CONTRACT_ADDRESSES[this.chain].PufferL2Depositor as Address,
       abi: PUFFER_L2_DEPOSITOR_ABIS[this.chain].PufferL2Depositor,
       client: {
         wallet: this.walletClient,
@@ -130,7 +130,7 @@ export class PufferL2DepositorHandler {
       .withToken(token)
       .getPermitSignature(
         walletAddress,
-        CHAIN_ADDRESSES[this.chain].PufferL2Depositor as Address,
+        CONTRACT_ADDRESSES[this.chain].PufferL2Depositor as Address,
         value,
       );
     /* istanbul ignore next */
