@@ -6,7 +6,7 @@ export enum Token {
   USDC = 'USDC',
   DAI = 'DAI',
   ETH = 'ETH',
-  WETH = 'wETH',
+  WETH = 'WETH',
   stETH = 'stETH',
   wstETH = 'wstETH',
   pufETH = 'pufETH',
