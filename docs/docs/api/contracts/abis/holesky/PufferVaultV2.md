@@ -8,4 +8,4 @@
 
 #### Source
 
-[lib/contracts/abis/holesky/PufferVaultV2.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/abis/holesky/PufferVaultV2.ts#L1)
+[lib/contracts/abis/holesky/PufferVaultV2.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/abis/holesky/PufferVaultV2.ts#L1)

@@ -30,7 +30,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:26](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L26)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:26](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L26)
 
 #### Properties
 
@@ -60,7 +60,7 @@ USDC). If a token's contract doesn't support permit signatures, use
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `token` | [`NonPufToken`](../tokens.md#nonpuftoken) | Token to deposit. |
+| `token` | [`Token`](../tokens.md#token) | Token to deposit. |
 | `walletAddress` | \`0x$\{string\}\` | Wallet address to take the token from. |
 | `value` | `bigint` | Value in wei of the token to deposit. |
 | `referralCode` | `bigint` | Referral code for the deposit. |
@@ -93,7 +93,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L123)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L123)
 
 ##### depositPreApproved()
 
@@ -108,7 +108,7 @@ make the transaction but returns two methods namely `transact` and
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `token` | [`NonPufToken`](../tokens.md#nonpuftoken) | Token to deposit. |
+| `token` | [`Token`](../tokens.md#token) | Token to deposit. |
 | `walletAddress` | \`0x$\{string\}\` | Wallet address to take the token from. |
 | `value` | `bigint` | Value in wei of the token to deposit. |
 
@@ -140,7 +140,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L71)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L71)
 
 ##### getContract()
 
@@ -157,4 +157,4 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L45)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L45)

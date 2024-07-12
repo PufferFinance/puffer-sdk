@@ -2,6 +2,24 @@
 
 ## Enumerations
 
+### PufToken
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `pufALT` | `"pufALT"` |
+| `pufDAI` | `"pufDAI"` |
+| `pufEETH` | `"pufEETH"` |
+| `pufStETH` | `"pufStETH"` |
+| `pufUSDC` | `"pufUSDC"` |
+| `pufUSDT` | `"pufUSDT"` |
+| `pufWETH` | `"pufWETH"` |
+| `pufWstETH` | `"pufWstETH"` |
+| `pufpufETH` | `"pufpufETH"` |
+
+***
+
 ### Token
 
 #### Enumeration Members
@@ -12,126 +30,81 @@
 | `ETH` | `"ETH"` |
 | `USDC` | `"USDC"` |
 | `USDT` | `"USDT"` |
-| `WETH` | `"wETH"` |
-| `pufALT` | `"pufALT"` |
-| `pufDAI` | `"pufDAI"` |
-| `pufEETH` | `"pufEETH"` |
+| `WETH` | `"WETH"` |
 | `pufETH` | `"pufETH"` |
-| `pufStETH` | `"pufStETH"` |
-| `pufUSDC` | `"pufUSDC"` |
-| `pufUSDT` | `"pufUSDT"` |
-| `pufWETH` | `"pufWETH"` |
-| `pufWstETH` | `"pufWstETH"` |
-| `pufpufETH` | `"pufpufETH"` |
 | `stETH` | `"stETH"` |
 | `wstETH` | `"wstETH"` |
 
 ## Type Aliases
 
-### NonPufToken
+### AnyToken
 
-> **NonPufToken**: `Extract` \<[`Token`](tokens.md#token), `"USDT"` \| `"USDC"` \| `"DAI"` \| `"ETH"` \| `"WETH"` \| `"stETH"` \| `"wstETH"` \| `"pufETH"`\>
-
-#### Source
-
-[lib/contracts/tokens.ts:26](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/tokens.ts#L26)
-
-***
-
-### PufToken
-
-> **PufToken**: `Extract` \<[`Token`](tokens.md#token), `"pufUSDT"` \| `"pufUSDC"` \| `"pufDAI"` \| `"pufpufETH"` \| `"pufWETH"` \| `"pufStETH"` \| `"pufWstETH"` \| `"pufALT"` \| `"pufEETH"`\>
+> **AnyToken**: [`Token`](tokens.md#token) \| [`PufToken`](tokens.md#puftoken)
 
 #### Source
 
-[lib/contracts/tokens.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/tokens.ts#L31)
+[lib/contracts/tokens.ts:27](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/tokens.ts#L27)
 
 ## Variables
 
 ### TOKENS\_ADDRESSES
 
-> `const` **TOKENS\_ADDRESSES**: `{ [key in Token]: { [chain in Chain]: Address } }`
+> `const` **TOKENS\_ADDRESSES**: \{ \[key in Token \| PufToken\]: \{ \[chain in Chain\]: Address \} \}
 
 #### Source
 
-[lib/contracts/tokens.ts:44](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/tokens.ts#L44)
+[lib/contracts/tokens.ts:40](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/tokens.ts#L40)
 
 ***
 
 ### TOKENS\_PERMIT\_VERSION
 
-> `const` **TOKENS\_PERMIT\_VERSION**: `object`
+> `const` **TOKENS\_PERMIT\_VERSION**: \{ \[key in Token \| PufToken\]: string \}
+
+#### Source
+
+[lib/contracts/tokens.ts:116](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/tokens.ts#L116)
+
+***
+
+### TOKEN\_TO\_PUF\_TOKEN\_MAP
+
+> `const` **TOKEN\_TO\_PUF\_TOKEN\_MAP**: `object`
 
 #### Type declaration
 
 ##### DAI
 
-> **DAI**: `string` = `'1'`
+> **DAI**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufDAI`
 
 ##### ETH
 
-> **ETH**: `string` = `''`
+> **ETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufEETH`
 
 ##### USDC
 
-> **USDC**: `string` = `'2'`
+> **USDC**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufUSDC`
 
 ##### USDT
 
-> **USDT**: `string` = `'2'`
+> **USDT**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufUSDT`
 
-##### pufALT
+##### WETH
 
-> **pufALT**: `string` = `'1'`
-
-##### pufDAI
-
-> **pufDAI**: `string` = `'1'`
-
-##### pufEETH
-
-> **pufEETH**: `string` = `'1'`
+> **WETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufWETH`
 
 ##### pufETH
 
-> **pufETH**: `string` = `'1'`
-
-##### pufStETH
-
-> **pufStETH**: `string` = `'1'`
-
-##### pufUSDC
-
-> **pufUSDC**: `string` = `'1'`
-
-##### pufUSDT
-
-> **pufUSDT**: `string` = `'1'`
-
-##### pufWETH
-
-> **pufWETH**: `string` = `'1'`
-
-##### pufWstETH
-
-> **pufWstETH**: `string` = `'1'`
-
-##### pufpufETH
-
-> **pufpufETH**: `string` = `'1'`
+> **pufETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufpufETH`
 
 ##### stETH
 
-> **stETH**: `string` = `'2'`
-
-##### wETH
-
-> **wETH**: `string` = `''`
+> **stETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufStETH`
 
 ##### wstETH
 
-> **wstETH**: `string` = `'1'`
+> **wstETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufWstETH`
 
 #### Source
 
-[lib/contracts/tokens.ts:120](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/contracts/tokens.ts#L120)
+[lib/contracts/tokens.ts:29](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/tokens.ts#L29)

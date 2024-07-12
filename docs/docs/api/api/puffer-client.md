@@ -28,7 +28,7 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:46](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/api/puffer-client.ts#L46)
+[lib/api/puffer-client.ts:46](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/api/puffer-client.ts#L46)
 
 #### Properties
 
@@ -59,4 +59,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:104](https://github.com/PufferFinance/puffer-sdk/blob/b5daa782ae6806e90fac58668a99d5205505589f/lib/api/puffer-client.ts#L104)
+[lib/api/puffer-client.ts:104](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/api/puffer-client.ts#L104)
