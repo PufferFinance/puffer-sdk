@@ -109,7 +109,7 @@ export const TOKENS_ADDRESSES: {
   },
   [PufToken.pufpufETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0xECa244cBBe52A68EB6c4fdC266c2c50D568bcd22',
+    [Chain.Holesky]: '0x2de087ab00e427aa7c7e94f5ae6ceb129625f87c',
   },
 };
 

@@ -65,12 +65,13 @@ describe('PufTokenHandler', () => {
       .spyOn((handler as any).erc20PermitHandler, 'getPermitSignature')
       .mockReturnValue(Promise.resolve(mockPermitSignature));
 
-    const { transact, estimate } = await handler.depositPreApproved(
-      PufToken.pufWETH,
-      mockAccount,
-      1n,
-      10n,
-    );
+    const { transact, estimate } = await handler.deposit({
+      token: PufToken.pufWETH,
+      account: mockAccount,
+      value: 1n,
+      lockPeriod: 10n,
+      isPreapproved: true,
+    });
 
     expect(typeof (await estimate())).toBe('bigint');
     expect(isHash(await transact())).toBe(true);
@@ -82,12 +83,12 @@ describe('PufTokenHandler', () => {
       .spyOn((handler as any).erc20PermitHandler, 'getPermitSignature')
       .mockReturnValue(Promise.resolve(mockPermitSignature));
 
-    const { transact, estimate } = await handler.deposit(
-      PufToken.pufWETH,
-      mockAccount,
-      1n,
-      10n,
-    );
+    const { transact, estimate } = await handler.deposit({
+      token: PufToken.pufWETH,
+      account: mockAccount,
+      value: 1n,
+      lockPeriod: 10n,
+    });
 
     expect(typeof (await estimate())).toBe('bigint');
     expect(isHash(await transact())).toBe(true);
