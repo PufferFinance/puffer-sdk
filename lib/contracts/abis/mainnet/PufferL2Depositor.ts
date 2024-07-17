@@ -3,6 +3,7 @@ export const PufferL2Depositor = <const>[
     inputs: [
       { internalType: 'address', name: 'accessManager', type: 'address' },
       { internalType: 'address', name: 'weth', type: 'address' },
+      { internalType: 'contract IPufLocker', name: 'locker', type: 'address' },
     ],
     stateMutability: 'nonpayable',
     type: 'constructor',
@@ -172,6 +173,15 @@ export const PufferL2Depositor = <const>[
   },
   {
     inputs: [],
+    name: 'PUFFER_LOCKER',
+    outputs: [
+      { internalType: 'contract IPufLocker', name: '', type: 'address' },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
     name: 'WETH',
     outputs: [{ internalType: 'address', name: '', type: 'address' }],
     stateMutability: 'view',
@@ -208,6 +218,7 @@ export const PufferL2Depositor = <const>[
         type: 'tuple',
       },
       { internalType: 'uint256', name: 'referralCode', type: 'uint256' },
+      { internalType: 'uint128', name: 'lockPeriod', type: 'uint128' },
     ],
     name: 'deposit',
     outputs: [],
@@ -218,6 +229,7 @@ export const PufferL2Depositor = <const>[
     inputs: [
       { internalType: 'address', name: 'account', type: 'address' },
       { internalType: 'uint256', name: 'referralCode', type: 'uint256' },
+      { internalType: 'uint128', name: 'lockPeriod', type: 'uint128' },
     ],
     name: 'depositETH',
     outputs: [],
