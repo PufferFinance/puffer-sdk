@@ -5,6 +5,15 @@ import { CONTRACT_ADDRESSES } from '../addresses';
 import { TOKENS_ADDRESSES, Token } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
 
+export type L2DepositParams = {
+  token: Token;
+  account: Address;
+  value: bigint;
+  referralCode?: bigint;
+  lockPeriod?: bigint;
+  isPreapproved?: boolean;
+};
+
 /**
  * Handler for the `PufferL2Depositor` contract exposing methods to
  * interact with the contract.
@@ -54,109 +63,83 @@ export class PufferL2DepositorHandler {
   }
 
   /**
-   * Deposit the given token which is pre-approved using
-   * `Token.approve()` in exchange for wrapped PufToken. This doesn't
-   * make the transaction but returns two methods namely `transact` and
-   * `estimate`.
-   *
-   * @param token Token to deposit.
-   * @param walletAddress Wallet address to take the token from.
-   * @param value Value in wei of the token to deposit.
-   * @returns `transact: () => Promise<Address>` - Used to make the
-   * transaction.
-   *
-   * `estimate: () => Promise<bigint>` - Gas estimate of the
-   * transaction.
-   */
-  public depositPreApproved(
-    token: Token,
-    walletAddress: Address,
-    value: bigint,
-  ) {
-    const depositArgs = <const>[
-      TOKENS_ADDRESSES[token][this.chain],
-      walletAddress,
-      // Only `amount` is needed if `Token.approve()` is already called.
-      // So using mock values for other properties.
-      {
-        r: padHex('0x', { size: 32 }),
-        s: padHex('0x', { size: 32 }),
-        v: 0,
-        deadline: 0n,
-        amount: value,
-      },
-      value,
-    ];
-
-    const transact = () =>
-      this.getContract().write.deposit(depositArgs, {
-        account: walletAddress,
-        chain: this.viemChain,
-      });
-    const estimate = () =>
-      this.getContract().estimateGas.deposit(depositArgs, {
-        account: walletAddress,
-      });
-
-    return { transact, estimate };
-  }
-
-  /**
    * Deposit the given token in exchange for the wrapped PufToken. This
    * doesn't make the transaction but returns two methods namely
    * `transact` and `estimate`.
    *
    * Note that not all token contracts support permit signatures (e.g.
    * USDC). If a token's contract doesn't support permit signatures, use
-   * `Token.approve()` and call `this.depositPreApproved()` instead.
+   * `Token.approve()` and be sure to set the option `isPreapproved` to
+   * `true`.
    *
-   * @param token Token to deposit.
-   * @param walletAddress Wallet address to take the token from.
-   * @param value Value in wei of the token to deposit.
-   * @param referralCode Referral code for the deposit.
+   * @param depositParams.token Token to deposit.
+   * @param depositParams.account Wallet address to take the token from.
+   * @param depositParams.value Value in wei of the token to deposit.
+   * @param depositParams.referralCode Referral code for the deposit.
+   * @param depositParams.lockPeriod The period for the deposit in
+   * seconds.
+   * @param depositParams.isPreapproved Whether token is pre-approved or
+   * needs a permit.
    * @returns `transact: () => Promise<Address>` - Used to make the
    * transaction.
    *
    * `estimate: () => Promise<bigint>` - Gas estimate of the
    * transaction.
    */
-  public async deposit(
-    token: Token,
-    walletAddress: Address,
-    value: bigint,
-    referralCode: bigint = 0n,
-  ) {
-    const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
-      .withToken(token)
-      .getPermitSignature(
-        walletAddress,
-        CONTRACT_ADDRESSES[this.chain].PufferL2Depositor as Address,
-        value,
-      );
-    /* istanbul ignore next */
-    const permitData = {
-      r,
-      s,
-      v: Number(v ?? yParity),
-      deadline,
+  public async deposit(depositParams: L2DepositParams) {
+    const {
+      token,
+      account,
+      value,
+      referralCode = 0n,
+      lockPeriod = 0n,
+      isPreapproved = false,
+    } = depositParams;
+
+    // Only `amount` is needed if `Token.approve()` is already called.
+    // So using mock values for other properties.
+    let permitData = {
+      r: padHex('0x', { size: 32 }),
+      s: padHex('0x', { size: 32 }),
+      v: 0,
+      deadline: 0n,
       amount: value,
     };
 
+    if (!isPreapproved) {
+      const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
+        .withToken(token)
+        .getPermitSignature(
+          account,
+          CONTRACT_ADDRESSES[this.chain].PufferL2Depositor as Address,
+          value,
+        );
+      /* istanbul ignore next */
+      permitData = {
+        r,
+        s,
+        v: Number(v ?? yParity),
+        deadline,
+        amount: value,
+      };
+    }
+
     const depositArgs = <const>[
       TOKENS_ADDRESSES[token][this.chain],
-      walletAddress,
+      account,
       permitData,
       referralCode,
+      lockPeriod,
     ];
 
     const transact = () =>
       this.getContract().write.deposit(depositArgs, {
-        account: walletAddress,
+        account: account,
         chain: this.viemChain,
       });
     const estimate = () =>
       this.getContract().estimateGas.deposit(depositArgs, {
-        account: walletAddress,
+        account: account,
       });
 
     return { transact, estimate };

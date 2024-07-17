@@ -30,11 +30,12 @@ describe('PufferL2DepositorHandler', () => {
   it('should deposit pre-approved token', async () => {
     contractTestingUtils.mockTransaction('deposit');
 
-    const { transact, estimate } = handler.depositPreApproved(
-      Token.stETH,
-      mockAccount,
-      10n,
-    );
+    const { transact, estimate } = await handler.deposit({
+      token: Token.stETH,
+      account: mockAccount,
+      value: 10n,
+      isPreapproved: true,
+    });
 
     expect(typeof (await estimate())).toBe('bigint');
     expect(isHash(await transact())).toBe(true);
@@ -46,11 +47,11 @@ describe('PufferL2DepositorHandler', () => {
       .spyOn((handler as any).erc20PermitHandler, 'getPermitSignature')
       .mockReturnValue(Promise.resolve(mockPermitSignature));
 
-    const { transact, estimate } = await handler.deposit(
-      Token.stETH,
-      mockAccount,
-      10n,
-    );
+    const { transact, estimate } = await handler.deposit({
+      token: Token.stETH,
+      account: mockAccount,
+      value: 10n,
+    });
 
     expect(typeof (await estimate())).toBe('bigint');
     expect(isHash(await transact())).toBe(true);
