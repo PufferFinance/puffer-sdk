@@ -30,7 +30,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:26](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L26)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:35](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L35)
 
 #### Properties
 
@@ -46,7 +46,7 @@ methods to interact with the contract.
 
 ##### deposit()
 
-> **deposit**(`token`, `walletAddress`, `value`, `referralCode`): `Promise`\<`object`\>
+> **deposit**(`depositParams`): `Promise`\<`object`\>
 
 Deposit the given token in exchange for the wrapped PufToken. This
 doesn't make the transaction but returns two methods namely
@@ -54,16 +54,14 @@ doesn't make the transaction but returns two methods namely
 
 Note that not all token contracts support permit signatures (e.g.
 USDC). If a token's contract doesn't support permit signatures, use
-`Token.approve()` and call `this.depositPreApproved()` instead.
+`Token.approve()` and be sure to set the option `isPreapproved` to
+`true`.
 
 ###### Parameters
 
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `token` | [`Token`](../tokens.md#token) | Token to deposit. |
-| `walletAddress` | \`0x$\{string\}\` | Wallet address to take the token from. |
-| `value` | `bigint` | Value in wei of the token to deposit. |
-| `referralCode` | `bigint` | Referral code for the deposit. |
+| Parameter | Type |
+| :------ | :------ |
+| `depositParams` | [`L2DepositParams`](puffer-l2-depositor-handler.md#l2depositparams) |
 
 ###### Returns
 
@@ -93,54 +91,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L123)
-
-##### depositPreApproved()
-
-> **depositPreApproved**(`token`, `walletAddress`, `value`): `object`
-
-Deposit the given token which is pre-approved using
-`Token.approve()` in exchange for wrapped PufToken. This doesn't
-make the transaction but returns two methods namely `transact` and
-`estimate`.
-
-###### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `token` | [`Token`](../tokens.md#token) | Token to deposit. |
-| `walletAddress` | \`0x$\{string\}\` | Wallet address to take the token from. |
-| `value` | `bigint` | Value in wei of the token to deposit. |
-
-###### Returns
-
-`object`
-
-`transact: () => Promise<Address>` - Used to make the
-transaction.
-
-`estimate: () => Promise<bigint>` - Gas estimate of the
-transaction.
-
-###### estimate()
-
-> **estimate**: () => `Promise`\<`bigint`\>
-
-###### Returns
-
-`Promise`\<`bigint`\>
-
-###### transact()
-
-> **transact**: () => `Promise`\<\`0x$\{string\}\`\>
-
-###### Returns
-
-`Promise`\<\`0x$\{string\}\`\>
-
-###### Source
-
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L71)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L89)
 
 ##### getContract()
 
@@ -157,4 +108,40 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/39340937ae31056b8c2916027e171b355c2065cc/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L45)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:54](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L54)
+
+## Type Aliases
+
+### L2DepositParams
+
+> **L2DepositParams**: `object`
+
+#### Type declaration
+
+##### account
+
+> **account**: `Address`
+
+##### isPreapproved?
+
+> `optional` **isPreapproved**: `boolean`
+
+##### lockPeriod?
+
+> `optional` **lockPeriod**: `bigint`
+
+##### referralCode?
+
+> `optional` **referralCode**: `bigint`
+
+##### token
+
+> **token**: [`Token`](../tokens.md#token)
+
+##### value
+
+> **value**: `bigint`
+
+#### Source
+
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:8](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L8)
