@@ -78,8 +78,8 @@ export class PufferL2DepositorHandler {
    * @param depositParams.referralCode Referral code for the deposit.
    * @param depositParams.lockPeriod The period for the deposit in
    * seconds.
-   * @param depositParams.isPreapproved Whether token is pre-approved or
-   * needs a permit.
+   * @param depositParams.isPreapproved Whether the token is
+   * pre-approved or needs a permit.
    * @returns `transact: () => Promise<Address>` - Used to make the
    * transaction.
    *

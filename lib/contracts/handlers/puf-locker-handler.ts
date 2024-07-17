@@ -5,6 +5,14 @@ import { CONTRACT_ADDRESSES } from '../addresses';
 import { PufToken, TOKENS_ADDRESSES } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
 
+export type LockerDepositParams = {
+  token: PufToken;
+  account: Address;
+  value: bigint;
+  lockPeriod: bigint;
+  isPreapproved?: boolean;
+};
+
 /**
  * Handler for the `PufLocker` contract exposing methods to interact
  * with the contract.
@@ -101,105 +109,74 @@ export class PufLockerHandler {
   }
 
   /**
-   * Deposit the given pre-approved PufToken into the locker. A token
-   * can be pre-approved using `Token.approve()`, This doesn't make the
-   * transaction but returns two methods namely `transact` and
-   * `estimate`.
-   *
-   * @param pufToken PufToken to deposit.
-   * @param walletAddress Wallet address of the depositor.
-   * @param value Amount of the deposit.
-   * @param lockPeriod The period for the deposit in seconds.
-   * @returns `transact: () => Promise<Address>` - Used to make the
-   * transaction.
-   *
-   * `estimate: () => Promise<bigint>` - Gas estimate of the
-   * transaction.
-   */
-  public async depositPreApproved(
-    pufToken: PufToken,
-    walletAddress: Address,
-    value: bigint,
-    lockPeriod: bigint,
-  ) {
-    const depositArgs = <const>[
-      TOKENS_ADDRESSES[pufToken][this.chain],
-      lockPeriod,
-      // Only `amount` is needed if `Token.approve()` is already called.
-      // So using mock values for other properties.
-      {
-        r: padHex('0x', { size: 32 }),
-        s: padHex('0x', { size: 32 }),
-        v: 0,
-        deadline: 0n,
-        amount: value,
-      },
-    ];
-
-    const transact = () =>
-      this.getContract().write.deposit(depositArgs, {
-        account: walletAddress,
-        chain: this.viemChain,
-      });
-    const estimate = () =>
-      this.getContract().estimateGas.deposit(depositArgs, {
-        account: walletAddress,
-      });
-
-    return { transact, estimate };
-  }
-
-  /**
    * Deposit the given PufToken into the locker. This doesn't make the
    * transaction but returns two methods namely `transact` and
    * `estimate`.
    *
-   * @param pufToken PufToken to deposit.
-   * @param walletAddress Wallet address of the depositor.
-   * @param value Amount of the deposit.
-   * @param lockPeriod The period for the deposit in seconds.
+   * @param depositParams.pufToken PufToken to deposit.
+   * @param depositParams.account Wallet address of the depositor.
+   * @param depositParams.value Amount of the deposit.
+   * @param depositParams.lockPeriod The period for the deposit in
+   * seconds.
+   * @param depositParams.isPreapproved Whether the token is
+   * pre-approved or needs a permit.
    * @returns `transact: () => Promise<Address>` - Used to make the
    * transaction.
    *
    * `estimate: () => Promise<bigint>` - Gas estimate of the
    * transaction.
    */
-  public async deposit(
-    pufToken: PufToken,
-    walletAddress: Address,
-    value: bigint,
-    lockPeriod: bigint,
-  ) {
-    const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
-      .withToken(pufToken)
-      .getPermitSignature(
-        walletAddress,
-        CONTRACT_ADDRESSES[this.chain].PufLocker as Address,
-        value,
-      );
-    /* istanbul ignore next */
-    const permitData = {
-      r,
-      s,
-      v: Number(v ?? yParity),
-      deadline,
+  public async deposit(depositParams: LockerDepositParams) {
+    const {
+      token,
+      account,
+      value,
+      lockPeriod,
+      isPreapproved = false,
+    } = depositParams;
+
+    // Only `amount` is needed if `Token.approve()` is already called.
+    // So using mock values for other properties.
+    let permitData = {
+      r: padHex('0x', { size: 32 }),
+      s: padHex('0x', { size: 32 }),
+      v: 0,
+      deadline: 0n,
       amount: value,
     };
 
+    if (!isPreapproved) {
+      const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
+        .withToken(token)
+        .getPermitSignature(
+          account,
+          CONTRACT_ADDRESSES[this.chain].PufLocker as Address,
+          value,
+        );
+      /* istanbul ignore next */
+      permitData = {
+        r,
+        s,
+        v: Number(v ?? yParity),
+        deadline,
+        amount: value,
+      };
+    }
+
     const depositArgs = <const>[
-      TOKENS_ADDRESSES[pufToken][this.chain],
+      TOKENS_ADDRESSES[token][this.chain],
       lockPeriod,
       permitData,
     ];
 
     const transact = () =>
       this.getContract().write.deposit(depositArgs, {
-        account: walletAddress,
+        account,
         chain: this.viemChain,
       });
     const estimate = () =>
       this.getContract().estimateGas.deposit(depositArgs, {
-        account: walletAddress,
+        account,
       });
 
     return { transact, estimate };
