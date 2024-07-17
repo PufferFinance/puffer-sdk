@@ -68,7 +68,7 @@ export const TOKENS_ADDRESSES: {
   },
   [Token.pufETH]: {
     [Chain.Mainnet]: '0xd9a442856c234a39a81a089c06451ebaa4306a72',
-    [Chain.Holesky]: '0x9196830bb4c05504e0a8475a0ad566aceeb6bec9',
+    [Chain.Holesky]: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
   },
 
   // TODO: Update the addresses once the contracts are deployed on chain.
@@ -81,11 +81,11 @@ export const TOKENS_ADDRESSES: {
   },
   [PufToken.pufUSDC]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0xC4731029b6F4fEd5930A56F0FFa3E8Ae688f9dA8',
+    [Chain.Holesky]: '0x6D900a9f5784A2cA0004B5c3D3e08D7A9cE4A1b3',
   },
   [PufToken.pufDAI]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0xcA1C3DBC6Ea41f018B8d91C3AbE6FacDBDd4F63e',
+    [Chain.Holesky]: '0x28177665f597DA2dcF43c3680cc40D855672A700',
   },
   [PufToken.pufEETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
@@ -93,7 +93,7 @@ export const TOKENS_ADDRESSES: {
   },
   [PufToken.pufWETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x2207119500757bDD269F98d86Dca6356535b876E',
+    [Chain.Holesky]: '0x1E1Aaeff72905B682b9CEc5bC6D3425087df9edf',
   },
   [PufToken.pufStETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
@@ -109,14 +109,14 @@ export const TOKENS_ADDRESSES: {
   },
   [PufToken.pufpufETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x2de087ab00e427aa7c7e94f5ae6ceb129625f87c',
+    [Chain.Holesky]: '0x2dE087aB00E427aa7c7e94f5ae6ceB129625F87c',
   },
 };
 
 export const TOKENS_PERMIT_VERSION: { [key in Token | PufToken]: string } = {
   [Token.USDT]: '2',
   // USDC does not support permit signatures (ERC20Permit).
-  [Token.USDC]: '2',
+  [Token.USDC]: '',
   [Token.DAI]: '1',
   [Token.ETH]: '',
   // WETH does not support permit signatures (ERC20Permit).

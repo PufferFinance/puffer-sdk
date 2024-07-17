@@ -8,6 +8,7 @@ import { ERC20PermitHandler } from './erc20-permit-handler';
 export type LockerDepositParams = {
   token: PufToken;
   account: Address;
+  recipient: Address;
   value: bigint;
   lockPeriod: bigint;
   isPreapproved?: boolean;
@@ -130,6 +131,7 @@ export class PufLockerHandler {
     const {
       token,
       account,
+      recipient,
       value,
       lockPeriod,
       isPreapproved = false,
@@ -165,6 +167,7 @@ export class PufLockerHandler {
 
     const depositArgs = <const>[
       TOKENS_ADDRESSES[token][this.chain],
+      recipient,
       lockPeriod,
       permitData,
     ];

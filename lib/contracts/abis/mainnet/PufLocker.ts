@@ -210,6 +210,7 @@ export const PufLocker = <const>[
   {
     inputs: [
       { internalType: 'address', name: 'token', type: 'address' },
+      { internalType: 'address', name: 'recipient', type: 'address' },
       { internalType: 'uint128', name: 'lockPeriod', type: 'uint128' },
       {
         components: [
