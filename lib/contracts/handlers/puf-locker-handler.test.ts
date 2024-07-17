@@ -68,6 +68,7 @@ describe('PufTokenHandler', () => {
     const { transact, estimate } = await handler.deposit({
       token: PufToken.pufWETH,
       account: mockAccount,
+      recipient: mockAccount,
       value: 1n,
       lockPeriod: 10n,
       isPreapproved: true,
@@ -86,6 +87,7 @@ describe('PufTokenHandler', () => {
     const { transact, estimate } = await handler.deposit({
       token: PufToken.pufWETH,
       account: mockAccount,
+      recipient: mockAccount,
       value: 1n,
       lockPeriod: 10n,
     });
