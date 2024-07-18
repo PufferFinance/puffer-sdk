@@ -117,7 +117,8 @@ export const TOKENS_PERMIT_VERSION: { [key in Token | PufToken]: string } = {
   [Token.USDT]: '2',
   // USDC does not support permit signatures (ERC20Permit).
   [Token.USDC]: '',
-  [Token.DAI]: '1',
+  // DAI does not support permit signatures (ERC20Permit).
+  [Token.DAI]: '',
   [Token.ETH]: '',
   // WETH does not support permit signatures (ERC20Permit).
   [Token.WETH]: '',
