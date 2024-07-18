@@ -31,7 +31,7 @@ interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puf-token-handler.ts:25](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puf-token-handler.ts#L25)
+[lib/contracts/handlers/puf-token-handler.ts:25](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/handlers/puf-token-handler.ts#L25)
 
 #### Properties
 
@@ -67,7 +67,7 @@ Hash of the transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puf-token-handler.ts:213](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puf-token-handler.ts#L213)
+[lib/contracts/handlers/puf-token-handler.ts:213](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/handlers/puf-token-handler.ts#L213)
 
 ##### balanceOf()
 
@@ -89,7 +89,7 @@ The wrapped token's (PufToken) balance in wei.
 
 ###### Source
 
-[lib/contracts/handlers/puf-token-handler.ts:68](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puf-token-handler.ts#L68)
+[lib/contracts/handlers/puf-token-handler.ts:68](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/handlers/puf-token-handler.ts#L68)
 
 ##### deposit()
 
@@ -135,7 +135,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puf-token-handler.ts:143](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puf-token-handler.ts#L143)
+[lib/contracts/handlers/puf-token-handler.ts:143](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/handlers/puf-token-handler.ts#L143)
 
 ##### getAllowance()
 
@@ -158,7 +158,7 @@ Allowance that can be used by the spender.
 
 ###### Source
 
-[lib/contracts/handlers/puf-token-handler.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puf-token-handler.ts#L79)
+[lib/contracts/handlers/puf-token-handler.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/handlers/puf-token-handler.ts#L79)
 
 ##### getContract()
 
@@ -175,7 +175,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/puf-token-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puf-token-handler.ts#L51)
+[lib/contracts/handlers/puf-token-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/handlers/puf-token-handler.ts#L51)
 
 ##### getTotalDepositCap()
 
@@ -191,7 +191,7 @@ Total cap of the PufToken that can be deposited.
 
 ###### Source
 
-[lib/contracts/handlers/puf-token-handler.ts:88](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puf-token-handler.ts#L88)
+[lib/contracts/handlers/puf-token-handler.ts:88](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/handlers/puf-token-handler.ts#L88)
 
 ##### getTotalSupply()
 
@@ -207,7 +207,7 @@ Total supply of the PufToken.
 
 ###### Source
 
-[lib/contracts/handlers/puf-token-handler.ts:97](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puf-token-handler.ts#L97)
+[lib/contracts/handlers/puf-token-handler.ts:97](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/handlers/puf-token-handler.ts#L97)
 
 ##### migrate()
 
@@ -253,7 +253,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puf-token-handler.ts:181](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puf-token-handler.ts#L181)
+[lib/contracts/handlers/puf-token-handler.ts:181](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/handlers/puf-token-handler.ts#L181)
 
 ##### withPufToken()
 
@@ -275,7 +275,7 @@ The handler.
 
 ###### Source
 
-[lib/contracts/handlers/puf-token-handler.ts:40](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puf-token-handler.ts#L40)
+[lib/contracts/handlers/puf-token-handler.ts:40](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/handlers/puf-token-handler.ts#L40)
 
 ##### withdraw()
 
@@ -320,4 +320,4 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puf-token-handler.ts:114](https://github.com/PufferFinance/puffer-sdk/blob/2ca4ca708a93d0fd96e57575e2b5bc924e934421/lib/contracts/handlers/puf-token-handler.ts#L114)
+[lib/contracts/handlers/puf-token-handler.ts:114](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/handlers/puf-token-handler.ts#L114)
