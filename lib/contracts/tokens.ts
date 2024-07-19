@@ -18,8 +18,8 @@ export enum PufToken {
   pufDAI = 'pufDAI',
   pufpufETH = 'pufpufETH',
   pufWETH = 'pufWETH',
-  pufStETH = 'pufStETH',
-  pufWstETH = 'pufWstETH',
+  pufstETH = 'pufstETH',
+  pufwstETH = 'pufwstETH',
   pufALT = 'pufALT',
   pufEETH = 'pufEETH',
 }
@@ -32,8 +32,8 @@ export const TOKEN_TO_PUF_TOKEN_MAP = {
   [Token.DAI]: PufToken.pufDAI,
   [Token.ETH]: PufToken.pufEETH,
   [Token.WETH]: PufToken.pufWETH,
-  [Token.stETH]: PufToken.pufStETH,
-  [Token.wstETH]: PufToken.pufWstETH,
+  [Token.stETH]: PufToken.pufstETH,
+  [Token.wstETH]: PufToken.pufwstETH,
   [Token.pufETH]: PufToken.pufpufETH,
 };
 
@@ -95,11 +95,11 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0x1E1Aaeff72905B682b9CEc5bC6D3425087df9edf',
   },
-  [PufToken.pufStETH]: {
+  [PufToken.pufstETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
-  [PufToken.pufWstETH]: {
+  [PufToken.pufwstETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
@@ -133,8 +133,8 @@ export const TOKENS_PERMIT_VERSION: { [key in Token | PufToken]: string } = {
   [PufToken.pufDAI]: '1',
   [PufToken.pufEETH]: '1',
   [PufToken.pufWETH]: '1',
-  [PufToken.pufStETH]: '1',
-  [PufToken.pufWstETH]: '1',
+  [PufToken.pufstETH]: '1',
+  [PufToken.pufwstETH]: '1',
   [PufToken.pufALT]: '1',
   [PufToken.pufpufETH]: '1',
 };
