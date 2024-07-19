@@ -6,7 +6,7 @@ import { PufToken, TOKENS_ADDRESSES } from '../tokens';
 /**
  * Handler for the `PufToken` contract exposing methods to interact with
  * the contract for each of the wrapped PufTokens (like pufWETH,
- * pufStETH, pufWstETH etc.).
+ * pufstETH, pufwstETH etc.).
  */
 export class PufTokenHandler {
   private viemChain: ViemChain;
