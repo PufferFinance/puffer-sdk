@@ -11,12 +11,12 @@
 | `pufALT` | `"pufALT"` |
 | `pufDAI` | `"pufDAI"` |
 | `pufEETH` | `"pufEETH"` |
-| `pufStETH` | `"pufStETH"` |
 | `pufUSDC` | `"pufUSDC"` |
 | `pufUSDT` | `"pufUSDT"` |
 | `pufWETH` | `"pufWETH"` |
-| `pufWstETH` | `"pufWstETH"` |
 | `pufpufETH` | `"pufpufETH"` |
+| `pufstETH` | `"pufstETH"` |
+| `pufwstETH` | `"pufwstETH"` |
 
 ***
 
@@ -43,7 +43,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:27](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/tokens.ts#L27)
+[lib/contracts/tokens.ts:27](https://github.com/PufferFinance/puffer-sdk/blob/1d1e0f56353f68627f89fcbefdf7413c184aec36/lib/contracts/tokens.ts#L27)
 
 ## Variables
 
@@ -53,7 +53,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:40](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/tokens.ts#L40)
+[lib/contracts/tokens.ts:40](https://github.com/PufferFinance/puffer-sdk/blob/1d1e0f56353f68627f89fcbefdf7413c184aec36/lib/contracts/tokens.ts#L40)
 
 ***
 
@@ -63,7 +63,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:116](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/tokens.ts#L116)
+[lib/contracts/tokens.ts:116](https://github.com/PufferFinance/puffer-sdk/blob/1d1e0f56353f68627f89fcbefdf7413c184aec36/lib/contracts/tokens.ts#L116)
 
 ***
 
@@ -99,12 +99,12 @@
 
 ##### stETH
 
-> **stETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufStETH`
+> **stETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufstETH`
 
 ##### wstETH
 
-> **wstETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufWstETH`
+> **wstETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufwstETH`
 
 #### Source
 
-[lib/contracts/tokens.ts:29](https://github.com/PufferFinance/puffer-sdk/blob/f94047cccf0b8bbd9162171a06fc9e32df6ed317/lib/contracts/tokens.ts#L29)
+[lib/contracts/tokens.ts:29](https://github.com/PufferFinance/puffer-sdk/blob/1d1e0f56353f68627f89fcbefdf7413c184aec36/lib/contracts/tokens.ts#L29)
