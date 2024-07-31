@@ -85,7 +85,7 @@ export const TOKENS_ADDRESSES: {
   },
   [PufToken.pufDAI]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x28177665f597DA2dcF43c3680cc40D855672A700',
+    [Chain.Holesky]: '0x2D6B705e118198A02F00490BA323B17eC5D58109',
   },
   [PufToken.pufEETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
@@ -93,7 +93,7 @@ export const TOKENS_ADDRESSES: {
   },
   [PufToken.pufWETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x1E1Aaeff72905B682b9CEc5bC6D3425087df9edf',
+    [Chain.Holesky]: '0x5335f231C22d472Ab31CC2690A2247d25efd76a5',
   },
   [PufToken.pufstETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
@@ -109,7 +109,7 @@ export const TOKENS_ADDRESSES: {
   },
   [PufToken.pufpufETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x2dE087aB00E427aa7c7e94f5ae6ceB129625F87c',
+    [Chain.Holesky]: '0x638fd1Fe8205285E8497Eb8E6037c8254EDdB0ae',
   },
 };
 
