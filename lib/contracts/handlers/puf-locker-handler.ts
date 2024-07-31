@@ -116,6 +116,7 @@ export class PufLockerHandler {
    *
    * @param depositParams.pufToken PufToken to deposit.
    * @param depositParams.account Wallet address of the depositor.
+   * @param depositParams.recipient Recipient of the deposit.
    * @param depositParams.value Amount of the deposit.
    * @param depositParams.lockPeriod The period for the deposit in
    * seconds.
