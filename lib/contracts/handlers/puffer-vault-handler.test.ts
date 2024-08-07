@@ -73,4 +73,52 @@ describe('PufferVaultHandler', () => {
     expect(typeof (await estimate())).toBe('bigint');
     expect(isHash(await transact())).toBe(true);
   });
+
+  it('should preview redeem for the given pufETH', async () => {
+    const mockRedeemAmount = 10n;
+    vaultTestingUtils.mockCall('previewRedeem', [mockRedeemAmount]);
+
+    const wethAmount = await handler.previowRedeem(10n);
+    expect(wethAmount).toBe(mockRedeemAmount);
+  });
+
+  it('should get max possible pufETH that can be redeemed', async () => {
+    const mockMaxRedeem = 10n;
+    vaultTestingUtils.mockCall('maxRedeem', [mockMaxRedeem]);
+
+    const maxRedeemPufETH = await handler.maxRedeem(mockAccount);
+    expect(maxRedeemPufETH).toBe(mockMaxRedeem);
+  });
+
+  it('should get exit fee basis points', async () => {
+    const mockPoints = 10n;
+    vaultTestingUtils.mockCall('getExitFeeBasisPoints', [mockPoints]);
+
+    const exitFeeBasisPoints = await handler.getExitFeeBasisPoints();
+    expect(exitFeeBasisPoints).toBe(mockPoints);
+  });
+
+  it('should get remaining assets daily withdrawal limit', async () => {
+    const mockLimit = 10n;
+    vaultTestingUtils.mockCall('getRemainingAssetsDailyWithdrawalLimit', [
+      mockLimit,
+    ]);
+
+    const withdrawalLimit =
+      await handler.getRemainingAssetsDailyWithdrawalLimit();
+    expect(withdrawalLimit).toBe(mockLimit);
+  });
+
+  it('should redeem pufETH in exchange for WETH', async () => {
+    vaultTestingUtils.mockTransaction('redeem');
+
+    const { transact, estimate } = handler.redeem(
+      mockAccount,
+      mockAccount,
+      10n,
+    );
+
+    expect(typeof (await estimate())).toBe('bigint');
+    expect(isHash(await transact())).toBe(true);
+  });
 });
