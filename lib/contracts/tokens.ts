@@ -53,10 +53,9 @@ export const TOKENS_ADDRESSES: {
     [Chain.Holesky]: '0x4478905505ddfb7eA1c8A9f46eAEC3695cE542ac',
   },
   [Token.ETH]: {},
-  // WETH does not support permit signatures (ERC20Permit).
   [Token.WETH]: {
     [Chain.Mainnet]: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
-    [Chain.Holesky]: '0x35B1167b4D37931540F4e5189004d1756d1381B0',
+    [Chain.Holesky]: '0x1d181cBd1825e9eBC6AD966878D555A7215FF4F0',
   },
   [Token.stETH]: {
     [Chain.Mainnet]: '0xae7ab96520de3a18e5e111b5eaab095312d7fe84',

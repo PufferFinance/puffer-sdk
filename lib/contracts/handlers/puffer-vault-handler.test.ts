@@ -78,7 +78,7 @@ describe('PufferVaultHandler', () => {
     const mockRedeemAmount = 10n;
     vaultTestingUtils.mockCall('previewRedeem', [mockRedeemAmount]);
 
-    const wethAmount = await handler.previowRedeem(10n);
+    const wethAmount = await handler.previewRedeem(10n);
     expect(wethAmount).toBe(mockRedeemAmount);
   });
 

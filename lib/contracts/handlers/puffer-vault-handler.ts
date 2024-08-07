@@ -153,7 +153,7 @@ export class PufferVaultHandler {
    * @param value Value of pufETH to redeem.
    * @returns Preview of the amount of WETH that can be redeemed.
    */
-  public previowRedeem(value: bigint) {
+  public previewRedeem(value: bigint) {
     return this.getContract().read.previewRedeem([value]);
   }
 
