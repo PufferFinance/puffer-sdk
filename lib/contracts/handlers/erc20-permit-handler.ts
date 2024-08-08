@@ -38,7 +38,7 @@ export class ERC20PermitHandler {
     private publicClient: PublicClient,
   ) {
     this.viemChain = VIEM_CHAINS[chain];
-    this.token = Token.ETH;
+    this.token = Token.WETH;
   }
 
   /**
