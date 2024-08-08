@@ -1,4 +1,10 @@
-import { Address, PublicClient, WalletClient, getContract } from 'viem';
+import {
+  Address,
+  GetContractReturnType,
+  PublicClient,
+  WalletClient,
+  getContract,
+} from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUFFER_DEPOSITOR_ABIS } from '../abis/puffer-depositor-abis';
 import { CONTRACT_ADDRESSES } from '../addresses';
@@ -43,14 +49,15 @@ export class PufferDepositorHandler {
    * @returns The viem contract.
    */
   public getContract() {
-    return getContract({
-      address: CONTRACT_ADDRESSES[this.chain].PufferDepositor as Address,
-      abi: PUFFER_DEPOSITOR_ABIS[this.chain].PufferDepositor,
-      client: {
-        wallet: this.walletClient,
-        public: this.publicClient,
-      },
-    });
+    const address = CONTRACT_ADDRESSES[this.chain].PufferDepositor as Address;
+    const abi = PUFFER_DEPOSITOR_ABIS[this.chain].PufferDepositor;
+    const client = { public: this.publicClient, wallet: this.walletClient };
+
+    return getContract({ address, abi, client }) as GetContractReturnType<
+      typeof abi,
+      typeof client,
+      Address
+    >;
   }
 
   /**

@@ -1,4 +1,10 @@
-import { WalletClient, PublicClient, getContract, Address } from 'viem';
+import {
+  WalletClient,
+  PublicClient,
+  getContract,
+  GetContractReturnType,
+  Address,
+} from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUF_TOKEN_ABIS } from '../abis/puf-token-abis';
 import { PufToken, TOKENS_ADDRESSES } from '../tokens';
@@ -49,14 +55,15 @@ export class PufTokenHandler {
    * @returns The viem contract.
    */
   public getContract() {
-    return getContract({
-      address: TOKENS_ADDRESSES[this.pufToken][this.chain],
-      abi: PUF_TOKEN_ABIS[this.chain].PufToken,
-      client: {
-        wallet: this.walletClient,
-        public: this.publicClient,
-      },
-    });
+    const address = TOKENS_ADDRESSES[this.pufToken][this.chain];
+    const abi = PUF_TOKEN_ABIS[this.chain].PufToken;
+    const client = { public: this.publicClient, wallet: this.walletClient };
+
+    return getContract({ address, abi, client }) as GetContractReturnType<
+      typeof abi,
+      typeof client,
+      Address
+    >;
   }
 
   /**

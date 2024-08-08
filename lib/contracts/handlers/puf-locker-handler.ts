@@ -1,4 +1,11 @@
-import { WalletClient, PublicClient, getContract, Address, padHex } from 'viem';
+import {
+  WalletClient,
+  PublicClient,
+  getContract,
+  Address,
+  padHex,
+  GetContractReturnType,
+} from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUF_LOCKER_ABIS } from '../abis/puf-locker-abis';
 import { CONTRACT_ADDRESSES } from '../addresses';
@@ -52,14 +59,15 @@ export class PufLockerHandler {
    * @returns The viem contract.
    */
   public getContract() {
-    return getContract({
-      address: CONTRACT_ADDRESSES[this.chain].PufLocker as Address,
-      abi: PUF_LOCKER_ABIS[this.chain].PufLocker,
-      client: {
-        wallet: this.walletClient,
-        public: this.publicClient,
-      },
-    });
+    const address = CONTRACT_ADDRESSES[this.chain].PufLocker as Address;
+    const abi = PUF_LOCKER_ABIS[this.chain].PufLocker;
+    const client = { public: this.publicClient, wallet: this.walletClient };
+
+    return getContract({ address, abi, client }) as GetContractReturnType<
+      typeof abi,
+      typeof client,
+      Address
+    >;
   }
 
   /**

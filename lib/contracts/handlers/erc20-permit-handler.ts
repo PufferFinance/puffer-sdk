@@ -4,6 +4,7 @@ import {
   getContract,
   Address,
   parseSignature,
+  GetContractReturnType,
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { ERC20PERMIT_ABI } from '../abis/tokens-abis';
@@ -58,14 +59,15 @@ export class ERC20PermitHandler {
    * @returns The viem contract.
    */
   public getContract() {
-    return getContract({
-      address: TOKENS_ADDRESSES[this.token][this.chain],
-      abi: ERC20PERMIT_ABI,
-      client: {
-        wallet: this.walletClient,
-        public: this.publicClient,
-      },
-    });
+    const address = TOKENS_ADDRESSES[this.token][this.chain];
+    const abi = ERC20PERMIT_ABI;
+    const client = { public: this.publicClient, wallet: this.walletClient };
+
+    return getContract({ address, abi, client }) as GetContractReturnType<
+      typeof abi,
+      typeof client,
+      Address
+    >;
   }
 
   /**
