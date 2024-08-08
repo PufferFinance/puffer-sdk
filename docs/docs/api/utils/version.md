@@ -6,6 +6,6 @@
 
 > `const` **version**: `string` = `packageVersion`
 
-#### Source
+#### Defined in
 
-[lib/utils/version.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/23bbe3274bee6f0fa4d4691cb53f9f9b2a456bd9/lib/utils/version.ts#L3)
+[lib/utils/version.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/9a2052c66d4e242693f95406bd756015cdd4bdd5/lib/utils/version.ts#L3)

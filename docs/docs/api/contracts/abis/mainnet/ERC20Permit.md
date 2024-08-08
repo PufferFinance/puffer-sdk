@@ -1,11 +1,7 @@
 # contracts/abis/mainnet/ERC20Permit
 
-## Variables
+## References
 
 ### ERC20Permit
 
-> `const` **ERC20Permit**: readonly [`object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`]
-
-#### Source
-
-[lib/contracts/abis/mainnet/ERC20Permit.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/23bbe3274bee6f0fa4d4691cb53f9f9b2a456bd9/lib/contracts/abis/mainnet/ERC20Permit.ts#L1)
+Re-exports [ERC20Permit](ERC20Permit.md#erc20permit)

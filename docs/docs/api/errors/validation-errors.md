@@ -17,7 +17,7 @@
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `message` | `string` |
 | `params` | [`ErrorBaseParameters`](types.md#errorbaseparameters) |
 
@@ -27,11 +27,11 @@
 
 ###### Inherited from
 
-[`BaseError`](base-error.md#baseerrort) . [`constructor`](base-error.md#constructors)
+[`BaseError`](base-error.md#baseerrort).[`constructor`](base-error.md#constructors)
 
-###### Source
+###### Defined in
 
-[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/23bbe3274bee6f0fa4d4691cb53f9f9b2a456bd9/lib/errors/base-error.ts#L9)
+[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/9a2052c66d4e242693f95406bd756015cdd4bdd5/lib/errors/base-error.ts#L9)
 
 #### Methods
 
@@ -42,7 +42,7 @@
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `message` | `string` |
 | `params` | [`ErrorBaseParameters`](types.md#errorbaseparameters) |
 
@@ -52,8 +52,8 @@
 
 ###### Inherited from
 
-[`BaseError`](base-error.md#baseerrort) . [`compileMessage`](base-error.md#compilemessage)
+[`BaseError`](base-error.md#baseerrort).[`compileMessage`](base-error.md#compilemessage)
 
-###### Source
+###### Defined in
 
-[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/23bbe3274bee6f0fa4d4691cb53f9f9b2a456bd9/lib/errors/base-error.ts#L14)
+[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/9a2052c66d4e242693f95406bd756015cdd4bdd5/lib/errors/base-error.ts#L14)

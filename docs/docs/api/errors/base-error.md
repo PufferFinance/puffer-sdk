@@ -12,10 +12,10 @@
 
 - [`AccountError`](validation-errors.md#accounterror)
 
-#### Type parameters
+#### Type Parameters
 
-| Type parameter | Value |
-| :------ | :------ |
+| Type Parameter | Default type |
+| ------ | ------ |
 | `T` *extends* `object` | [`ErrorBaseParameters`](types.md#errorbaseparameters) |
 
 #### Constructors
@@ -27,7 +27,7 @@
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `message` | `string` |
 | `params` | `T` |
 
@@ -39,9 +39,9 @@
 
 `Error.constructor`
 
-###### Source
+###### Defined in
 
-[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/23bbe3274bee6f0fa4d4691cb53f9f9b2a456bd9/lib/errors/base-error.ts#L9)
+[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/9a2052c66d4e242693f95406bd756015cdd4bdd5/lib/errors/base-error.ts#L9)
 
 #### Methods
 
@@ -52,7 +52,7 @@
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `message` | `string` |
 | `params` | `T` |
 
@@ -60,6 +60,6 @@
 
 `string`
 
-###### Source
+###### Defined in
 
-[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/23bbe3274bee6f0fa4d4691cb53f9f9b2a456bd9/lib/errors/base-error.ts#L14)
+[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/9a2052c66d4e242693f95406bd756015cdd4bdd5/lib/errors/base-error.ts#L14)
