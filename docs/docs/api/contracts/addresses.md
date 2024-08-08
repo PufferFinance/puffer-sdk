@@ -8,4 +8,4 @@
 
 #### Defined in
 
-[lib/contracts/addresses.ts:5](https://github.com/PufferFinance/puffer-sdk/blob/757072c9d39b8cb5fad75518954e68b14c1ba5da/lib/contracts/addresses.ts#L5)
+[lib/contracts/addresses.ts:5](https://github.com/PufferFinance/puffer-sdk/blob/76e7ef64bae7e516a3502e53b1b67e1ba5bfc496/lib/contracts/addresses.ts#L5)
