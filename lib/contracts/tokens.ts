@@ -146,9 +146,7 @@ export const TOKENS_PERMIT_VERSION: { [key in Token | PufToken]: string } = {
   [Token.ALT]: '1',
   // https://github.com/etherfi-protocol/smart-contracts/blob/7c66e571df4fe7ec502a3c325b623bc52349ef9d/src/EETH.sol#L55
   [Token.eETH]: '1',
-  // https://etherscan.io/address/0xeeda34a377dd0ca676b9511ee1324974fa8d980d#code#L216
-  // See line 216: `version: public(constant(String[8])) = "v7.0.0"`
-  [Token.pufETHwstE]: 'v7.0.0',
+  [Token.pufETHwstE]: '',
   [Token.pufETH]: '1',
 
   // Wrapped PufTokens
