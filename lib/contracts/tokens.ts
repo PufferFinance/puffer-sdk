@@ -11,6 +11,7 @@ export enum Token {
   wstETH = 'wstETH',
   ALT = 'ALT',
   eETH = 'eETH',
+  pufETHwstE = 'pufETHwstE',
   pufETH = 'pufETH',
 }
 
@@ -24,6 +25,7 @@ export enum PufToken {
   pufwstETH = 'pufwstETH',
   pufALT = 'pufALT',
   pufeETH = 'pufeETH',
+  pufpufETHwstE = 'pufpufETHwstE',
 }
 
 export type AnyToken = Token | PufToken;
@@ -38,6 +40,7 @@ export const TOKEN_TO_PUF_TOKEN_MAP = {
   [Token.wstETH]: PufToken.pufwstETH,
   [Token.ALT]: PufToken.pufALT,
   [Token.eETH]: PufToken.pufeETH,
+  [Token.pufETHwstE]: PufToken.pufpufETHwstE,
   [Token.pufETH]: PufToken.pufpufETH,
 };
 
@@ -77,6 +80,10 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x35fa164735182de50811e8e2e824cfb9b6118ac2',
     [Chain.Holesky]: '0x7ba2ee123b5977e3da040e1eacb3a61c82c17876',
   },
+  [Token.pufETHwstE]: {
+    [Chain.Mainnet]: '0xeeda34a377dd0ca676b9511ee1324974fa8d980d',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
   [Token.pufETH]: {
     [Chain.Mainnet]: '0xd9a442856c234a39a81a089c06451ebaa4306a72',
     [Chain.Holesky]: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
@@ -91,7 +98,7 @@ export const TOKENS_ADDRESSES: {
     [Chain.Holesky]: '0x61e7C87c387178D6e0aE6c04748b7FF753fC9b81',
   },
   [PufToken.pufUSDC]: {
-    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
+    [Chain.Mainnet]: '0x2f0d8e30df0c598b90b34cd68b5e3981b7af3881',
     [Chain.Holesky]: '0x6D900a9f5784A2cA0004B5c3D3e08D7A9cE4A1b3',
   },
   [PufToken.pufDAI]: {
@@ -99,7 +106,7 @@ export const TOKENS_ADDRESSES: {
     [Chain.Holesky]: '0x2D6B705e118198A02F00490BA323B17eC5D58109',
   },
   [PufToken.pufWETH]: {
-    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
+    [Chain.Mainnet]: '0x2b36f6bfd223f460e7e43ef49bc487481648948c',
     [Chain.Holesky]: '0x5335f231C22d472Ab31CC2690A2247d25efd76a5',
   },
   [PufToken.pufstETH]: {
@@ -116,6 +123,10 @@ export const TOKENS_ADDRESSES: {
   },
   [PufToken.pufeETH]: {
     [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
+  [PufToken.pufpufETHwstE]: {
+    [Chain.Mainnet]: '0xf374014f6fa86bad50d52e6240a117b0830663cb',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
   [PufToken.pufpufETH]: {
@@ -139,6 +150,9 @@ export const TOKENS_PERMIT_VERSION: { [key in Token | PufToken]: string } = {
   [Token.ALT]: '1',
   // https://github.com/etherfi-protocol/smart-contracts/blob/7c66e571df4fe7ec502a3c325b623bc52349ef9d/src/EETH.sol#L55
   [Token.eETH]: '1',
+  // https://etherscan.io/address/0xeeda34a377dd0ca676b9511ee1324974fa8d980d#code#L216
+  // See line 216: `version: public(constant(String[8])) = "v7.0.0"`
+  [Token.pufETHwstE]: 'v7.0.0',
   [Token.pufETH]: '1',
 
   // Wrapped PufTokens
@@ -150,5 +164,6 @@ export const TOKENS_PERMIT_VERSION: { [key in Token | PufToken]: string } = {
   [PufToken.pufwstETH]: '1',
   [PufToken.pufALT]: '1',
   [PufToken.pufeETH]: '1',
+  [PufToken.pufpufETHwstE]: '1',
   [PufToken.pufpufETH]: '1',
 };
