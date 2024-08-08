@@ -5,7 +5,6 @@ export enum Token {
   USDT = 'USDT',
   USDC = 'USDC',
   DAI = 'DAI',
-  ETH = 'ETH',
   WETH = 'WETH',
   stETH = 'stETH',
   wstETH = 'wstETH',
@@ -34,7 +33,6 @@ export const TOKEN_TO_PUF_TOKEN_MAP = {
   [Token.USDT]: PufToken.pufUSDT,
   [Token.USDC]: PufToken.pufUSDC,
   [Token.DAI]: PufToken.pufDAI,
-  [Token.ETH]: undefined,
   [Token.WETH]: PufToken.pufWETH,
   [Token.stETH]: PufToken.pufstETH,
   [Token.wstETH]: PufToken.pufwstETH,
@@ -59,7 +57,6 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x6b175474e89094c44da98b954eedeac495271d0f',
     [Chain.Holesky]: '0x4478905505ddfb7eA1c8A9f46eAEC3695cE542ac',
   },
-  [Token.ETH]: {},
   [Token.WETH]: {
     [Chain.Mainnet]: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
     [Chain.Holesky]: '0x1d181cBd1825e9eBC6AD966878D555A7215FF4F0',
@@ -141,7 +138,6 @@ export const TOKENS_PERMIT_VERSION: { [key in Token | PufToken]: string } = {
   [Token.USDC]: '',
   // DAI does not support permit signatures (ERC20Permit).
   [Token.DAI]: '',
-  [Token.ETH]: '',
   // WETH does not support permit signatures (ERC20Permit).
   [Token.WETH]: '',
   [Token.stETH]: '2',
