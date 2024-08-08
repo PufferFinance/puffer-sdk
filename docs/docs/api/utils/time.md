@@ -12,4 +12,4 @@
 
 #### Defined in
 
-[lib/utils/time.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/9a2052c66d4e242693f95406bd756015cdd4bdd5/lib/utils/time.ts#L1)
+[lib/utils/time.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/757072c9d39b8cb5fad75518954e68b14c1ba5da/lib/utils/time.ts#L1)
