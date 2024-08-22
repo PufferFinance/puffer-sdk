@@ -20,6 +20,11 @@
       "types": "./dist/contracts/handlers/*.d.ts",
       "import": "./dist/contracts/handlers/*.js",
       "require": "./dist/contracts/handlers/*.cjs"
+    },
+    "./*": {
+      "types": "./*.d.ts",
+      "import": "./*.js",
+      "require": "./*.cjs"
     }
   },
   "files": [
