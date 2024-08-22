@@ -1,0 +1,32 @@
+---
+sidebar_position: 3
+---
+
+# Contract Handlers
+
+The SDK uses handlers for each Puffer contract to interact with it. Each handler exposes a set of methods that calls the related functions of the contract. It's also possible to get the original contract from the handler which can then be used to call any low-level contract function directly.
+
+## Existing Handlers
+
+We currently have the following handlers.
+
+- [ERC20PermitHandler](../api/contracts/handlers/erc20-permit-handler.md)\
+  For interacting with the `ERC20Permit` contract for any supported token.
+- [PufLockerHandler](../api/contracts/handlers/puf-locker-handler.md)\
+  For interacting with Puffer's `PufLocker` contract.
+- [PufTokenHandler](../api/contracts/handlers/puf-token-handler.md)\
+  For interacting with Puffer's `PufToken` contract for wrapped tokens.
+- [PufferDepositorHandler](../api/contracts/handlers/puffer-depositor-handler.md)\
+  For interacting with Puffer's `PufferDepositor` contract.
+- [PufferL2DepositorHandler](../api/contracts/handlers/puffer-l2-depositor-handler.md)\
+  For interacting with Puffer's `PufferL2Depositor` contract.
+- [PufferVaultHandler](../api/contracts/handlers/puffer-vault-handler.md)\
+  For interacting with Puffer's `PufferVault` contract.
+
+## Using Handlers
+
+There are two ways to use handlers.
+
+### 1. Using the Handler Directly
+
+This is the optimal way to use handlers since this will only import code and ABI of the handler being used which will improve tree-shaking and reduce bundle size depending on the bundler used.
