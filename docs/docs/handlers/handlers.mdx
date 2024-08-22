@@ -23,10 +23,64 @@ We currently have the following handlers.
 - [PufferVaultHandler](../api/contracts/handlers/puffer-vault-handler.md)\
   For interacting with Puffer's `PufferVault` contract.
 
+More details about each handler can be found in their respective API documentation.
+
 ## Using Handlers
 
 There are two ways to use handlers.
 
-### 1. Using the Handler Directly
+### 1. Using the PufferClient
 
-This is the optimal way to use handlers since this will only import code and ABI of the handler being used which will improve tree-shaking and reduce bundle size depending on the bundler used.
+The `PufferClient` is the entry point for the SDK and contains all handlers. See [PufferClient#Properties](../api/api/puffer-client.md#properties) for the full list of contract handlers `PufferClient` has.
+
+```ts
+import {
+  PufferClientHelpers,
+  PufferClient,
+  Chain,
+} from '@pufferfinance/puffer-sdk';
+
+const walletClient = PufferClientHelpers.createWalletClient({
+  chain: Chain.Holesky,
+  provider: window.ethereum,
+});
+
+// highlight-start
+// Use the `PufferClient` to interact with `PufferVaultHandler`.
+const pufferClient = new PufferClient(Chain.Holesky, walletClient);
+const { transact } = pufferClient.vault.depositETH('0x123...');
+const txHash = await transact(BigInt(1e18));
+// highlight-end
+```
+
+### 2. Using the Handler Directly
+
+This is the optimal way to use handlers since this will only import code and ABI of the handler being used which will improve tree-shaking and reduce bundle size depending on the bundler used. The downside of this is that the code will be more verbose.
+
+```ts
+// highlight-start
+// Import the modules directly from their respective files.
+import { Chain } from '@pufferfinance/puffer-sdk/dist/chains/constants';
+import { PufferClientHelpers } from '@pufferfinance/puffer-sdk/dist/api/puffer-client-helpers';
+import { PufferVaultHandler } from '@pufferfinance/puffer-sdk/handlers/puffer-vault-handler';
+// highlight-end
+
+const walletClient = PufferClientHelpers.createWalletClient({
+  chain: Chain.Holesky,
+  provider: window.ethereum,
+});
+const publicClient = PufferClientHelpers.createPublicClient({
+  chain: Chain.Holesky,
+  provider: window.ethereum,
+});
+
+// highlight-start
+const pufferVaultHandler = new PufferVaultHandler(
+  Chain.Holesky,
+  walletClient,
+  publicClient,
+);
+const { transact } = pufferVaultHandler.depositETH('0x123...');
+const txHash = await transact(BigInt(1e18));
+// highlight-end
+```
