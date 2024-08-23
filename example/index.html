@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+    <style>
+      html,
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Example Script</h2>
+    <p>
+      This file is an example script for using the SDK. It is mostly used during
+      development to test new SDK functions. The example uses the SDK to deposit
+      ETH using the "PufferVaultV2" contract.
+    </p>
+    <p>
+      Before running the example, make sure to run "pnpm build" to build the SDK
+      locally.
+    </p>
+
+    <label>
+      Deposit Value (Wei):
+      <input id="depositInput" value="0" />
+    </label>
+
+    <br />
+
+    <button id="depositButton">Deposit ETH</button>
+
+    <br />
+
+    <pre id="output">Output will appear here</pre>
+
+    <details>
+      <summary>Source code</summary>
+      <pre id="sourceCode"></pre>
+    </details>
+
+    <script id="sourceScript" type="module">
+      import {
+        PufferClient,
+        PufferClientHelpers,
+        Chain,
+        Token,
+        PufToken,
+      } from '../dist/main.js';
+
+      const depositInput = document.querySelector('#depositInput');
+      const depositButton = document.querySelector('#depositButton');
+      const output = document.querySelector('#output');
+
+      const depositETH = async () => {
+        const walletClient = PufferClientHelpers.createWalletClient({
+          chain: Chain.Holesky,
+          provider: window.ethereum,
+        });
+        const publicClient = PufferClientHelpers.createPublicClient({
+          chain: Chain.Holesky,
+          provider: window.ethereum,
+        });
+        const pufferClient = new PufferClient(
+          Chain.Holesky,
+          walletClient,
+          publicClient,
+        );
+        const [walletAddress] = await pufferClient.requestAddresses();
+
+        try {
+          const { transact } =
+            await pufferClient.vault.depositETH(walletAddress);
+          const value = depositInput.value;
+
+          console.log(
+            `Making transaction with wallet ${walletAddress} and value ${value}`,
+          );
+
+          const txHash = await transact(value);
+
+          output.textContent = txHash;
+        } catch (error) {
+          console.error(error);
+          output.textContent = `Error occurred (check console): ${error.message}`;
+        }
+      };
+
+      depositButton.addEventListener('click', depositETH);
+    </script>
+
+    <script>
+      const sourceCode = document.querySelector('#sourceCode');
+      sourceCode.textContent =
+        document.querySelector('#sourceScript').textContent;
+    </script>
+  </body>
+</html>
