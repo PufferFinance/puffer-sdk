@@ -17,4 +17,7 @@ export const CONTRACT_ADDRESSES = {
     PufLocker: '0xa58983ad0899a452b7420bc57228e329d7ba92b6',
     L2RewardManager: '0x0000000000000000000000000000000000000000',
   },
+  [Chain.Base]: {
+    L2RewardManager: '0x70a8813751a1a76219c88f0269e6db742a42bd65',
+  },
 };
