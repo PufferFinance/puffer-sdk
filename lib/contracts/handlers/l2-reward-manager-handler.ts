@@ -9,6 +9,13 @@ import { ViemChain, VIEM_CHAINS, Chain } from '../../chains/constants';
 import { CONTRACT_ADDRESSES } from '../addresses';
 import { L2_REWARD_MANAGER_ABIS } from '../abis/l2-reward-manager-abis';
 
+export type ClaimOrder = {
+  account: Address;
+  amount: bigint;
+  intervalId: Address;
+  merkleProof: Address[];
+};
+
 /**
  * Handler for the `L2RewardManager` contract.
  */
@@ -52,9 +59,9 @@ export class L2RewardManagerHandler {
   }
 
   /**
+   * Get the authority address.
    *
-   *
-   * @returns
+   * @returns The authority address.
    */
   public authority() {
     return this.getContract().read.authority();
@@ -135,5 +142,38 @@ export class L2RewardManagerHandler {
    */
   public isConsumingScheduledOp() {
     return this.getContract().read.isConsumingScheduledOp();
+  }
+
+  /**
+   * Claims the rewards for a specific epoch range based on the `ClaimOrder`.
+   *
+   * @param account The account using which to claim the rewards.
+   * @param claimOrders One or more claim orders.
+   * @param claimOrders[].account Account of the claim order.
+   * @param claimOrders[].amount Amount of the claim order.
+   * @param claimOrders[].intervalId Interval ID of the claim order. See `getIntervalId`.
+   * @param claimOrders[].merkleProof Merkle proof of the claim order.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public claimRewards(
+    account: Address,
+    // One or more claim orders.
+    claimOrders: [ClaimOrder, ...ClaimOrder[]],
+  ) {
+    const transact = () =>
+      this.getContract().write.claimRewards([claimOrders], {
+        chain: this.viemChain,
+        account,
+      });
+    const estimate = () =>
+      this.getContract().estimateGas.claimRewards([claimOrders], {
+        account,
+      });
+
+    return { transact, estimate };
   }
 }
