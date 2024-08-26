@@ -1,8 +1,8 @@
-import { Address } from 'viem';
+import { generateAddress } from './address';
 
 export const mockPermitSignature = {
-  r: `0x${new Array(64).fill(0).join('')}` as Address,
-  s: `0x${new Array(64).fill(0).join('')}` as Address,
+  r: generateAddress(32),
+  s: generateAddress(32),
   v: 0n,
   yParity: 1,
   deadline: 0n,
