@@ -142,12 +142,12 @@ export class PufferL2DepositorHandler {
 
     const transact = () =>
       this.getContract().write.deposit(depositArgs, {
-        account: account,
+        account,
         chain: this.viemChain,
       });
     const estimate = () =>
       this.getContract().estimateGas.deposit(depositArgs, {
-        account: account,
+        account,
       });
 
     return { transact, estimate };
