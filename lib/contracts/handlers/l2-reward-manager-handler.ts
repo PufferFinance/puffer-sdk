@@ -132,19 +132,6 @@ export class L2RewardManagerHandler {
   }
 
   /**
-   * Returns `true` only in the context of a delayed restricted call, at
-   * the moment when the scheduled operation is being consumed. Prevents
-   * denial of service for delayed restricted calls in the case that the
-   * contract performs attacker controlled calls.
-   *
-   * @returns `true` only in the context of a delayed restricted call at
-   * the moment when the scheduled operation is being consumed.
-   */
-  public isConsumingScheduledOp() {
-    return this.getContract().read.isConsumingScheduledOp();
-  }
-
-  /**
    * Claims the rewards for a specific epoch range based on the `ClaimOrder`.
    *
    * @param account The account using which to claim the rewards.
