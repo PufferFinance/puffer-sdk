@@ -8,6 +8,7 @@ import {
 import { ViemChain, VIEM_CHAINS, Chain } from '../../chains/constants';
 import { CONTRACT_ADDRESSES } from '../addresses';
 import { L2_REWARD_MANAGER_ABIS } from '../abis/l2-reward-manager-abis';
+import { InvalidInputError } from '../../errors/validation-errors';
 
 export type ClaimOrder = {
   account: Address;
@@ -145,12 +146,19 @@ export class L2RewardManagerHandler {
    *
    * `estimate: () => Promise<bigint>` - Gas estimate of the
    * transaction.
+   * @throws {InvalidInputError} If `claimOrders` is empty.
    */
-  public claimRewards(
-    account: Address,
-    // One or more claim orders.
-    claimOrders: [ClaimOrder, ...ClaimOrder[]],
-  ) {
+  public claimRewards(account: Address, claimOrders: ClaimOrder[]) {
+    if (claimOrders.length === 0) {
+      throw new InvalidInputError(
+        '`claimOrders` cannot be empty and must be specified',
+        {
+          fixMessage:
+            'Specify at least one or more claim orders to claim rewards',
+        },
+      );
+    }
+
     const transact = () =>
       this.getContract().write.claimRewards([claimOrders], {
         chain: this.viemChain,
