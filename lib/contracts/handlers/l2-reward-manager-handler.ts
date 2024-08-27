@@ -133,13 +133,15 @@ export class L2RewardManagerHandler {
   }
 
   /**
-   * Claims the rewards for a specific epoch range based on the `ClaimOrder`.
+   * Claims the rewards for a specific epoch range based on the
+   * `ClaimOrder`.
    *
    * @param account The account using which to claim the rewards.
    * @param claimOrders One or more claim orders.
    * @param claimOrders[].account Account of the claim order.
    * @param claimOrders[].amount Amount of the claim order.
-   * @param claimOrders[].intervalId Interval ID of the claim order. See `getIntervalId`.
+   * @param claimOrders[].intervalId Interval ID of the claim order. See
+   * `getIntervalId`.
    * @param claimOrders[].merkleProof Merkle proof of the claim order.
    * @returns `transact: () => Promise<Address>` - Used to make the
    * transaction.
