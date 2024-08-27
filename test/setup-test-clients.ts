@@ -9,8 +9,10 @@ import {
 import { holesky } from 'viem/chains';
 import { testingUtils } from './setup-tests';
 import { TransportProvider } from '../lib/utils/types';
+import { Chain } from '../lib/chains/constants';
 
 export const setupTestClient = (
+  chain: Chain = Chain.Holesky,
   rpcRequestMock?: TransportProvider['request'],
 ) => {
   return createTestClient({
@@ -22,7 +24,7 @@ export const setupTestClient = (
         : {
             request: (...args: any[]) => {
               if (args[0].method === 'eth_chainId') {
-                return Promise.resolve(holesky.id);
+                return Promise.resolve(chain);
               }
 
               return rpcRequestMock(...args);
@@ -33,15 +35,17 @@ export const setupTestClient = (
 };
 
 export const setupTestWalletClient = (
+  chain: Chain = Chain.Holesky,
   rpcRequestMock?: TransportProvider['request'],
 ) => {
-  const client = setupTestClient(rpcRequestMock);
+  const client = setupTestClient(chain, rpcRequestMock);
   return client.extend(walletActions) as WalletClient;
 };
 
 export const setupTestPublicClient = (
+  chain: Chain = Chain.Holesky,
   rpcRequestMock?: TransportProvider['request'],
 ) => {
-  const client = setupTestClient(rpcRequestMock);
+  const client = setupTestClient(chain, rpcRequestMock);
   return client.extend(publicActions) as PublicClient;
 };

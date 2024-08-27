@@ -50,4 +50,46 @@ export class L1RewardManagerHandler {
       Address
     >;
   }
+
+  /**
+   * Get the bridge data for the given bridge address.
+   *
+   * @param bridgeAddress Address of the bridge.
+   * @returns The bridge data.
+   */
+  public getBridge(bridgeAddress: Address) {
+    return this.getContract().read.getBridge([bridgeAddress]);
+  }
+
+  /**
+   * Sets the rewards claimer on L2. Smart contracts might not be able
+   * to to own the same address on L2. This function allows to set a
+   * different address as the claimer.
+   *
+   * @param account The account to make the transaction with.
+   * @param bridge Address of the bridge.
+   * @param claimer Address of the new claimer.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public setL2RewardClaimer(
+    account: Address,
+    bridge: Address,
+    claimer: Address,
+  ) {
+    const transact = () =>
+      this.getContract().write.setL2RewardClaimer([bridge, claimer], {
+        chain: this.viemChain,
+        account,
+      });
+    const estimate = () =>
+      this.getContract().estimateGas.setL2RewardClaimer([bridge, claimer], {
+        account,
+      });
+
+    return { transact, estimate };
+  }
 }
