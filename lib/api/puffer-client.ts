@@ -12,6 +12,7 @@ import { PufTokenHandler } from '../contracts/handlers/puf-token-handler';
 import { PufferL2DepositorHandler } from '../contracts/handlers/puffer-l2-depositor-handler';
 import { ERC20PermitHandler } from '../contracts/handlers/erc20-permit-handler';
 import { PufLockerHandler } from '../contracts/handlers/puf-locker-handler';
+import { L2RewardManagerHandler } from '../contracts/handlers/l2-reward-manager-handler';
 
 /**
  * The core class and the main entry point of the Puffer SDK.
@@ -33,6 +34,8 @@ export class PufferClient {
   public pufToken: PufTokenHandler;
   /** Handler for the `PufLocker` contract. */
   public pufLocker: PufLockerHandler;
+  /** Handler for the `L2RewardManager` contract. */
+  public l2RewardManager: L2RewardManagerHandler;
 
   /**
    * Create the Puffer Client.
@@ -90,6 +93,11 @@ export class PufferClient {
       this.publicClient,
     );
     this.pufLocker = new PufLockerHandler(
+      chain,
+      this.walletClient,
+      this.publicClient,
+    );
+    this.l2RewardManager = new L2RewardManagerHandler(
       chain,
       this.walletClient,
       this.publicClient,
