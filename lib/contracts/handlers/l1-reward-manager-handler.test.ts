@@ -23,7 +23,7 @@ describe('L1RewardManagerHandler', () => {
     handler = new L1RewardManagerHandler(Chain.Bsc, walletClient, publicClient);
   });
 
-  it('should get the authority', async () => {
+  it('should get the bridge for the given address', async () => {
     const mockBridge = { destinationDomainId: 1 };
     contractTestingUtils.mockCall('getBridge', [mockBridge]);
 
