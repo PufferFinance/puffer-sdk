@@ -6,10 +6,12 @@
 
 #### Enumeration Members
 
-| Enumeration Member | Value | Defined in |
-| ------ | ------ | ------ |
-| `Holesky` | `number` | [lib/chains/constants.ts:6](https://github.com/PufferFinance/puffer-sdk/blob/76e7ef64bae7e516a3502e53b1b67e1ba5bfc496/lib/chains/constants.ts#L6) |
-| `Mainnet` | `number` | [lib/chains/constants.ts:5](https://github.com/PufferFinance/puffer-sdk/blob/76e7ef64bae7e516a3502e53b1b67e1ba5bfc496/lib/chains/constants.ts#L5) |
+| Enumeration Member | Value |
+| :------ | :------ |
+| `Base` | `number` |
+| `Bsc` | `number` |
+| `Holesky` | `number` |
+| `Mainnet` | `number` |
 
 ## Variables
 
@@ -17,6 +19,6 @@
 
 > `const` **VIEM\_CHAINS**: `{ [key in Chain]: ViemChain }`
 
-#### Defined in
+#### Source
 
-[lib/chains/constants.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/76e7ef64bae7e516a3502e53b1b67e1ba5bfc496/lib/chains/constants.ts#L9)
+[lib/chains/constants.ts:11](https://github.com/PufferFinance/puffer-sdk/blob/12cdceb5c50cb23872f9333c998038e5b91f2189/lib/chains/constants.ts#L11)

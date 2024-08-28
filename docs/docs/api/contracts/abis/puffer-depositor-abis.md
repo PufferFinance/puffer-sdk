@@ -1,11 +1,21 @@
 # contracts/abis/puffer-depositor-abis
 
-## References
+## Variables
 
 ### PUFFER\_DEPOSITOR\_ABIS
 
-Re-exports [PUFFER_DEPOSITOR_ABIS](puffer-depositor-abis.md#puffer_depositor_abis)
+> `const` **PUFFER\_DEPOSITOR\_ABIS**: `object`
+
+#### Source
+
+[lib/contracts/abis/puffer-depositor-abis.ts:6](https://github.com/PufferFinance/puffer-sdk/blob/12cdceb5c50cb23872f9333c998038e5b91f2189/lib/contracts/abis/puffer-depositor-abis.ts#L6)
+
+***
 
 ### PUFFER\_L2\_DEPOSITOR\_ABIS
 
-Re-exports [PUFFER_L2_DEPOSITOR_ABIS](puffer-depositor-abis.md#puffer_l2_depositor_abis)
+> `const` **PUFFER\_L2\_DEPOSITOR\_ABIS**: `object`
+
+#### Source
+
+[lib/contracts/abis/puffer-depositor-abis.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/12cdceb5c50cb23872f9333c998038e5b91f2189/lib/contracts/abis/puffer-depositor-abis.ts#L15)

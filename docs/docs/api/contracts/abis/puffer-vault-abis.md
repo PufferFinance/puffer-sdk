@@ -1,7 +1,11 @@
 # contracts/abis/puffer-vault-abis
 
-## References
+## Variables
 
 ### PUFFER\_VAULT\_ABIS
 
-Re-exports [PUFFER_VAULT_ABIS](puffer-vault-abis.md#puffer_vault_abis)
+> `const` **PUFFER\_VAULT\_ABIS**: `object`
+
+#### Source
+
+[lib/contracts/abis/puffer-vault-abis.ts:5](https://github.com/PufferFinance/puffer-sdk/blob/12cdceb5c50cb23872f9333c998038e5b91f2189/lib/contracts/abis/puffer-vault-abis.ts#L5)

@@ -1,7 +1,11 @@
 # contracts/abis/mainnet/PufferL2Depositor
 
-## References
+## Variables
 
 ### PufferL2Depositor
 
-Re-exports [PufferL2Depositor](PufferL2Depositor.md#pufferl2depositor)
+> `const` **PufferL2Depositor**: readonly [`object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`]
+
+#### Source
+
+[lib/contracts/abis/mainnet/PufferL2Depositor.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/12cdceb5c50cb23872f9333c998038e5b91f2189/lib/contracts/abis/mainnet/PufferL2Depositor.ts#L1)

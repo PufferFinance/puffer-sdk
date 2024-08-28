@@ -1,7 +1,11 @@
 # contracts/abis/holesky/PufferDepositor
 
-## References
+## Variables
 
 ### PufferDepositor
 
-Re-exports [PufferDepositor](PufferDepositor.md#pufferdepositor)
+> `const` **PufferDepositor**: readonly [`object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`, `object`]
+
+#### Source
+
+[lib/contracts/abis/holesky/PufferDepositor.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/12cdceb5c50cb23872f9333c998038e5b91f2189/lib/contracts/abis/holesky/PufferDepositor.ts#L1)

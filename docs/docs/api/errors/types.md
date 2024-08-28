@@ -16,6 +16,6 @@
 
 > `optional` **fixMessage**: `string`
 
-#### Defined in
+#### Source
 
-[lib/errors/types.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/76e7ef64bae7e516a3502e53b1b67e1ba5bfc496/lib/errors/types.ts#L1)
+[lib/errors/types.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/12cdceb5c50cb23872f9333c998038e5b91f2189/lib/errors/types.ts#L1)

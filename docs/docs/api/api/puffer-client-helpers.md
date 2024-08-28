@@ -28,7 +28,7 @@ configuration
 ###### Parameters
 
 | Parameter | Type | Description |
-| ------ | ------ | ------ |
+| :------ | :------ | :------ |
 | `config` | [`ClientConfig`](puffer-client-helpers.md#clientconfig) | Configuration for the public client. |
 
 ###### Returns
@@ -37,9 +37,9 @@ configuration
 
 The public client created with viem.
 
-###### Defined in
+###### Source
 
-[lib/api/puffer-client-helpers.ts:33](https://github.com/PufferFinance/puffer-sdk/blob/76e7ef64bae7e516a3502e53b1b67e1ba5bfc496/lib/api/puffer-client-helpers.ts#L33)
+[lib/api/puffer-client-helpers.ts:33](https://github.com/PufferFinance/puffer-sdk/blob/12cdceb5c50cb23872f9333c998038e5b91f2189/lib/api/puffer-client-helpers.ts#L33)
 
 ##### createWalletClient()
 
@@ -51,7 +51,7 @@ configuration
 ###### Parameters
 
 | Parameter | Type | Description |
-| ------ | ------ | ------ |
+| :------ | :------ | :------ |
 | `config` | [`ClientConfig`](puffer-client-helpers.md#clientconfig) | Configuration for the wallet client. |
 
 ###### Returns
@@ -60,9 +60,27 @@ configuration
 
 The wallet client created with viem.
 
-###### Defined in
+###### Source
 
-[lib/api/puffer-client-helpers.ts:47](https://github.com/PufferFinance/puffer-sdk/blob/76e7ef64bae7e516a3502e53b1b67e1ba5bfc496/lib/api/puffer-client-helpers.ts#L47)
+[lib/api/puffer-client-helpers.ts:47](https://github.com/PufferFinance/puffer-sdk/blob/12cdceb5c50cb23872f9333c998038e5b91f2189/lib/api/puffer-client-helpers.ts#L47)
+
+##### extractTransportConfig()
+
+> `static` `private` **extractTransportConfig**(`config`): `Transport`
+
+###### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `config` | [`ClientConfig`](puffer-client-helpers.md#clientconfig) |
+
+###### Returns
+
+`Transport`
+
+###### Source
+
+[lib/api/puffer-client-helpers.ts:54](https://github.com/PufferFinance/puffer-sdk/blob/12cdceb5c50cb23872f9333c998038e5b91f2189/lib/api/puffer-client-helpers.ts#L54)
 
 ## Type Aliases
 
@@ -76,6 +94,6 @@ The wallet client created with viem.
 
 > **chain**: [`Chain`](../chains/constants.md#chain)
 
-#### Defined in
+#### Source
 
-[lib/api/puffer-client-helpers.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/76e7ef64bae7e516a3502e53b1b67e1ba5bfc496/lib/api/puffer-client-helpers.ts#L15)
+[lib/api/puffer-client-helpers.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/12cdceb5c50cb23872f9333c998038e5b91f2189/lib/api/puffer-client-helpers.ts#L15)
