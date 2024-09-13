@@ -17,10 +17,10 @@ export const CONTRACT_ADDRESSES = {
     L1RewardManager: '0x0000000000000000000000000000000000000000',
     L2RewardManager: '0x0000000000000000000000000000000000000000',
   },
+  // These are deployed on a fork at the moment:
+  // https://rpc.tenderly.co/fork/f7fd7621-7280-47e5-8521-81b24142814f
   [Chain.Base]: {
-    L2RewardManager: '0x70a8813751a1a76219c88f0269e6db742a42bd65',
-  },
-  [Chain.Bsc]: {
-    L1RewardManager: '0x2553e4f1e5bcbe37027a40aadb24b98611661e0f',
+    L2RewardManager: '0xb4dBcf934558d7b647A7FB21bbcd6b8370318A5c',
+    L1RewardManager: '0x5A0B37ce6c5b90B634B2AD32E3d909B545De8BB7',
   },
 };
