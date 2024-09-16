@@ -11,16 +11,20 @@ import { generateAddress } from '../../../test/mocks/address';
 
 describe('L1RewardManagerHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(
-    L1_REWARD_MANAGER_ABIS[Chain.Bsc].L1RewardManager,
+    L1_REWARD_MANAGER_ABIS[Chain.Holesky].L1RewardManager,
   );
   let handler: L1RewardManagerHandler;
 
   beforeEach(() => {
-    testingUtils.mockConnectedWallet([mockAccount], { chainId: Chain.Bsc });
+    testingUtils.mockConnectedWallet([mockAccount], { chainId: Chain.Holesky });
     const walletClient = setupTestWalletClient();
     const publicClient = setupTestPublicClient();
 
-    handler = new L1RewardManagerHandler(Chain.Bsc, walletClient, publicClient);
+    handler = new L1RewardManagerHandler(
+      Chain.Holesky,
+      walletClient,
+      publicClient,
+    );
   });
 
   it('should get the bridge for the given address', async () => {
