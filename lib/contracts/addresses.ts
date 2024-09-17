@@ -18,7 +18,7 @@ export const CONTRACT_ADDRESSES = {
     PufLocker: '0xa58983ad0899a452b7420bc57228e329d7ba92b6',
     // These are deployed on a fork at the moment:
     // https://rpc.tenderly.co/fork/f7fd7621-7280-47e5-8521-81b24142814f
-    L2RewardManager: '0xb4dBcf934558d7b647A7FB21bbcd6b8370318A5c',
-    L1RewardManager: '0x5A0B37ce6c5b90B634B2AD32E3d909B545De8BB7',
+    L1RewardManager: '0x10f970bcb84B82B82a65eBCbF45F26dD26D69F12',
+    L2RewardManager: '0x58C046794f69A8830b0BE737022a45b4acd01dE5',
   },
 };
