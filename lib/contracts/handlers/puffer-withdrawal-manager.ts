@@ -94,7 +94,6 @@ export class PufferWithdrawalHandler {
         CONTRACT_ADDRESSES[this.chain].PufferWithdrawalManager as Address,
         amount,
       );
-
     const permitData = {
       r,
       s,
