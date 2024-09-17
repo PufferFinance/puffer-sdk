@@ -47,7 +47,7 @@ export class PufferWithdrawalHandler {
    *
    * @returns The viem contract.
    */
-  private getContract() {
+  public getContract() {
     const address = CONTRACT_ADDRESSES[this.chain]
       .PufferWithdrawalManager as Address;
     const abi =
@@ -62,16 +62,19 @@ export class PufferWithdrawalHandler {
   }
 
   /**
-   * Request a withdrawal of the given amount to the given address.
+   * Request a withdrawal of the given amount to the given address, with a permit.
    * @param walletAddress The account address to request the withdrawal for.
    * @param amount The pufETH amount to request the withdrawal for.
    * @returns The transaction hash of the withdrawal.
    */
   public async requestWithdrawal(walletAddress: Address, amount: bigint) {
-    return await this.getContract().write.requestWithdrawal([
-      amount,
-      walletAddress,
-    ]);
+    return await this.getContract().write.requestWithdrawal(
+      [amount, walletAddress],
+      {
+        account: walletAddress,
+        chain: this.viemChain,
+      },
+    );
   }
 
   /**
@@ -91,7 +94,7 @@ export class PufferWithdrawalHandler {
         CONTRACT_ADDRESSES[this.chain].PufferWithdrawalManager as Address,
         amount,
       );
-    /* istanbul ignore next */
+
     const permitData = {
       r,
       s,
@@ -99,11 +102,14 @@ export class PufferWithdrawalHandler {
       deadline,
       amount,
     };
-    // TOOD add permit
-    return await this.getContract().write.requestWithdrawalWithPermit([
-      permitData,
-      walletAddress,
-    ]);
+
+    return await this.getContract().write.requestWithdrawalWithPermit(
+      [permitData, walletAddress],
+      {
+        account: walletAddress,
+        chain: this.viemChain,
+      },
+    );
   }
 
   /**
@@ -111,10 +117,17 @@ export class PufferWithdrawalHandler {
    * @param withdrawalIdx The index of the withdrawal to complete.
    * @returns The transaction hash of the withdrawal.
    */
-  public async completeQueueWithdrawal(withdrawalIdx: bigint) {
-    return await this.getContract().write.completeQueuedWithdrawal([
-      withdrawalIdx,
-    ]);
+  public async completeQueueWithdrawal(
+    walletAddress: Address,
+    withdrawalIdx: bigint,
+  ) {
+    return await this.getContract().write.completeQueuedWithdrawal(
+      [withdrawalIdx],
+      {
+        account: walletAddress,
+        chain: this.viemChain,
+      },
+    );
   }
 
   /**
