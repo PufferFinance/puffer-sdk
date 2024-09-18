@@ -63,22 +63,33 @@ export class PufferWithdrawalHandler {
 
   /**
    * Request a withdrawal of the given amount to the given address, with a permit.
+   *
    * @param walletAddress The account address to request the withdrawal for.
    * @param amount The pufETH amount to request the withdrawal for.
    * @returns The transaction hash of the withdrawal.
    */
   public async requestWithdrawal(walletAddress: Address, amount: bigint) {
-    return await this.getContract().write.requestWithdrawal(
-      [amount, walletAddress],
-      {
-        account: walletAddress,
-        chain: this.viemChain,
-      },
-    );
+    const transact = async () =>
+      await this.getContract().write.requestWithdrawal(
+        [amount, walletAddress],
+        {
+          account: walletAddress,
+          chain: this.viemChain,
+        },
+      );
+
+    const estimate = async () =>
+      await this.getContract().estimateGas.requestWithdrawal(
+        [amount, walletAddress],
+        { account: walletAddress },
+      );
+
+    return { transact, estimate };
   }
 
   /**
    * Request a withdrawal of the given amount to the given address.
+   *
    * @param walletAddress The account address to request the withdrawal for.
    * @param amount The pufETHamount to request the withdrawal for.
    * @returns The transaction hash of the withdrawal.
@@ -102,17 +113,27 @@ export class PufferWithdrawalHandler {
       amount,
     };
 
-    return await this.getContract().write.requestWithdrawalWithPermit(
-      [permitData, walletAddress],
-      {
-        account: walletAddress,
-        chain: this.viemChain,
-      },
-    );
+    const transact = async () =>
+      await this.getContract().write.requestWithdrawalWithPermit(
+        [permitData, walletAddress],
+        {
+          account: walletAddress,
+          chain: this.viemChain,
+        },
+      );
+
+    const estimate = async () =>
+      await this.getContract().estimateGas.requestWithdrawalWithPermit(
+        [permitData, walletAddress],
+        { account: walletAddress },
+      );
+
+    return { transact, estimate };
   }
 
   /**
    * Complete a withdrawal from the queue.
+   *
    * @param withdrawalIdx The index of the withdrawal to complete.
    * @returns The transaction hash of the withdrawal.
    */
@@ -131,6 +152,7 @@ export class PufferWithdrawalHandler {
 
   /**
    * Get the withdrawal at the given index.
+   *
    * @param withdrawalIdx The index of the withdrawal to get.
    * @returns The withdrawal at the given index.
    */
