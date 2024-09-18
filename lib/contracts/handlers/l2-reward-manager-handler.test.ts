@@ -15,17 +15,17 @@ import { InvalidInputError } from '../../errors/validation-errors';
 
 describe('L2RewardManagerHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(
-    L2_REWARD_MANAGER_ABIS[Chain.Base].L2RewardManager,
+    L2_REWARD_MANAGER_ABIS[Chain.Holesky].L2RewardManager,
   );
   let handler: L2RewardManagerHandler;
 
   beforeEach(() => {
-    testingUtils.mockConnectedWallet([mockAccount], { chainId: Chain.Base });
+    testingUtils.mockConnectedWallet([mockAccount], { chainId: Chain.Holesky });
     const walletClient = setupTestWalletClient();
     const publicClient = setupTestPublicClient();
 
     handler = new L2RewardManagerHandler(
-      Chain.Base,
+      Chain.Holesky,
       walletClient,
       publicClient,
     );
@@ -95,6 +95,7 @@ describe('L2RewardManagerHandler', () => {
       {
         account: generateAddress(),
         amount: 1n,
+        isL1Contract: false,
         intervalId: generateAddress(32),
         merkleProof: [generateAddress(32)],
       },

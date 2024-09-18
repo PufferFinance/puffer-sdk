@@ -14,6 +14,7 @@ export type ClaimOrder = {
   account: Address;
   amount: bigint;
   intervalId: Address;
+  isL1Contract: boolean;
   merkleProof: Address[];
 };
 
@@ -142,6 +143,8 @@ export class L2RewardManagerHandler {
    * @param claimOrders[].amount Amount of the claim order.
    * @param claimOrders[].intervalId Interval ID of the claim order. See
    * `getIntervalId`.
+   * @param claimOrders[].isL1Contract Whether the claim order is for an
+   * L1 contract.
    * @param claimOrders[].merkleProof Merkle proof of the claim order.
    * @returns `transact: () => Promise<Address>` - Used to make the
    * transaction.
