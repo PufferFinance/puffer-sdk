@@ -5,16 +5,12 @@ import {
 } from '../../../test/setup-test-clients';
 import { Chain } from '../../chains/constants';
 import { Address, getContract } from 'viem';
-import { Token } from '../tokens';
-import { ERC20PermitHandler } from './erc20-permit-handler';
 import { PUFFER_WITHDRAWAL_MANAGER_ABIS } from '../abis/puffer-withdrawal-manager-abis';
 
 jest.mock('viem', () => ({
   ...jest.requireActual('viem'),
   getContract: jest.fn(),
 }));
-jest.mock('./erc20-permit-handler');
-const mockErc20PermitHandler = jest.mocked(ERC20PermitHandler);
 
 describe('PufferWithdrawalHandler', () => {
   let handler: PufferWithdrawalHandler;
@@ -104,11 +100,9 @@ describe('PufferWithdrawalHandler', () => {
       },
     });
 
-    const withToken = jest
-      .spyOn(mockErc20PermitHandler.prototype, 'withToken')
-      .mockImplementation(() => ({
-        getPermitSignature: jest.fn().mockResolvedValue(mockPermit),
-      }));
+    const getPermitSignature = jest
+      .spyOn((handler as any).erc20PermitHandler, 'getPermitSignature')
+      .mockReturnValue(Promise.resolve(mockPermit));
 
     const { transact } = await handler.requestWithdrawalWithPermit(
       mockAddress,
@@ -117,7 +111,11 @@ describe('PufferWithdrawalHandler', () => {
 
     await transact();
 
-    expect(withToken).toHaveBeenCalledWith(Token.pufETH);
+    expect(getPermitSignature).toHaveBeenCalledWith(
+      mockAddress,
+      '0x0000000000000000000000000000000000000000',
+      BigInt(1000),
+    );
 
     expect(
       handler['getContract']().write.requestWithdrawalWithPermit,
@@ -145,11 +143,9 @@ describe('PufferWithdrawalHandler', () => {
       },
     });
 
-    const withToken = jest
-      .spyOn(mockErc20PermitHandler.prototype, 'withToken')
-      .mockImplementation(() => ({
-        getPermitSignature: jest.fn().mockResolvedValue(mockPermit),
-      }));
+    const getPermitSignature = jest
+      .spyOn((handler as any).erc20PermitHandler, 'getPermitSignature')
+      .mockReturnValue(Promise.resolve(mockPermit));
 
     const { estimate } = await handler.requestWithdrawalWithPermit(
       mockAddress,
@@ -158,7 +154,11 @@ describe('PufferWithdrawalHandler', () => {
 
     const gasEstimate = await estimate();
 
-    expect(withToken).toHaveBeenCalledWith(Token.pufETH);
+    expect(getPermitSignature).toHaveBeenCalledWith(
+      mockAddress,
+      '0x0000000000000000000000000000000000000000',
+      BigInt(1000),
+    );
 
     expect(
       handler['getContract']().estimateGas.requestWithdrawalWithPermit,
