@@ -180,10 +180,38 @@ describe('PufferWithdrawalHandler', () => {
     });
 
     const withdrawalIdx = BigInt(5);
-    await handler.completeQueueWithdrawal(mockAddress, withdrawalIdx);
+    const { transact } = await handler.completeQueueWithdrawal(
+      mockAddress,
+      withdrawalIdx,
+    );
+
+    await transact();
 
     expect(
       handler['getContract']().write.completeQueuedWithdrawal,
+    ).toHaveBeenCalledWith(
+      expect.arrayContaining([withdrawalIdx]),
+      expect.any(Object),
+    );
+  });
+
+  it('should estimate gas for a queued withdrawal', async () => {
+    jest.spyOn(handler as any, 'getContract').mockReturnValue({
+      estimateGas: {
+        completeQueuedWithdrawal: jest.fn().mockResolvedValue(BigInt(100000)),
+      },
+    });
+
+    const withdrawalIdx = BigInt(5);
+    const { estimate } = await handler.completeQueueWithdrawal(
+      mockAddress,
+      withdrawalIdx,
+    );
+
+    await estimate();
+
+    expect(
+      handler['getContract']().estimateGas.completeQueuedWithdrawal,
     ).toHaveBeenCalledWith(
       expect.arrayContaining([withdrawalIdx]),
       expect.any(Object),

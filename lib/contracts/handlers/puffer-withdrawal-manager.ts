@@ -143,13 +143,19 @@ export class PufferWithdrawalHandler {
     walletAddress: Address,
     withdrawalIdx: bigint,
   ) {
-    return await this.getContract().write.completeQueuedWithdrawal(
-      [withdrawalIdx],
-      {
+    const transact = async () =>
+      await this.getContract().write.completeQueuedWithdrawal([withdrawalIdx], {
         account: walletAddress,
         chain: this.viemChain,
-      },
-    );
+      });
+
+    const estimate = async () =>
+      await this.getContract().estimateGas.completeQueuedWithdrawal(
+        [withdrawalIdx],
+        { account: walletAddress },
+      );
+
+    return { transact, estimate };
   }
 
   /**
