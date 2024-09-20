@@ -164,7 +164,7 @@ export class PufferWithdrawalHandler {
    * @param withdrawalIdx The index of the withdrawal to get.
    * @returns The withdrawal at the given index.
    */
-  public async getWithDrawal(withdrawalIdx: bigint) {
+  public async getWithdrawal(withdrawalIdx: bigint) {
     return await this.getContract().read.getWithdrawal([withdrawalIdx]);
   }
 }
