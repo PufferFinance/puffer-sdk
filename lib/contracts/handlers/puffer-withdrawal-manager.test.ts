@@ -1,11 +1,12 @@
+import { Address, getContract } from 'viem';
 import { PufferWithdrawalHandler } from './puffer-withdrawal-manager';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
 } from '../../../test/setup-test-clients';
 import { Chain } from '../../chains/constants';
-import { Address, getContract } from 'viem';
 import { PUFFER_WITHDRAWAL_MANAGER_ABIS } from '../abis/puffer-withdrawal-manager-abis';
+import { CONTRACT_ADDRESSES } from '../addresses';
 
 jest.mock('viem', () => ({
   ...jest.requireActual('viem'),
@@ -14,7 +15,7 @@ jest.mock('viem', () => ({
 
 describe('PufferWithdrawalHandler', () => {
   let handler: PufferWithdrawalHandler;
-  const mockChain = Chain.Mainnet;
+  const mockChain = Chain.Holesky;
   const mockAddress = '0x123' as Address;
   const walletClient = setupTestWalletClient();
   const publicClient = setupTestPublicClient();
@@ -32,7 +33,7 @@ describe('PufferWithdrawalHandler', () => {
     handler.getContract();
 
     expect(getContract).toHaveBeenCalledWith({
-      address: '0x0000000000000000000000000000000000000000',
+      address: CONTRACT_ADDRESSES[mockChain].PufferWithdrawalManager,
       abi: mockAbi,
       client: { public: publicClient, wallet: walletClient },
     });
@@ -113,7 +114,7 @@ describe('PufferWithdrawalHandler', () => {
 
     expect(getPermitSignature).toHaveBeenCalledWith(
       mockAddress,
-      '0x0000000000000000000000000000000000000000',
+      CONTRACT_ADDRESSES[mockChain].PufferWithdrawalManager,
       BigInt(1000),
     );
 
@@ -156,7 +157,7 @@ describe('PufferWithdrawalHandler', () => {
 
     expect(getPermitSignature).toHaveBeenCalledWith(
       mockAddress,
-      '0x0000000000000000000000000000000000000000',
+      CONTRACT_ADDRESSES[mockChain].PufferWithdrawalManager,
       BigInt(1000),
     );
 
