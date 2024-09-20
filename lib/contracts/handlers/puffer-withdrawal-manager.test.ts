@@ -228,7 +228,7 @@ describe('PufferWithdrawalHandler', () => {
       },
     });
 
-    const result = await handler.getWithDrawal(withdrawalIdx);
+    const result = await handler.getWithdrawal(withdrawalIdx);
     expect(result).toEqual(mockWithdrawal);
 
     expect(handler['getContract']().read.getWithdrawal).toHaveBeenCalledWith([
