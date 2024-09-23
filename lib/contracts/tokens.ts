@@ -43,7 +43,7 @@ export const TOKEN_TO_PUF_TOKEN_MAP = {
 };
 
 export const TOKENS_ADDRESSES: {
-  [key in Token | PufToken]: { [chain in Chain]: Address };
+  [key in AnyToken]: { [chain in Chain]: Address };
 } = {
   [Token.USDT]: {
     [Chain.Mainnet]: '0xdac17f958d2ee523a2206206994597c13d831ec7',
@@ -132,7 +132,7 @@ export const TOKENS_ADDRESSES: {
   },
 };
 
-export const TOKENS_PERMIT_VERSION: { [key in Token | PufToken]: string } = {
+export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.USDT]: '2',
   // USDC does not support permit signatures (ERC20Permit).
   [Token.USDC]: '',
@@ -162,9 +162,15 @@ export const TOKENS_PERMIT_VERSION: { [key in Token | PufToken]: string } = {
   [PufToken.pufpufETH]: '1',
 };
 
-export const TOKENS_SALT = {
-  // Taken from
-  // https://etherscan.io/token/0xeeda34a377dd0ca676b9511ee1324974fa8d980d#readContract#F39.
-  [Token.pufETHwstE]:
-    '0x0e986ed5610121905f03fd3850cebcc00f66166fc3ab760acb4e087d735d9457',
+export const TOKENS_SALT: Partial<{
+  [key in AnyToken]: { [chain in Chain]: Address };
+}> = {
+  [Token.pufETHwstE]: {
+    // Taken from
+    // https://etherscan.io/token/0xeeda34a377dd0ca676b9511ee1324974fa8d980d#readContract#F39.
+    [Chain.Mainnet]:
+      '0x0e986ed5610121905f03fd3850cebcc00f66166fc3ab760acb4e087d735d9457',
+    [Chain.Holesky]:
+      '0x0000000000000000000000000000000000000000000000000000000000000000',
+  },
 };

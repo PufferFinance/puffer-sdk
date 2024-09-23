@@ -148,11 +148,7 @@ export class ERC20PermitHandler {
     });
   }
 
-  private getPermitSalt(token: AnyToken): Address | undefined {
-    if (token in TOKENS_SALT) {
-      return TOKENS_SALT[token as keyof typeof TOKENS_SALT] as Address;
-    }
-
-    return undefined;
+  private getPermitSalt(token: AnyToken) {
+    return TOKENS_SALT?.[token]?.[this.chain];
   }
 }
