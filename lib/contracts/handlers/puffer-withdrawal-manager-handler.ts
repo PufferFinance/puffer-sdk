@@ -15,7 +15,7 @@ import { Token } from '../tokens';
  * Handler for the `PufferWithdrawalsManager` contract exposing methods to
  * interact with the contract.
  */
-export class PufferWithdrawalHandler {
+export class PufferWithdrawalManagerHandler {
   private viemChain: ViemChain;
   private erc20PermitHandler: ERC20PermitHandler;
 
@@ -139,7 +139,7 @@ export class PufferWithdrawalHandler {
    * @param withdrawalIdx The index of the withdrawal to complete.
    * @returns The transaction hash of the withdrawal.
    */
-  public async completeQueueWithdrawal(
+  public async completeQueuedWithdrawal(
     walletAddress: Address,
     withdrawalIdx: bigint,
   ) {
