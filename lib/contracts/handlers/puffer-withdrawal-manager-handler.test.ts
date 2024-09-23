@@ -1,5 +1,4 @@
-import { Address, getContract } from 'viem';
-import { PufferWithdrawalHandler } from './puffer-withdrawal-manager';
+import { PufferWithdrawalManagerHandler } from './puffer-withdrawal-manager-handler';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
@@ -7,21 +6,22 @@ import {
 import { Chain } from '../../chains/constants';
 import { PUFFER_WITHDRAWAL_MANAGER_ABIS } from '../abis/puffer-withdrawal-manager-abis';
 import { CONTRACT_ADDRESSES } from '../addresses';
+import { Address, getContract } from 'viem';
 
 jest.mock('viem', () => ({
   ...jest.requireActual('viem'),
   getContract: jest.fn(),
 }));
 
-describe('PufferWithdrawalHandler', () => {
-  let handler: PufferWithdrawalHandler;
+describe('PufferWithdrawalMangerHandler', () => {
+  let handler: PufferWithdrawalManagerHandler;
   const mockChain = Chain.Holesky;
   const mockAddress = '0x123' as Address;
   const walletClient = setupTestWalletClient();
   const publicClient = setupTestPublicClient();
 
   beforeEach(() => {
-    handler = new PufferWithdrawalHandler(
+    handler = new PufferWithdrawalManagerHandler(
       mockChain,
       walletClient,
       publicClient,
@@ -181,7 +181,7 @@ describe('PufferWithdrawalHandler', () => {
     });
 
     const withdrawalIdx = BigInt(5);
-    const { transact } = await handler.completeQueueWithdrawal(
+    const { transact } = await handler.completeQueuedWithdrawal(
       mockAddress,
       withdrawalIdx,
     );
@@ -204,7 +204,7 @@ describe('PufferWithdrawalHandler', () => {
     });
 
     const withdrawalIdx = BigInt(5);
-    const { estimate } = await handler.completeQueueWithdrawal(
+    const { estimate } = await handler.completeQueuedWithdrawal(
       mockAddress,
       withdrawalIdx,
     );
