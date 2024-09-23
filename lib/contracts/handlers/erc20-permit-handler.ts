@@ -11,6 +11,7 @@ import { ERC20PERMIT_ABI } from '../abis/tokens-abis';
 import {
   AnyToken,
   TOKENS_ADDRESSES,
+  TOKENS_SALT,
   TOKENS_PERMIT_VERSION,
   Token,
 } from '../tokens';
@@ -93,6 +94,7 @@ export class ERC20PermitHandler {
       version: this.getPermitVersion(this.token),
       chainId: this.chain,
       verifyingContract: TOKENS_ADDRESSES[this.token][this.chain],
+      salt: this.getPermitSalt(this.token),
     };
     const types = <const>{
       Permit: [
@@ -144,5 +146,13 @@ export class ERC20PermitHandler {
       account: ownerAddress,
       chain: this.viemChain,
     });
+  }
+
+  private getPermitSalt(token: AnyToken): Address | undefined {
+    if (token in TOKENS_SALT) {
+      return TOKENS_SALT[token as keyof typeof TOKENS_SALT] as Address;
+    }
+
+    return undefined;
   }
 }

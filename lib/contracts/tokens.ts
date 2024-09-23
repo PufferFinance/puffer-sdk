@@ -146,7 +146,7 @@ export const TOKENS_PERMIT_VERSION: { [key in Token | PufToken]: string } = {
   [Token.ALT]: '1',
   // https://github.com/etherfi-protocol/smart-contracts/blob/7c66e571df4fe7ec502a3c325b623bc52349ef9d/src/EETH.sol#L55
   [Token.eETH]: '1',
-  [Token.pufETHwstE]: '',
+  [Token.pufETHwstE]: 'v7.0.0',
   [Token.pufETH]: '1',
 
   // Wrapped PufTokens
@@ -160,4 +160,11 @@ export const TOKENS_PERMIT_VERSION: { [key in Token | PufToken]: string } = {
   [PufToken.pufeETH]: '1',
   [PufToken.pufpufETHwstE]: '1',
   [PufToken.pufpufETH]: '1',
+};
+
+export const TOKENS_SALT = {
+  // Taken from
+  // https://etherscan.io/token/0xeeda34a377dd0ca676b9511ee1324974fa8d980d#readContract#F39.
+  [Token.pufETHwstE]:
+    '0x0e986ed5610121905f03fd3850cebcc00f66166fc3ab760acb4e087d735d9457',
 };
