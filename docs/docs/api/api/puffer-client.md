@@ -28,7 +28,7 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:52](https://github.com/PufferFinance/puffer-sdk/blob/2dba95d045033c5e0830b258a1aac29a7e630ff1/lib/api/puffer-client.ts#L52)
+[lib/api/puffer-client.ts:54](https://github.com/PufferFinance/puffer-sdk/blob/5f2c1f76ccc77858612f51473444b7de7408a8a8/lib/api/puffer-client.ts#L54)
 
 #### Properties
 
@@ -42,6 +42,7 @@ Create the Puffer Client.
 | `publicClient` | `private` | `object` | - |
 | `pufLocker` | `public` | [`PufLockerHandler`](../contracts/handlers/puf-locker-handler.md#puflockerhandler) | Handler for the `PufLocker` contract. |
 | `pufToken` | `public` | [`PufTokenHandler`](../contracts/handlers/puf-token-handler.md#puftokenhandler) | Handler for the `PufToken` contract. |
+| `pufferWithdrawalManager` | `public` | [`PufferWithdrawalManagerHandler`](../contracts/handlers/puffer-withdrawal-manager-handler.md#pufferwithdrawalmanagerhandler) | Handler for the `PufferWithdrawalManager` contract. |
 | `vault` | `public` | [`PufferVaultHandler`](../contracts/handlers/puffer-vault-handler.md#puffervaulthandler) | Handler for the `PufferVaultV2` contract. |
 | `walletClient` | `private` | `object` | - |
 
@@ -61,4 +62,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:120](https://github.com/PufferFinance/puffer-sdk/blob/2dba95d045033c5e0830b258a1aac29a7e630ff1/lib/api/puffer-client.ts#L120)
+[lib/api/puffer-client.ts:127](https://github.com/PufferFinance/puffer-sdk/blob/5f2c1f76ccc77858612f51473444b7de7408a8a8/lib/api/puffer-client.ts#L127)

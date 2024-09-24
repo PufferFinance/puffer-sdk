@@ -46,27 +46,37 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/2dba95d045033c5e0830b258a1aac29a7e630ff1/lib/contracts/tokens.ts#L30)
+[lib/contracts/tokens.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/5f2c1f76ccc77858612f51473444b7de7408a8a8/lib/contracts/tokens.ts#L30)
 
 ## Variables
 
 ### TOKENS\_ADDRESSES
 
-> `const` **TOKENS\_ADDRESSES**: \{ \[key in Token \| PufToken\]: \{ \[chain in Chain\]: Address \} \}
+> `const` **TOKENS\_ADDRESSES**: `{ [key in AnyToken]: { [chain in Chain]: Address } }`
 
 #### Source
 
-[lib/contracts/tokens.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/2dba95d045033c5e0830b258a1aac29a7e630ff1/lib/contracts/tokens.ts#L45)
+[lib/contracts/tokens.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/5f2c1f76ccc77858612f51473444b7de7408a8a8/lib/contracts/tokens.ts#L45)
 
 ***
 
 ### TOKENS\_PERMIT\_VERSION
 
-> `const` **TOKENS\_PERMIT\_VERSION**: \{ \[key in Token \| PufToken\]: string \}
+> `const` **TOKENS\_PERMIT\_VERSION**: `{ [key in AnyToken]: string }`
 
 #### Source
 
-[lib/contracts/tokens.ts:135](https://github.com/PufferFinance/puffer-sdk/blob/2dba95d045033c5e0830b258a1aac29a7e630ff1/lib/contracts/tokens.ts#L135)
+[lib/contracts/tokens.ts:135](https://github.com/PufferFinance/puffer-sdk/blob/5f2c1f76ccc77858612f51473444b7de7408a8a8/lib/contracts/tokens.ts#L135)
+
+***
+
+### TOKENS\_SALT
+
+> `const` **TOKENS\_SALT**: `Partial`\<`{ [key in AnyToken]: { [chain in Chain]: Address } }`\>
+
+#### Source
+
+[lib/contracts/tokens.ts:165](https://github.com/PufferFinance/puffer-sdk/blob/5f2c1f76ccc77858612f51473444b7de7408a8a8/lib/contracts/tokens.ts#L165)
 
 ***
 
@@ -118,4 +128,4 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/2dba95d045033c5e0830b258a1aac29a7e630ff1/lib/contracts/tokens.ts#L32)
+[lib/contracts/tokens.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/5f2c1f76ccc77858612f51473444b7de7408a8a8/lib/contracts/tokens.ts#L32)
