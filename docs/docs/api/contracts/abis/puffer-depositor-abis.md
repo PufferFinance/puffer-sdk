@@ -8,7 +8,7 @@
 
 #### Source
 
-[lib/contracts/abis/puffer-depositor-abis.ts:6](https://github.com/PufferFinance/puffer-sdk/blob/5f2c1f76ccc77858612f51473444b7de7408a8a8/lib/contracts/abis/puffer-depositor-abis.ts#L6)
+[lib/contracts/abis/puffer-depositor-abis.ts:6](https://github.com/PufferFinance/puffer-sdk/blob/b46ed546b0c80d1ee29830ee55d7a176a24b8d34/lib/contracts/abis/puffer-depositor-abis.ts#L6)
 
 ***
 
@@ -18,4 +18,4 @@
 
 #### Source
 
-[lib/contracts/abis/puffer-depositor-abis.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/5f2c1f76ccc77858612f51473444b7de7408a8a8/lib/contracts/abis/puffer-depositor-abis.ts#L15)
+[lib/contracts/abis/puffer-depositor-abis.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/b46ed546b0c80d1ee29830ee55d7a176a24b8d34/lib/contracts/abis/puffer-depositor-abis.ts#L15)
