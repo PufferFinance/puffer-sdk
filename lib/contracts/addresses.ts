@@ -21,8 +21,6 @@ export const CONTRACT_ADDRESSES = {
     // https://rpc.tenderly.co/fork/f7fd7621-7280-47e5-8521-81b24142814f
     L1RewardManager: '0x10f970bcb84B82B82a65eBCbF45F26dD26D69F12',
     L2RewardManager: '0x58C046794f69A8830b0BE737022a45b4acd01dE5',
-    // This is deployed on a fork at the moment:
-    // https://rpc.tenderly.co/fork/f7fd7621-7280-47e5-8521-81b24142814f
-    PufferWithdrawalManager: '0xd3978c299A430a49D838429A4E50b1b5AE2aAa2f',
+    PufferWithdrawalManager: '0x5A3E1069B66800c0ecbc91bd81b1AE4D1804DBc4',
   },
 };
