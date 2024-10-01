@@ -9,6 +9,16 @@ import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { TOKENS_ADDRESSES, UnifiToken } from '../tokens';
 import { BORING_VAULT_ABIS } from '../abis/boring-vault-abis';
 
+export type PermitParams = {
+  owner: Address;
+  spender: Address;
+  value: bigint;
+  deadline: bigint;
+  v: number;
+  r: Address;
+  s: Address;
+};
+
 /**
  * Handler for the `BoringVault` contract for a given token exposing
  * methods to interact with the contract.
@@ -76,6 +86,15 @@ export class NucleusBoringVaultHandler {
   }
 
   /**
+   * Get the total supply of the token.
+   *
+   * @returns Total supply of the token.
+   */
+  public getTotalSupply() {
+    return this.getContract().read.totalSupply();
+  }
+
+  /**
    * Check the token balance of the wallet.
    *
    * @param walletAddress Wallet address to check the balance of.
@@ -92,5 +111,121 @@ export class NucleusBoringVaultHandler {
    */
   public totalSupply() {
     return this.getContract().read.totalSupply();
+  }
+
+  /**
+   * Approve transaction for the spender to spend the owner's tokens.
+   *
+   * @param walletAddress Address of the caller of the transaction.
+   * @param spenderAddress Address of the spender.
+   * @param value Value to approve for the spender.
+   * @returns Hash of the transaction.
+   */
+  public approve(
+    walletAddress: Address,
+    spenderAddress: Address,
+    value: bigint,
+  ) {
+    return this.getContract().write.approve([spenderAddress, value], {
+      account: walletAddress,
+      chain: this.viemChain,
+    });
+  }
+
+  /**
+   * Transfer tokens from the owner's wallet to the given address.
+   *
+   * @param walletAddress Address of the owner's wallet.
+   * @param toAddress Address to transfer the tokens to.
+   * @param value Value to transfer.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction with the given value.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public transfer(walletAddress: Address, toAddress: Address, value: bigint) {
+    const transact = () =>
+      this.getContract().write.transfer([toAddress, value], {
+        account: walletAddress,
+        chain: this.viemChain,
+      });
+    const estimate = () =>
+      this.getContract().estimateGas.transfer([toAddress, value], {
+        account: walletAddress,
+      });
+
+    return { transact, estimate };
+  }
+
+  /**
+   * Transfer tokens from the given address to another address.
+   *
+   * @param walletAddress Address of the caller of the transaction.
+   * @param fromAddress Address to transfer the tokens from.
+   * @param toAddress Address to transfer the tokens to.
+   * @param value Value to transfer.
+   * @returns `transact: () => Promise<Address>` - Used to
+   * make the transaction with the given value.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public transferFrom(
+    walletAddress: Address,
+    fromAddress: Address,
+    toAddress: Address,
+    value: bigint,
+  ) {
+    const transact = () =>
+      this.getContract().write.transferFrom([fromAddress, toAddress, value], {
+        account: walletAddress,
+        chain: this.viemChain,
+      });
+    const estimate = () =>
+      this.getContract().estimateGas.transfer([toAddress, value], {
+        account: walletAddress,
+      });
+
+    return { transact, estimate };
+  }
+
+  /**
+   * Get permit to be able to use the token.
+   *
+   * @param walletAddress Address of the caller of the transaction.
+   * @param params Permit parameters.
+   * @param params.owner Address of the owner.
+   * @param params.spender Address of the spender.
+   * @param params.value Value to approve for the spender.
+   * @param params.deadline Deadline for the permit.
+   * @param params.v v value of the permit.
+   * @param params.r r value of the permit.
+   * @param params.s s value of the permit.
+   * @returns `transact: () => Promise<Address>` - Used to make the
+   * transaction with the given value.
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public permit(walletAddress: Address, params: PermitParams) {
+    const { owner, spender, value, deadline, v, r, s } = params;
+    const transact = () =>
+      this.getContract().write.permit(
+        [owner, spender, value, deadline, v, r, s],
+        {
+          account: walletAddress,
+          chain: this.viemChain,
+        },
+      );
+    const estimate = () =>
+      this.getContract().estimateGas.permit(
+        [owner, spender, value, deadline, v, r, s],
+        {
+          account: walletAddress,
+        },
+      );
+
+    return { transact, estimate };
   }
 }
