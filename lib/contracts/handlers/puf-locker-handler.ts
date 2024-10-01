@@ -9,11 +9,11 @@ import {
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { PUF_LOCKER_ABIS } from '../abis/puf-locker-abis';
 import { CONTRACT_ADDRESSES } from '../addresses';
-import { PufToken, TOKENS_ADDRESSES } from '../tokens';
+import { UnifiToken, TOKENS_ADDRESSES } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
 
 export type LockerDepositParams = {
-  token: PufToken;
+  token: UnifiToken;
   account: Address;
   recipient: Address;
   value: bigint;
@@ -77,7 +77,7 @@ export class PufLockerHandler {
    * @param walletAddress The wallet address to get the deposits for.
    * @returns The amount and deposits of the given account address.
    */
-  public getAllDeposits(pufToken: PufToken, walletAddress: Address) {
+  public getAllDeposits(pufToken: UnifiToken, walletAddress: Address) {
     return this.getContract().read.getAllDeposits([
       TOKENS_ADDRESSES[pufToken][this.chain],
       walletAddress,
@@ -94,7 +94,7 @@ export class PufLockerHandler {
    * @returns The amount and release time of the deposits.
    */
   public getDeposits(
-    pufToken: PufToken,
+    pufToken: UnifiToken,
     userAddress: Address,
     start: bigint,
     limit: bigint,
@@ -205,7 +205,7 @@ export class PufLockerHandler {
    * @returns Hash of the withdrawal transaction.
    */
   public withdraw(
-    pufToken: PufToken,
+    pufToken: UnifiToken,
     walletAddress: Address,
     recipient: Address,
     depositIndexes: bigint[],
