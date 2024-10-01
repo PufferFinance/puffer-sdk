@@ -20,8 +20,6 @@ export enum UnifiToken {
 
 export type AnyToken = Token | UnifiToken;
 
-export const TOKEN_TO_UNIFI_TOKEN_MAP = {};
-
 export const TOKENS_ADDRESSES: {
   [key in AnyToken]: { [chain in Chain]: Address };
 } = {
