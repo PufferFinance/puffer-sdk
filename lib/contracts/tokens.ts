@@ -14,33 +14,13 @@ export enum Token {
   pufETH = 'pufETH',
 }
 
-export enum PufToken {
-  pufUSDT = 'pufUSDT',
-  pufUSDC = 'pufUSDC',
-  pufDAI = 'pufDAI',
-  pufpufETH = 'pufpufETH',
-  pufWETH = 'pufWETH',
-  pufstETH = 'pufstETH',
-  pufwstETH = 'pufwstETH',
-  pufALT = 'pufALT',
-  pufeETH = 'pufeETH',
-  pufpufETHwstE = 'pufpufETHwstE',
+export enum UnifiToken {
+  unifiETH = 'unifiETH',
 }
 
-export type AnyToken = Token | PufToken;
+export type AnyToken = Token | UnifiToken;
 
-export const TOKEN_TO_PUF_TOKEN_MAP = {
-  [Token.USDT]: PufToken.pufUSDT,
-  [Token.USDC]: PufToken.pufUSDC,
-  [Token.DAI]: PufToken.pufDAI,
-  [Token.WETH]: PufToken.pufWETH,
-  [Token.stETH]: PufToken.pufstETH,
-  [Token.wstETH]: PufToken.pufwstETH,
-  [Token.ALT]: PufToken.pufALT,
-  [Token.eETH]: PufToken.pufeETH,
-  [Token.pufETHwstE]: PufToken.pufpufETHwstE,
-  [Token.pufETH]: PufToken.pufpufETH,
-};
+export const TOKEN_TO_UNIFI_TOKEN_MAP = {};
 
 export const TOKENS_ADDRESSES: {
   [key in AnyToken]: { [chain in Chain]: Address };
@@ -89,46 +69,10 @@ export const TOKENS_ADDRESSES: {
   // TODO: Update the addresses once the contracts are deployed on chain.
   // See https://dev.azure.com/pufferfi/Frontend/_workitems/edit/1797.
 
-  // Wrapped PufTokens.
-  [PufToken.pufUSDT]: {
-    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x61e7C87c387178D6e0aE6c04748b7FF753fC9b81',
-  },
-  [PufToken.pufUSDC]: {
-    [Chain.Mainnet]: '0x2f0d8e30df0c598b90b34cd68b5e3981b7af3881',
-    [Chain.Holesky]: '0x6D900a9f5784A2cA0004B5c3D3e08D7A9cE4A1b3',
-  },
-  [PufToken.pufDAI]: {
-    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x2D6B705e118198A02F00490BA323B17eC5D58109',
-  },
-  [PufToken.pufWETH]: {
-    [Chain.Mainnet]: '0x2b36f6bfd223f460e7e43ef49bc487481648948c',
-    [Chain.Holesky]: '0x5335f231C22d472Ab31CC2690A2247d25efd76a5',
-  },
-  [PufToken.pufstETH]: {
-    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
+  // UniFi Tokens
+  [UnifiToken.unifiETH]: {
+    [Chain.Mainnet]: '0x196ead472583bc1e9af7a05f860d9857e1bd3dcc',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
-  },
-  [PufToken.pufwstETH]: {
-    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
-  },
-  [PufToken.pufALT]: {
-    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
-  },
-  [PufToken.pufeETH]: {
-    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
-  },
-  [PufToken.pufpufETHwstE]: {
-    [Chain.Mainnet]: '0xf374014f6fa86bad50d52e6240a117b0830663cb',
-    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
-  },
-  [PufToken.pufpufETH]: {
-    [Chain.Mainnet]: '0x0000000000000000000000000000000000000000',
-    [Chain.Holesky]: '0x638fd1Fe8205285E8497Eb8E6037c8254EDdB0ae',
   },
 };
 
@@ -149,17 +93,8 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.pufETHwstE]: 'v7.0.0',
   [Token.pufETH]: '1',
 
-  // Wrapped PufTokens
-  [PufToken.pufUSDT]: '1',
-  [PufToken.pufUSDC]: '1',
-  [PufToken.pufDAI]: '1',
-  [PufToken.pufWETH]: '1',
-  [PufToken.pufstETH]: '1',
-  [PufToken.pufwstETH]: '1',
-  [PufToken.pufALT]: '1',
-  [PufToken.pufeETH]: '1',
-  [PufToken.pufpufETHwstE]: '1',
-  [PufToken.pufpufETH]: '1',
+  // UniFi Tokens
+  [UnifiToken.unifiETH]: '1',
 };
 
 export const TOKENS_SALT: Partial<{

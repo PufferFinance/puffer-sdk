@@ -7,7 +7,6 @@ export * from './contracts/handlers/erc20-permit-handler';
 export * from './contracts/handlers/l1-reward-manager-handler';
 export * from './contracts/handlers/l2-reward-manager-handler';
 export * from './contracts/handlers/puf-locker-handler';
-export * from './contracts/handlers/puf-token-handler';
 export * from './contracts/handlers/puffer-depositor-handler';
 export * from './contracts/handlers/puffer-l2-depositor-handler';
 export * from './contracts/handlers/puffer-vault-handler';

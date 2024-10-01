@@ -73,7 +73,7 @@ export class ERC20PermitHandler {
 
   /**
    * Process and get permit signature for the given token to perform
-   * transactions through the `PufferDepositor` contract.
+   * transactions without calling `approve()`.
    *
    * @param ownerAddress Address of the token owner.
    * @param spenderAddress Address of the spender who needs the permit.
@@ -125,10 +125,6 @@ export class ERC20PermitHandler {
     return { ...parseSignature(signature), deadline };
   }
 
-  private getPermitVersion(token: AnyToken): string {
-    return TOKENS_PERMIT_VERSION[token];
-  }
-
   /**
    * Approve transaction for the spender to spend the owner's tokens.
    *
@@ -146,6 +142,10 @@ export class ERC20PermitHandler {
       account: ownerAddress,
       chain: this.viemChain,
     });
+  }
+
+  private getPermitVersion(token: AnyToken): string {
+    return TOKENS_PERMIT_VERSION[token];
   }
 
   private getPermitSalt(token: AnyToken) {

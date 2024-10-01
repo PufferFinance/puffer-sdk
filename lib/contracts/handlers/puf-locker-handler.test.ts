@@ -7,7 +7,7 @@ import {
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { Chain } from '../../chains/constants';
 import { PUF_LOCKER_ABIS } from '../abis/puf-locker-abis';
-import { PufToken } from '../tokens';
+import { UnifiToken } from '../tokens';
 import { PufLockerHandler } from './puf-locker-handler';
 
 describe('PufTokenHandler', () => {
@@ -28,7 +28,7 @@ describe('PufTokenHandler', () => {
     contractTestingUtils.mockCall('getAllDeposits', [[mockDeposit]]);
 
     const allDeposits = await handler.getAllDeposits(
-      PufToken.pufWETH,
+      UnifiToken.pufWETH,
       mockAccount,
     );
 
@@ -40,7 +40,7 @@ describe('PufTokenHandler', () => {
     contractTestingUtils.mockCall('getDeposits', [[mockDeposit]]);
 
     const allDeposits = await handler.getDeposits(
-      PufToken.pufWETH,
+      UnifiToken.pufWETH,
       mockAccount,
       0n,
       1n,
@@ -66,7 +66,7 @@ describe('PufTokenHandler', () => {
       .mockReturnValue(Promise.resolve(mockPermitSignature));
 
     const { transact, estimate } = await handler.deposit({
-      token: PufToken.pufWETH,
+      token: UnifiToken.pufWETH,
       account: mockAccount,
       recipient: mockAccount,
       value: 1n,
@@ -85,7 +85,7 @@ describe('PufTokenHandler', () => {
       .mockReturnValue(Promise.resolve(mockPermitSignature));
 
     const { transact, estimate } = await handler.deposit({
-      token: PufToken.pufWETH,
+      token: UnifiToken.pufWETH,
       account: mockAccount,
       recipient: mockAccount,
       value: 1n,
@@ -100,7 +100,7 @@ describe('PufTokenHandler', () => {
     contractTestingUtils.mockTransaction('withdraw');
 
     const { transact, estimate } = handler.withdraw(
-      PufToken.pufWETH,
+      UnifiToken.pufWETH,
       mockAccount,
       mockAccount,
       [0n],
