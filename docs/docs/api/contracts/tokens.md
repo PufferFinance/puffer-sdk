@@ -2,25 +2,6 @@
 
 ## Enumerations
 
-### PufToken
-
-#### Enumeration Members
-
-| Enumeration Member | Value |
-| :------ | :------ |
-| `pufALT` | `"pufALT"` |
-| `pufDAI` | `"pufDAI"` |
-| `pufUSDC` | `"pufUSDC"` |
-| `pufUSDT` | `"pufUSDT"` |
-| `pufWETH` | `"pufWETH"` |
-| `pufeETH` | `"pufeETH"` |
-| `pufpufETH` | `"pufpufETH"` |
-| `pufpufETHwstE` | `"pufpufETHwstE"` |
-| `pufstETH` | `"pufstETH"` |
-| `pufwstETH` | `"pufwstETH"` |
-
-***
-
 ### Token
 
 #### Enumeration Members
@@ -38,15 +19,25 @@
 | `stETH` | `"stETH"` |
 | `wstETH` | `"wstETH"` |
 
+***
+
+### UnifiToken
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `unifiETH` | `"unifiETH"` |
+
 ## Type Aliases
 
 ### AnyToken
 
-> **AnyToken**: [`Token`](tokens.md#token) \| [`PufToken`](tokens.md#puftoken)
+> **AnyToken**: [`Token`](tokens.md#token) \| [`UnifiToken`](tokens.md#unifitoken)
 
 #### Source
 
-[lib/contracts/tokens.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/b46ed546b0c80d1ee29830ee55d7a176a24b8d34/lib/contracts/tokens.ts#L30)
+[lib/contracts/tokens.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/tokens.ts#L21)
 
 ## Variables
 
@@ -56,7 +47,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/b46ed546b0c80d1ee29830ee55d7a176a24b8d34/lib/contracts/tokens.ts#L45)
+[lib/contracts/tokens.ts:23](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/tokens.ts#L23)
 
 ***
 
@@ -66,7 +57,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:135](https://github.com/PufferFinance/puffer-sdk/blob/b46ed546b0c80d1ee29830ee55d7a176a24b8d34/lib/contracts/tokens.ts#L135)
+[lib/contracts/tokens.ts:77](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/tokens.ts#L77)
 
 ***
 
@@ -76,56 +67,4 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:165](https://github.com/PufferFinance/puffer-sdk/blob/b46ed546b0c80d1ee29830ee55d7a176a24b8d34/lib/contracts/tokens.ts#L165)
-
-***
-
-### TOKEN\_TO\_PUF\_TOKEN\_MAP
-
-> `const` **TOKEN\_TO\_PUF\_TOKEN\_MAP**: `object`
-
-#### Type declaration
-
-##### ALT
-
-> **ALT**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufALT`
-
-##### DAI
-
-> **DAI**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufDAI`
-
-##### USDC
-
-> **USDC**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufUSDC`
-
-##### USDT
-
-> **USDT**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufUSDT`
-
-##### WETH
-
-> **WETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufWETH`
-
-##### eETH
-
-> **eETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufeETH`
-
-##### pufETH
-
-> **pufETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufpufETH`
-
-##### pufETHwstE
-
-> **pufETHwstE**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufpufETHwstE`
-
-##### stETH
-
-> **stETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufstETH`
-
-##### wstETH
-
-> **wstETH**: [`PufToken`](tokens.md#puftoken) = `PufToken.pufwstETH`
-
-#### Source
-
-[lib/contracts/tokens.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/b46ed546b0c80d1ee29830ee55d7a176a24b8d34/lib/contracts/tokens.ts#L32)
+[lib/contracts/tokens.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/tokens.ts#L98)

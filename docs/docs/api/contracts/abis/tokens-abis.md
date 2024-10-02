@@ -8,4 +8,4 @@
 
 #### Source
 
-[lib/contracts/abis/tokens-abis.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/b46ed546b0c80d1ee29830ee55d7a176a24b8d34/lib/contracts/abis/tokens-abis.ts#L3)
+[lib/contracts/abis/tokens-abis.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/abis/tokens-abis.ts#L3)
