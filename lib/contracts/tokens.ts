@@ -92,7 +92,7 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.pufETH]: '1',
 
   // UniFi Tokens
-  [UnifiToken.unifiETH]: '1',
+  [UnifiToken.unifiETH]: '',
 };
 
 export const TOKENS_SALT: Partial<{
