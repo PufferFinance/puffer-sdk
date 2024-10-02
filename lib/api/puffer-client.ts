@@ -15,6 +15,8 @@ import { L2RewardManagerHandler } from '../contracts/handlers/l2-reward-manager-
 import { L1RewardManagerHandler } from '../contracts/handlers/l1-reward-manager-handler';
 import { PufferWithdrawalManagerHandler } from '../contracts/handlers/puffer-withdrawal-manager-handler';
 import { NucleusBoringVaultHandler } from '../contracts/handlers/nucleus-boring-vault-handler';
+import { NucleusTellerHandler } from '../contracts/handlers/nucleus-teller-handler';
+import { NucleusAccountantHandler } from '../contracts/handlers/nucleus-accountant-handler';
 
 /**
  * The core class and the main entry point of the Puffer SDK.
@@ -42,6 +44,10 @@ export class PufferClient {
   public pufferWithdrawalManager: PufferWithdrawalManagerHandler;
   /** Handler for the `NucleusBoringVault` contract. */
   public nucleusBoringVault: NucleusBoringVaultHandler;
+  /** Handler for the `NucleusTeller` contract. */
+  public nucleusTeller: NucleusTellerHandler;
+  /** Handler for the `NucleusAccountant` contract. */
+  public nucleusAccountant: NucleusAccountantHandler;
 
   /**
    * Create the Puffer Client.
@@ -114,6 +120,16 @@ export class PufferClient {
       this.publicClient,
     );
     this.nucleusBoringVault = new NucleusBoringVaultHandler(
+      chain,
+      this.walletClient,
+      this.publicClient,
+    );
+    this.nucleusTeller = new NucleusTellerHandler(
+      chain,
+      this.walletClient,
+      this.publicClient,
+    );
+    this.nucleusAccountant = new NucleusAccountantHandler(
       chain,
       this.walletClient,
       this.publicClient,
