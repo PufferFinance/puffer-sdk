@@ -11,6 +11,7 @@ import { NUCLEUS_TELLER_ABIS } from '../abis/nucleus-teller-abis';
 import { Token, TOKENS_ADDRESSES } from '../tokens';
 
 export type DepositWithPermitParams = {
+  account: Address;
   depositAsset: Address;
   depositAmount: bigint;
   minimumMint: bigint;
@@ -147,8 +148,8 @@ export class NucleusTellerHandler {
   /**
    * Deposit an asset/token for staking with a permit.
    *
-   * @param walletAddress Address of the caller of the transaction.
    * @param params Permit parameters.
+   * @param params.account Address of the caller of the transaction.
    * @param params.depositAsset Address of the asset/token to deposit.
    * @param params.depositAmount Amount of the asset/token to deposit.
    * @param params.minimumMint Minimum amount of shares to mint.
@@ -162,18 +163,23 @@ export class NucleusTellerHandler {
    * `estimate: () => Promise<bigint>` - Gas estimate of the
    * transaction.
    */
-  public depositWithPermit(
-    walletAddress: Address,
-    params: DepositWithPermitParams,
-  ) {
-    const { depositAsset, depositAmount, minimumMint, deadline, v, r, s } =
-      params;
+  public depositWithPermit(params: DepositWithPermitParams) {
+    const {
+      account,
+      depositAsset,
+      depositAmount,
+      minimumMint,
+      deadline,
+      v,
+      r,
+      s,
+    } = params;
 
     const transact = () =>
       this.getContract().write.depositWithPermit(
         [depositAsset, depositAmount, minimumMint, deadline, v, r, s],
         {
-          account: walletAddress,
+          account,
           chain: this.viemChain,
         },
       );
@@ -181,7 +187,7 @@ export class NucleusTellerHandler {
       this.getContract().estimateGas.depositWithPermit(
         [depositAsset, depositAmount, minimumMint, deadline, v, r, s],
         {
-          account: walletAddress,
+          account,
         },
       );
 
