@@ -25,7 +25,11 @@ export const CONTRACT_ADDRESSES = {
     PufLocker: '0xa58983ad0899a452b7420bc57228e329d7ba92b6',
     L1RewardManager: '0x10f970bcb84B82B82a65eBCbF45F26dD26D69F12',
     L2RewardManager: '0x58C046794f69A8830b0BE737022a45b4acd01dE5',
+    // Nucleus contracts are not deployed to holesky.
     PufferWithdrawalManager: '0x5A3E1069B66800c0ecbc91bd81b1AE4D1804DBc4',
+    NucleusBoringVault: '0x0000000000000000000000000000000000000000',
+    NucleusAccountant: '0x0000000000000000000000000000000000000000',
+    NucleusTeller: '0x0000000000000000000000000000000000000000',
   },
   [Chain.Base]: {
     L2RewardManager: '0xF9Dd335bF363b2E4ecFe3c94A86EBD7Dd3Dcf0e7',
