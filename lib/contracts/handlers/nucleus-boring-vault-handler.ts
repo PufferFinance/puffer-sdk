@@ -12,6 +12,7 @@ import { NUCLEUS_BORING_VAULT_ABIS } from '../abis/nucleus-boring-vault-abis';
 import { CONTRACT_ADDRESSES } from '../addresses';
 
 export type PermitParams = {
+  account: Address;
   owner: Address;
   spender: Address;
   value: bigint;
@@ -173,9 +174,10 @@ export class NucleusBoringVaultHandler {
         chain: this.viemChain,
       });
     const estimate = () =>
-      this.getContract().estimateGas.transfer([toAddress, value], {
-        account: walletAddress,
-      });
+      this.getContract().estimateGas.transferFrom(
+        [fromAddress, toAddress, value],
+        { account: walletAddress },
+      );
 
     return { transact, estimate };
   }
@@ -183,8 +185,8 @@ export class NucleusBoringVaultHandler {
   /**
    * Get permit to be able to use the token.
    *
-   * @param walletAddress Address of the caller of the transaction.
    * @param params Permit parameters.
+   * @param params.account Address of the caller of the transaction.
    * @param params.owner Address of the owner.
    * @param params.spender Address of the spender.
    * @param params.value Value to approve for the spender.
@@ -198,22 +200,17 @@ export class NucleusBoringVaultHandler {
    * `estimate: () => Promise<bigint>` - Gas estimate of the
    * transaction.
    */
-  public permit(walletAddress: Address, params: PermitParams) {
-    const { owner, spender, value, deadline, v, r, s } = params;
+  public permit(params: PermitParams) {
+    const { account, owner, spender, value, deadline, v, r, s } = params;
     const transact = () =>
       this.getContract().write.permit(
         [owner, spender, value, deadline, v, r, s],
-        {
-          account: walletAddress,
-          chain: this.viemChain,
-        },
+        { account, chain: this.viemChain },
       );
     const estimate = () =>
       this.getContract().estimateGas.permit(
         [owner, spender, value, deadline, v, r, s],
-        {
-          account: walletAddress,
-        },
+        { account },
       );
 
     return { transact, estimate };
