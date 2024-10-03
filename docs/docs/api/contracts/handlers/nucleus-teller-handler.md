@@ -28,7 +28,7 @@ Create the handler for processing tokens.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:41](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/handlers/nucleus-teller-handler.ts#L41)
+[lib/contracts/handlers/nucleus-teller-handler.ts:41](https://github.com/PufferFinance/puffer-sdk/blob/cbf6163a8a17b3c450cff07d167e090f549dc689/lib/contracts/handlers/nucleus-teller-handler.ts#L41)
 
 #### Properties
 
@@ -55,7 +55,7 @@ The address of the `Accountant` contract.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:72](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/handlers/nucleus-teller-handler.ts#L72)
+[lib/contracts/handlers/nucleus-teller-handler.ts:72](https://github.com/PufferFinance/puffer-sdk/blob/cbf6163a8a17b3c450cff07d167e090f549dc689/lib/contracts/handlers/nucleus-teller-handler.ts#L72)
 
 ##### deposit()
 
@@ -100,7 +100,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:126](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/handlers/nucleus-teller-handler.ts#L126)
+[lib/contracts/handlers/nucleus-teller-handler.ts:126](https://github.com/PufferFinance/puffer-sdk/blob/cbf6163a8a17b3c450cff07d167e090f549dc689/lib/contracts/handlers/nucleus-teller-handler.ts#L126)
 
 ##### depositWithPermit()
 
@@ -142,7 +142,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:168](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/handlers/nucleus-teller-handler.ts#L168)
+[lib/contracts/handlers/nucleus-teller-handler.ts:168](https://github.com/PufferFinance/puffer-sdk/blob/cbf6163a8a17b3c450cff07d167e090f549dc689/lib/contracts/handlers/nucleus-teller-handler.ts#L168)
 
 ##### getContract()
 
@@ -159,7 +159,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:55](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/handlers/nucleus-teller-handler.ts#L55)
+[lib/contracts/handlers/nucleus-teller-handler.ts:55](https://github.com/PufferFinance/puffer-sdk/blob/cbf6163a8a17b3c450cff07d167e090f549dc689/lib/contracts/handlers/nucleus-teller-handler.ts#L55)
 
 ##### isPaused()
 
@@ -175,7 +175,7 @@ The paused state of the contract.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/handlers/nucleus-teller-handler.ts#L109)
+[lib/contracts/handlers/nucleus-teller-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/cbf6163a8a17b3c450cff07d167e090f549dc689/lib/contracts/handlers/nucleus-teller-handler.ts#L109)
 
 ##### shareLockPeriod()
 
@@ -191,7 +191,7 @@ The share lock period.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/handlers/nucleus-teller-handler.ts#L90)
+[lib/contracts/handlers/nucleus-teller-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/cbf6163a8a17b3c450cff07d167e090f549dc689/lib/contracts/handlers/nucleus-teller-handler.ts#L90)
 
 ##### shareUnlockTime()
 
@@ -213,7 +213,7 @@ The share unlock time.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:100](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/handlers/nucleus-teller-handler.ts#L100)
+[lib/contracts/handlers/nucleus-teller-handler.ts:100](https://github.com/PufferFinance/puffer-sdk/blob/cbf6163a8a17b3c450cff07d167e090f549dc689/lib/contracts/handlers/nucleus-teller-handler.ts#L100)
 
 ##### vault()
 
@@ -229,7 +229,7 @@ The address of the `BoringVault` contract.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/handlers/nucleus-teller-handler.ts#L81)
+[lib/contracts/handlers/nucleus-teller-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/cbf6163a8a17b3c450cff07d167e090f549dc689/lib/contracts/handlers/nucleus-teller-handler.ts#L81)
 
 ## Type Aliases
 
@@ -273,4 +273,4 @@ The address of the `BoringVault` contract.
 
 #### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/cce0870cf49d92e09d8ce9ea521f2d5d798f7757/lib/contracts/handlers/nucleus-teller-handler.ts#L15)
+[lib/contracts/handlers/nucleus-teller-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/cbf6163a8a17b3c450cff07d167e090f549dc689/lib/contracts/handlers/nucleus-teller-handler.ts#L15)
