@@ -235,4 +235,15 @@ export class PufferVaultHandler {
 
     return { transact, estimate };
   }
+
+  /**
+   * Gives exchange rate of pufETH relative to WETH.
+   * This does not include any fees, as compared to previewRedeem method.
+   *
+   * @param amount Amount of pufETH to convert.
+   * @returns Amount of equivalent WETH.
+   */
+  public convertToAssets(amount: bigint) {
+    return this.getContract().read.convertToAssets([amount]);
+  }
 }
