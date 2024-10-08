@@ -121,4 +121,15 @@ describe('PufferVaultHandler', () => {
     expect(typeof (await estimate())).toBe('bigint');
     expect(isHash(await transact())).toBe(true);
   });
+
+  it('should convert pufETH to WETH', async () => {
+    const mockPufETH = 10n;
+    const mockWETH = 20n;
+
+    vaultTestingUtils.mockCall('convertToAssets', [mockWETH]);
+
+    const wethAmount = await handler.convertToAssets(mockPufETH);
+
+    expect(wethAmount).toBe(mockWETH);
+  });
 });
