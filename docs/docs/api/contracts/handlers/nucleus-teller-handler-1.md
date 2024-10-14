@@ -2,6 +2,10 @@
 
 ## References
 
+### DepositParams
+
+Re-exports [DepositParams](nucleus-teller-handler.md#depositparams)
+
 ### DepositWithPermitParams
 
 Re-exports [DepositWithPermitParams](nucleus-teller-handler.md#depositwithpermitparams)

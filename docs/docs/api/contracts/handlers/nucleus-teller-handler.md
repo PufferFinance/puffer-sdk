@@ -28,13 +28,14 @@ Create the handler for processing tokens.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:41](https://github.com/PufferFinance/puffer-sdk/blob/ac895edd81760da761663681aeed6740117f2db6/lib/contracts/handlers/nucleus-teller-handler.ts#L41)
+[lib/contracts/handlers/nucleus-teller-handler.ts:50](https://github.com/PufferFinance/puffer-sdk/blob/0be1bec30fd92606682cd2b2062122b82c51e20f/lib/contracts/handlers/nucleus-teller-handler.ts#L50)
 
 #### Properties
 
 | Property | Modifier | Type | Description |
 | :------ | :------ | :------ | :------ |
 | `chain` | `private` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
+| `erc20PermitHandler` | `private` | [`ERC20PermitHandler`](erc20-permit-handler.md#erc20permithandler) | - |
 | `publicClient` | `private` | `object` | The public client to use for public interactions. |
 | `viemChain` | `private` | `Chain` | - |
 | `walletClient` | `private` | `object` | The wallet client to use for wallet interactions. |
@@ -55,26 +56,25 @@ The address of the `Accountant` contract.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:72](https://github.com/PufferFinance/puffer-sdk/blob/ac895edd81760da761663681aeed6740117f2db6/lib/contracts/handlers/nucleus-teller-handler.ts#L72)
+[lib/contracts/handlers/nucleus-teller-handler.ts:86](https://github.com/PufferFinance/puffer-sdk/blob/0be1bec30fd92606682cd2b2062122b82c51e20f/lib/contracts/handlers/nucleus-teller-handler.ts#L86)
 
 ##### deposit()
 
-> **deposit**(`walletAddress`, `token`, `amount`, `minimumMint`): `object`
+> **deposit**(`params`): `Promise`\<`object`\>
 
-Deposit the given token for staking.
+Deposit the given token for staking. This doesn't make the
+transaction but returns two methods namely `transact` and
+`estimate`.
 
 ###### Parameters
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `walletAddress` | \`0x$\{string\}\` | Address of the caller of the transaction. |
-| `token` | [`Token`](../tokens.md#token) | Token to deposit. |
-| `amount` | `bigint` | Amount of the token to deposit. |
-| `minimumMint` | `bigint` | Minimum amount of shares to mint. |
+| `params` | [`DepositParams`](nucleus-teller-handler.md#depositparams) | Deposit parameters. |
 
 ###### Returns
 
-`object`
+`Promise`\<`object`\>
 
 `transact: () => Promise<Address>` - Used to make the
 transaction with the given value.
@@ -100,7 +100,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:126](https://github.com/PufferFinance/puffer-sdk/blob/ac895edd81760da761663681aeed6740117f2db6/lib/contracts/handlers/nucleus-teller-handler.ts#L126)
+[lib/contracts/handlers/nucleus-teller-handler.ts:145](https://github.com/PufferFinance/puffer-sdk/blob/0be1bec30fd92606682cd2b2062122b82c51e20f/lib/contracts/handlers/nucleus-teller-handler.ts#L145)
 
 ##### depositWithPermit()
 
@@ -142,7 +142,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:168](https://github.com/PufferFinance/puffer-sdk/blob/ac895edd81760da761663681aeed6740117f2db6/lib/contracts/handlers/nucleus-teller-handler.ts#L168)
+[lib/contracts/handlers/nucleus-teller-handler.ts:224](https://github.com/PufferFinance/puffer-sdk/blob/0be1bec30fd92606682cd2b2062122b82c51e20f/lib/contracts/handlers/nucleus-teller-handler.ts#L224)
 
 ##### getContract()
 
@@ -159,7 +159,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:55](https://github.com/PufferFinance/puffer-sdk/blob/ac895edd81760da761663681aeed6740117f2db6/lib/contracts/handlers/nucleus-teller-handler.ts#L55)
+[lib/contracts/handlers/nucleus-teller-handler.ts:69](https://github.com/PufferFinance/puffer-sdk/blob/0be1bec30fd92606682cd2b2062122b82c51e20f/lib/contracts/handlers/nucleus-teller-handler.ts#L69)
 
 ##### isPaused()
 
@@ -175,7 +175,7 @@ The paused state of the contract.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/ac895edd81760da761663681aeed6740117f2db6/lib/contracts/handlers/nucleus-teller-handler.ts#L109)
+[lib/contracts/handlers/nucleus-teller-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/0be1bec30fd92606682cd2b2062122b82c51e20f/lib/contracts/handlers/nucleus-teller-handler.ts#L123)
 
 ##### shareLockPeriod()
 
@@ -191,7 +191,7 @@ The share lock period.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/ac895edd81760da761663681aeed6740117f2db6/lib/contracts/handlers/nucleus-teller-handler.ts#L90)
+[lib/contracts/handlers/nucleus-teller-handler.ts:104](https://github.com/PufferFinance/puffer-sdk/blob/0be1bec30fd92606682cd2b2062122b82c51e20f/lib/contracts/handlers/nucleus-teller-handler.ts#L104)
 
 ##### shareUnlockTime()
 
@@ -213,7 +213,7 @@ The share unlock time.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:100](https://github.com/PufferFinance/puffer-sdk/blob/ac895edd81760da761663681aeed6740117f2db6/lib/contracts/handlers/nucleus-teller-handler.ts#L100)
+[lib/contracts/handlers/nucleus-teller-handler.ts:114](https://github.com/PufferFinance/puffer-sdk/blob/0be1bec30fd92606682cd2b2062122b82c51e20f/lib/contracts/handlers/nucleus-teller-handler.ts#L114)
 
 ##### vault()
 
@@ -229,9 +229,45 @@ The address of the `BoringVault` contract.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/ac895edd81760da761663681aeed6740117f2db6/lib/contracts/handlers/nucleus-teller-handler.ts#L81)
+[lib/contracts/handlers/nucleus-teller-handler.ts:95](https://github.com/PufferFinance/puffer-sdk/blob/0be1bec30fd92606682cd2b2062122b82c51e20f/lib/contracts/handlers/nucleus-teller-handler.ts#L95)
 
 ## Type Aliases
+
+### DepositParams
+
+> **DepositParams**: `object`
+
+#### Type declaration
+
+##### account
+
+> **account**: `Address`
+
+##### amount
+
+> **amount**: `bigint`
+
+##### isPreapproved?
+
+> `optional` **isPreapproved**: `boolean`
+
+##### minimumMint
+
+> **minimumMint**: `bigint`
+
+##### token
+
+> **token**: [`Token`](../tokens.md#token)
+
+##### unifiToken
+
+> **unifiToken**: [`UnifiToken`](../tokens.md#unifitoken)
+
+#### Source
+
+[lib/contracts/handlers/nucleus-teller-handler.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/0be1bec30fd92606682cd2b2062122b82c51e20f/lib/contracts/handlers/nucleus-teller-handler.ts#L14)
+
+***
 
 ### DepositWithPermitParams
 
@@ -273,4 +309,4 @@ The address of the `BoringVault` contract.
 
 #### Source
 
-[lib/contracts/handlers/nucleus-teller-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/ac895edd81760da761663681aeed6740117f2db6/lib/contracts/handlers/nucleus-teller-handler.ts#L15)
+[lib/contracts/handlers/nucleus-teller-handler.ts:23](https://github.com/PufferFinance/puffer-sdk/blob/0be1bec30fd92606682cd2b2062122b82c51e20f/lib/contracts/handlers/nucleus-teller-handler.ts#L23)
