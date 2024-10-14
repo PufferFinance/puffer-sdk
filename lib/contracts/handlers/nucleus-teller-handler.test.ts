@@ -7,8 +7,9 @@ import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { NUCLEUS_TELLER_ABIS } from '../abis/nucleus-teller-abis';
 import { NucleusTellerHandler } from './nucleus-teller-handler';
 import { generateAddress } from '../../../test/mocks/address';
-import { Token, TOKENS_ADDRESSES } from '../tokens';
+import { Token, TOKENS_ADDRESSES, UnifiToken } from '../tokens';
 import { isHash } from 'viem';
+import { mockPermitSignature } from '../../../test/mocks/permit-signature';
 
 describe('NucleusBoringVaultHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(
@@ -55,15 +56,37 @@ describe('NucleusBoringVaultHandler', () => {
     expect(isPaused).toBe(mockIsPaused);
   });
 
-  it('should deposit without a permit', async () => {
+  it('should deposit with preapproval', async () => {
     contractTestingUtils.mockTransaction('deposit');
 
-    const { transact, estimate } = handler.deposit(
-      mockAccount,
-      Token.pufETH,
-      100n,
-      0n,
-    );
+    const { transact, estimate } = await handler.deposit({
+      account: mockAccount,
+      token: Token.pufETH,
+      unifiToken: UnifiToken.unifiETH,
+      amount: 100n,
+      minimumMint: 0n,
+      isPreapproved: true,
+    });
+
+    expect(typeof (await estimate())).toBe('bigint');
+    expect(isHash(await transact())).toBe(true);
+  });
+
+  it('should deposit with generated permit', async () => {
+    contractTestingUtils.mockTransaction('depositWithPermit');
+    jest
+      .spyOn((handler as any).erc20PermitHandler, 'getPermitSignature')
+      .mockReturnValue(Promise.resolve(mockPermitSignature));
+
+    const { transact, estimate } = await handler.deposit({
+      account: mockAccount,
+      token: Token.pufETH,
+      unifiToken: UnifiToken.unifiETH,
+      amount: 100n,
+      minimumMint: 0n,
+      // This is set by default.
+      // isPreapproved: false,
+    });
 
     expect(typeof (await estimate())).toBe('bigint');
     expect(isHash(await transact())).toBe(true);
