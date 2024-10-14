@@ -13,7 +13,7 @@ export const CONTRACT_ADDRESSES = {
     L2RewardManager: '0x0000000000000000000000000000000000000000',
     // Deployed on a fork
     // https://dashboard.tenderly.co/explorer/fork/f7fd7621-7280-47e5-8521-81b24142814f/transactions.
-    PufferWithdrawalManager: '0x8a253974f1de9f64d79f1eaaf850faf406802fce',
+    PufferWithdrawalManager: '0xDdA0483184E75a5579ef9635ED14BacCf9d50283',
     NucleusBoringVault: '0x196ead472583bc1e9af7a05f860d9857e1bd3dcc',
     NucleusAccountant: '0xa9fb7e2922216debe3fd5e1bbe7591ee446dc21c',
     NucleusTeller: '0x08eb2eccdf6ebd7aba601791f23ec5b5f68a1d53',
