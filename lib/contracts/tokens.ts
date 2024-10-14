@@ -92,7 +92,8 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.pufETH]: '1',
 
   // UniFi Tokens
-  [UnifiToken.unifiETH]: '',
+  // https://etherscan.io/address/0x196ead472583bc1e9af7a05f860d9857e1bd3dcc#code#F7#L172
+  [UnifiToken.unifiETH]: '1',
 };
 
 export const TOKENS_SALT: Partial<{

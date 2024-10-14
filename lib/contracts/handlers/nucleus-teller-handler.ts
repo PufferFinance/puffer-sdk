@@ -1,5 +1,3 @@
-/* istanbul ignore file */
-
 import {
   WalletClient,
   PublicClient,
@@ -10,7 +8,17 @@ import {
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { CONTRACT_ADDRESSES } from '../addresses';
 import { NUCLEUS_TELLER_ABIS } from '../abis/nucleus-teller-abis';
-import { Token, TOKENS_ADDRESSES } from '../tokens';
+import { Token, TOKENS_ADDRESSES, UnifiToken } from '../tokens';
+import { ERC20PermitHandler } from './erc20-permit-handler';
+
+export type DepositParams = {
+  account: Address;
+  token: Token;
+  unifiToken: UnifiToken;
+  amount: bigint;
+  minimumMint: bigint;
+  isPreapproved?: boolean;
+};
 
 export type DepositWithPermitParams = {
   account: Address;
@@ -28,6 +36,7 @@ export type DepositWithPermitParams = {
  */
 export class NucleusTellerHandler {
   private viemChain: ViemChain;
+  private erc20PermitHandler: ERC20PermitHandler;
 
   /**
    * Create the handler for processing tokens.
@@ -44,6 +53,11 @@ export class NucleusTellerHandler {
     private publicClient: PublicClient,
   ) {
     this.viemChain = VIEM_CHAINS[chain];
+    this.erc20PermitHandler = new ERC20PermitHandler(
+      chain,
+      walletClient,
+      publicClient,
+    );
   }
 
   /**
@@ -111,38 +125,80 @@ export class NucleusTellerHandler {
   }
 
   /**
-   * Deposit the given token for staking.
+   * Deposit the given token for staking. This doesn't make the
+   * transaction but returns two methods namely `transact` and
+   * `estimate`.
    *
-   * @param walletAddress Address of the caller of the transaction.
-   * @param token Token to deposit.
-   * @param amount Amount of the token to deposit.
-   * @param minimumMint Minimum amount of shares to mint.
+   * @param params Deposit parameters.
+   * @param params.account Address of the caller of the transaction.
+   * @param params.token Token to deposit.
+   * @param params.unifiToken UniFi token to get in return of the deposit.
+   * @param params.amount Amount of the token to deposit.
+   * @param params.minimumMint Minimum amount of shares to mint.
+   * @param params.isPreapproved Whether the token is preapproved.
    * @returns `transact: () => Promise<Address>` - Used to make the
    * transaction with the given value.
    *
    * `estimate: () => Promise<bigint>` - Gas estimate of the
    * transaction.
    */
-  public deposit(
-    walletAddress: Address,
-    token: Token,
-    amount: bigint,
-    minimumMint: bigint,
-  ) {
+  public async deposit(params: DepositParams) {
+    const {
+      token,
+      unifiToken,
+      account,
+      amount,
+      minimumMint,
+      isPreapproved = false,
+    } = params;
     const tokenAddress = TOKENS_ADDRESSES[token][this.chain];
 
+    if (isPreapproved) {
+      return {
+        transact: () =>
+          this.getContract().write.deposit(
+            [tokenAddress, amount, minimumMint],
+            {
+              account,
+              chain: this.viemChain,
+            },
+          ),
+        estimate: () =>
+          this.getContract().estimateGas.deposit(
+            [tokenAddress, amount, minimumMint],
+            { account },
+          ),
+      };
+    }
+
+    const { r, s, v, deadline } = await this.erc20PermitHandler
+      .withToken(token)
+      .getPermitSignature(
+        account,
+        // The UniFi token contract is the spender.
+        TOKENS_ADDRESSES[unifiToken][this.chain],
+        amount,
+      );
+
+    const depositArgs = <const>[
+      tokenAddress,
+      amount,
+      minimumMint,
+      deadline,
+      Number(v),
+      r,
+      s,
+    ];
+
     const transact = () =>
-      this.getContract().write.deposit([tokenAddress, amount, minimumMint], {
-        account: walletAddress,
+      this.getContract().write.depositWithPermit(depositArgs, {
+        account,
         chain: this.viemChain,
       });
     const estimate = () =>
-      this.getContract().estimateGas.deposit(
-        [tokenAddress, amount, minimumMint],
-        {
-          account: walletAddress,
-        },
-      );
+      this.getContract().estimateGas.depositWithPermit(depositArgs, {
+        account,
+      });
 
     return { transact, estimate };
   }
