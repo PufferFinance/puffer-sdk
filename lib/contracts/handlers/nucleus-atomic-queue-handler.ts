@@ -28,7 +28,7 @@ export type SolveMetaData = {
 /**
  * Handler for the `AtomicQueue` contract.
  */
-export class AtomicQueueHandler {
+export class NucleusAtomicQueueHandler {
   private viemChain: Chain;
 
   constructor(
