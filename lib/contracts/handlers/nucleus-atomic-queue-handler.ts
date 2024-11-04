@@ -52,7 +52,7 @@ export class NucleusAtomicQueueHandler {
   }
 
   /**
-   * Get the atomic request details for a specific user.
+   * Get the atomic request details for a specific user (wallet address).
    * @param user User address
    * @param offerToken Token being offered
    * @param wantToken Token being requested
