@@ -117,8 +117,6 @@ export class NucleusBoringVaultHandler {
     spenderAddress: Address,
     value: bigint,
   ) {
-    console.log({ walletAddress, spenderAddress, value });
-
     return this.getContract().write.approve([spenderAddress, value], {
       account: walletAddress,
       chain: this.viemChain,

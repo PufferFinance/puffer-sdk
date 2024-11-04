@@ -1,4 +1,3 @@
-/* istanbul ignore file */
 import {
   setupTestPublicClient,
   setupTestWalletClient,
@@ -61,6 +60,52 @@ describe('NucleusAtomicQueueHandler', () => {
       deadline: 1730977828n,
       inSolve: false,
     });
+  });
+
+  it('should check if an atomic request is valid', async () => {
+    contractTestingUtils.mockCall('isAtomicRequestValid', [true]);
+
+    const result = await handler.isAtomicRequestValid(
+      TOKENS_ADDRESSES[UnifiToken.unifiETH][Chain.Mainnet],
+      mockAccount,
+      {
+        atomicPrice: 1n,
+        deadline: 1n,
+        offerAmount: 1n,
+        inSolve: false,
+      },
+    );
+
+    expect(result).toBe(true);
+  });
+
+  it('should return a user request', async () => {
+    const mockResponse = [
+      1730977828n,
+      1000000000000000000n,
+      50000000000000000n,
+      false,
+    ];
+    contractTestingUtils.mockCall('userAtomicRequest', mockResponse, {
+      callValues: [
+        mockAccount,
+        TOKENS_ADDRESSES[UnifiToken.unifiETH][Chain.Mainnet],
+        TOKENS_ADDRESSES[Token.pufETH][Chain.Mainnet],
+      ],
+    });
+
+    const result = await handler.userAtomicRequest(
+      mockAccount,
+      TOKENS_ADDRESSES[UnifiToken.unifiETH][Chain.Mainnet],
+      TOKENS_ADDRESSES[Token.pufETH][Chain.Mainnet],
+    );
+
+    expect(result).toMatchSnapshot([
+      1730977828n,
+      1000000000000000000n,
+      50000000000000000n,
+      false,
+    ]);
   });
 
   it('should update atomic request', async () => {

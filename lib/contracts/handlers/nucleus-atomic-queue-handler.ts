@@ -146,22 +146,4 @@ export class NucleusAtomicQueueHandler {
       wantToken,
     ]);
   }
-
-  /**
-   * View solve metadata for a group of users.
-   * @param offerToken Token being offered
-   * @param wantToken Token being requested
-   * @param users Array of user addresses
-   */
-  public viewSolveMetaData(
-    offerToken: Address,
-    wantToken: Address,
-    users: Address[],
-  ) {
-    return this.getContract().read.viewSolveMetaData([
-      offerToken,
-      wantToken,
-      users,
-    ]);
-  }
 }

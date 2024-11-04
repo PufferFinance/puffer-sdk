@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NucleusAtomicQueueHandler should return a user request 1`] = `
+[
+  1730977828n,
+  1000000000000000000n,
+  50000000000000000n,
+  false,
+]
+`;
