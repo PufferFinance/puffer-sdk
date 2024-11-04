@@ -34,14 +34,14 @@ describe('NucleusAtomicQueueHandler', () => {
     );
   });
 
-  it.skip('should get the user request', async () => {
+  it('should get the user request', async () => {
     const mockResponse = [
       1730977828n,
       1000000000000000000n,
       50000000000000000n,
       false,
     ];
-    contractTestingUtils.mockCall('getUserAtomicRequest', mockResponse, {
+    contractTestingUtils.mockCall('getUserAtomicRequest', [mockResponse], {
       callValues: [
         mockAccount,
         TOKENS_ADDRESSES[UnifiToken.unifiETH][Chain.Mainnet],
@@ -55,7 +55,12 @@ describe('NucleusAtomicQueueHandler', () => {
       TOKENS_ADDRESSES[Token.pufETH][Chain.Mainnet],
     );
 
-    expect(result).toEqual(mockResponse);
+    expect(result).toEqual({
+      atomicPrice: 1000000000000000000n,
+      offerAmount: 50000000000000000n,
+      deadline: 1730977828n,
+      inSolve: false,
+    });
   });
 
   it('should update atomic request', async () => {
