@@ -15,6 +15,7 @@ export const CONTRACT_ADDRESSES = {
     NucleusBoringVault: '0x196ead472583bc1e9af7a05f860d9857e1bd3dcc',
     NucleusAccountant: '0xa9fb7e2922216debe3fd5e1bbe7591ee446dc21c',
     NucleusTeller: '0x08eb2eccdf6ebd7aba601791f23ec5b5f68a1d53',
+    AtomicQueue: '0xc7287780bfa0C5D2dD74e3e51E238B1cd9B221ee',
   },
   [Chain.Holesky]: {
     PufferVault: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',

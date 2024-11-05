@@ -17,6 +17,7 @@ import { PufferWithdrawalManagerHandler } from '../contracts/handlers/puffer-wit
 import { NucleusBoringVaultHandler } from '../contracts/handlers/nucleus-boring-vault-handler';
 import { NucleusTellerHandler } from '../contracts/handlers/nucleus-teller-handler';
 import { NucleusAccountantHandler } from '../contracts/handlers/nucleus-accountant-handler';
+import { NucleusAtomicQueueHandler } from '../contracts/handlers/nucleus-atomic-queue-handler';
 
 /**
  * The core class and the main entry point of the Puffer SDK.
@@ -48,6 +49,8 @@ export class PufferClient {
   public nucleusTeller: NucleusTellerHandler;
   /** Handler for the `NucleusAccountant` contract. */
   public nucleusAccountant: NucleusAccountantHandler;
+  /** Handler for the `NucleusAtomicQueue` contract. */
+  public nucleusAtomicQueue: NucleusAtomicQueueHandler;
 
   /**
    * Create the Puffer Client.
@@ -130,6 +133,11 @@ export class PufferClient {
       this.publicClient,
     );
     this.nucleusAccountant = new NucleusAccountantHandler(
+      chain,
+      this.walletClient,
+      this.publicClient,
+    );
+    this.nucleusAtomicQueue = new NucleusAtomicQueueHandler(
       chain,
       this.walletClient,
       this.publicClient,
