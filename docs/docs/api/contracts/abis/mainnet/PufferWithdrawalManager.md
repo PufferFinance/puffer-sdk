@@ -8,4 +8,4 @@
 
 #### Source
 
-[lib/contracts/abis/mainnet/PufferWithdrawalManager.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/fdee675745314d4bdd8ce8a62cebad3f5d73a957/lib/contracts/abis/mainnet/PufferWithdrawalManager.ts#L1)
+[lib/contracts/abis/mainnet/PufferWithdrawalManager.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/06a39bc3698c30dd13fb1bc00df2e907256639ac/lib/contracts/abis/mainnet/PufferWithdrawalManager.ts#L1)

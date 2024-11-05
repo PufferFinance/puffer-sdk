@@ -28,7 +28,7 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/fdee675745314d4bdd8ce8a62cebad3f5d73a957/lib/api/puffer-client.ts#L61)
+[lib/api/puffer-client.ts:64](https://github.com/PufferFinance/puffer-sdk/blob/06a39bc3698c30dd13fb1bc00df2e907256639ac/lib/api/puffer-client.ts#L64)
 
 #### Properties
 
@@ -40,6 +40,7 @@ Create the Puffer Client.
 | `l2Depositor` | `public` | [`PufferL2DepositorHandler`](../contracts/handlers/puffer-l2-depositor-handler.md#pufferl2depositorhandler) | Handler for the `PufferL2Depositor` contract. |
 | `l2RewardManager` | `public` | [`L2RewardManagerHandler`](../contracts/handlers/l2-reward-manager-handler.md#l2rewardmanagerhandler) | Handler for the `L2RewardManager` contract. |
 | `nucleusAccountant` | `public` | [`NucleusAccountantHandler`](../contracts/handlers/nucleus-accountant-handler.md#nucleusaccountanthandler) | Handler for the `NucleusAccountant` contract. |
+| `nucleusAtomicQueue` | `public` | [`NucleusAtomicQueueHandler`](../contracts/handlers/nucleus-atomic-queue-handler.md#nucleusatomicqueuehandler) | Handler for the `NucleusAtomicQueue` contract. |
 | `nucleusBoringVault` | `public` | [`NucleusBoringVaultHandler`](../contracts/handlers/nucleus-boring-vault-handler.md#nucleusboringvaulthandler) | Handler for the `NucleusBoringVault` contract. |
 | `nucleusTeller` | `public` | [`NucleusTellerHandler`](../contracts/handlers/nucleus-teller-handler.md#nucleustellerhandler) | Handler for the `NucleusTeller` contract. |
 | `publicClient` | `private` | `object` | - |
@@ -64,4 +65,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:144](https://github.com/PufferFinance/puffer-sdk/blob/fdee675745314d4bdd8ce8a62cebad3f5d73a957/lib/api/puffer-client.ts#L144)
+[lib/api/puffer-client.ts:152](https://github.com/PufferFinance/puffer-sdk/blob/06a39bc3698c30dd13fb1bc00df2e907256639ac/lib/api/puffer-client.ts#L152)
