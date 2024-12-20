@@ -26,7 +26,7 @@ Handler for the `AtomicQueue` contract.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:34](https://github.com/PufferFinance/puffer-sdk/blob/06a39bc3698c30dd13fb1bc00df2e907256639ac/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L34)
+[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:34](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L34)
 
 #### Properties
 
@@ -49,7 +49,7 @@ Handler for the `AtomicQueue` contract.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/06a39bc3698c30dd13fb1bc00df2e907256639ac/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L42)
+[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L42)
 
 ##### getUserAtomicRequest()
 
@@ -87,7 +87,7 @@ Get the atomic request details for a specific user (wallet address).
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/06a39bc3698c30dd13fb1bc00df2e907256639ac/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L60)
+[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L60)
 
 ##### isAtomicRequestValid()
 
@@ -109,7 +109,7 @@ Check if an atomic request is valid.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:78](https://github.com/PufferFinance/puffer-sdk/blob/06a39bc3698c30dd13fb1bc00df2e907256639ac/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L78)
+[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:78](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L78)
 
 ##### solve()
 
@@ -133,7 +133,7 @@ Solve atomic requests for multiple users.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/06a39bc3698c30dd13fb1bc00df2e907256639ac/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L98)
+[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L98)
 
 ##### updateAtomicRequest()
 
@@ -156,7 +156,7 @@ Update an atomic request.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:120](https://github.com/PufferFinance/puffer-sdk/blob/06a39bc3698c30dd13fb1bc00df2e907256639ac/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L120)
+[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:120](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L120)
 
 ##### userAtomicRequest()
 
@@ -178,7 +178,7 @@ Get user's atomic request details directly from storage.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:138](https://github.com/PufferFinance/puffer-sdk/blob/06a39bc3698c30dd13fb1bc00df2e907256639ac/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L138)
+[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:138](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L138)
 
 ## Type Aliases
 
@@ -206,7 +206,7 @@ Get user's atomic request details directly from storage.
 
 #### Source
 
-[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/06a39bc3698c30dd13fb1bc00df2e907256639ac/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L14)
+[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L14)
 
 ***
 
@@ -234,4 +234,4 @@ Get user's atomic request details directly from storage.
 
 #### Source
 
-[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/06a39bc3698c30dd13fb1bc00df2e907256639ac/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L21)
+[lib/contracts/handlers/nucleus-atomic-queue-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L21)
