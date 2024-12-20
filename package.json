@@ -48,26 +48,26 @@
     "docs:deploy": "pnpm --filter docs run deploy"
   },
   "dependencies": {
-    "viem": "~2.18.0"
+    "viem": "~2.21.55"
   },
   "devDependencies": {
-    "@eslint/js": "^9.9.0",
-    "@types/jest": "^29.5.12",
-    "@types/node": "^20.14.2",
-    "eslint": "^9.9.0",
+    "@eslint/js": "^9.17.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.2",
+    "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eth-testing": "^1.14.0",
     "glob": "^11.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "prettier": "^3.3.3",
-    "release-it": "^17.6.0",
-    "ts-jest": "^29.2.4",
+    "prettier": "^3.4.2",
+    "release-it": "^17.10.0",
+    "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4",
-    "typescript-eslint": "^8.1.0",
-    "vite": "^5.4.0",
-    "vite-plugin-dts": "^4.0.2"
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1",
+    "vite": "^6.0.4",
+    "vite-plugin-dts": "^4.4.0"
   }
 }
