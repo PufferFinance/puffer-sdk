@@ -8,13 +8,16 @@ import {
   GetContractReturnType,
 } from 'viem';
 import { Chain } from '../../chains/constants';
-import { CONTRACT_ADDRESSES } from '../addresses';
+import { NUCLEUS_CONTRACT_ADDRESSES } from '../addresses';
 import { NUCLEUS_ACCOUNTANT_ABIS } from '../abis/nucleus-accountant-abis';
+import { UnifiToken } from '../tokens';
 
 /**
  * Handler for the `Accountant` contract from nucleus.
  */
 export class NucleusAccountantHandler {
+  private token: UnifiToken;
+
   /**
    * Create the handler for processing tokens.
    *
@@ -28,7 +31,21 @@ export class NucleusAccountantHandler {
     private chain: Chain,
     private walletClient: WalletClient,
     private publicClient: PublicClient,
-  ) {}
+  ) {
+    this.token = UnifiToken.unifiETH;
+  }
+
+  /**
+   * Set the UniFi token to use for executing transactions on the
+   * contract.
+   *
+   * @param token UniFi token to use for the handler.
+   * @returns The handler.
+   */
+  public withToken(token: UnifiToken) {
+    this.token = token;
+    return this;
+  }
 
   /**
    * Get the contract. This is a method because the typings are complex
@@ -37,7 +54,8 @@ export class NucleusAccountantHandler {
    * @returns The viem contract.
    */
   public getContract() {
-    const address = CONTRACT_ADDRESSES[this.chain].NucleusAccountant as Address;
+    const address = NUCLEUS_CONTRACT_ADDRESSES[this.token][this.chain]
+      .NucleusAccountant as Address;
     const abi = NUCLEUS_ACCOUNTANT_ABIS[this.chain].Accountant;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
