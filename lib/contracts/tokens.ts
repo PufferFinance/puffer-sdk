@@ -12,10 +12,16 @@ export enum Token {
   eETH = 'eETH',
   pufETHwstE = 'pufETHwstE',
   pufETH = 'pufETH',
+  WBTC = 'WBTC',
+  LBTC = 'LBTC',
+  tBTC = 'tBTC',
+  cbBTC = 'cbBTC',
 }
 
 export enum UnifiToken {
   unifiETH = 'unifiETH',
+  unifiUSD = 'unifiUSD',
+  unifiBTC = 'unifiBTC',
 }
 
 export type AnyToken = Token | UnifiToken;
@@ -63,13 +69,34 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0xd9a442856c234a39a81a089c06451ebaa4306a72',
     [Chain.Holesky]: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
   },
-
-  // TODO: Update the addresses once the contracts are deployed on chain.
-  // See https://dev.azure.com/pufferfi/Frontend/_workitems/edit/1797.
+  [Token.WBTC]: {
+    [Chain.Mainnet]: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
+  [Token.LBTC]: {
+    [Chain.Mainnet]: '0x8236a87084f8b84306f72007f36f2618a5634494',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
+  [Token.tBTC]: {
+    [Chain.Mainnet]: '0x18084fbA666a33d37592fA2633fD49a74DD93a88',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
+  [Token.cbBTC]: {
+    [Chain.Mainnet]: '0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
 
   // UniFi Tokens
   [UnifiToken.unifiETH]: {
     [Chain.Mainnet]: '0x196ead472583bc1e9af7a05f860d9857e1bd3dcc',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
+  [UnifiToken.unifiUSD]: {
+    [Chain.Mainnet]: '0x82c40e07277eBb92935f79cE92268F80dDc7caB4',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
+  [UnifiToken.unifiBTC]: {
+    [Chain.Mainnet]: '0x170d847a8320f3b6a77ee15b0cae430e3ec933a0',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
 };
@@ -90,10 +117,18 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.eETH]: '1',
   [Token.pufETHwstE]: 'v7.0.0',
   [Token.pufETH]: '1',
+  [Token.WBTC]: '',
+  [Token.LBTC]: '',
+  [Token.tBTC]: '',
+  [Token.cbBTC]: '',
 
   // UniFi Tokens
   // https://etherscan.io/address/0x196ead472583bc1e9af7a05f860d9857e1bd3dcc#code#F7#L172
   [UnifiToken.unifiETH]: '1',
+  // https://etherscan.io/address/0x82c40e07277eBb92935f79cE92268F80dDc7caB4#code#F7#L172
+  [UnifiToken.unifiUSD]: '1',
+  // https://etherscan.io/address/0x170d847a8320f3b6a77ee15b0cae430e3ec933a0#code#F7#L172
+  [UnifiToken.unifiBTC]: '1',
 };
 
 export const TOKENS_SALT: Partial<{
