@@ -1,3 +1,4 @@
+import { Account, isHash, PublicClient, WalletClient } from 'viem';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
@@ -7,7 +8,7 @@ import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { NUCLEUS_ATOMIC_QUEUE_ABIS } from '../abis/nucleus-atomic-queue-abis';
 import { NucleusAtomicQueueHandler } from './nucleus-atomic-queue-handler';
 import { TOKENS_ADDRESSES, UnifiToken, Token } from '../tokens';
-import { Account, isHash, PublicClient, WalletClient } from 'viem';
+import { NUCLEUS_CONTRACT_ADDRESSES } from '../addresses';
 
 describe('NucleusAtomicQueueHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(
@@ -138,5 +139,23 @@ describe('NucleusAtomicQueueHandler', () => {
     );
 
     expect(isHash(result)).toBe(true);
+  });
+
+  it('should use the given token to call contract functions', async () => {
+    const unifiBTCAtomicQueue = handler
+      .withToken(UnifiToken.unifiBTC)
+      .getContract();
+    expect(unifiBTCAtomicQueue.address).toEqual(
+      NUCLEUS_CONTRACT_ADDRESSES[UnifiToken.unifiBTC][Chain.Mainnet]
+        .AtomicQueue,
+    );
+
+    const unifiUSDAtomicQueue = handler
+      .withToken(UnifiToken.unifiUSD)
+      .getContract();
+    expect(unifiUSDAtomicQueue.address).toEqual(
+      NUCLEUS_CONTRACT_ADDRESSES[UnifiToken.unifiUSD][Chain.Mainnet]
+        .AtomicQueue,
+    );
   });
 });

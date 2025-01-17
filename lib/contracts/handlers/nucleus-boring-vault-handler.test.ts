@@ -1,3 +1,4 @@
+import { isHash } from 'viem';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
@@ -7,7 +8,8 @@ import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { NucleusBoringVaultHandler } from './nucleus-boring-vault-handler';
 import { NUCLEUS_BORING_VAULT_ABIS } from '../abis/nucleus-boring-vault-abis';
 import { generateAddress } from '../../../test/mocks/address';
-import { isHash } from 'viem';
+import { NUCLEUS_CONTRACT_ADDRESSES } from '../addresses';
+import { UnifiToken } from '../tokens';
 
 describe('NucleusBoringVaultHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(
@@ -104,5 +106,23 @@ describe('NucleusBoringVaultHandler', () => {
 
     expect(typeof (await estimate())).toBe('bigint');
     expect(isHash(await transact())).toBe(true);
+  });
+
+  it('should use the given token to call contract functions', async () => {
+    const unifiBTCBoringVault = handler
+      .withToken(UnifiToken.unifiBTC)
+      .getContract();
+    expect(unifiBTCBoringVault.address).toEqual(
+      NUCLEUS_CONTRACT_ADDRESSES[UnifiToken.unifiBTC][Chain.Mainnet]
+        .NucleusBoringVault,
+    );
+
+    const unifiUSDBoringVault = handler
+      .withToken(UnifiToken.unifiUSD)
+      .getContract();
+    expect(unifiUSDBoringVault.address).toEqual(
+      NUCLEUS_CONTRACT_ADDRESSES[UnifiToken.unifiUSD][Chain.Mainnet]
+        .NucleusBoringVault,
+    );
   });
 });

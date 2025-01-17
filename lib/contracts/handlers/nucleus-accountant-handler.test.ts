@@ -8,6 +8,8 @@ import { NucleusAccountantHandler } from './nucleus-accountant-handler';
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { generateAddress } from '../../../test/mocks/address';
 import { Address } from 'viem';
+import { UnifiToken } from '../tokens';
+import { NUCLEUS_CONTRACT_ADDRESSES } from '../addresses';
 
 describe('NucleusAccountantHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(
@@ -71,5 +73,23 @@ describe('NucleusAccountantHandler', () => {
     contractTestingUtils.mockCall('getRateInQuoteSafe', [mockRate]);
     const rateInQuoteSafe = await handler.getRateInQuoteSafe(tokenAddress);
     expect(rateInQuoteSafe).toEqual(mockRate);
+  });
+
+  it('should use the given token to call contract functions', async () => {
+    const unifiBTCAccountant = handler
+      .withToken(UnifiToken.unifiBTC)
+      .getContract();
+    expect(unifiBTCAccountant.address).toEqual(
+      NUCLEUS_CONTRACT_ADDRESSES[UnifiToken.unifiBTC][Chain.Mainnet]
+        .NucleusAccountant,
+    );
+
+    const unifiUSDAcountant = handler
+      .withToken(UnifiToken.unifiUSD)
+      .getContract();
+    expect(unifiUSDAcountant.address).toEqual(
+      NUCLEUS_CONTRACT_ADDRESSES[UnifiToken.unifiUSD][Chain.Mainnet]
+        .NucleusAccountant,
+    );
   });
 });
