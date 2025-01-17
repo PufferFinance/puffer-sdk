@@ -9,7 +9,8 @@ import {
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { NUCLEUS_BORING_VAULT_ABIS } from '../abis/nucleus-boring-vault-abis';
-import { CONTRACT_ADDRESSES } from '../addresses';
+import { NUCLEUS_CONTRACT_ADDRESSES } from '../addresses';
+import { UnifiToken } from '../tokens';
 
 export type PermitParams = {
   account: Address;
@@ -28,6 +29,7 @@ export type PermitParams = {
  */
 export class NucleusBoringVaultHandler {
   private viemChain: ViemChain;
+  private token: UnifiToken;
 
   /**
    * Create the handler for processing UniFi tokens.
@@ -44,6 +46,19 @@ export class NucleusBoringVaultHandler {
     private publicClient: PublicClient,
   ) {
     this.viemChain = VIEM_CHAINS[chain];
+    this.token = UnifiToken.unifiETH;
+  }
+
+  /**
+   * Set the UniFi token to use for executing transactions on the
+   * contract.
+   *
+   * @param token UniFi token to use for the handler.
+   * @returns The handler.
+   */
+  public withToken(token: UnifiToken) {
+    this.token = token;
+    return this;
   }
 
   /**
@@ -53,7 +68,7 @@ export class NucleusBoringVaultHandler {
    * @returns The viem contract.
    */
   public getContract() {
-    const address = CONTRACT_ADDRESSES[this.chain]
+    const address = NUCLEUS_CONTRACT_ADDRESSES[this.token][this.chain]
       .NucleusBoringVault as Address;
     const abi = NUCLEUS_BORING_VAULT_ABIS[this.chain].BoringVault;
     const client = { public: this.publicClient, wallet: this.walletClient };

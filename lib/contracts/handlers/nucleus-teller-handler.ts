@@ -6,7 +6,7 @@ import {
   GetContractReturnType,
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
-import { CONTRACT_ADDRESSES } from '../addresses';
+import { NUCLEUS_CONTRACT_ADDRESSES } from '../addresses';
 import { NUCLEUS_TELLER_ABIS } from '../abis/nucleus-teller-abis';
 import { Token, TOKENS_ADDRESSES, UnifiToken } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
@@ -37,6 +37,7 @@ export type DepositWithPermitParams = {
 export class NucleusTellerHandler {
   private viemChain: ViemChain;
   private erc20PermitHandler: ERC20PermitHandler;
+  private token: UnifiToken;
 
   /**
    * Create the handler for processing tokens.
@@ -58,6 +59,19 @@ export class NucleusTellerHandler {
       walletClient,
       publicClient,
     );
+    this.token = UnifiToken.unifiETH;
+  }
+
+  /**
+   * Set the UniFi token to use for executing transactions on the
+   * contract.
+   *
+   * @param token UniFi token to use for the handler.
+   * @returns The handler.
+   */
+  public withToken(token: UnifiToken) {
+    this.token = token;
+    return this;
   }
 
   /**
@@ -67,7 +81,8 @@ export class NucleusTellerHandler {
    * @returns The viem contract.
    */
   public getContract() {
-    const address = CONTRACT_ADDRESSES[this.chain].NucleusTeller as Address;
+    const address = NUCLEUS_CONTRACT_ADDRESSES[this.token][this.chain]
+      .NucleusTeller as Address;
     const abi = NUCLEUS_TELLER_ABIS[this.chain].Teller;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
