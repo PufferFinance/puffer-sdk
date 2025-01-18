@@ -8,9 +8,8 @@ import {
 } from 'viem';
 import { Chain } from 'viem';
 import { Chain as LocalChain, VIEM_CHAINS } from '../../chains/constants';
-import { NUCLEUS_CONTRACT_ADDRESSES } from '../addresses';
+import { CONTRACT_ADDRESSES } from '../addresses';
 import { NUCLEUS_ATOMIC_QUEUE_ABIS } from '../abis/nucleus-atomic-queue-abis';
-import { UnifiToken } from '../tokens';
 
 export type AtomicRequest = {
   deadline: bigint;
@@ -31,7 +30,6 @@ export type SolveMetaData = {
  */
 export class NucleusAtomicQueueHandler {
   private viemChain: Chain;
-  private token: UnifiToken;
 
   constructor(
     private chain: LocalChain,
@@ -39,24 +37,11 @@ export class NucleusAtomicQueueHandler {
     private publicClient: PublicClient,
   ) {
     this.viemChain = VIEM_CHAINS[chain];
-    this.token = UnifiToken.unifiETH;
-  }
-
-  /**
-   * Set the UniFi token to use for executing transactions on the
-   * contract.
-   *
-   * @param token UniFi token to use for the handler.
-   * @returns The handler.
-   */
-  public withToken(token: UnifiToken) {
-    this.token = token;
-    return this;
   }
 
   public getContract() {
-    const address = NUCLEUS_CONTRACT_ADDRESSES[this.token][this.chain]
-      .AtomicQueue as Address;
+    const address = CONTRACT_ADDRESSES[this.chain]
+      .NucleusAtomicQueue as Address;
     const abi = NUCLEUS_ATOMIC_QUEUE_ABIS[this.chain].AtomicQueue;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
