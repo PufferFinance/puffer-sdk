@@ -92,15 +92,6 @@ export class NucleusBoringVaultHandler {
   }
 
   /**
-   * Get the total supply of the token.
-   *
-   * @returns Total supply of the token.
-   */
-  public getTotalSupply() {
-    return this.getContract().read.totalSupply();
-  }
-
-  /**
    * Check the token balance of the wallet.
    *
    * @param walletAddress Wallet address to check the balance of.
