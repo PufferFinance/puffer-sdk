@@ -44,7 +44,7 @@ describe('NucleusBoringVaultHandler', () => {
     const mockTotalSupply = 100n;
     contractTestingUtils.mockCall('totalSupply', [mockTotalSupply]);
 
-    const totalSupply = await handler.getTotalSupply();
+    const totalSupply = await handler.totalSupply();
     expect(totalSupply).toEqual(mockTotalSupply);
   });
 
