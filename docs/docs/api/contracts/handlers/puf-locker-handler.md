@@ -30,7 +30,7 @@ interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/puf-locker-handler.ts#L42)
+[lib/contracts/handlers/puf-locker-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/f7546e5e9a7742d28c2acc6d473bdf05079d711c/lib/contracts/handlers/puf-locker-handler.ts#L42)
 
 #### Properties
 
@@ -86,7 +86,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:139](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/puf-locker-handler.ts#L139)
+[lib/contracts/handlers/puf-locker-handler.ts:139](https://github.com/PufferFinance/puffer-sdk/blob/f7546e5e9a7742d28c2acc6d473bdf05079d711c/lib/contracts/handlers/puf-locker-handler.ts#L139)
 
 ##### getAllDeposits()
 
@@ -98,7 +98,7 @@ Get all deposits of the given account address.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `pufToken` | `unifiETH` | The PufToken to get the deposits for. |
+| `pufToken` | [`UnifiToken`](../tokens.md#unifitoken) | The PufToken to get the deposits for. |
 | `walletAddress` | \`0x$\{string\}\` | The wallet address to get the deposits for. |
 
 ###### Returns
@@ -109,7 +109,7 @@ The amount and deposits of the given account address.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/puf-locker-handler.ts#L80)
+[lib/contracts/handlers/puf-locker-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/f7546e5e9a7742d28c2acc6d473bdf05079d711c/lib/contracts/handlers/puf-locker-handler.ts#L80)
 
 ##### getContract()
 
@@ -126,7 +126,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/puf-locker-handler.ts#L61)
+[lib/contracts/handlers/puf-locker-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/f7546e5e9a7742d28c2acc6d473bdf05079d711c/lib/contracts/handlers/puf-locker-handler.ts#L61)
 
 ##### getDeposits()
 
@@ -138,7 +138,7 @@ Get the user's deposits for the given token and deposit index.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `pufToken` | `unifiETH` | PufToken to get the deposits of. |
+| `pufToken` | [`UnifiToken`](../tokens.md#unifitoken) | PufToken to get the deposits of. |
 | `userAddress` | \`0x$\{string\}\` | User address to get the deposits for. |
 | `start` | `bigint` | The starting index of the deposits. |
 | `limit` | `bigint` | The maximum number of deposits to retrieve. |
@@ -151,7 +151,7 @@ The amount and release time of the deposits.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/puf-locker-handler.ts#L96)
+[lib/contracts/handlers/puf-locker-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/f7546e5e9a7742d28c2acc6d473bdf05079d711c/lib/contracts/handlers/puf-locker-handler.ts#L96)
 
 ##### getLockPeriods()
 
@@ -168,7 +168,7 @@ The minimum and maximum lock period in seconds.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:116](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/puf-locker-handler.ts#L116)
+[lib/contracts/handlers/puf-locker-handler.ts:116](https://github.com/PufferFinance/puffer-sdk/blob/f7546e5e9a7742d28c2acc6d473bdf05079d711c/lib/contracts/handlers/puf-locker-handler.ts#L116)
 
 ##### withdraw()
 
@@ -181,7 +181,7 @@ locker.
 
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
-| `pufToken` | `unifiETH` | PufToken to withdraw. |
+| `pufToken` | [`UnifiToken`](../tokens.md#unifitoken) | PufToken to withdraw. |
 | `walletAddress` | \`0x$\{string\}\` | Address of the account making the transaction. |
 | `recipient` | \`0x$\{string\}\` | Recipient of the withdrawal. |
 | `depositIndexes` | `bigint`[] | Deposit indexes to withdraw. |
@@ -210,7 +210,7 @@ Hash of the withdrawal transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:207](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/puf-locker-handler.ts#L207)
+[lib/contracts/handlers/puf-locker-handler.ts:207](https://github.com/PufferFinance/puffer-sdk/blob/f7546e5e9a7742d28c2acc6d473bdf05079d711c/lib/contracts/handlers/puf-locker-handler.ts#L207)
 
 ## Type Aliases
 
@@ -246,4 +246,4 @@ Hash of the withdrawal transaction.
 
 #### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/handlers/puf-locker-handler.ts#L15)
+[lib/contracts/handlers/puf-locker-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/f7546e5e9a7742d28c2acc6d473bdf05079d711c/lib/contracts/handlers/puf-locker-handler.ts#L15)

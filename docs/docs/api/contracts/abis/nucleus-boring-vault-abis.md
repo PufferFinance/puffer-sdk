@@ -8,4 +8,4 @@
 
 #### Source
 
-[lib/contracts/abis/nucleus-boring-vault-abis.ts:4](https://github.com/PufferFinance/puffer-sdk/blob/302c0f19ce389981cb4dce6e1cb6c95f9b8e41f5/lib/contracts/abis/nucleus-boring-vault-abis.ts#L4)
+[lib/contracts/abis/nucleus-boring-vault-abis.ts:4](https://github.com/PufferFinance/puffer-sdk/blob/f7546e5e9a7742d28c2acc6d473bdf05079d711c/lib/contracts/abis/nucleus-boring-vault-abis.ts#L4)
