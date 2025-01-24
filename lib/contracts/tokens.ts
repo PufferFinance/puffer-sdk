@@ -20,6 +20,7 @@ export enum Token {
   SolvBTC = 'SolvBTC',
   PUFFER = 'PUFFER',
   CARROT = 'CARROT',
+  lvlUSD = 'lvlUSD',
   slvlUSD = 'slvlUSD',
 }
 
@@ -106,6 +107,10 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x282a69142bac47855c3fbe1693fcc4ba3b4d5ed6',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
+  [Token.lvlUSD]: {
+    [Chain.Mainnet]: '0x7C1156E515aA1A2E851674120074968C905aAF37',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
   [Token.slvlUSD]: {
     [Chain.Mainnet]: '0x4737d9b4592b40d51e110b94c9c043c6654067ae',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
@@ -150,6 +155,7 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.SolvBTC]: '',
   [Token.PUFFER]: '1',
   [Token.CARROT]: '1',
+  [Token.lvlUSD]: '1',
   [Token.slvlUSD]: '1',
 
   // UniFi Tokens
