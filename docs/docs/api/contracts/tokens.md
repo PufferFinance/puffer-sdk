@@ -13,14 +13,18 @@
 | `DAI` | `"DAI"` |
 | `LBTC` | `"LBTC"` |
 | `PUFFER` | `"PUFFER"` |
+| `SolvBTC` | `"SolvBTC"` |
 | `USDC` | `"USDC"` |
 | `USDT` | `"USDT"` |
 | `WBTC` | `"WBTC"` |
 | `WETH` | `"WETH"` |
 | `cbBTC` | `"cbBTC"` |
 | `eETH` | `"eETH"` |
+| `lvlUSD` | `"lvlUSD"` |
 | `pufETH` | `"pufETH"` |
 | `pufETHwstE` | `"pufETHwstE"` |
+| `pumpBTC` | `"pumpBTC"` |
+| `slvlUSD` | `"slvlUSD"` |
 | `stETH` | `"stETH"` |
 | `tBTC` | `"tBTC"` |
 | `wstETH` | `"wstETH"` |
@@ -45,7 +49,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:29](https://github.com/PufferFinance/puffer-sdk/blob/e1df5b058ff743a8745e419a3c4cc544308f89f4/lib/contracts/tokens.ts#L29)
+[lib/contracts/tokens.ts:33](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/tokens.ts#L33)
 
 ## Variables
 
@@ -55,7 +59,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/e1df5b058ff743a8745e419a3c4cc544308f89f4/lib/contracts/tokens.ts#L31)
+[lib/contracts/tokens.ts:35](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/tokens.ts#L35)
 
 ***
 
@@ -65,7 +69,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:114](https://github.com/PufferFinance/puffer-sdk/blob/e1df5b058ff743a8745e419a3c4cc544308f89f4/lib/contracts/tokens.ts#L114)
+[lib/contracts/tokens.ts:134](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/tokens.ts#L134)
 
 ***
 
@@ -75,4 +79,4 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:146](https://github.com/PufferFinance/puffer-sdk/blob/e1df5b058ff743a8745e419a3c4cc544308f89f4/lib/contracts/tokens.ts#L146)
+[lib/contracts/tokens.ts:170](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/tokens.ts#L170)
