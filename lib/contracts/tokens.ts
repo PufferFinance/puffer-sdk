@@ -16,8 +16,11 @@ export enum Token {
   LBTC = 'LBTC',
   tBTC = 'tBTC',
   cbBTC = 'cbBTC',
+  pumpBTC = 'pumpBTC',
+  SolvBTC = 'SolvBTC',
   PUFFER = 'PUFFER',
   CARROT = 'CARROT',
+  slvlUSD = 'slvlUSD',
 }
 
 export enum UnifiToken {
@@ -87,12 +90,24 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
+  [Token.pumpBTC]: {
+    [Chain.Mainnet]: '0xf469fbd2abcd6b9de8e169d128226c0fc90a012e',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
+  [Token.SolvBTC]: {
+    [Chain.Mainnet]: '0x7a56e1c57c7475ccf742a1832b028f0456652f97',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
   [Token.PUFFER]: {
     [Chain.Mainnet]: '0x4d1c297d39c5c1277964d0e3f8aa901493664530',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
   [Token.CARROT]: {
     [Chain.Mainnet]: '0x282a69142bac47855c3fbe1693fcc4ba3b4d5ed6',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
+  [Token.slvlUSD]: {
+    [Chain.Mainnet]: '0x4737d9b4592b40d51e110b94c9c043c6654067ae',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
 
@@ -131,8 +146,11 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.LBTC]: '',
   [Token.tBTC]: '',
   [Token.cbBTC]: '',
+  [Token.pumpBTC]: '',
+  [Token.SolvBTC]: '',
   [Token.PUFFER]: '1',
   [Token.CARROT]: '1',
+  [Token.slvlUSD]: '1',
 
   // UniFi Tokens
   // https://etherscan.io/address/0x196ead472583bc1e9af7a05f860d9857e1bd3dcc#code#F7#L172
