@@ -6,6 +6,7 @@ import {
   WalletClient,
   PublicClient,
   Account,
+  TestClient,
 } from 'viem';
 import { holesky } from 'viem/chains';
 import { testingUtils } from './setup-tests';
@@ -16,7 +17,7 @@ export const setupTestClient = (
   chain: Chain = Chain.Holesky,
   rpcRequestMock?: TransportProvider['request'],
   account?: Account,
-) => {
+): TestClient => {
   return createTestClient({
     mode: 'anvil',
     chain: holesky,

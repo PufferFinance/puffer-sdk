@@ -18,6 +18,7 @@ import { NucleusBoringVaultHandler } from '../contracts/handlers/nucleus-boring-
 import { NucleusTellerHandler } from '../contracts/handlers/nucleus-teller-handler';
 import { NucleusAccountantHandler } from '../contracts/handlers/nucleus-accountant-handler';
 import { NucleusAtomicQueueHandler } from '../contracts/handlers/nucleus-atomic-queue-handler';
+import { MtwCarrotHandler } from '../contracts/handlers/mtw-carrot-handler';
 
 /**
  * The core class and the main entry point of the Puffer SDK.
@@ -51,6 +52,8 @@ export class PufferClient {
   public nucleusAccountant: NucleusAccountantHandler;
   /** Handler for the `NucleusAtomicQueue` contract. */
   public nucleusAtomicQueue: NucleusAtomicQueueHandler;
+  /** Handler for the `mtwCARROT` (Merkl Token Wrapper) contract. */
+  public mtwCarrot: MtwCarrotHandler;
 
   /**
    * Create the Puffer Client.
@@ -138,6 +141,11 @@ export class PufferClient {
       this.publicClient,
     );
     this.nucleusAtomicQueue = new NucleusAtomicQueueHandler(
+      chain,
+      this.walletClient,
+      this.publicClient,
+    );
+    this.mtwCarrot = new MtwCarrotHandler(
       chain,
       this.walletClient,
       this.publicClient,

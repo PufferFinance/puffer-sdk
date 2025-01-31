@@ -76,7 +76,7 @@ export class MtwCarrotHandler {
    * Retrieve the claimable amount for a user, optionally at a specific index.
    *
    * @param user The user's address.
-   * @param maxClaimIndex The maximum index to check for claimable amount (optional).
+   * @param maxClaimIn, '0x123'dex The maximum index to check for claimable amount (optional).
    * @returns The claimable amount for the user.
    */
   public claimable(user: Address, maxClaimIndex?: bigint) {
@@ -97,22 +97,19 @@ export class MtwCarrotHandler {
   }
 
   /**
-   * Retrieve the address set as the fee recipient.
-   *
-   * @returns The address of the fee recipient.
-   */
-  public feeRecipient() {
-    return this.getContract().read.feeRecipient();
-  }
-
-  /**
    * Retrieve all vesting schedules associated with a user.
    *
    * @param user The address of the user.
    * @returns An array of vesting schedules.
    */
-  public getUserVestings(user: Address) {
-    return this.getContract().read.getUserVestings([user]);
+  public async getUserVestings(user: Address) {
+    const [allVestings, nextClaimIndex] =
+      await this.getContract().read.getUserVestings([user]);
+
+    return {
+      allVestings,
+      nextClaimIndex,
+    };
   }
 
   /**
@@ -155,7 +152,7 @@ export class MtwCarrotHandler {
    * Retrieve vesting data for a given address.
    *
    * @param address The address to query vesting data for.
-   * @returns Vesting data associated with the address.
+   * @returns Next claim index.
    */
   public vestingData(address: Address) {
     return this.getContract().read.vestingData([address]);
@@ -195,6 +192,7 @@ export class MtwCarrotHandler {
         chain: this.viemChain,
       });
     }
+
     return this.getContract().write.claim([user], {
       account,
       chain: this.viemChain,
@@ -267,20 +265,6 @@ export class MtwCarrotHandler {
         chain: this.viemChain,
       },
     );
-  }
-
-  /**
-   * Set the cliff duration for the vesting schedule.
-   *
-   * @param account Address of the caller of the transaction.
-   * @param newCliffDuration The new cliff duration in seconds.
-   * @returns A promise that resolves to the transaction hash.
-   */
-  public setCliffDuration(account: Address, newCliffDuration: number) {
-    return this.getContract().write.setCliffDuration([newCliffDuration], {
-      account,
-      chain: this.viemChain,
-    });
   }
 
   /**
