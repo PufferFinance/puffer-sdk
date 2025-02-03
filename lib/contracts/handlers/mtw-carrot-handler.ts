@@ -79,7 +79,7 @@ export class MtwCarrotHandler {
    * @param maxClaimIn, '0x123'dex The maximum index to check for claimable amount (optional).
    * @returns The claimable amount for the user.
    */
-  public claimable(user: Address, maxClaimIndex?: bigint) {
+  public claimable(user: Address, maxClaimIndex?: bigint): Promise<bigint> {
     if (maxClaimIndex !== undefined) {
       return this.getContract().read.claimable([user, maxClaimIndex]);
     }
