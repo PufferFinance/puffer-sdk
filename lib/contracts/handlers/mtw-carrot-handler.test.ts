@@ -32,15 +32,13 @@ describe('MtwCarrotHandler', () => {
     expect(allowance).toEqual(mockAllowance);
   });
 
-  // it("should get user's claimable amount", async () => {
-  //   const mockClaimable = 100n;
-  //   contractTestingUtils.mockCall('claimable', [mockClaimable], {
-  //     callValues: [mockAccount],
-  //   });
+  it('should get the balance of the given address', async () => {
+    const mockBalance = 100n;
+    contractTestingUtils.mockCall('balanceOf', [mockBalance]);
 
-  //   const claimable = await handler.claimable(mockAccount);
-  //   expect(claimable).toEqual(mockClaimable);
-  // });
+    const balance = await handler.balanceOf(mockAccount);
+    expect(balance).toEqual(mockBalance);
+  });
 
   it('should get cliff duration', async () => {
     const mockCliffDuration = 100n;
@@ -165,6 +163,8 @@ describe('MtwCarrotHandler', () => {
     expect(isHash(txHash)).toBeTruthy();
   });
 
+  // TODO: Not able to test overloads using `eth-testing`.
+
   // it('should claim tokens', async () => {
   //   contractTestingUtils.mockTransaction('claim');
   //   const mockUser = padHex('0x', { size: 20 });
@@ -184,5 +184,15 @@ describe('MtwCarrotHandler', () => {
 
   //   const txHash = await handler.claim(mockAccount, mockUser);
   //   expect(isHash(txHash)).toBeTruthy();
+  // });
+
+  // it("should get user's claimable amount", async () => {
+  //   const mockClaimable = 100n;
+  //   contractTestingUtils.mockCall('claimable', [mockClaimable], {
+  //     callValues: [mockAccount],
+  //   });
+
+  //   const claimable = await handler.claimable(mockAccount);
+  //   expect(claimable).toEqual(mockClaimable);
   // });
 });
