@@ -137,7 +137,9 @@ export const TOKENS_ADDRESSES: {
 };
 
 export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
-  [Token.USDT]: '2',
+  // USDC does not support permit signatures (ERC20Permit).
+  // https://ethereum.stackexchange.com/questions/166254/usdt-contract-dont-have-erc20permit
+  [Token.USDT]: '',
   // USDC does not support permit signatures (ERC20Permit).
   [Token.USDC]: '',
   // DAI does not support permit signatures (ERC20Permit).
