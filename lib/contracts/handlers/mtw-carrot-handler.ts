@@ -72,6 +72,8 @@ export class MtwCarrotHandler {
     return this.getContract().read.allowance([owner, spender]);
   }
 
+  // TODO: Not able to test overloads using `eth-testing`.
+  /* istanbul ignore next */
   /**
    * Retrieve the claimable amount for a user, optionally at a specific index.
    *
@@ -177,6 +179,8 @@ export class MtwCarrotHandler {
     });
   }
 
+  // TODO: Not able to test overloads using `eth-testing`.
+  /* istanbul ignore next */
   /**
    * Claim tokens for a user.
    *
