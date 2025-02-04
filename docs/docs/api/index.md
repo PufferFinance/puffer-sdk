@@ -100,6 +100,7 @@
 - [contracts/handlers/puffer-withdrawal-manager-handler](contracts/handlers/puffer-withdrawal-manager-handler.md)
 - [contracts/handlers/puffer-withdrawal-manager-handler](contracts/handlers/puffer-withdrawal-manager-handler-1.md)
 - [contracts/tokens](contracts/tokens.md)
+- [contracts/vaults-addresses](contracts/vaults-addresses.md)
 - [errors/base-error](errors/base-error.md)
 - [errors/types](errors/types.md)
 - [errors/validation-errors](errors/validation-errors.md)

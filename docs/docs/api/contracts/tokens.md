@@ -19,6 +19,7 @@
 | `WBTC` | `"WBTC"` |
 | `WETH` | `"WETH"` |
 | `cbBTC` | `"cbBTC"` |
+| `cbETH` | `"cbETH"` |
 | `eETH` | `"eETH"` |
 | `lvlUSD` | `"lvlUSD"` |
 | `mtwCARROT` | `"mtwCARROT"` |
@@ -38,6 +39,7 @@
 
 | Enumeration Member | Value |
 | :------ | :------ |
+| `pufETHs` | `"pufETHs"` |
 | `unifiBTC` | `"unifiBTC"` |
 | `unifiETH` | `"unifiETH"` |
 | `unifiUSD` | `"unifiUSD"` |
@@ -50,7 +52,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:34](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/tokens.ts#L34)
+[lib/contracts/tokens.ts:37](https://github.com/PufferFinance/puffer-sdk/blob/27df411d5247e5fbf1e0eef219e9ba2b85ebf896/lib/contracts/tokens.ts#L37)
 
 ## Variables
 
@@ -60,7 +62,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:36](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/tokens.ts#L36)
+[lib/contracts/tokens.ts:39](https://github.com/PufferFinance/puffer-sdk/blob/27df411d5247e5fbf1e0eef219e9ba2b85ebf896/lib/contracts/tokens.ts#L39)
 
 ***
 
@@ -70,7 +72,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:139](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/tokens.ts#L139)
+[lib/contracts/tokens.ts:150](https://github.com/PufferFinance/puffer-sdk/blob/27df411d5247e5fbf1e0eef219e9ba2b85ebf896/lib/contracts/tokens.ts#L150)
 
 ***
 
@@ -80,4 +82,4 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:178](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/tokens.ts#L178)
+[lib/contracts/tokens.ts:193](https://github.com/PufferFinance/puffer-sdk/blob/27df411d5247e5fbf1e0eef219e9ba2b85ebf896/lib/contracts/tokens.ts#L193)
