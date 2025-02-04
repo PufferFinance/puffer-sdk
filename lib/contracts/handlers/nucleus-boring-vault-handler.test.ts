@@ -8,7 +8,7 @@ import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { NucleusBoringVaultHandler } from './nucleus-boring-vault-handler';
 import { NUCLEUS_BORING_VAULT_ABIS } from '../abis/nucleus-boring-vault-abis';
 import { generateAddress } from '../../../test/mocks/address';
-import { NUCLEUS_CONTRACT_ADDRESSES } from '../addresses';
+import { VAULTS_ADDRESSES } from '../vaults-addresses';
 import { UnifiToken } from '../tokens';
 
 describe('NucleusBoringVaultHandler', () => {
@@ -113,16 +113,14 @@ describe('NucleusBoringVaultHandler', () => {
       .withToken(UnifiToken.unifiBTC)
       .getContract();
     expect(unifiBTCBoringVault.address).toEqual(
-      NUCLEUS_CONTRACT_ADDRESSES[UnifiToken.unifiBTC][Chain.Mainnet]
-        .NucleusBoringVault,
+      VAULTS_ADDRESSES[UnifiToken.unifiBTC][Chain.Mainnet].NucleusBoringVault,
     );
 
     const unifiUSDBoringVault = handler
       .withToken(UnifiToken.unifiUSD)
       .getContract();
     expect(unifiUSDBoringVault.address).toEqual(
-      NUCLEUS_CONTRACT_ADDRESSES[UnifiToken.unifiUSD][Chain.Mainnet]
-        .NucleusBoringVault,
+      VAULTS_ADDRESSES[UnifiToken.unifiUSD][Chain.Mainnet].NucleusBoringVault,
     );
   });
 });

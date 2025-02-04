@@ -10,7 +10,7 @@ import { generateAddress } from '../../../test/mocks/address';
 import { Token, TOKENS_ADDRESSES, UnifiToken } from '../tokens';
 import { isHash } from 'viem';
 import { mockPermitSignature } from '../../../test/mocks/permit-signature';
-import { NUCLEUS_CONTRACT_ADDRESSES } from '../addresses';
+import { VAULTS_ADDRESSES } from '../vaults-addresses';
 
 describe('NucleusBoringVaultHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(
@@ -114,14 +114,12 @@ describe('NucleusBoringVaultHandler', () => {
   it('should use the given token to call contract functions', async () => {
     const unifiBTCTeller = handler.withToken(UnifiToken.unifiBTC).getContract();
     expect(unifiBTCTeller.address).toEqual(
-      NUCLEUS_CONTRACT_ADDRESSES[UnifiToken.unifiBTC][Chain.Mainnet]
-        .NucleusTeller,
+      VAULTS_ADDRESSES[UnifiToken.unifiBTC][Chain.Mainnet].NucleusTeller,
     );
 
     const unifiUSDTeller = handler.withToken(UnifiToken.unifiUSD).getContract();
     expect(unifiUSDTeller.address).toEqual(
-      NUCLEUS_CONTRACT_ADDRESSES[UnifiToken.unifiUSD][Chain.Mainnet]
-        .NucleusTeller,
+      VAULTS_ADDRESSES[UnifiToken.unifiUSD][Chain.Mainnet].NucleusTeller,
     );
   });
 });
