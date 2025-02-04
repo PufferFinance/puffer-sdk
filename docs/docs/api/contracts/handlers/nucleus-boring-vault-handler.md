@@ -29,7 +29,7 @@ Create the handler for processing UniFi tokens.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-boring-vault-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L43)
+[lib/contracts/handlers/nucleus-boring-vault-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L43)
 
 #### Properties
 
@@ -65,7 +65,7 @@ Hash of the transaction.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-boring-vault-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L121)
+[lib/contracts/handlers/nucleus-boring-vault-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L121)
 
 ##### balanceOf()
 
@@ -87,7 +87,7 @@ Token balance in wei.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-boring-vault-handler.ts:100](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L100)
+[lib/contracts/handlers/nucleus-boring-vault-handler.ts:100](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L100)
 
 ##### getAllowance()
 
@@ -110,7 +110,7 @@ Allowance for the given owner and spender.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-boring-vault-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L90)
+[lib/contracts/handlers/nucleus-boring-vault-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L90)
 
 ##### getContract()
 
@@ -127,7 +127,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-boring-vault-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L70)
+[lib/contracts/handlers/nucleus-boring-vault-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L70)
 
 ##### permit()
 
@@ -169,7 +169,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-boring-vault-handler.ts:209](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L209)
+[lib/contracts/handlers/nucleus-boring-vault-handler.ts:209](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L209)
 
 ##### totalSupply()
 
@@ -185,7 +185,7 @@ Total supply of the token.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-boring-vault-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L109)
+[lib/contracts/handlers/nucleus-boring-vault-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L109)
 
 ##### transfer()
 
@@ -229,7 +229,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-boring-vault-handler.ts:144](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L144)
+[lib/contracts/handlers/nucleus-boring-vault-handler.ts:144](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L144)
 
 ##### transferFrom()
 
@@ -274,7 +274,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-boring-vault-handler.ts:171](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L171)
+[lib/contracts/handlers/nucleus-boring-vault-handler.ts:171](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L171)
 
 ##### withToken()
 
@@ -297,7 +297,7 @@ The handler.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-boring-vault-handler.ts:59](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L59)
+[lib/contracts/handlers/nucleus-boring-vault-handler.ts:59](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L59)
 
 ## Type Aliases
 
@@ -341,4 +341,4 @@ The handler.
 
 #### Source
 
-[lib/contracts/handlers/nucleus-boring-vault-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/902dcf689642fbd8f30bfc32811a64f4ce4ce61f/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L15)
+[lib/contracts/handlers/nucleus-boring-vault-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/19acedcc3e7bfa8f4a1b86d9a874d641a82e9978/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L15)
