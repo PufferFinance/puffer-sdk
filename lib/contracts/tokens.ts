@@ -29,6 +29,8 @@ export enum UnifiToken {
   unifiETH = 'unifiETH',
   unifiUSD = 'unifiUSD',
   unifiBTC = 'unifiBTC',
+  // Symbiotic pufETH.
+  pufETHs = 'pufETHs',
 }
 
 export type AnyToken = Token | UnifiToken;
@@ -134,6 +136,10 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x170d847a8320f3b6a77ee15b0cae430e3ec933a0',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
+  [UnifiToken.pufETHs]: {
+    [Chain.Mainnet]: '0x62a4ce0722ee65635c0f8339dd814d549b6f6735',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
 };
 
 export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
@@ -173,6 +179,8 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [UnifiToken.unifiUSD]: '1',
   // https://etherscan.io/address/0x170d847a8320f3b6a77ee15b0cae430e3ec933a0#code#F7#L172
   [UnifiToken.unifiBTC]: '1',
+  // https://etherscan.io/address/0x62a4ce0722ee65635c0f8339dd814d549b6f6735#code#F7#L172
+  [UnifiToken.pufETHs]: '1',
 };
 
 export const TOKENS_SALT: Partial<{

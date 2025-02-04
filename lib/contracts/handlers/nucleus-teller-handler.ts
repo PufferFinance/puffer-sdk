@@ -6,7 +6,7 @@ import {
   GetContractReturnType,
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
-import { NUCLEUS_CONTRACT_ADDRESSES } from '../addresses';
+import { VAULTS_ADDRESSES } from '../vaults-addresses';
 import { NUCLEUS_TELLER_ABIS } from '../abis/nucleus-teller-abis';
 import { Token, TOKENS_ADDRESSES, UnifiToken } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
@@ -81,7 +81,7 @@ export class NucleusTellerHandler {
    * @returns The viem contract.
    */
   public getContract() {
-    const address = NUCLEUS_CONTRACT_ADDRESSES[this.token][this.chain]
+    const address = VAULTS_ADDRESSES[this.token][this.chain]
       .NucleusTeller as Address;
     const abi = NUCLEUS_TELLER_ABIS[this.chain].Teller;
     const client = { public: this.publicClient, wallet: this.walletClient };
