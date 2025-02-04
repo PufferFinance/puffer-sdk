@@ -8,8 +8,9 @@ export enum Token {
   WETH = 'WETH',
   stETH = 'stETH',
   wstETH = 'wstETH',
-  ALT = 'ALT',
   eETH = 'eETH',
+  cbETH = 'cbETH',
+  ALT = 'ALT',
   pufETHwstE = 'pufETHwstE',
   pufETH = 'pufETH',
   WBTC = 'WBTC',
@@ -61,13 +62,17 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0',
     [Chain.Holesky]: '0x8d09a4502Cc8Cf1547aD300E066060D043f6982D',
   },
-  [Token.ALT]: {
-    [Chain.Mainnet]: '0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb',
-    [Chain.Holesky]: '0xaf5588a571b42c7e50bd440d80f9bf94a4db94ee',
-  },
   [Token.eETH]: {
     [Chain.Mainnet]: '0x35fa164735182de50811e8e2e824cfb9b6118ac2',
     [Chain.Holesky]: '0x7ba2ee123b5977e3da040e1eacb3a61c82c17876',
+  },
+  [Token.cbETH]: {
+    [Chain.Mainnet]: '0xbe9895146f7af43049ca1c1ae358b0541ea49704',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
+  [Token.ALT]: {
+    [Chain.Mainnet]: '0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb',
+    [Chain.Holesky]: '0xaf5588a571b42c7e50bd440d80f9bf94a4db94ee',
   },
   [Token.pufETHwstE]: {
     [Chain.Mainnet]: '0xeeda34a377dd0ca676b9511ee1324974fa8d980d',
@@ -148,9 +153,11 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.stETH]: '2',
   // Puffer Quest v1 uses version 1 for wstETH.
   [Token.wstETH]: '1',
-  [Token.ALT]: '1',
   // https://github.com/etherfi-protocol/smart-contracts/blob/7c66e571df4fe7ec502a3c325b623bc52349ef9d/src/EETH.sol#L55
   [Token.eETH]: '1',
+  // https://etherscan.io/token/0xbe9895146f7af43049ca1c1ae358b0541ea49704#readProxyContract#F26
+  [Token.cbETH]: '2',
+  [Token.ALT]: '1',
   [Token.pufETHwstE]: 'v7.0.0',
   [Token.pufETH]: '1',
   [Token.WBTC]: '',
