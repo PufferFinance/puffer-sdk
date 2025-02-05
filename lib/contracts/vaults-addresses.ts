@@ -26,8 +26,8 @@ export const VAULTS_ADDRESSES = {
   [UnifiToken.pufETHs]: {
     [Chain.Mainnet]: {
       NucleusBoringVault: '0x62a4ce0722ee65635c0f8339dd814d549b6f6735',
-      NucleusAccountant: '0xd049ebeaa59b75ba8ee38f9f6830db7293320236',
-      NucleusTeller: '0xa99a92c505ff92c543d9d48295f1f31024afb31f',
+      NucleusAccountant: '0xa99a92c505ff92c543d9d48295f1f31024afb31f',
+      NucleusTeller: '0xd049ebeaa59b75ba8ee38f9f6830db7293320236',
     },
   },
 };
