@@ -12,7 +12,7 @@ import { CarrotStaker } from '../abis/mainnet/CarrotStaker';
 /**
  * Handler for the `CarrotStaker` contract.
  */
-export class CarrotStakerHandler {
+export class CarrotStakingHandler {
   private viemChain: ViemChain;
 
   /**

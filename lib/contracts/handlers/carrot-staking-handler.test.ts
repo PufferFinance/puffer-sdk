@@ -5,12 +5,12 @@ import {
   setupTestPublicClient,
 } from '../../../test/setup-test-clients';
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { CarrotStakerHandler } from './carrot-staker-handler';
+import { CarrotStakingHandler } from './carrot-staking-handler';
 import { CarrotStaker } from '../abis/mainnet/CarrotStaker';
 
-describe('CarrotStakerHandler', () => {
+describe('CarrotStakingHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(CarrotStaker);
-  let handler: CarrotStakerHandler;
+  let handler: CarrotStakingHandler;
   let walletClient: WalletClient;
   let publicClient: PublicClient;
 
@@ -18,7 +18,7 @@ describe('CarrotStakerHandler', () => {
     walletClient = setupTestWalletClient();
     publicClient = setupTestPublicClient();
 
-    handler = new CarrotStakerHandler(
+    handler = new CarrotStakingHandler(
       Chain.Holesky,
       walletClient,
       publicClient,
