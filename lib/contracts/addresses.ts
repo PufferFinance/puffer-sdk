@@ -12,7 +12,7 @@ export const CONTRACT_ADDRESSES = {
     // L2RewardManager is not deployed to mainnet but base.
     L2RewardManager: '0x0000000000000000000000000000000000000000',
     PufferWithdrawalManager: '0xDdA0483184E75a5579ef9635ED14BacCf9d50283',
-    NucleusAtomicQueue: '0xc7287780bfa0C5D2dD74e3e51E238B1cd9B221ee',
+    NucleusAtomicQueue: '0x228c44bb4885c6633f4b6c83f14622f37d5112e5',
     CarrotStaker: '0x99c599227c65132822f0290d9e5b4b0430d6c0d6',
   },
   [Chain.Holesky]: {
