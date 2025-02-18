@@ -28,12 +28,13 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:67](https://github.com/PufferFinance/puffer-sdk/blob/1c5e477a87f5fdd7d05ef2636c616970039070b1/lib/api/puffer-client.ts#L67)
+[lib/api/puffer-client.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/f53ce5c8c68838d336922a0d48246fe792f772d6/lib/api/puffer-client.ts#L70)
 
 #### Properties
 
 | Property | Modifier | Type | Description |
 | :------ | :------ | :------ | :------ |
+| `carrotStaker` | `public` | [`CarrotStakingHandler`](../contracts/handlers/carrot-staking-handler.md#carrotstakinghandler) | Handler for the `CarrotStaker` contract. |
 | `depositor` | `public` | [`PufferDepositorHandler`](../contracts/handlers/puffer-depositor-handler.md#pufferdepositorhandler) | Handler for the `PufferDepositor` contract. |
 | `erc20Permit` | `public` | [`ERC20PermitHandler`](../contracts/handlers/erc20-permit-handler.md#erc20permithandler) | Handler for the `ERC20Permit` contract. |
 | `l1RewardManager` | `public` | [`L1RewardManagerHandler`](../contracts/handlers/l1-reward-manager-handler.md#l1rewardmanagerhandler) | Handler for the `L1RewardManager` contract. |
@@ -66,4 +67,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:160](https://github.com/PufferFinance/puffer-sdk/blob/1c5e477a87f5fdd7d05ef2636c616970039070b1/lib/api/puffer-client.ts#L160)
+[lib/api/puffer-client.ts:168](https://github.com/PufferFinance/puffer-sdk/blob/f53ce5c8c68838d336922a0d48246fe792f772d6/lib/api/puffer-client.ts#L168)
