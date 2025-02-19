@@ -24,6 +24,7 @@ export enum Token {
   lvlUSD = 'lvlUSD',
   slvlUSD = 'slvlUSD',
   mtwCARROT = 'mtwCARROT',
+  sCARROT = 'sCARROT',
 }
 
 export enum UnifiToken {
@@ -127,6 +128,10 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x8A5A5DE9db5770123Ff2145F59e9F20047f0A8EC',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
+  [Token.sCARROT]: {
+    [Chain.Mainnet]: '0x99c599227c65132822f0290d9e5b4b0430d6c0d6',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
 
   // UniFi Tokens
   [UnifiToken.unifiETH]: {
@@ -178,6 +183,7 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.lvlUSD]: '1',
   [Token.slvlUSD]: '1',
   [Token.mtwCARROT]: '',
+  [Token.sCARROT]: '',
 
   // UniFi Tokens
   // https://etherscan.io/address/0x196ead472583bc1e9af7a05f860d9857e1bd3dcc#code#F7#L172

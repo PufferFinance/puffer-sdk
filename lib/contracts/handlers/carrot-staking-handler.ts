@@ -6,7 +6,7 @@ import {
   GetContractReturnType,
 } from 'viem';
 import { ViemChain, VIEM_CHAINS, Chain } from '../../chains/constants';
-import { CONTRACT_ADDRESSES } from '../addresses';
+import { Token, TOKENS_ADDRESSES } from '../tokens';
 import { CarrotStaker } from '../abis/mainnet/CarrotStaker';
 
 /**
@@ -40,7 +40,7 @@ export class CarrotStakingHandler {
    * @returns The viem contract.
    */
   public getContract() {
-    const address = CONTRACT_ADDRESSES[this.chain].CarrotStaker as Address;
+    const address = TOKENS_ADDRESSES[Token.sCARROT][this.chain];
     const abi = CarrotStaker;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
