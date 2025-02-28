@@ -11,3 +11,4 @@ export * from './contracts/handlers/puffer-depositor-handler';
 export * from './contracts/handlers/puffer-l2-depositor-handler';
 export * from './contracts/handlers/puffer-vault-handler';
 export * from './contracts/handlers/puffer-withdrawal-manager-handler';
+export * from './contracts/handlers/distributor-handler';
