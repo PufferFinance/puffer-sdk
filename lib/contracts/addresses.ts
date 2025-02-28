@@ -14,7 +14,7 @@ export const CONTRACT_ADDRESSES = {
     PufferWithdrawalManager: '0xDdA0483184E75a5579ef9635ED14BacCf9d50283',
     NucleusAtomicQueue: '0x228c44bb4885c6633f4b6c83f14622f37d5112e5',
     CarrotStaker: '0x99c599227c65132822f0290d9e5b4b0430d6c0d6',
-    Distributor: '0x3Ef3D8bA38EBe18DB133cEc108f4D14CE00Dd9Ae', //'0x0e6590f64a82cbc838b2a087281689de1a5bc8e0',
+    Distributor: '0x3Ef3D8bA38EBe18DB133cEc108f4D14CE00Dd9Ae',
   },
   [Chain.Holesky]: {
     PufferVault: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
