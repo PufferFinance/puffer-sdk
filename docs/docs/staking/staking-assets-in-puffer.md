@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Staking assets in Puffer
+# Staking Assets in Puffer
 
 Puffer supports staking of the following assets on the protocol:
 
@@ -10,7 +10,7 @@ Puffer supports staking of the following assets on the protocol:
 - `stETH`
 - `wstETH`
 
-## Setting up the PufferClient
+## Setting Up the PufferClient
 
 ```ts
 import {
