@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Puffer operates as a decentralized native liquid restaking protocol native to its ecosystem. Prior to its mainnet launch, pufETH serves as a yield-generating token, mirroring the yield of wstETH, while also providing users the opportunity to accumulate both Puffer and EigenLayer points.
 
-## How staking works
+## How Staking Works
 
 1. **Deposit**\
    Deposit ETH into Puffer’s Liquid Restaking Protocol.
