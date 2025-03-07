@@ -16,10 +16,14 @@ Puffer vaults are a way to earn optimized yield across top DeFi protocols, along
 
 Each Puffer vault consists of a set of the following contracts:
 
-- `BoringVault`: The main vault ERC20 token contract which represents the vault's share of the deposited assets.
-- `AccountantWithRateProviders`: Accountant contract with rate providers for the vault.
-- `TellerWithMultiAssetSupport`: The contract that handles deposits to the vault.
-- `AtomicQueue`: The contract that handles withdrawals from the vault in the form withdrawal queues.
+- **BoringVault**\
+  The main vault ERC20 token contract which represents the vault's share of the deposited assets.
+- **AccountantWithRateProviders**\
+  Accountant contract with rate providers for the vault.
+- **TellerWithMultiAssetSupport**\
+  The contract that handles deposits to the vault.
+- **AtomicQueue**\
+  The contract that handles withdrawals from the vault in the form withdrawal queues.
 
 ## Puffer Vaults
 
