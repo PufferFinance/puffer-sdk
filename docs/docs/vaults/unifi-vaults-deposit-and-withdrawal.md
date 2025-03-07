@@ -95,7 +95,7 @@ const atomicPrice = await pufferClient.nucleusAccountant
   .withToken(UnifiToken.unifiETH)
   .getRateInQuoteSafe(TOKENS_ADDRESSES[Token.pufETH][Chain.Mainnet]);
 
-// Price of pufETH in unifiETH with 1% slippage.
+// Price of pufETH in unifiETH with 0.5% slippage.
 const atomicPriceWithSlippage = getAtomicPriceWithSlippage(
   atomicPrice,
   0.005,
@@ -107,7 +107,7 @@ const atomicPriceWithSlippage = getAtomicPriceWithSlippage(
 Now that the token is approved and the atomic price is calculated, it can be queued for withdrawal through the `AtomicQueue` contract.
 
 ```ts
-// Set the deadline to 3 days from now.
+// Set the deadline to process the withdrawal to 3 days from now.
 const deadline = BigInt(Math.floor(Date.now() / 1000) + 3 * 24 * 60 * 60);
 
 const txHash = await pufferClient.nucleusAtomicQueue.updateAtomicRequest(
