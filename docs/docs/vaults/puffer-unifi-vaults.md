@@ -39,3 +39,33 @@ Each Puffer vault consists of a set of the following contracts:
   - [BoringVault](https://etherscan.io/address/0x170d847a8320f3b6a77ee15b0cae430e3ec933a0)
   - [AccountantWithRateProviders](https://etherscan.io/address/0x2afb28b0561d99b5e00829ec2ef54946a00a35f7)
   - [TellerWithMultiAssetSupport](https://etherscan.io/address/0x0743647a607822781f9d0a639454e76289182f0b)
+
+## Interacting with the Vaults
+
+Getting the balance of `unifiETH` (UniFi ETH Vault) for a wallet address.
+
+```ts
+const balance = await pufferClient.nucleusBoringVault
+  .withToken(UnifiToken.unifiETH)
+  .balanceOf(walletAddress);
+
+const balanceAmount = Number(balance) / 1e18;
+```
+
+Getting the rate compared to another ERC20 token.
+
+```ts
+const pufETHAddress = '0xd9a442856c234a39a81a089c06451ebaa4306a72';
+const rate = await pufferClient.nucleusAccountant
+  .withToken(UnifiToken.unifiETH)
+  .getRateInQuoteSafe(pufETHAddress);
+
+const rateValue = Number(rate) / 1e18;
+```
+
+For more information on how to use the vault contracts, please refer to the API docs for the contract handlers:
+
+- [BoringVault / NucleusBoringVaultHandler](../api/contracts/handlers/nucleus-boring-vault-handler.md)
+- [AccountantWithRateProviders / NucleusAccountantHandler](../api/contracts/handlers/nucleus-accountant-handler.md)
+- [TellerWithMultiAssetSupport / NucleusTellerHandler](../api/contracts/handlers/nucleus-teller-handler.md)
+- [AtomicQueue / NucleusAtomicQueueHandler](../api/contracts/handlers/nucleus-atomic-queue-handler.md)
