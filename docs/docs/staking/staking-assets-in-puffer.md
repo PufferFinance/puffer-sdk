@@ -10,27 +10,7 @@ Puffer supports staking of the following assets on the protocol:
 - `stETH`
 - `wstETH`
 
-## Setting Up the PufferClient
-
-```ts
-import {
-  PufferClientHelpers,
-  PufferClient,
-  Chain,
-} from '@pufferfinance/puffer-sdk';
-
-const walletClient = PufferClientHelpers.createWalletClient({
-  chain: Chain.Holesky,
-  provider: window.ethereum,
-});
-const pufferClient = new PufferClient(Chain.Holesky, walletClient);
-```
-
-Then connect to the wallet to fetch your address.
-
-```ts
-const [walletAddress] = await pufferClient.requestAddresses();
-```
+Before staking, make sure to follow the [Getting Started](../getting-started.mdx#1-setup-the-puffer-client) guide to setup the PufferClient.
 
 ## Staking ETH
 
