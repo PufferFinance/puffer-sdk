@@ -5,8 +5,8 @@ import {
   Address,
   GetContractReturnType,
   Account,
+  Chain,
 } from 'viem';
-import { Chain } from 'viem';
 import { Chain as LocalChain, VIEM_CHAINS } from '../../chains/constants';
 import { CONTRACT_ADDRESSES } from '../addresses';
 import { NUCLEUS_ATOMIC_QUEUE_ABIS } from '../abis/nucleus-atomic-queue-abis';
