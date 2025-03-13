@@ -7,8 +7,8 @@ import {
 } from 'viem';
 import { ViemChain, VIEM_CHAINS, Chain } from '../../chains/constants';
 import { CONTRACT_ADDRESSES } from '../addresses';
-import { L2_REWARD_MANAGER_ABIS } from '../abis/l2-reward-manager-abis';
 import { InvalidInputError } from '../../errors/validation-errors';
+import { L2RewardManager } from '../abis/mainnet/L2RewardManager';
 
 export type ClaimOrder = {
   account: Address;
@@ -50,7 +50,7 @@ export class L2RewardManagerHandler {
    */
   public getContract() {
     const address = CONTRACT_ADDRESSES[this.chain].L2RewardManager as Address;
-    const abi = L2_REWARD_MANAGER_ABIS[this.chain].L2RewardManager;
+    const abi = L2RewardManager;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
     return getContract({ address, abi, client }) as GetContractReturnType<

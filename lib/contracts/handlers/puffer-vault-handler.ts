@@ -7,7 +7,7 @@ import {
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { CONTRACT_ADDRESSES } from '../addresses';
-import { PUFFER_VAULT_ABIS } from '../abis/puffer-vault-abis';
+import { PufferVaultV2 } from '../abis/mainnet/PufferVaultV2';
 
 /**
  * Handler for the `PufferVaultV2` contract exposing methods to interact
@@ -42,7 +42,7 @@ export class PufferVaultHandler {
    */
   public getContract() {
     const address = CONTRACT_ADDRESSES[this.chain].PufferVault as Address;
-    const abi = PUFFER_VAULT_ABIS[this.chain].PufferVaultV2;
+    const abi = PufferVaultV2;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
     return getContract({ address, abi, client }) as GetContractReturnType<

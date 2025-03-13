@@ -7,7 +7,7 @@ import {
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { CONTRACT_ADDRESSES } from '../addresses';
-import { L1_REWARD_MANAGER_ABIS } from '../abis/l1-reward-manager-abis';
+import { L1RewardManager } from '../abis/mainnet/L1RewardManager';
 
 /**
  * Handler for the `L1RewardManager` contract.
@@ -41,7 +41,7 @@ export class L1RewardManagerHandler {
    */
   public getContract() {
     const address = CONTRACT_ADDRESSES[this.chain].L1RewardManager as Address;
-    const abi = L1_REWARD_MANAGER_ABIS[this.chain].L1RewardManager;
+    const abi = L1RewardManager;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
     return getContract({ address, abi, client }) as GetContractReturnType<

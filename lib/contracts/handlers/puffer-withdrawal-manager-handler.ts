@@ -8,8 +8,8 @@ import {
 import { CONTRACT_ADDRESSES } from '../addresses';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { ERC20PermitHandler } from './erc20-permit-handler';
-import { PUFFER_WITHDRAWAL_MANAGER_ABIS } from '../abis/puffer-withdrawal-manager-abis';
 import { Token } from '../tokens';
+import { PufferWithdrawalManager } from '../abis/mainnet/PufferWithdrawalManager';
 
 /**
  * Handler for the `PufferWithdrawalsManager` contract exposing methods to
@@ -50,8 +50,7 @@ export class PufferWithdrawalManagerHandler {
   public getContract() {
     const address = CONTRACT_ADDRESSES[this.chain]
       .PufferWithdrawalManager as Address;
-    const abi =
-      PUFFER_WITHDRAWAL_MANAGER_ABIS[this.chain].PufferWithdrawalManager;
+    const abi = PufferWithdrawalManager;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
     return getContract({ address, abi, client }) as GetContractReturnType<

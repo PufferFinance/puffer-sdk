@@ -9,26 +9,22 @@ import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { CONTRACT_ADDRESSES } from '../addresses';
 import { Distributor } from '../abis/mainnet/Distributor';
 
-interface ContractAddressesWithDistributor {
-  Distributor: Address;
-}
-
 export interface MerkleTree {
-  merkleRoot: `0x${string}`;
-  ipfsHash: `0x${string}`;
+  merkleRoot: Address;
+  ipfsHash: Address;
 }
 
 export interface ClaimInfo {
   amount: bigint;
   timestamp: bigint;
-  merkleRoot: `0x${string}`;
+  merkleRoot: Address;
 }
 
 export interface ClaimParams {
   users: Address[];
   tokens: Address[];
   amounts: bigint[];
-  proofs: `0x${string}`[][];
+  proofs: Address[][];
 }
 
 /**
@@ -59,11 +55,7 @@ export class DistributorHandler {
    * @returns The viem contract.
    */
   public getContract() {
-    const address = (
-      CONTRACT_ADDRESSES[
-        this.chain
-      ] as unknown as ContractAddressesWithDistributor
-    ).Distributor;
+    const address = CONTRACT_ADDRESSES[this.chain].Distributor as Address;
     const abi = Distributor;
     const client = { public: this.publicClient, wallet: this.walletClient };
 

@@ -8,9 +8,9 @@ import {
   GetContractReturnType,
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
-import { NUCLEUS_BORING_VAULT_ABIS } from '../abis/nucleus-boring-vault-abis';
 import { VAULTS_ADDRESSES } from '../vaults-addresses';
 import { UnifiToken } from '../tokens';
+import { BoringVault } from '../abis/mainnet/BoringVault';
 
 export type PermitParams = {
   account: Address;
@@ -70,7 +70,7 @@ export class NucleusBoringVaultHandler {
   public getContract() {
     const address = VAULTS_ADDRESSES[this.token][this.chain]
       .NucleusBoringVault as Address;
-    const abi = NUCLEUS_BORING_VAULT_ABIS[this.chain].BoringVault;
+    const abi = BoringVault;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
     return getContract({ address, abi, client }) as GetContractReturnType<

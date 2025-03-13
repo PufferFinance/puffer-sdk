@@ -7,10 +7,10 @@ import {
   GetContractReturnType,
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
-import { PUF_LOCKER_ABIS } from '../abis/puf-locker-abis';
 import { CONTRACT_ADDRESSES } from '../addresses';
 import { AnyToken, TOKENS_ADDRESSES } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
+import { PufLocker } from '../abis/mainnet/PufLocker';
 
 export type LockerDepositParams = {
   token: AnyToken;
@@ -60,7 +60,7 @@ export class PufLockerHandler {
    */
   public getContract() {
     const address = CONTRACT_ADDRESSES[this.chain].PufLocker as Address;
-    const abi = PUF_LOCKER_ABIS[this.chain].PufLocker;
+    const abi = PufLocker;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
     return getContract({ address, abi, client }) as GetContractReturnType<

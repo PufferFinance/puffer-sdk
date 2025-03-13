@@ -7,7 +7,6 @@ import {
   GetContractReturnType,
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
-import { ERC20PERMIT_ABI } from '../abis/tokens-abis';
 import {
   AnyToken,
   TOKENS_ADDRESSES,
@@ -16,6 +15,7 @@ import {
   Token,
 } from '../tokens';
 import { getTimestampInSeconds } from '../../utils/time';
+import { ERC20Permit } from '../abis/mainnet/ERC20Permit';
 
 /**
  * Handler for performing operations for and with ERC20Permit tokens.
@@ -61,7 +61,7 @@ export class ERC20PermitHandler {
    */
   public getContract() {
     const address = TOKENS_ADDRESSES[this.token][this.chain];
-    const abi = ERC20PERMIT_ABI;
+    const abi = ERC20Permit;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
     return getContract({ address, abi, client }) as GetContractReturnType<
