@@ -3,7 +3,10 @@ import { Chain } from '../chains/constants';
 // Source of truth:
 // https://github.com/PufferFinance/Deployments-and-ACL/tree/main/docs/deployments
 export const CONTRACT_ADDRESSES = {
-  [Chain.Mainnet]: {
+  // Casting to number so the consumer can use chain ids. Also not using
+  // a generic type for the variable so the consumer knows which
+  // contracts can be accessed.
+  [Chain.Mainnet as number]: {
     PufferVault: '0xD9A442856C234a39a81a089C06451EBAa4306a72',
     PufferDepositor: '0x4aa799c5dfc01ee7d790e3bf1a7c2257ce1dceff',
     PufferL2Depositor: '0x3436E0B85cd929929F5802e792CFE282166E0259',
@@ -16,7 +19,7 @@ export const CONTRACT_ADDRESSES = {
     CarrotStaker: '0x99c599227c65132822f0290d9e5b4b0430d6c0d6',
     Distributor: '0x3Ef3D8bA38EBe18DB133cEc108f4D14CE00Dd9Ae',
   },
-  [Chain.Holesky]: {
+  [Chain.Holesky as number]: {
     PufferVault: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
     PufferDepositor: '0x824AC05aeb86A0aD770b8acDe0906d2d4a6c4A8c',
     PufferL2Depositor: '0x0af6998e4828ad8ef8f79a9288d0a861890f791d',
@@ -25,7 +28,7 @@ export const CONTRACT_ADDRESSES = {
     L2RewardManager: '0x58C046794f69A8830b0BE737022a45b4acd01dE5',
     PufferWithdrawalManager: '0x5A3E1069B66800c0ecbc91bd81b1AE4D1804DBc4',
   },
-  [Chain.Base]: {
+  [Chain.Base as number]: {
     L2RewardManager: '0xF9Dd335bF363b2E4ecFe3c94A86EBD7Dd3Dcf0e7',
   },
 };
