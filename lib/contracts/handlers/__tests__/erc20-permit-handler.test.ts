@@ -6,15 +6,15 @@ import {
   padHex,
   serializeSignature,
 } from 'viem';
-import { Chain } from '../../chains/constants';
+import { Chain } from '../../../chains/constants';
 import {
   setupTestWalletClient,
   setupTestPublicClient,
-} from '../../../test/setup-test-clients';
-import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { Token, TOKENS_SALT } from '../tokens';
-import { ERC20PermitHandler } from './erc20-permit-handler';
-import { ERC20Permit } from '../abis/mainnet/ERC20Permit';
+} from '../../../../test/setup-test-clients';
+import { mockAccount, testingUtils } from '../../../../test/setup-tests';
+import { Token, TOKENS_SALT } from '../../tokens';
+import { ERC20PermitHandler } from '../erc20-permit-handler';
+import { ERC20Permit } from '../../abis/mainnet/ERC20Permit';
 
 describe('ERC20PermitHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(ERC20Permit);

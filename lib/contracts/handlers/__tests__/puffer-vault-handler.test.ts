@@ -2,11 +2,11 @@ import { isHash, toHex } from 'viem';
 import {
   setupTestWalletClient,
   setupTestPublicClient,
-} from '../../../test/setup-test-clients';
-import { Chain } from '../../chains/constants';
-import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { PufferVaultHandler } from './puffer-vault-handler';
-import { PufferVaultV2 } from '../abis/mainnet/PufferVaultV2';
+} from '../../../../test/setup-test-clients';
+import { Chain } from '../../../chains/constants';
+import { mockAccount, testingUtils } from '../../../../test/setup-tests';
+import { PufferVaultHandler } from '../puffer-vault-handler';
+import { PufferVaultV2 } from '../../abis/mainnet/PufferVaultV2';
 
 describe('PufferVaultHandler', () => {
   const vaultTestingUtils = testingUtils.generateContractUtils(PufferVaultV2);

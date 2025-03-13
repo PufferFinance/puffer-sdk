@@ -1,12 +1,12 @@
-import { Chain } from '../../chains/constants';
+import { Chain } from '../../../chains/constants';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
-} from '../../../test/setup-test-clients';
-import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { DistributorHandler } from './distributor-handler';
-import { Distributor } from '../abis/mainnet/Distributor';
-import { CONTRACT_ADDRESSES } from '../addresses';
+} from '../../../../test/setup-test-clients';
+import { mockAccount, testingUtils } from '../../../../test/setup-tests';
+import { DistributorHandler } from '../distributor-handler';
+import { Distributor } from '../../abis/mainnet/Distributor';
+import { CONTRACT_ADDRESSES } from '../../addresses';
 import { isHash, padHex } from 'viem';
 
 describe('DistributorHandler', () => {

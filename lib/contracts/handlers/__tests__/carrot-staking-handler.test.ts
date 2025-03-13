@@ -1,12 +1,12 @@
 import { PublicClient, WalletClient } from 'viem';
-import { Chain } from '../../chains/constants';
+import { Chain } from '../../../chains/constants';
 import {
   setupTestWalletClient,
   setupTestPublicClient,
-} from '../../../test/setup-test-clients';
-import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { CarrotStakingHandler } from './carrot-staking-handler';
-import { CarrotStaker } from '../abis/mainnet/CarrotStaker';
+} from '../../../../test/setup-test-clients';
+import { mockAccount, testingUtils } from '../../../../test/setup-tests';
+import { CarrotStakingHandler } from '../carrot-staking-handler';
+import { CarrotStaker } from '../../abis/mainnet/CarrotStaker';
 
 describe('CarrotStakingHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(CarrotStaker);

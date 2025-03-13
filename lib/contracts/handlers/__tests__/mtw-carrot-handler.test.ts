@@ -1,12 +1,12 @@
-import { Chain } from '../../chains/constants';
+import { Chain } from '../../../chains/constants';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
-} from '../../../test/setup-test-clients';
-import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { MtwCarrotHandler } from './mtw-carrot-handler';
-import { mtwCARROT } from '../abis/mainnet/mtwCARROT';
-import { TOKENS_ADDRESSES, Token } from '../tokens';
+} from '../../../../test/setup-test-clients';
+import { mockAccount, testingUtils } from '../../../../test/setup-tests';
+import { MtwCarrotHandler } from '../mtw-carrot-handler';
+import { mtwCARROT } from '../../abis/mainnet/mtwCARROT';
+import { TOKENS_ADDRESSES, Token } from '../../tokens';
 import { isHash, padHex } from 'viem';
 
 describe('MtwCarrotHandler', () => {

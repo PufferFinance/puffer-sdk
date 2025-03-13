@@ -1,13 +1,13 @@
 import { isHash } from 'viem';
-import { Chain } from '../../chains/constants';
+import { Chain } from '../../../chains/constants';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
-} from '../../../test/setup-test-clients';
-import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { L1RewardManagerHandler } from './l1-reward-manager-handler';
-import { generateAddress } from '../../../test/mocks/address';
-import { L1RewardManager } from '../abis/mainnet/L1RewardManager';
+} from '../../../../test/setup-test-clients';
+import { mockAccount, testingUtils } from '../../../../test/setup-tests';
+import { L1RewardManagerHandler } from '../l1-reward-manager-handler';
+import { generateAddress } from '../../../../test/mocks/address';
+import { L1RewardManager } from '../../abis/mainnet/L1RewardManager';
 
 describe('L1RewardManagerHandler', () => {
   const contractTestingUtils =
