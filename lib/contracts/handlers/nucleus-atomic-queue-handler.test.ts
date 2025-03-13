@@ -5,14 +5,12 @@ import {
 } from '../../../test/setup-test-clients';
 import { Chain } from '../../chains/constants';
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { NUCLEUS_ATOMIC_QUEUE_ABIS } from '../abis/nucleus-atomic-queue-abis';
 import { NucleusAtomicQueueHandler } from './nucleus-atomic-queue-handler';
 import { TOKENS_ADDRESSES, UnifiToken, Token } from '../tokens';
+import { AtomicQueue } from '../abis/mainnet/AtomicQueue';
 
 describe('NucleusAtomicQueueHandler', () => {
-  const contractTestingUtils = testingUtils.generateContractUtils(
-    NUCLEUS_ATOMIC_QUEUE_ABIS[Chain.Mainnet].AtomicQueue,
-  );
+  const contractTestingUtils = testingUtils.generateContractUtils(AtomicQueue);
   let handler: NucleusAtomicQueueHandler;
   let walletClient: WalletClient;
   let publicClient: PublicClient;

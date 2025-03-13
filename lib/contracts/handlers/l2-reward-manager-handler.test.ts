@@ -1,5 +1,4 @@
 import { isHash } from 'viem';
-import { L2_REWARD_MANAGER_ABIS } from '../abis/l2-reward-manager-abis';
 import { Chain } from '../../chains/constants';
 import {
   setupTestPublicClient,
@@ -12,11 +11,11 @@ import {
 } from './l2-reward-manager-handler';
 import { generateAddress } from '../../../test/mocks/address';
 import { InvalidInputError } from '../../errors/validation-errors';
+import { L2RewardManager } from '../abis/mainnet/L2RewardManager';
 
 describe('L2RewardManagerHandler', () => {
-  const contractTestingUtils = testingUtils.generateContractUtils(
-    L2_REWARD_MANAGER_ABIS[Chain.Holesky].L2RewardManager,
-  );
+  const contractTestingUtils =
+    testingUtils.generateContractUtils(L2RewardManager);
   let handler: L2RewardManagerHandler;
 
   beforeEach(() => {

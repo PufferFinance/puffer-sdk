@@ -1,21 +1,19 @@
+import { isHash } from 'viem';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
 } from '../../../test/setup-test-clients';
 import { Chain } from '../../chains/constants';
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { NUCLEUS_TELLER_ABIS } from '../abis/nucleus-teller-abis';
 import { NucleusTellerHandler } from './nucleus-teller-handler';
 import { generateAddress } from '../../../test/mocks/address';
 import { Token, TOKENS_ADDRESSES, UnifiToken } from '../tokens';
-import { isHash } from 'viem';
 import { mockPermitSignature } from '../../../test/mocks/permit-signature';
 import { VAULTS_ADDRESSES } from '../vaults-addresses';
+import { Teller } from '../abis/mainnet/Teller';
 
 describe('NucleusBoringVaultHandler', () => {
-  const contractTestingUtils = testingUtils.generateContractUtils(
-    NUCLEUS_TELLER_ABIS[Chain.Mainnet].Teller,
-  );
+  const contractTestingUtils = testingUtils.generateContractUtils(Teller);
   let handler: NucleusTellerHandler;
 
   beforeEach(() => {

@@ -6,14 +6,13 @@ import {
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { mockPermitSignature } from '../../../test/mocks/permit-signature';
 import { Chain } from '../../chains/constants';
-import { PUFFER_L2_DEPOSITOR_ABIS } from '../abis/puffer-depositor-abis';
 import { PufferL2DepositorHandler } from './puffer-l2-depositor-handler';
 import { Token } from '../tokens';
+import { PufferL2Depositor } from '../abis/mainnet/PufferL2Depositor';
 
 describe('PufferL2DepositorHandler', () => {
-  const contractTestingUtils = testingUtils.generateContractUtils(
-    PUFFER_L2_DEPOSITOR_ABIS[Chain.Holesky].PufferL2Depositor,
-  );
+  const contractTestingUtils =
+    testingUtils.generateContractUtils(PufferL2Depositor);
   let handler: PufferL2DepositorHandler;
 
   beforeEach(() => {

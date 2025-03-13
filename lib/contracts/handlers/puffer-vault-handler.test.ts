@@ -5,13 +5,11 @@ import {
 } from '../../../test/setup-test-clients';
 import { Chain } from '../../chains/constants';
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { PUFFER_VAULT_ABIS } from '../abis/puffer-vault-abis';
 import { PufferVaultHandler } from './puffer-vault-handler';
+import { PufferVaultV2 } from '../abis/mainnet/PufferVaultV2';
 
 describe('PufferVaultHandler', () => {
-  const vaultTestingUtils = testingUtils.generateContractUtils(
-    PUFFER_VAULT_ABIS[Chain.Holesky].PufferVaultV2,
-  );
+  const vaultTestingUtils = testingUtils.generateContractUtils(PufferVaultV2);
   let handler: PufferVaultHandler;
 
   beforeEach(() => {

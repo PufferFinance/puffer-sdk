@@ -6,14 +6,12 @@ import {
 } from '../../../test/setup-test-clients';
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { Chain } from '../../chains/constants';
-import { PUF_LOCKER_ABIS } from '../abis/puf-locker-abis';
 import { Token } from '../tokens';
 import { PufLockerHandler } from './puf-locker-handler';
+import { PufLocker } from '../abis/mainnet/PufLocker';
 
 describe('PufTokenHandler', () => {
-  const contractTestingUtils = testingUtils.generateContractUtils(
-    PUF_LOCKER_ABIS[Chain.Holesky].PufLocker,
-  );
+  const contractTestingUtils = testingUtils.generateContractUtils(PufLocker);
   let handler: PufLockerHandler;
 
   beforeEach(() => {
