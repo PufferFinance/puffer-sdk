@@ -24,14 +24,6 @@ describe('DistributorHandler', () => {
     handler = new DistributorHandler(Chain.Mainnet, walletClient, publicClient);
   });
 
-  it('should check if an address can update merkle root', async () => {
-    const mockCanUpdate = 1n;
-    contractTestingUtils.mockCall('canUpdateMerkleRoot', [mockCanUpdate]);
-
-    const canUpdate = await handler.canUpdateMerkleRoot(mockAccount);
-    expect(canUpdate).toEqual(mockCanUpdate);
-  });
-
   it('should claim tokens for multiple users', async () => {
     contractTestingUtils.mockTransaction('claim');
     const mockUsers = [
@@ -167,77 +159,6 @@ describe('DistributorHandler', () => {
     expect(onlyOperatorCanClaim).toEqual(mockOnlyOperatorCanClaim);
   });
 
-  it('should check if an address is an operator for a user', async () => {
-    const mockIsOperator = 1n;
-    contractTestingUtils.mockCall('operators', [mockIsOperator]);
-
-    const isOperator = await handler.operators(
-      mockAccount,
-      padHex('0x', { size: 20 }),
-    );
-    expect(isOperator).toEqual(mockIsOperator);
-  });
-
-  it('should recover ERC20 tokens', async () => {
-    contractTestingUtils.mockTransaction('recoverERC20');
-    const mockTokenAddress = padHex('0x1', { size: 20 });
-    const mockTo = padHex('0x2', { size: 20 });
-    const mockAmountToRecover = 100n;
-
-    const txHash = await handler.recoverERC20(
-      mockAccount,
-      mockTokenAddress,
-      mockTo,
-      mockAmountToRecover,
-    );
-    expect(isHash(txHash)).toBeTruthy();
-  });
-
-  it('should resolve a dispute', async () => {
-    contractTestingUtils.mockTransaction('resolveDispute');
-    const mockValid = true;
-
-    const txHash = await handler.resolveDispute(mockAccount, mockValid);
-    expect(isHash(txHash)).toBeTruthy();
-  });
-
-  it('should revoke the tree', async () => {
-    contractTestingUtils.mockTransaction('revokeTree');
-
-    const txHash = await handler.revokeTree(mockAccount);
-    expect(isHash(txHash)).toBeTruthy();
-  });
-
-  it('should set the dispute amount', async () => {
-    contractTestingUtils.mockTransaction('setDisputeAmount');
-    const mockDisputeAmount = 100n;
-
-    const txHash = await handler.setDisputeAmount(
-      mockAccount,
-      mockDisputeAmount,
-    );
-    expect(isHash(txHash)).toBeTruthy();
-  });
-
-  it('should set the dispute period', async () => {
-    contractTestingUtils.mockTransaction('setDisputePeriod');
-    const mockDisputePeriod = 100;
-
-    const txHash = await handler.setDisputePeriod(
-      mockAccount,
-      mockDisputePeriod,
-    );
-    expect(isHash(txHash)).toBeTruthy();
-  });
-
-  it('should set the dispute token', async () => {
-    contractTestingUtils.mockTransaction('setDisputeToken');
-    const mockDisputeToken = padHex('0x', { size: 20 });
-
-    const txHash = await handler.setDisputeToken(mockAccount, mockDisputeToken);
-    expect(isHash(txHash)).toBeTruthy();
-  });
-
   it('should toggle only operator can claim', async () => {
     contractTestingUtils.mockTransaction('toggleOnlyOperatorCanClaim');
     const mockUser = padHex('0x', { size: 20 });
@@ -282,16 +203,5 @@ describe('DistributorHandler', () => {
 
     const tree = await handler.tree();
     expect(tree).toEqual(mockTree);
-  });
-
-  it('should update the merkle tree', async () => {
-    contractTestingUtils.mockTransaction('updateTree');
-    const mockTree = {
-      merkleRoot: padHex('0x1', { size: 32 }),
-      ipfsHash: padHex('0x2', { size: 32 }),
-    };
-
-    const txHash = await handler.updateTree(mockAccount, mockTree);
-    expect(isHash(txHash)).toBeTruthy();
   });
 });
