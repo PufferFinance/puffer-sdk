@@ -6,10 +6,10 @@ import {
   getContract,
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
-import { PUFFER_DEPOSITOR_ABIS } from '../abis/puffer-depositor-abis';
 import { CONTRACT_ADDRESSES } from '../addresses';
 import { ERC20PermitHandler } from './erc20-permit-handler';
 import { Token } from '../tokens';
+import { PufferDepositor } from '../abis/mainnet/PufferDepositor';
 
 /**
  * Handler for the `PufferDepositor` contract exposing methods to
@@ -50,7 +50,7 @@ export class PufferDepositorHandler {
    */
   public getContract() {
     const address = CONTRACT_ADDRESSES[this.chain].PufferDepositor as Address;
-    const abi = PUFFER_DEPOSITOR_ABIS[this.chain].PufferDepositor;
+    const abi = PufferDepositor;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
     return getContract({ address, abi, client }) as GetContractReturnType<

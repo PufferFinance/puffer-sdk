@@ -9,7 +9,7 @@ import {
 } from 'viem';
 import { Chain as LocalChain, VIEM_CHAINS } from '../../chains/constants';
 import { CONTRACT_ADDRESSES } from '../addresses';
-import { NUCLEUS_ATOMIC_QUEUE_ABIS } from '../abis/nucleus-atomic-queue-abis';
+import { AtomicQueue } from '../abis/mainnet/AtomicQueue';
 
 export type AtomicRequest = {
   deadline: bigint;
@@ -42,7 +42,7 @@ export class NucleusAtomicQueueHandler {
   public getContract() {
     const address = CONTRACT_ADDRESSES[this.chain]
       .NucleusAtomicQueue as Address;
-    const abi = NUCLEUS_ATOMIC_QUEUE_ABIS[this.chain].AtomicQueue;
+    const abi = AtomicQueue;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
     return getContract({ address, abi, client }) as GetContractReturnType<

@@ -7,10 +7,10 @@ import {
   GetContractReturnType,
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
-import { PUFFER_L2_DEPOSITOR_ABIS } from '../abis/puffer-depositor-abis';
 import { CONTRACT_ADDRESSES } from '../addresses';
 import { TOKENS_ADDRESSES, Token } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
+import { PufferL2Depositor } from '../abis/mainnet/PufferL2Depositor';
 
 export type L2DepositParams = {
   token: Token;
@@ -60,7 +60,7 @@ export class PufferL2DepositorHandler {
    */
   public getContract() {
     const address = CONTRACT_ADDRESSES[this.chain].PufferL2Depositor as Address;
-    const abi = PUFFER_L2_DEPOSITOR_ABIS[this.chain].PufferL2Depositor;
+    const abi = PufferL2Depositor;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
     return getContract({ address, abi, client }) as GetContractReturnType<

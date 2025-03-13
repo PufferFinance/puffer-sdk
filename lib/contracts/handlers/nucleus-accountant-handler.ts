@@ -9,8 +9,8 @@ import {
 } from 'viem';
 import { Chain } from '../../chains/constants';
 import { VAULTS_ADDRESSES } from '../vaults-addresses';
-import { NUCLEUS_ACCOUNTANT_ABIS } from '../abis/nucleus-accountant-abis';
 import { UnifiToken } from '../tokens';
+import { Accountant } from '../abis/mainnet/Accountant';
 
 /**
  * Handler for the `Accountant` contract from nucleus.
@@ -56,7 +56,7 @@ export class NucleusAccountantHandler {
   public getContract() {
     const address = VAULTS_ADDRESSES[this.token][this.chain]
       .NucleusAccountant as Address;
-    const abi = NUCLEUS_ACCOUNTANT_ABIS[this.chain].Accountant;
+    const abi = Accountant;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
     return getContract({ address, abi, client }) as GetContractReturnType<
