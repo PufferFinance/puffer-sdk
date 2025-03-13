@@ -67,16 +67,6 @@ export class DistributorHandler {
   }
 
   /**
-   * Check if an address can update the merkle root.
-   *
-   * @param address The address to check.
-   * @returns Whether the address can update the merkle root.
-   */
-  public canUpdateMerkleRoot(address: Address) {
-    return this.getContract().read.canUpdateMerkleRoot([address]);
-  }
-
-  /**
    * Claim tokens for multiple users.
    *
    * @param account The account making the claim.
@@ -211,110 +201,6 @@ export class DistributorHandler {
   }
 
   /**
-   * Check if an address is an operator for a user.
-   *
-   * @param user The user address.
-   * @param operator The operator address.
-   * @returns Whether the address is an operator.
-   */
-  public operators(user: Address, operator: Address) {
-    return this.getContract().read.operators([user, operator]);
-  }
-
-  /**
-   * Recover ERC20 tokens sent to the contract.
-   *
-   * @param account The account recovering the tokens.
-   * @param tokenAddress The token address to recover.
-   * @param to The address to send recovered tokens to.
-   * @param amountToRecover The amount to recover.
-   * @returns A promise that resolves to the transaction hash.
-   */
-  public recoverERC20(
-    account: Address,
-    tokenAddress: Address,
-    to: Address,
-    amountToRecover: bigint,
-  ) {
-    return this.getContract().write.recoverERC20(
-      [tokenAddress, to, amountToRecover],
-      {
-        account,
-        chain: this.viemChain,
-      },
-    );
-  }
-
-  /**
-   * Resolve a dispute.
-   *
-   * @param account The account resolving the dispute.
-   * @param valid Whether the disputed tree is valid.
-   * @returns A promise that resolves to the transaction hash.
-   */
-  public resolveDispute(account: Address, valid: boolean) {
-    return this.getContract().write.resolveDispute([valid], {
-      account,
-      chain: this.viemChain,
-    });
-  }
-
-  /**
-   * Revoke the current tree.
-   *
-   * @param account The account revoking the tree.
-   * @returns A promise that resolves to the transaction hash.
-   */
-  public revokeTree(account: Address) {
-    return this.getContract().write.revokeTree({
-      account,
-      chain: this.viemChain,
-    });
-  }
-
-  /**
-   * Set the dispute amount.
-   *
-   * @param account The account setting the dispute amount.
-   * @param disputeAmount The new dispute amount.
-   * @returns A promise that resolves to the transaction hash.
-   */
-  public setDisputeAmount(account: Address, disputeAmount: bigint) {
-    return this.getContract().write.setDisputeAmount([disputeAmount], {
-      account,
-      chain: this.viemChain,
-    });
-  }
-
-  /**
-   * Set the dispute period.
-   *
-   * @param account The account setting the dispute period.
-   * @param disputePeriod The new dispute period in seconds.
-   * @returns A promise that resolves to the transaction hash.
-   */
-  public setDisputePeriod(account: Address, disputePeriod: number) {
-    return this.getContract().write.setDisputePeriod([disputePeriod], {
-      account,
-      chain: this.viemChain,
-    });
-  }
-
-  /**
-   * Set the dispute token.
-   *
-   * @param account The account setting the dispute token.
-   * @param disputeToken The new dispute token address.
-   * @returns A promise that resolves to the transaction hash.
-   */
-  public setDisputeToken(account: Address, disputeToken: Address) {
-    return this.getContract().write.setDisputeToken([disputeToken], {
-      account,
-      chain: this.viemChain,
-    });
-  }
-
-  /**
    * Toggle whether only operators can claim for a user.
    *
    * @param account The account toggling the setting.
@@ -368,19 +254,5 @@ export class DistributorHandler {
       merkleRoot,
       ipfsHash,
     };
-  }
-
-  /**
-   * Update the merkle tree.
-   *
-   * @param account The account updating the tree.
-   * @param tree The new tree information.
-   * @returns A promise that resolves to the transaction hash.
-   */
-  public updateTree(account: Address, tree: MerkleTree) {
-    return this.getContract().write.updateTree([tree], {
-      account,
-      chain: this.viemChain,
-    });
   }
 }
