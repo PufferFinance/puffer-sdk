@@ -2,11 +2,11 @@ import { toHex } from 'viem';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
-} from '../../../test/setup-test-clients';
-import { mockPermitSignature } from '../../../test/mocks/permit-signature';
-import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { Chain } from '../../chains/constants';
-import { PufferDepositorHandler } from './puffer-depositor-handler';
+} from '../../../../test/setup-test-clients';
+import { mockPermitSignature } from '../../../../test/mocks/permit-signature';
+import { mockAccount, testingUtils } from '../../../../test/setup-tests';
+import { Chain } from '../../../chains/constants';
+import { PufferDepositorHandler } from '../puffer-depositor-handler';
 
 describe('PufferDepositorHandler', () => {
   it('should deposit stETH in exchange for pufETH', async () => {

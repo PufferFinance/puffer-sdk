@@ -2,13 +2,13 @@ import { isHash } from 'viem';
 import {
   setupTestWalletClient,
   setupTestPublicClient,
-} from '../../../test/setup-test-clients';
-import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { mockPermitSignature } from '../../../test/mocks/permit-signature';
-import { Chain } from '../../chains/constants';
-import { PufferL2DepositorHandler } from './puffer-l2-depositor-handler';
-import { Token } from '../tokens';
-import { PufferL2Depositor } from '../abis/mainnet/PufferL2Depositor';
+} from '../../../../test/setup-test-clients';
+import { mockAccount, testingUtils } from '../../../../test/setup-tests';
+import { mockPermitSignature } from '../../../../test/mocks/permit-signature';
+import { Chain } from '../../../chains/constants';
+import { PufferL2DepositorHandler } from '../puffer-l2-depositor-handler';
+import { Token } from '../../tokens';
+import { PufferL2Depositor } from '../../abis/mainnet/PufferL2Depositor';
 
 describe('PufferL2DepositorHandler', () => {
   const contractTestingUtils =

@@ -2,12 +2,12 @@ import { Account, isHash, PublicClient, WalletClient } from 'viem';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
-} from '../../../test/setup-test-clients';
-import { Chain } from '../../chains/constants';
-import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { NucleusAtomicQueueHandler } from './nucleus-atomic-queue-handler';
-import { TOKENS_ADDRESSES, UnifiToken, Token } from '../tokens';
-import { AtomicQueue } from '../abis/mainnet/AtomicQueue';
+} from '../../../../test/setup-test-clients';
+import { Chain } from '../../../chains/constants';
+import { mockAccount, testingUtils } from '../../../../test/setup-tests';
+import { NucleusAtomicQueueHandler } from '../nucleus-atomic-queue-handler';
+import { TOKENS_ADDRESSES, UnifiToken, Token } from '../../tokens';
+import { AtomicQueue } from '../../abis/mainnet/AtomicQueue';
 
 describe('NucleusAtomicQueueHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(AtomicQueue);

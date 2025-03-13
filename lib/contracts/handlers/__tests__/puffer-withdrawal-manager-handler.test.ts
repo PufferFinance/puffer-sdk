@@ -1,12 +1,12 @@
-import { PufferWithdrawalManagerHandler } from './puffer-withdrawal-manager-handler';
+import { PufferWithdrawalManagerHandler } from '../puffer-withdrawal-manager-handler';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
-} from '../../../test/setup-test-clients';
-import { Chain } from '../../chains/constants';
-import { CONTRACT_ADDRESSES } from '../addresses';
+} from '../../../../test/setup-test-clients';
+import { Chain } from '../../../chains/constants';
+import { CONTRACT_ADDRESSES } from '../../addresses';
 import { Address, getContract } from 'viem';
-import { PufferWithdrawalManager } from '../abis/mainnet/PufferWithdrawalManager';
+import { PufferWithdrawalManager } from '../../abis/mainnet/PufferWithdrawalManager';
 
 jest.mock('viem', () => ({
   ...jest.requireActual('viem'),

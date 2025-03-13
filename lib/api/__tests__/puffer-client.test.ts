@@ -1,10 +1,10 @@
-import { Chain } from '../chains/constants';
+import { Chain } from '../../chains/constants';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
-} from '../../test/setup-test-clients';
-import { mockAccount, testingUtils } from '../../test/setup-tests';
-import { PufferClient } from './puffer-client';
+} from '../../../test/setup-test-clients';
+import { mockAccount, testingUtils } from '../../../test/setup-tests';
+import { PufferClient } from '../puffer-client';
 import { toHex } from 'viem';
 
 describe('PufferClient', () => {

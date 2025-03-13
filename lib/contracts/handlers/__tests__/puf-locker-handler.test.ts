@@ -1,14 +1,14 @@
 import { isHash } from 'viem';
-import { mockPermitSignature } from '../../../test/mocks/permit-signature';
+import { mockPermitSignature } from '../../../../test/mocks/permit-signature';
 import {
   setupTestWalletClient,
   setupTestPublicClient,
-} from '../../../test/setup-test-clients';
-import { mockAccount, testingUtils } from '../../../test/setup-tests';
-import { Chain } from '../../chains/constants';
-import { Token } from '../tokens';
-import { PufLockerHandler } from './puf-locker-handler';
-import { PufLocker } from '../abis/mainnet/PufLocker';
+} from '../../../../test/setup-test-clients';
+import { mockAccount, testingUtils } from '../../../../test/setup-tests';
+import { Chain } from '../../../chains/constants';
+import { Token } from '../../tokens';
+import { PufLockerHandler } from '../puf-locker-handler';
+import { PufLocker } from '../../abis/mainnet/PufLocker';
 
 describe('PufTokenHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(PufLocker);

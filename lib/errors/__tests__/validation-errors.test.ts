@@ -1,5 +1,5 @@
-import { version } from '../utils/version';
-import { AccountError } from './validation-errors';
+import { version } from '../../utils/version';
+import { AccountError } from '../validation-errors';
 
 describe('ValidationErrors', () => {
   it('should throw a formatted error', () => {

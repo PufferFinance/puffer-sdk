@@ -1,5 +1,5 @@
-import { PufferClientHelpers } from './puffer-client-helpers';
-import { Chain } from '../chains/constants';
+import { PufferClientHelpers } from '../puffer-client-helpers';
+import { Chain } from '../../chains/constants';
 
 describe('PufferClientHelpers', () => {
   it('should create public client with defined config', () => {
