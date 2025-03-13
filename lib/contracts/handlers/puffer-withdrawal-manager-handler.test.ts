@@ -4,9 +4,9 @@ import {
   setupTestWalletClient,
 } from '../../../test/setup-test-clients';
 import { Chain } from '../../chains/constants';
-import { PUFFER_WITHDRAWAL_MANAGER_ABIS } from '../abis/puffer-withdrawal-manager-abis';
 import { CONTRACT_ADDRESSES } from '../addresses';
 import { Address, getContract } from 'viem';
+import { PufferWithdrawalManager } from '../abis/mainnet/PufferWithdrawalManager';
 
 jest.mock('viem', () => ({
   ...jest.requireActual('viem'),
@@ -29,7 +29,7 @@ describe('PufferWithdrawalMangerHandler', () => {
   });
 
   it('should return the contract', () => {
-    const mockAbi = PUFFER_WITHDRAWAL_MANAGER_ABIS[1].PufferWithdrawalManager;
+    const mockAbi = PufferWithdrawalManager;
     handler.getContract();
 
     expect(getContract).toHaveBeenCalledWith({

@@ -1,5 +1,4 @@
 import { isHash } from 'viem';
-import { L1_REWARD_MANAGER_ABIS } from '../abis/l1-reward-manager-abis';
 import { Chain } from '../../chains/constants';
 import {
   setupTestPublicClient,
@@ -8,11 +7,11 @@ import {
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { L1RewardManagerHandler } from './l1-reward-manager-handler';
 import { generateAddress } from '../../../test/mocks/address';
+import { L1RewardManager } from '../abis/mainnet/L1RewardManager';
 
 describe('L1RewardManagerHandler', () => {
-  const contractTestingUtils = testingUtils.generateContractUtils(
-    L1_REWARD_MANAGER_ABIS[Chain.Holesky].L1RewardManager,
-  );
+  const contractTestingUtils =
+    testingUtils.generateContractUtils(L1RewardManager);
   let handler: L1RewardManagerHandler;
 
   beforeEach(() => {

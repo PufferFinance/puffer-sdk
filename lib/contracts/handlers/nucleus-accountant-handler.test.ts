@@ -1,20 +1,18 @@
+import { Address } from 'viem';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
 } from '../../../test/setup-test-clients';
-import { NUCLEUS_ACCOUNTANT_ABIS } from '../abis/nucleus-accountant-abis';
 import { Chain } from '../../chains/constants';
 import { NucleusAccountantHandler } from './nucleus-accountant-handler';
 import { mockAccount, testingUtils } from '../../../test/setup-tests';
 import { generateAddress } from '../../../test/mocks/address';
-import { Address } from 'viem';
 import { UnifiToken } from '../tokens';
 import { VAULTS_ADDRESSES } from '../vaults-addresses';
+import { Accountant } from '../abis/mainnet/Accountant';
 
 describe('NucleusAccountantHandler', () => {
-  const contractTestingUtils = testingUtils.generateContractUtils(
-    NUCLEUS_ACCOUNTANT_ABIS[Chain.Mainnet].Accountant,
-  );
+  const contractTestingUtils = testingUtils.generateContractUtils(Accountant);
   let handler: NucleusAccountantHandler;
 
   beforeEach(() => {
