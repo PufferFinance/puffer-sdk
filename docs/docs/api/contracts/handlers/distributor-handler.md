@@ -29,7 +29,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:48](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L48)
+[lib/contracts/handlers/distributor-handler.ts:48](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L48)
 
 #### Properties
 
@@ -62,7 +62,7 @@ Whether the address can update the merkle root.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:83](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L83)
+[lib/contracts/handlers/distributor-handler.ts:83](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L83)
 
 ##### claim()
 
@@ -85,7 +85,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L94)
+[lib/contracts/handlers/distributor-handler.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L94)
 
 ##### claimed()
 
@@ -108,7 +108,7 @@ The claim information.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:111](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L111)
+[lib/contracts/handlers/distributor-handler.ts:111](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L111)
 
 ##### core()
 
@@ -124,7 +124,7 @@ The core contract address.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:126](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L126)
+[lib/contracts/handlers/distributor-handler.ts:126](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L126)
 
 ##### disputeAmount()
 
@@ -140,7 +140,7 @@ The dispute amount.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:135](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L135)
+[lib/contracts/handlers/distributor-handler.ts:135](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L135)
 
 ##### disputePeriod()
 
@@ -156,7 +156,7 @@ The dispute period in seconds.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:144](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L144)
+[lib/contracts/handlers/distributor-handler.ts:144](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L144)
 
 ##### disputeToken()
 
@@ -172,7 +172,7 @@ The dispute token address.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:153](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L153)
+[lib/contracts/handlers/distributor-handler.ts:153](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L153)
 
 ##### disputeTree()
 
@@ -195,7 +195,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:164](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L164)
+[lib/contracts/handlers/distributor-handler.ts:164](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L164)
 
 ##### disputer()
 
@@ -211,7 +211,7 @@ The disputer address.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L176)
+[lib/contracts/handlers/distributor-handler.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L176)
 
 ##### endOfDisputePeriod()
 
@@ -227,7 +227,7 @@ The timestamp when the dispute period ends.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:185](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L185)
+[lib/contracts/handlers/distributor-handler.ts:185](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L185)
 
 ##### getContract()
 
@@ -243,7 +243,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L61)
+[lib/contracts/handlers/distributor-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L61)
 
 ##### getMerkleRoot()
 
@@ -259,7 +259,7 @@ The current merkle root.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:194](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L194)
+[lib/contracts/handlers/distributor-handler.ts:194](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L194)
 
 ##### lastTree()
 
@@ -275,7 +275,7 @@ The last tree information.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:203](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L203)
+[lib/contracts/handlers/distributor-handler.ts:203](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L203)
 
 ##### onlyOperatorCanClaim()
 
@@ -297,7 +297,7 @@ Whether only operators can claim for the user.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:217](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L217)
+[lib/contracts/handlers/distributor-handler.ts:217](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L217)
 
 ##### operators()
 
@@ -320,7 +320,7 @@ Whether the address is an operator.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:228](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L228)
+[lib/contracts/handlers/distributor-handler.ts:228](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L228)
 
 ##### recoverERC20()
 
@@ -345,7 +345,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:241](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L241)
+[lib/contracts/handlers/distributor-handler.ts:241](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L241)
 
 ##### resolveDispute()
 
@@ -368,7 +368,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:263](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L263)
+[lib/contracts/handlers/distributor-handler.ts:263](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L263)
 
 ##### revokeTree()
 
@@ -390,7 +390,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:276](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L276)
+[lib/contracts/handlers/distributor-handler.ts:276](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L276)
 
 ##### setDisputeAmount()
 
@@ -413,7 +413,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:290](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L290)
+[lib/contracts/handlers/distributor-handler.ts:290](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L290)
 
 ##### setDisputePeriod()
 
@@ -436,7 +436,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:304](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L304)
+[lib/contracts/handlers/distributor-handler.ts:304](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L304)
 
 ##### setDisputeToken()
 
@@ -459,7 +459,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:318](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L318)
+[lib/contracts/handlers/distributor-handler.ts:318](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L318)
 
 ##### toggleOnlyOperatorCanClaim()
 
@@ -482,7 +482,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:332](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L332)
+[lib/contracts/handlers/distributor-handler.ts:332](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L332)
 
 ##### toggleOperator()
 
@@ -506,7 +506,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:347](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L347)
+[lib/contracts/handlers/distributor-handler.ts:347](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L347)
 
 ##### toggleTrusted()
 
@@ -529,7 +529,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:361](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L361)
+[lib/contracts/handlers/distributor-handler.ts:361](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L361)
 
 ##### tree()
 
@@ -545,7 +545,7 @@ The current tree information.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:373](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L373)
+[lib/contracts/handlers/distributor-handler.ts:373](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L373)
 
 ##### updateTree()
 
@@ -568,7 +568,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/distributor-handler.ts:388](https://github.com/PufferFinance/puffer-sdk/blob/eca497d16ab6fc5ed47eb2db977f715df56cdbcf/lib/contracts/handlers/distributor-handler.ts#L388)
+[lib/contracts/handlers/distributor-handler.ts:388](https://github.com/PufferFinance/puffer-sdk/blob/ea4e095894ae8bcf290447f3cee88afef03caaae/lib/contracts/handlers/distributor-handler.ts#L388)
 
 ## Interfaces
 

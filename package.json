@@ -1,7 +1,7 @@
 {
   "name": "@pufferfinance/puffer-sdk",
   "description": "SDK for interacting with the puffer smart contracts",
-  "version": "1.13.1",
+  "version": "1.13.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/PufferFinance/puffer-sdk.git"
