@@ -195,6 +195,8 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.slvlUSD]: '1',
   [Token.mtwCARROT]: '',
   [Token.sCARROT]: '',
+  [Token.LINK]: '',
+  [Token.TEST]: '',
 
   // UniFi Tokens
   // https://etherscan.io/address/0x196ead472583bc1e9af7a05f860d9857e1bd3dcc#code#F7#L172
