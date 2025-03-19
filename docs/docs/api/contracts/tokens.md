@@ -12,8 +12,10 @@
 | `CARROT` | `"CARROT"` |
 | `DAI` | `"DAI"` |
 | `LBTC` | `"LBTC"` |
+| `LINK` | `"LINK"` |
 | `PUFFER` | `"PUFFER"` |
 | `SolvBTC` | `"SolvBTC"` |
+| `TEST` | `"TEST"` |
 | `USDC` | `"USDC"` |
 | `USDT` | `"USDT"` |
 | `WBTC` | `"WBTC"` |
@@ -53,7 +55,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:38](https://github.com/PufferFinance/puffer-sdk/blob/897a69a733c8b700ba51181925befa0dfe8cb652/lib/contracts/tokens.ts#L38)
+[lib/contracts/tokens.ts:40](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/tokens.ts#L40)
 
 ## Variables
 
@@ -63,7 +65,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:40](https://github.com/PufferFinance/puffer-sdk/blob/897a69a733c8b700ba51181925befa0dfe8cb652/lib/contracts/tokens.ts#L40)
+[lib/contracts/tokens.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/tokens.ts#L42)
 
 ***
 
@@ -73,7 +75,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:155](https://github.com/PufferFinance/puffer-sdk/blob/897a69a733c8b700ba51181925befa0dfe8cb652/lib/contracts/tokens.ts#L155)
+[lib/contracts/tokens.ts:166](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/tokens.ts#L166)
 
 ***
 
@@ -83,4 +85,4 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:199](https://github.com/PufferFinance/puffer-sdk/blob/897a69a733c8b700ba51181925befa0dfe8cb652/lib/contracts/tokens.ts#L199)
+[lib/contracts/tokens.ts:212](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/tokens.ts#L212)

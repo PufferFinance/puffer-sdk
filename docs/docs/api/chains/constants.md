@@ -9,9 +9,12 @@
 | Enumeration Member | Value |
 | :------ | :------ |
 | `Base` | `number` |
+| `BaseSepolia` | `number` |
 | `Bsc` | `number` |
 | `Holesky` | `number` |
 | `Mainnet` | `number` |
+| `OptimismSepolia` | `number` |
+| `Sepolia` | `number` |
 
 ## Variables
 
@@ -21,4 +24,4 @@
 
 #### Source
 
-[lib/chains/constants.ts:11](https://github.com/PufferFinance/puffer-sdk/blob/897a69a733c8b700ba51181925befa0dfe8cb652/lib/chains/constants.ts#L11)
+[lib/chains/constants.ts:22](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/chains/constants.ts#L22)
