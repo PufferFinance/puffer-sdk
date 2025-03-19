@@ -25,6 +25,8 @@ export enum Token {
   slvlUSD = 'slvlUSD',
   mtwCARROT = 'mtwCARROT',
   sCARROT = 'sCARROT',
+  LINK = 'LINK',
+  TEST = 'TEST',
 }
 
 export enum UnifiToken {
@@ -40,9 +42,18 @@ export type AnyToken = Token | UnifiToken;
 export const TOKENS_ADDRESSES: {
   [key in AnyToken]: { [chain in Chain]: Address };
 } = {
+  [Token.TEST]: {
+    [Chain.Sepolia]: '0xd26e3540a0a368845b234736a0700e0a5a821bba',
+    [Chain.OptimismSepolia]: '0x7Fa13D6CB44164ea09dF8BCc673A8849092D435b',
+  },
+  [Token.LINK]: {
+    [Chain.BaseSepolia]: '0xe4ab69c077896252fafbd49efd26b5d171a32410',
+    [Chain.OptimismSepolia]: '0xE4aB69C077896252FAFBD49EFD26B5D171A32410',
+  },
   [Token.USDT]: {
     [Chain.Mainnet]: '0xdac17f958d2ee523a2206206994597c13d831ec7',
     [Chain.Holesky]: '0xd5bef2c64f418fd460319521d37862327122e3bc',
+    [Chain.Sepolia]: '0xaa8e23fb1079ea71e0a56f48a2aa51851d8433d0',
   },
   [Token.USDC]: {
     [Chain.Mainnet]: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
