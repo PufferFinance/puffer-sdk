@@ -29,7 +29,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-staking-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/handlers/carrot-staking-handler.ts#L28)
+[lib/contracts/handlers/carrot-staking-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/carrot-staking-handler.ts#L28)
 
 #### Properties
 
@@ -63,7 +63,7 @@ The allowance of the owner for the spender.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-staking-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/handlers/carrot-staking-handler.ts#L61)
+[lib/contracts/handlers/carrot-staking-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/carrot-staking-handler.ts#L61)
 
 ##### balanceOf()
 
@@ -85,7 +85,7 @@ The balance of the address.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-staking-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/handlers/carrot-staking-handler.ts#L71)
+[lib/contracts/handlers/carrot-staking-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/carrot-staking-handler.ts#L71)
 
 ##### decimals()
 
@@ -101,7 +101,7 @@ The number of decimals of the token.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-staking-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/handlers/carrot-staking-handler.ts#L80)
+[lib/contracts/handlers/carrot-staking-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/carrot-staking-handler.ts#L80)
 
 ##### getContract()
 
@@ -118,7 +118,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-staking-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/handlers/carrot-staking-handler.ts#L42)
+[lib/contracts/handlers/carrot-staking-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/carrot-staking-handler.ts#L42)
 
 ##### isUnstakingAllowed()
 
@@ -134,7 +134,7 @@ Whether unstaking is allowed.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-staking-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/handlers/carrot-staking-handler.ts#L89)
+[lib/contracts/handlers/carrot-staking-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/carrot-staking-handler.ts#L89)
 
 ##### stake()
 
@@ -157,7 +157,7 @@ The transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-staking-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/handlers/carrot-staking-handler.ts#L109)
+[lib/contracts/handlers/carrot-staking-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/carrot-staking-handler.ts#L109)
 
 ##### totalSupply()
 
@@ -173,7 +173,7 @@ The total supply of the token.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-staking-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/handlers/carrot-staking-handler.ts#L98)
+[lib/contracts/handlers/carrot-staking-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/carrot-staking-handler.ts#L98)
 
 ##### unstake()
 
@@ -197,4 +197,4 @@ The transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-staking-handler.ts:124](https://github.com/PufferFinance/puffer-sdk/blob/0b19d29f8d30f18b7e65bfafa37030deaee6de9d/lib/contracts/handlers/carrot-staking-handler.ts#L124)
+[lib/contracts/handlers/carrot-staking-handler.ts:124](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/carrot-staking-handler.ts#L124)
