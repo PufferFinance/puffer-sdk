@@ -29,7 +29,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/l2-reward-manager-handler.ts:37](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/l2-reward-manager-handler.ts#L37)
+[lib/contracts/handlers/l2-reward-manager-handler.ts:37](https://github.com/PufferFinance/puffer-sdk/blob/9a075aecd66cb0e2ee296f8c298140e2fa31335e/lib/contracts/handlers/l2-reward-manager-handler.ts#L37)
 
 #### Properties
 
@@ -56,7 +56,7 @@ The authority address.
 
 ###### Source
 
-[lib/contracts/handlers/l2-reward-manager-handler.ts:68](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/l2-reward-manager-handler.ts#L68)
+[lib/contracts/handlers/l2-reward-manager-handler.ts:68](https://github.com/PufferFinance/puffer-sdk/blob/9a075aecd66cb0e2ee296f8c298140e2fa31335e/lib/contracts/handlers/l2-reward-manager-handler.ts#L68)
 
 ##### claimRewards()
 
@@ -104,7 +104,7 @@ If `claimOrders` is empty.
 
 ###### Source
 
-[lib/contracts/handlers/l2-reward-manager-handler.ts:156](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/l2-reward-manager-handler.ts#L156)
+[lib/contracts/handlers/l2-reward-manager-handler.ts:156](https://github.com/PufferFinance/puffer-sdk/blob/9a075aecd66cb0e2ee296f8c298140e2fa31335e/lib/contracts/handlers/l2-reward-manager-handler.ts#L156)
 
 ##### getClaimingDelay()
 
@@ -120,7 +120,7 @@ The claiming delay.
 
 ###### Source
 
-[lib/contracts/handlers/l2-reward-manager-handler.ts:77](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/l2-reward-manager-handler.ts#L77)
+[lib/contracts/handlers/l2-reward-manager-handler.ts:77](https://github.com/PufferFinance/puffer-sdk/blob/9a075aecd66cb0e2ee296f8c298140e2fa31335e/lib/contracts/handlers/l2-reward-manager-handler.ts#L77)
 
 ##### getContract()
 
@@ -137,7 +137,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/l2-reward-manager-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/l2-reward-manager-handler.ts#L51)
+[lib/contracts/handlers/l2-reward-manager-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/9a075aecd66cb0e2ee296f8c298140e2fa31335e/lib/contracts/handlers/l2-reward-manager-handler.ts#L51)
 
 ##### getEpochRecord()
 
@@ -187,7 +187,7 @@ The epoch record of exchange rate and reward root.
 
 ###### Source
 
-[lib/contracts/handlers/l2-reward-manager-handler.ts:88](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/l2-reward-manager-handler.ts#L88)
+[lib/contracts/handlers/l2-reward-manager-handler.ts:88](https://github.com/PufferFinance/puffer-sdk/blob/9a075aecd66cb0e2ee296f8c298140e2fa31335e/lib/contracts/handlers/l2-reward-manager-handler.ts#L88)
 
 ##### getIntervalId()
 
@@ -210,7 +210,7 @@ Interval ID for the given start and end epoch.
 
 ###### Source
 
-[lib/contracts/handlers/l2-reward-manager-handler.ts:99](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/l2-reward-manager-handler.ts#L99)
+[lib/contracts/handlers/l2-reward-manager-handler.ts:99](https://github.com/PufferFinance/puffer-sdk/blob/9a075aecd66cb0e2ee296f8c298140e2fa31335e/lib/contracts/handlers/l2-reward-manager-handler.ts#L99)
 
 ##### getRewardsClaimer()
 
@@ -232,7 +232,7 @@ Rewards claimer address.
 
 ###### Source
 
-[lib/contracts/handlers/l2-reward-manager-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/l2-reward-manager-handler.ts#L109)
+[lib/contracts/handlers/l2-reward-manager-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/9a075aecd66cb0e2ee296f8c298140e2fa31335e/lib/contracts/handlers/l2-reward-manager-handler.ts#L109)
 
 ##### isClaimed()
 
@@ -256,7 +256,7 @@ Whether the reward has been claimed.
 
 ###### Source
 
-[lib/contracts/handlers/l2-reward-manager-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/l2-reward-manager-handler.ts#L121)
+[lib/contracts/handlers/l2-reward-manager-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/9a075aecd66cb0e2ee296f8c298140e2fa31335e/lib/contracts/handlers/l2-reward-manager-handler.ts#L121)
 
 ##### isClaimingLocked()
 
@@ -278,7 +278,7 @@ Whether the claiming is locked for the given interval.
 
 ###### Source
 
-[lib/contracts/handlers/l2-reward-manager-handler.ts:132](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/l2-reward-manager-handler.ts#L132)
+[lib/contracts/handlers/l2-reward-manager-handler.ts:132](https://github.com/PufferFinance/puffer-sdk/blob/9a075aecd66cb0e2ee296f8c298140e2fa31335e/lib/contracts/handlers/l2-reward-manager-handler.ts#L132)
 
 ## Type Aliases
 
@@ -310,4 +310,4 @@ Whether the claiming is locked for the given interval.
 
 #### Source
 
-[lib/contracts/handlers/l2-reward-manager-handler.ts:13](https://github.com/PufferFinance/puffer-sdk/blob/3a6a93d78d4850f7a255ba30661450ff72841125/lib/contracts/handlers/l2-reward-manager-handler.ts#L13)
+[lib/contracts/handlers/l2-reward-manager-handler.ts:13](https://github.com/PufferFinance/puffer-sdk/blob/9a075aecd66cb0e2ee296f8c298140e2fa31335e/lib/contracts/handlers/l2-reward-manager-handler.ts#L13)
