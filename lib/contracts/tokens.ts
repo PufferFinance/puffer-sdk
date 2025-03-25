@@ -13,6 +13,7 @@ export enum Token {
   ALT = 'ALT',
   pufETHwstE = 'pufETHwstE',
   pufETH = 'pufETH',
+  xPufETH = 'xPufETH',
   WBTC = 'WBTC',
   LBTC = 'LBTC',
   tBTC = 'tBTC',
@@ -94,6 +95,13 @@ export const TOKENS_ADDRESSES: {
   [Token.pufETH]: {
     [Chain.Mainnet]: '0xd9a442856c234a39a81a089c06451ebaa4306a72',
     [Chain.Holesky]: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
+    [Chain.Soneium]: '0x6c460b2c6D6719562D5dA43E5152B375e79B9A8B',
+    [Chain.Arbitrum]: '0x37D6382B6889cCeF8d6871A8b60E667115eDDBcF',
+  },
+  [Token.xPufETH]: {
+    [Chain.Base]: '0x23dA5F2d509cb43A59d43C108a43eDf34510eff1',
+    [Chain.Bsc]: '0x64274835D88F5c0215da8AADd9A5f2D2A2569381',
+    [Chain.ApeChain]: '0x6234E5ef39B12EFdFcbd99dd7F452F27F3fEAE3b',
   },
   [Token.WBTC]: {
     [Chain.Mainnet]: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
@@ -183,6 +191,7 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.ALT]: '1',
   [Token.pufETHwstE]: 'v7.0.0',
   [Token.pufETH]: '1',
+  [Token.xPufETH]: '1',
   [Token.WBTC]: '',
   [Token.LBTC]: '',
   [Token.tBTC]: '',
