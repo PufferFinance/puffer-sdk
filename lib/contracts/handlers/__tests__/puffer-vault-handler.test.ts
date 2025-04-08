@@ -19,6 +19,19 @@ describe('PufferVaultHandler', () => {
     handler = new PufferVaultHandler(Chain.Holesky, walletClient, publicClient);
   });
 
+  it('should deposit tokens', async () => {
+    const mockGas = 1n;
+    const mockTxHash = '0x123';
+
+    testingUtils.lowLevel.mockRequest('eth_sendTransaction', mockTxHash);
+    testingUtils.lowLevel.mockRequest('eth_estimateGas', toHex(mockGas));
+
+    const { transact, estimate } = handler.deposit(mockAccount, 1n);
+
+    expect(await transact()).toBe(mockTxHash);
+    expect(await estimate()).toBe(mockGas);
+  });
+
   it('should deposit ETH', async () => {
     const mockGas = 1n;
     const mockTxHash = '0x123';
