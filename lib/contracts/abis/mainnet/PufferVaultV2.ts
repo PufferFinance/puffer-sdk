@@ -1,6 +1,30 @@
 export const PufferVaultV2 = <const>[
   {
     type: 'function',
+    name: 'deposit',
+    inputs: [
+      {
+        name: 'assets',
+        type: 'uint256',
+        internalType: 'uint256',
+      },
+      {
+        name: 'receiver',
+        type: 'address',
+        internalType: 'address',
+      },
+    ],
+    outputs: [
+      {
+        name: '',
+        type: 'uint256',
+        internalType: 'uint256',
+      },
+    ],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
     name: 'depositETH',
     inputs: [
       {

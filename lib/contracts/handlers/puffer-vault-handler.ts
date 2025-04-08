@@ -53,6 +53,33 @@ export class PufferVaultHandler {
   }
 
   /**
+   * Deposit tokens(e.g. WETH) in exchange for pufETH. This doesn't make the
+   * transaction but returns two methods namely `transact` and
+   * `estimate`.
+   *
+   * @param walletAddress Wallet address to get the tokens from.
+   * @param value Value of tokens to deposit.
+   * @returns `transact: (value: bigint) => Promise<Address>` -
+   *
+   * `estimate: () => Promise<bigint>` - Gas estimate of the
+   * transaction.
+   */
+  public deposit(walletAddress: Address, value: bigint) {
+    const transact = async () =>
+      await this.getContract().write.deposit([value, walletAddress], {
+        account: walletAddress,
+        chain: this.viemChain,
+      });
+
+    const estimate = async () =>
+      await this.getContract().estimateGas.deposit([value, walletAddress], {
+        account: walletAddress,
+      });
+
+    return { transact, estimate };
+  }
+
+  /**
    * Deposit ETH in exchange for pufETH. This doesn't make the
    * transaction but returns two methods namely `transact` and
    * `estimate`.
