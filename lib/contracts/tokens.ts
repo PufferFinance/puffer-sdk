@@ -21,6 +21,7 @@ export enum Token {
   pumpBTC = 'pumpBTC',
   SolvBTC = 'SolvBTC',
   PUFFER = 'PUFFER',
+  vePUFFER = 'vePUFFER',
   CARROT = 'CARROT',
   lvlUSD = 'lvlUSD',
   slvlUSD = 'slvlUSD',
@@ -131,6 +132,9 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x4d1c297d39c5c1277964d0e3f8aa901493664530',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
+  [Token.vePUFFER]: {
+    [Chain.Mainnet]: '0xA55eD5808aeCDF23AE3782C1443185f5D2363ce7',
+  },
   [Token.CARROT]: {
     [Chain.Mainnet]: '0x282a69142bac47855c3fbe1693fcc4ba3b4d5ed6',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
@@ -199,6 +203,7 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.pumpBTC]: '',
   [Token.SolvBTC]: '',
   [Token.PUFFER]: '1',
+  [Token.vePUFFER]: '1',
   [Token.CARROT]: '1',
   [Token.lvlUSD]: '1',
   [Token.slvlUSD]: '1',
