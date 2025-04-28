@@ -32,6 +32,7 @@
 | `slvlUSD` | `"slvlUSD"` |
 | `stETH` | `"stETH"` |
 | `tBTC` | `"tBTC"` |
+| `vePUFFER` | `"vePUFFER"` |
 | `wstETH` | `"wstETH"` |
 | `xPufETH` | `"xPufETH"` |
 
@@ -56,7 +57,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:41](https://github.com/PufferFinance/puffer-sdk/blob/2f4bffc24c0009ccc6176e967135f04f33a7fbfd/lib/contracts/tokens.ts#L41)
+[lib/contracts/tokens.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/abc759bacf8ed48d0b87dd025e4c84259b37520a/lib/contracts/tokens.ts#L42)
 
 ## Variables
 
@@ -66,7 +67,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/2f4bffc24c0009ccc6176e967135f04f33a7fbfd/lib/contracts/tokens.ts#L43)
+[lib/contracts/tokens.ts:44](https://github.com/PufferFinance/puffer-sdk/blob/abc759bacf8ed48d0b87dd025e4c84259b37520a/lib/contracts/tokens.ts#L44)
 
 ***
 
@@ -76,7 +77,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:174](https://github.com/PufferFinance/puffer-sdk/blob/2f4bffc24c0009ccc6176e967135f04f33a7fbfd/lib/contracts/tokens.ts#L174)
+[lib/contracts/tokens.ts:178](https://github.com/PufferFinance/puffer-sdk/blob/abc759bacf8ed48d0b87dd025e4c84259b37520a/lib/contracts/tokens.ts#L178)
 
 ***
 
@@ -86,4 +87,4 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:221](https://github.com/PufferFinance/puffer-sdk/blob/2f4bffc24c0009ccc6176e967135f04f33a7fbfd/lib/contracts/tokens.ts#L221)
+[lib/contracts/tokens.ts:226](https://github.com/PufferFinance/puffer-sdk/blob/abc759bacf8ed48d0b87dd025e4c84259b37520a/lib/contracts/tokens.ts#L226)
