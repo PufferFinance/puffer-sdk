@@ -1,5 +1,5 @@
 import { Chain } from '../chains/constants';
-import { UnifiToken } from './tokens';
+import { Token, UnifiToken } from './tokens';
 
 export const VAULTS_ADDRESSES = {
   [UnifiToken.unifiETH]: {
@@ -28,6 +28,11 @@ export const VAULTS_ADDRESSES = {
       NucleusBoringVault: '0x62a4ce0722ee65635c0f8339dd814d549b6f6735',
       NucleusAccountant: '0xa99a92c505ff92c543d9d48295f1f31024afb31f',
       NucleusTeller: '0xd049ebeaa59b75ba8ee38f9f6830db7293320236',
+    },
+  },
+  [Token.pufETH]: {
+    [Chain.Mainnet]: {
+      ConcreteMultiStrategyVault: '/0x78f314241df1ac151bfd0413eeb51979515f6abd',
     },
   },
 };
