@@ -30,7 +30,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-depositor-handler.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/abc759bacf8ed48d0b87dd025e4c84259b37520a/lib/contracts/handlers/puffer-depositor-handler.ts#L32)
+[lib/contracts/handlers/puffer-depositor-handler.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/b9c31353ab91f72b848aed9218b7e76d999078e7/lib/contracts/handlers/puffer-depositor-handler.ts#L32)
 
 #### Properties
 
@@ -87,7 +87,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-depositor-handler.ts:76](https://github.com/PufferFinance/puffer-sdk/blob/abc759bacf8ed48d0b87dd025e4c84259b37520a/lib/contracts/handlers/puffer-depositor-handler.ts#L76)
+[lib/contracts/handlers/puffer-depositor-handler.ts:76](https://github.com/PufferFinance/puffer-sdk/blob/b9c31353ab91f72b848aed9218b7e76d999078e7/lib/contracts/handlers/puffer-depositor-handler.ts#L76)
 
 ##### depositWstETH()
 
@@ -132,7 +132,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-depositor-handler.ts:120](https://github.com/PufferFinance/puffer-sdk/blob/abc759bacf8ed48d0b87dd025e4c84259b37520a/lib/contracts/handlers/puffer-depositor-handler.ts#L120)
+[lib/contracts/handlers/puffer-depositor-handler.ts:120](https://github.com/PufferFinance/puffer-sdk/blob/b9c31353ab91f72b848aed9218b7e76d999078e7/lib/contracts/handlers/puffer-depositor-handler.ts#L120)
 
 ##### getContract()
 
@@ -149,4 +149,4 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-depositor-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/abc759bacf8ed48d0b87dd025e4c84259b37520a/lib/contracts/handlers/puffer-depositor-handler.ts#L51)
+[lib/contracts/handlers/puffer-depositor-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/b9c31353ab91f72b848aed9218b7e76d999078e7/lib/contracts/handlers/puffer-depositor-handler.ts#L51)

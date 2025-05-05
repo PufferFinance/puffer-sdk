@@ -28,13 +28,14 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:73](https://github.com/PufferFinance/puffer-sdk/blob/abc759bacf8ed48d0b87dd025e4c84259b37520a/lib/api/puffer-client.ts#L73)
+[lib/api/puffer-client.ts:76](https://github.com/PufferFinance/puffer-sdk/blob/b9c31353ab91f72b848aed9218b7e76d999078e7/lib/api/puffer-client.ts#L76)
 
 #### Properties
 
 | Property | Modifier | Type | Description |
 | :------ | :------ | :------ | :------ |
 | `carrotStaker` | `public` | [`CarrotStakingHandler`](../contracts/handlers/carrot-staking-handler.md#carrotstakinghandler) | Handler for the `CarrotStaker` contract. |
+| `concreteVault` | `public` | [`ConcreteVaultHandler`](../contracts/handlers/concrete-vault-handler.md#concretevaulthandler) | Handler for the `ConcreteMultiStrategyVault` contract. |
 | `depositor` | `public` | [`PufferDepositorHandler`](../contracts/handlers/puffer-depositor-handler.md#pufferdepositorhandler) | Handler for the `PufferDepositor` contract. |
 | `distributor` | `public` | [`DistributorHandler`](../contracts/handlers/distributor-handler.md#distributorhandler) | Handler for the `Distributor` contract. |
 | `erc20Permit` | `public` | [`ERC20PermitHandler`](../contracts/handlers/erc20-permit-handler.md#erc20permithandler) | Handler for the `ERC20Permit` contract. |
@@ -68,4 +69,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/abc759bacf8ed48d0b87dd025e4c84259b37520a/lib/api/puffer-client.ts#L176)
+[lib/api/puffer-client.ts:184](https://github.com/PufferFinance/puffer-sdk/blob/b9c31353ab91f72b848aed9218b7e76d999078e7/lib/api/puffer-client.ts#L184)
