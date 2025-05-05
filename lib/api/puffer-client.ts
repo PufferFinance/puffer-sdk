@@ -21,6 +21,7 @@ import { NucleusAtomicQueueHandler } from '../contracts/handlers/nucleus-atomic-
 import { MtwCarrotHandler } from '../contracts/handlers/mtw-carrot-handler';
 import { CarrotStakingHandler } from '../contracts/handlers/carrot-staking-handler';
 import { DistributorHandler } from '../contracts/handlers/distributor-handler';
+import { ConcreteVaultHandler } from '../contracts/handlers/concrete-vault-handler';
 
 /**
  * The core class and the main entry point of the Puffer SDK.
@@ -60,6 +61,8 @@ export class PufferClient {
   public carrotStaker: CarrotStakingHandler;
   /** Handler for the `Distributor` contract. */
   public distributor: DistributorHandler;
+  /** Handler for the `ConcreteMultiStrategyVault` contract. */
+  public concreteVault: ConcreteVaultHandler;
 
   /**
    * Create the Puffer Client.
@@ -162,6 +165,11 @@ export class PufferClient {
       this.publicClient,
     );
     this.distributor = new DistributorHandler(
+      chain,
+      this.walletClient,
+      this.publicClient,
+    );
+    this.concreteVault = new ConcreteVaultHandler(
       chain,
       this.walletClient,
       this.publicClient,
