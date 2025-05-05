@@ -1,6 +1,8 @@
 import { Chain } from '../../../chains/constants';
 import { ConcreteVaultHandler } from '../concrete-vault-handler';
 import { Token } from '../../tokens';
+import { ConcreteMultiStrategyVault } from '../../abis/mainnet/ConcreteMultiStrategyVault';
+import { VAULTS_ADDRESSES } from '../../vaults-addresses';
 
 describe('ConcreteVaultHandler', () => {
   const mockWalletClient = {
@@ -10,6 +12,9 @@ describe('ConcreteVaultHandler', () => {
   const mockChain = Chain.Mainnet;
 
   const mockContract = {
+    address:
+      VAULTS_ADDRESSES[Token.pufETH][Chain.Mainnet].ConcreteMultiStrategyVault,
+    abi: ConcreteMultiStrategyVault,
     read: {
       allowance: jest.fn(),
       balanceOf: jest.fn(),
@@ -49,6 +54,25 @@ describe('ConcreteVaultHandler', () => {
       const result = handler.withToken(Token.pufETH);
       expect(result).toBe(handler);
       expect(handler['token']).toBe(Token.pufETH);
+    });
+  });
+
+  describe('getContract', () => {
+    it('should return the contract with correct configuration', () => {
+      const handler = new ConcreteVaultHandler(
+        mockChain,
+        mockWalletClient as any,
+        mockPublicClient as any,
+      );
+      const result = handler.getContract();
+
+      expect(result.address).toBe(
+        VAULTS_ADDRESSES[Token.pufETH][Chain.Mainnet]
+          .ConcreteMultiStrategyVault,
+      );
+      expect(result.abi).toBe(ConcreteMultiStrategyVault);
+      expect(result.read).toBeDefined();
+      expect(result.write).toBeDefined();
     });
   });
 
