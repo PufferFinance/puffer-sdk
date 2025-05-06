@@ -32,7 +32,7 @@ export const VAULTS_ADDRESSES = {
   },
   [Token.pufETH]: {
     [Chain.Mainnet]: {
-      ConcreteMultiStrategyVault: '/0x78f314241df1ac151bfd0413eeb51979515f6abd',
+      ConcreteMultiStrategyVault: '0x78f314241df1ac151bfd0413eeb51979515f6abd',
     },
   },
 };
