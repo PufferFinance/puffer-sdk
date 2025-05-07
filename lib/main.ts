@@ -3,6 +3,7 @@ export * from './api/puffer-client-helpers';
 export * from './chains/constants';
 export * from './contracts/tokens';
 export * from './contracts/addresses';
+export * from './contracts/vaults-addresses';
 export * from './contracts/handlers/erc20-permit-handler';
 export * from './contracts/handlers/l1-reward-manager-handler';
 export * from './contracts/handlers/l2-reward-manager-handler';
