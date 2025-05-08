@@ -100,6 +100,7 @@ export const TOKENS_ADDRESSES: {
     [Chain.Arbitrum]: '0x37D6382B6889cCeF8d6871A8b60E667115eDDBcF',
   },
   [Token.xPufETH]: {
+    [Chain.Mainnet]: '0xD7D2802f6b19843ac4DfE25022771FD83b5A7464',
     [Chain.Base]: '0x23dA5F2d509cb43A59d43C108a43eDf34510eff1',
     [Chain.Bsc]: '0x64274835D88F5c0215da8AADd9A5f2D2A2569381',
     [Chain.ApeChain]: '0x6234E5ef39B12EFdFcbd99dd7F452F27F3fEAE3b',
