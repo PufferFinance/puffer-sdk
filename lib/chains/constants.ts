@@ -11,6 +11,7 @@ import {
   optimismSepolia,
   baseSepolia,
   zircuit,
+  berachain,
 } from 'viem/chains';
 
 export enum Chain {
@@ -25,6 +26,7 @@ export enum Chain {
   OptimismSepolia = optimismSepolia.id,
   BaseSepolia = baseSepolia.id,
   Zircuit = zircuit.id,
+  Berachain = berachain.id,
 }
 
 export const VIEM_CHAINS: { [key in Chain]: ViemChain } = {
@@ -39,6 +41,7 @@ export const VIEM_CHAINS: { [key in Chain]: ViemChain } = {
   [Chain.OptimismSepolia]: optimismSepolia,
   [Chain.BaseSepolia]: baseSepolia,
   [Chain.Zircuit]: zircuit,
+  [Chain.Berachain]: berachain,
 };
 
 export { type ViemChain };
