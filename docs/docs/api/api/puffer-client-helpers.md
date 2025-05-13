@@ -39,7 +39,7 @@ The public client created with viem.
 
 ###### Source
 
-[lib/api/puffer-client-helpers.ts:33](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/api/puffer-client-helpers.ts#L33)
+[lib/api/puffer-client-helpers.ts:33](https://github.com/PufferFinance/puffer-sdk/blob/b473b6799040e5b8af4d82bc901b4d9332c1d211/lib/api/puffer-client-helpers.ts#L33)
 
 ##### createWalletClient()
 
@@ -62,7 +62,7 @@ The wallet client created with viem.
 
 ###### Source
 
-[lib/api/puffer-client-helpers.ts:47](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/api/puffer-client-helpers.ts#L47)
+[lib/api/puffer-client-helpers.ts:47](https://github.com/PufferFinance/puffer-sdk/blob/b473b6799040e5b8af4d82bc901b4d9332c1d211/lib/api/puffer-client-helpers.ts#L47)
 
 ##### extractTransportConfig()
 
@@ -80,7 +80,7 @@ The wallet client created with viem.
 
 ###### Source
 
-[lib/api/puffer-client-helpers.ts:54](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/api/puffer-client-helpers.ts#L54)
+[lib/api/puffer-client-helpers.ts:54](https://github.com/PufferFinance/puffer-sdk/blob/b473b6799040e5b8af4d82bc901b4d9332c1d211/lib/api/puffer-client-helpers.ts#L54)
 
 ## Type Aliases
 
@@ -96,4 +96,4 @@ The wallet client created with viem.
 
 #### Source
 
-[lib/api/puffer-client-helpers.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/api/puffer-client-helpers.ts#L15)
+[lib/api/puffer-client-helpers.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/b473b6799040e5b8af4d82bc901b4d9332c1d211/lib/api/puffer-client-helpers.ts#L15)
