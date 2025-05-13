@@ -29,7 +29,7 @@ Create the handler for processing UniFi tokens.
 
 ###### Source
 
-[lib/contracts/handlers/concrete-vault-handler.ts:34](https://github.com/PufferFinance/puffer-sdk/blob/ffbb31200179ce3d38953a8f9042fee9aa2a784a/lib/contracts/handlers/concrete-vault-handler.ts#L34)
+[lib/contracts/handlers/concrete-vault-handler.ts:34](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/contracts/handlers/concrete-vault-handler.ts#L34)
 
 #### Properties
 
@@ -64,7 +64,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/concrete-vault-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/ffbb31200179ce3d38953a8f9042fee9aa2a784a/lib/contracts/handlers/concrete-vault-handler.ts#L80)
+[lib/contracts/handlers/concrete-vault-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/contracts/handlers/concrete-vault-handler.ts#L80)
 
 ##### deposit()
 
@@ -86,7 +86,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/concrete-vault-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/ffbb31200179ce3d38953a8f9042fee9aa2a784a/lib/contracts/handlers/concrete-vault-handler.ts#L123)
+[lib/contracts/handlers/concrete-vault-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/contracts/handlers/concrete-vault-handler.ts#L123)
 
 ##### getAllowance()
 
@@ -109,7 +109,7 @@ The allowance.
 
 ###### Source
 
-[lib/contracts/handlers/concrete-vault-handler.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/ffbb31200179ce3d38953a8f9042fee9aa2a784a/lib/contracts/handlers/concrete-vault-handler.ts#L94)
+[lib/contracts/handlers/concrete-vault-handler.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/contracts/handlers/concrete-vault-handler.ts#L94)
 
 ##### getBalance()
 
@@ -131,7 +131,7 @@ The balance.
 
 ###### Source
 
-[lib/contracts/handlers/concrete-vault-handler.ts:104](https://github.com/PufferFinance/puffer-sdk/blob/ffbb31200179ce3d38953a8f9042fee9aa2a784a/lib/contracts/handlers/concrete-vault-handler.ts#L104)
+[lib/contracts/handlers/concrete-vault-handler.ts:104](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/contracts/handlers/concrete-vault-handler.ts#L104)
 
 ##### getContract()
 
@@ -147,7 +147,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/concrete-vault-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/ffbb31200179ce3d38953a8f9042fee9aa2a784a/lib/contracts/handlers/concrete-vault-handler.ts#L60)
+[lib/contracts/handlers/concrete-vault-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/contracts/handlers/concrete-vault-handler.ts#L60)
 
 ##### getTotalSupply()
 
@@ -163,7 +163,7 @@ The total supply.
 
 ###### Source
 
-[lib/contracts/handlers/concrete-vault-handler.ts:113](https://github.com/PufferFinance/puffer-sdk/blob/ffbb31200179ce3d38953a8f9042fee9aa2a784a/lib/contracts/handlers/concrete-vault-handler.ts#L113)
+[lib/contracts/handlers/concrete-vault-handler.ts:113](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/contracts/handlers/concrete-vault-handler.ts#L113)
 
 ##### previewDeposit()
 
@@ -185,7 +185,7 @@ The preview.
 
 ###### Source
 
-[lib/contracts/handlers/concrete-vault-handler.ts:149](https://github.com/PufferFinance/puffer-sdk/blob/ffbb31200179ce3d38953a8f9042fee9aa2a784a/lib/contracts/handlers/concrete-vault-handler.ts#L149)
+[lib/contracts/handlers/concrete-vault-handler.ts:149](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/contracts/handlers/concrete-vault-handler.ts#L149)
 
 ##### previewWithdraw()
 
@@ -207,7 +207,7 @@ The preview.
 
 ###### Source
 
-[lib/contracts/handlers/concrete-vault-handler.ts:159](https://github.com/PufferFinance/puffer-sdk/blob/ffbb31200179ce3d38953a8f9042fee9aa2a784a/lib/contracts/handlers/concrete-vault-handler.ts#L159)
+[lib/contracts/handlers/concrete-vault-handler.ts:159](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/contracts/handlers/concrete-vault-handler.ts#L159)
 
 ##### withToken()
 
@@ -230,7 +230,7 @@ The handler.
 
 ###### Source
 
-[lib/contracts/handlers/concrete-vault-handler.ts:50](https://github.com/PufferFinance/puffer-sdk/blob/ffbb31200179ce3d38953a8f9042fee9aa2a784a/lib/contracts/handlers/concrete-vault-handler.ts#L50)
+[lib/contracts/handlers/concrete-vault-handler.ts:50](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/contracts/handlers/concrete-vault-handler.ts#L50)
 
 ##### withdraw()
 
@@ -252,4 +252,4 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/concrete-vault-handler.ts:136](https://github.com/PufferFinance/puffer-sdk/blob/ffbb31200179ce3d38953a8f9042fee9aa2a784a/lib/contracts/handlers/concrete-vault-handler.ts#L136)
+[lib/contracts/handlers/concrete-vault-handler.ts:136](https://github.com/PufferFinance/puffer-sdk/blob/993b2d21b02d3a98164ddef83586b785b9cd549f/lib/contracts/handlers/concrete-vault-handler.ts#L136)
