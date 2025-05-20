@@ -204,6 +204,7 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.pufETHwstE]: 'v7.0.0',
   [Token.pufETH]: '1',
   [Token.xPufETH]: '1',
+  [Token.ctTACpufETH]: '',
   [Token.WBTC]: '',
   [Token.LBTC]: '',
   [Token.tBTC]: '',
