@@ -18,4 +18,4 @@
 
 #### Source
 
-[lib/errors/types.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/0ca2b2f97faa5e1d10a95d72d7d780e7c6ce957b/lib/errors/types.ts#L1)
+[lib/errors/types.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/e2b72bf4bfc4848e2d2cb232e4eef09072a65670/lib/errors/types.ts#L1)
