@@ -14,6 +14,7 @@ export enum Token {
   pufETHwstE = 'pufETHwstE',
   pufETH = 'pufETH',
   xPufETH = 'xPufETH',
+  ctTACpufETH = 'ctTACpufETH',
   WBTC = 'WBTC',
   LBTC = 'LBTC',
   tBTC = 'tBTC',
@@ -106,6 +107,10 @@ export const TOKENS_ADDRESSES: {
     [Chain.Bsc]: '0x64274835D88F5c0215da8AADd9A5f2D2A2569381',
     [Chain.ApeChain]: '0x6234E5ef39B12EFdFcbd99dd7F452F27F3fEAE3b',
     [Chain.Zircuit]: '0x9346A5043C590133FE900aec643D9622EDddBA57',
+  },
+  [Token.ctTACpufETH]: {
+    [Chain.Mainnet]: '0x78f314241df1ac151bfd0413eeb51979515f6abd',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
   [Token.WBTC]: {
     [Chain.Mainnet]: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
