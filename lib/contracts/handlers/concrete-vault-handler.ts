@@ -12,7 +12,7 @@ import { Token } from '../tokens';
 import { VAULTS_ADDRESSES } from '../vaults-addresses';
 
 type VaultAddresses = typeof VAULTS_ADDRESSES;
-type PufETHVault = VaultAddresses[Token.pufETH][Chain.Mainnet];
+type PufETHVault = VaultAddresses[Token.ctTACpufETH][Chain.Mainnet];
 
 /**
  * Handler for the `ConcreteMultStrategyVault` contract for a given token (pufETH) exposing
@@ -20,7 +20,7 @@ type PufETHVault = VaultAddresses[Token.pufETH][Chain.Mainnet];
  */
 export class ConcreteVaultHandler {
   private viemChain: ViemChain;
-  private token: Token.pufETH;
+  private token: Token.ctTACpufETH;
 
   /**
    * Create the handler for processing UniFi tokens.
@@ -37,7 +37,7 @@ export class ConcreteVaultHandler {
     private publicClient: PublicClient,
   ) {
     this.viemChain = VIEM_CHAINS[chain];
-    this.token = Token.pufETH;
+    this.token = Token.ctTACpufETH;
   }
 
   /**
@@ -47,7 +47,7 @@ export class ConcreteVaultHandler {
    * @param token UniFi token to use for the handler.
    * @returns The handler.
    */
-  public withToken(token: Token.pufETH) {
+  public withToken(token: Token.ctTACpufETH) {
     this.token = token;
     return this;
   }

@@ -30,7 +30,7 @@ export const VAULTS_ADDRESSES = {
       NucleusTeller: '0xd049ebeaa59b75ba8ee38f9f6830db7293320236',
     },
   },
-  [Token.pufETH]: {
+  [Token.ctTACpufETH]: {
     [Chain.Mainnet]: {
       ConcreteMultiStrategyVault: '0x78f314241df1ac151bfd0413eeb51979515f6abd',
     },

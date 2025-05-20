@@ -13,7 +13,8 @@ describe('ConcreteVaultHandler', () => {
 
   const mockContract = {
     address:
-      VAULTS_ADDRESSES[Token.pufETH][Chain.Mainnet].ConcreteMultiStrategyVault,
+      VAULTS_ADDRESSES[Token.ctTACpufETH][Chain.Mainnet]
+        .ConcreteMultiStrategyVault,
     abi: ConcreteMultiStrategyVault,
     read: {
       allowance: jest.fn(),
@@ -40,7 +41,7 @@ describe('ConcreteVaultHandler', () => {
         mockWalletClient as any,
         mockPublicClient as any,
       );
-      expect(handler['token']).toBe(Token.pufETH);
+      expect(handler['token']).toBe(Token.ctTACpufETH);
     });
   });
 
@@ -51,9 +52,9 @@ describe('ConcreteVaultHandler', () => {
         mockWalletClient as any,
         mockPublicClient as any,
       );
-      const result = handler.withToken(Token.pufETH);
+      const result = handler.withToken(Token.ctTACpufETH);
       expect(result).toBe(handler);
-      expect(handler['token']).toBe(Token.pufETH);
+      expect(handler['token']).toBe(Token.ctTACpufETH);
     });
   });
 
@@ -67,7 +68,7 @@ describe('ConcreteVaultHandler', () => {
       const result = handler.getContract();
 
       expect(result.address).toBe(
-        VAULTS_ADDRESSES[Token.pufETH][Chain.Mainnet]
+        VAULTS_ADDRESSES[Token.ctTACpufETH][Chain.Mainnet]
           .ConcreteMultiStrategyVault,
       );
       expect(result.abi).toBe(ConcreteMultiStrategyVault);
