@@ -159,4 +159,17 @@ export class ConcreteVaultHandler {
   public previewWithdraw(amount: bigint) {
     return this.getContract().read.previewWithdraw([amount]);
   }
+
+  /**
+   * Provides a preview of the amount of assets that would be redeemed
+   * for a specific number of shares, after withdrawal fees. Subtracts
+   * the withdrawal fee from the share amount to determine the net
+   * shares for asset conversion.
+   *
+   * @param amount The amount to redeem.
+   * @returns The preview.
+   */
+  public previewRedeem(amount: bigint) {
+    return this.getContract().read.previewRedeem([amount]);
+  }
 }

@@ -186,6 +186,13 @@ export const ConcreteMultiStrategyVault = <const>[
     type: 'function',
   },
   {
+    inputs: [{ internalType: 'uint256', name: 'shares_', type: 'uint256' }],
+    name: 'previewRedeem',
+    outputs: [{ internalType: 'uint256', name: 'assets', type: 'uint256' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
     inputs: [],
     name: 'totalSupply',
     outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
