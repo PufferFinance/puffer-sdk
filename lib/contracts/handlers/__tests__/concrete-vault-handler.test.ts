@@ -22,6 +22,7 @@ describe('ConcreteVaultHandler', () => {
       totalSupply: jest.fn(),
       previewDeposit: jest.fn(),
       previewWithdraw: jest.fn(),
+      previewRedeem: jest.fn(),
     },
     write: {
       approve: jest.fn(),
@@ -218,6 +219,22 @@ describe('ConcreteVaultHandler', () => {
       await handler.previewWithdraw(amount);
 
       expect(mockContract.read.previewWithdraw).toHaveBeenCalledWith([amount]);
+    });
+  });
+
+  describe('previewRedeem', () => {
+    it('should call contract previewRedeem with correct parameters', async () => {
+      const handler = new ConcreteVaultHandler(
+        mockChain,
+        mockWalletClient as any,
+        mockPublicClient as any,
+      );
+      handler['getContract'] = jest.fn().mockReturnValue(mockContract);
+
+      const amount = 1000n;
+      await handler.previewRedeem(amount);
+
+      expect(mockContract.read.previewRedeem).toHaveBeenCalledWith([amount]);
     });
   });
 });
