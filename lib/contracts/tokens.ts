@@ -215,7 +215,9 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.vePUFFER]: '1',
   [Token.CARROT]: '1',
   [Token.lvlUSD]: '1',
-  [Token.slvlUSD]: '1',
+  // `slvlUSD` supports permit but the transactions are reverting now
+  // for some reason.
+  [Token.slvlUSD]: '',
   [Token.mtwCARROT]: '',
   [Token.sCARROT]: '',
   [Token.LINK]: '',
