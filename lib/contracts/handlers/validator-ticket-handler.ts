@@ -64,12 +64,14 @@ export class ValidatorTicketHandler {
    * Purchase validator ticket with ETH.
    *
    * @param recipient The recipient of the validator ticket.
+   * @param payableAmount The amount of ETH to send with the transaction.
    * @returns The transaction.
    */
-  public purchaseValidatorTicket(recipient: Address) {
+  public purchaseValidatorTicket(recipient: Address, payableAmount: bigint) {
     return this.getContract().write.purchaseValidatorTicket([recipient], {
       account: this.walletClient.account as Account,
       chain: this.viemChain,
+      value: payableAmount,
     });
   }
 
