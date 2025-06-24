@@ -18,6 +18,7 @@ export const CONTRACT_ADDRESSES = {
     NucleusAtomicQueue: '0x228c44bb4885c6633f4b6c83f14622f37d5112e5',
     CarrotStaker: '0x99c599227c65132822f0290d9e5b4b0430d6c0d6',
     Distributor: '0x3Ef3D8bA38EBe18DB133cEc108f4D14CE00Dd9Ae',
+    ValidatorTicket: '0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A',
   },
   [Chain.Holesky as number]: {
     PufferVault: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
@@ -27,6 +28,7 @@ export const CONTRACT_ADDRESSES = {
     L1RewardManager: '0x10f970bcb84B82B82a65eBCbF45F26dD26D69F12',
     L2RewardManager: '0x58C046794f69A8830b0BE737022a45b4acd01dE5',
     PufferWithdrawalManager: '0x5A3E1069B66800c0ecbc91bd81b1AE4D1804DBc4',
+    ValidatorTicket: '0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A',
   },
   [Chain.Base as number]: {
     L2RewardManager: '0xF9Dd335bF363b2E4ecFe3c94A86EBD7Dd3Dcf0e7',
