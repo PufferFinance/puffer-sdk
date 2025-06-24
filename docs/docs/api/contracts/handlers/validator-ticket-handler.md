@@ -30,7 +30,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:38](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L38)
+[lib/contracts/handlers/validator-ticket-handler.ts:38](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L38)
 
 #### Properties
 
@@ -64,7 +64,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:125](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L125)
+[lib/contracts/handlers/validator-ticket-handler.ts:127](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L127)
 
 ##### burn()
 
@@ -86,7 +86,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:168](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L168)
+[lib/contracts/handlers/validator-ticket-handler.ts:170](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L170)
 
 ##### getAllowance()
 
@@ -109,7 +109,7 @@ The allowance.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:139](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L139)
+[lib/contracts/handlers/validator-ticket-handler.ts:141](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L141)
 
 ##### getBalance()
 
@@ -131,7 +131,7 @@ The balance.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:149](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L149)
+[lib/contracts/handlers/validator-ticket-handler.ts:151](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L151)
 
 ##### getContract()
 
@@ -147,7 +147,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L51)
+[lib/contracts/handlers/validator-ticket-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L51)
 
 ##### getDecimals()
 
@@ -163,7 +163,7 @@ The token decimals.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:303](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L303)
+[lib/contracts/handlers/validator-ticket-handler.ts:305](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L305)
 
 ##### getDomainSeparator()
 
@@ -179,7 +179,7 @@ The domain separator.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:227](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L227)
+[lib/contracts/handlers/validator-ticket-handler.ts:229](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L229)
 
 ##### getEip712Domain()
 
@@ -195,7 +195,7 @@ The EIP-712 domain information.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:276](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L276)
+[lib/contracts/handlers/validator-ticket-handler.ts:278](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L278)
 
 ##### getGuardiansFeeRate()
 
@@ -211,7 +211,7 @@ The guardians fee rate.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:209](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L209)
+[lib/contracts/handlers/validator-ticket-handler.ts:211](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L211)
 
 ##### getName()
 
@@ -227,7 +227,7 @@ The token name.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:285](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L285)
+[lib/contracts/handlers/validator-ticket-handler.ts:287](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L287)
 
 ##### getNonce()
 
@@ -249,7 +249,7 @@ The nonce.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:237](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L237)
+[lib/contracts/handlers/validator-ticket-handler.ts:239](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L239)
 
 ##### getProtocolFeeRate()
 
@@ -265,7 +265,7 @@ The protocol fee rate.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:218](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L218)
+[lib/contracts/handlers/validator-ticket-handler.ts:220](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L220)
 
 ##### getSymbol()
 
@@ -281,7 +281,7 @@ The token symbol.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:294](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L294)
+[lib/contracts/handlers/validator-ticket-handler.ts:296](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L296)
 
 ##### getTotalSupply()
 
@@ -297,7 +297,7 @@ The total supply.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:158](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L158)
+[lib/contracts/handlers/validator-ticket-handler.ts:160](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L160)
 
 ##### permit()
 
@@ -325,11 +325,11 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:253](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L253)
+[lib/contracts/handlers/validator-ticket-handler.ts:255](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L255)
 
 ##### purchaseValidatorTicket()
 
-> **purchaseValidatorTicket**(`recipient`): `Promise`\<\`0x$\{string\}\`\>
+> **purchaseValidatorTicket**(`recipient`, `payableAmount`): `Promise`\<\`0x$\{string\}\`\>
 
 Purchase validator ticket with ETH.
 
@@ -338,6 +338,7 @@ Purchase validator ticket with ETH.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `recipient` | \`0x$\{string\}\` | The recipient of the validator ticket. |
+| `payableAmount` | `bigint` | The amount of ETH to send with the transaction. |
 
 ###### Returns
 
@@ -347,7 +348,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:69](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L69)
+[lib/contracts/handlers/validator-ticket-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L70)
 
 ##### purchaseValidatorTicketWithPufETH()
 
@@ -370,7 +371,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:83](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L83)
+[lib/contracts/handlers/validator-ticket-handler.ts:85](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L85)
 
 ##### purchaseValidatorTicketWithPufETHAndPermit()
 
@@ -394,7 +395,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:104](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L104)
+[lib/contracts/handlers/validator-ticket-handler.ts:106](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L106)
 
 ##### transfer()
 
@@ -417,7 +418,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:182](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L182)
+[lib/contracts/handlers/validator-ticket-handler.ts:184](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L184)
 
 ##### transferFrom()
 
@@ -441,7 +442,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:197](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L197)
+[lib/contracts/handlers/validator-ticket-handler.ts:199](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L199)
 
 ## Type Aliases
 
@@ -473,4 +474,4 @@ The transaction.
 
 #### Source
 
-[lib/contracts/handlers/validator-ticket-handler.ts:13](https://github.com/PufferFinance/puffer-sdk/blob/3f3ba7627ef32070bead552f035d39402d2d9c1b/lib/contracts/handlers/validator-ticket-handler.ts#L13)
+[lib/contracts/handlers/validator-ticket-handler.ts:13](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/contracts/handlers/validator-ticket-handler.ts#L13)
