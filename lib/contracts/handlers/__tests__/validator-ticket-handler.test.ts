@@ -82,13 +82,15 @@ describe('ValidatorTicketHandler', () => {
       handler['getContract'] = jest.fn().mockReturnValue(mockContract);
 
       const recipient = '0x456';
-      await handler.purchaseValidatorTicket(recipient);
+      const payableAmount = 1000000000000000000n; // 1 ETH
+      await handler.purchaseValidatorTicket(recipient, payableAmount);
 
       expect(mockContract.write.purchaseValidatorTicket).toHaveBeenCalledWith(
         [recipient],
         {
           account: mockWalletClient.account,
           chain: expect.any(Object),
+          value: payableAmount,
         },
       );
     });
