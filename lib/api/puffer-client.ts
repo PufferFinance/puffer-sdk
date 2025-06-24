@@ -22,6 +22,7 @@ import { MtwCarrotHandler } from '../contracts/handlers/mtw-carrot-handler';
 import { CarrotStakingHandler } from '../contracts/handlers/carrot-staking-handler';
 import { DistributorHandler } from '../contracts/handlers/distributor-handler';
 import { ConcreteVaultHandler } from '../contracts/handlers/concrete-vault-handler';
+import { ValidatorTicketHandler } from '../contracts/handlers/validator-ticket-handler';
 
 /**
  * The core class and the main entry point of the Puffer SDK.
@@ -63,6 +64,8 @@ export class PufferClient {
   public distributor: DistributorHandler;
   /** Handler for the `ConcreteMultiStrategyVault` contract. */
   public concreteVault: ConcreteVaultHandler;
+  /** Handler for the `ValidatorTicket` contract. */
+  public validatorTicket: ValidatorTicketHandler;
 
   /**
    * Create the Puffer Client.
@@ -170,6 +173,11 @@ export class PufferClient {
       this.publicClient,
     );
     this.concreteVault = new ConcreteVaultHandler(
+      chain,
+      this.walletClient,
+      this.publicClient,
+    );
+    this.validatorTicket = new ValidatorTicketHandler(
       chain,
       this.walletClient,
       this.publicClient,
