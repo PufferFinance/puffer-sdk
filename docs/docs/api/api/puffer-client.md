@@ -28,7 +28,7 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/api/puffer-client.ts#L79)
+[lib/api/puffer-client.ts:82](https://github.com/PufferFinance/puffer-sdk/blob/a99d16a4c81c9790bc5d674be8b4ae73da6c9ab6/lib/api/puffer-client.ts#L82)
 
 #### Properties
 
@@ -49,6 +49,7 @@ Create the Puffer Client.
 | `nucleusTeller` | `public` | [`NucleusTellerHandler`](../contracts/handlers/nucleus-teller-handler.md#nucleustellerhandler) | Handler for the `NucleusTeller` contract. |
 | `publicClient` | `private` | `object` | - |
 | `pufLocker` | `public` | [`PufLockerHandler`](../contracts/handlers/puf-locker-handler.md#puflockerhandler) | Handler for the `PufLocker` contract. |
+| `pufferOracleV2` | `public` | [`PufferOracleV2Handler`](../contracts/handlers/puffer-oracle-v2-handler.md#pufferoraclev2handler) | Handler for the `PufferOracleV2` contract. |
 | `pufferWithdrawalManager` | `public` | [`PufferWithdrawalManagerHandler`](../contracts/handlers/puffer-withdrawal-manager-handler.md#pufferwithdrawalmanagerhandler) | Handler for the `PufferWithdrawalManager` contract. |
 | `validatorTicket` | `public` | [`ValidatorTicketHandler`](../contracts/handlers/validator-ticket-handler.md#validatortickethandler) | Handler for the `ValidatorTicket` contract. |
 | `vault` | `public` | [`PufferVaultHandler`](../contracts/handlers/puffer-vault-handler.md#puffervaulthandler) | Handler for the `PufferVaultV2` contract. |
@@ -70,4 +71,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:192](https://github.com/PufferFinance/puffer-sdk/blob/407a7c82d329677a5ea4cbd1d2397bf7d6b83b8c/lib/api/puffer-client.ts#L192)
+[lib/api/puffer-client.ts:200](https://github.com/PufferFinance/puffer-sdk/blob/a99d16a4c81c9790bc5d674be8b4ae73da6c9ab6/lib/api/puffer-client.ts#L200)
