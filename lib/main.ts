@@ -15,3 +15,4 @@ export * from './contracts/handlers/puffer-withdrawal-manager-handler';
 export * from './contracts/handlers/distributor-handler';
 export * from './contracts/handlers/concrete-vault-handler';
 export * from './contracts/handlers/validator-ticket-handler';
+export * from './contracts/handlers/puffer-oracle-v2-handler';
