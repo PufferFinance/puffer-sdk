@@ -30,6 +30,7 @@ export enum Token {
   sCARROT = 'sCARROT',
   LINK = 'LINK',
   TEST = 'TEST',
+  VT = 'VT',
 }
 
 export enum UnifiToken {
@@ -45,6 +46,10 @@ export type AnyToken = Token | UnifiToken;
 export const TOKENS_ADDRESSES: {
   [key in AnyToken]: { [chain in Chain]: Address };
 } = {
+  [Token.VT]: {
+    [Chain.Mainnet]: '0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A',
+    [Chain.Holesky]: '0xB028194785178a94Fe608994A4d5AD84c285A640',
+  },
   [Token.TEST]: {
     [Chain.Sepolia]: '0xd26e3540a0a368845b234736a0700e0a5a821bba',
     [Chain.OptimismSepolia]: '0x7Fa13D6CB44164ea09dF8BCc673A8849092D435b',
@@ -222,6 +227,7 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.sCARROT]: '',
   [Token.LINK]: '',
   [Token.TEST]: '',
+  [Token.VT]: '',
 
   // UniFi Tokens
   // https://etherscan.io/address/0x196ead472583bc1e9af7a05f860d9857e1bd3dcc#code#F7#L172
