@@ -18,6 +18,7 @@
 | `TEST` | `"TEST"` |
 | `USDC` | `"USDC"` |
 | `USDT` | `"USDT"` |
+| `VT` | `"VT"` |
 | `WBTC` | `"WBTC"` |
 | `WETH` | `"WETH"` |
 | `cbBTC` | `"cbBTC"` |
@@ -58,7 +59,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/8cd293b6144cbed8dff4ec3dab0566e7c809d098/lib/contracts/tokens.ts#L43)
+[lib/contracts/tokens.ts:44](https://github.com/PufferFinance/puffer-sdk/blob/a9993be944ac446b4d1c31dcacdd83bc080f187a/lib/contracts/tokens.ts#L44)
 
 ## Variables
 
@@ -68,7 +69,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/8cd293b6144cbed8dff4ec3dab0566e7c809d098/lib/contracts/tokens.ts#L45)
+[lib/contracts/tokens.ts:46](https://github.com/PufferFinance/puffer-sdk/blob/a9993be944ac446b4d1c31dcacdd83bc080f187a/lib/contracts/tokens.ts#L46)
 
 ***
 
@@ -78,7 +79,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:186](https://github.com/PufferFinance/puffer-sdk/blob/8cd293b6144cbed8dff4ec3dab0566e7c809d098/lib/contracts/tokens.ts#L186)
+[lib/contracts/tokens.ts:191](https://github.com/PufferFinance/puffer-sdk/blob/a9993be944ac446b4d1c31dcacdd83bc080f187a/lib/contracts/tokens.ts#L191)
 
 ***
 
@@ -88,4 +89,4 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:237](https://github.com/PufferFinance/puffer-sdk/blob/8cd293b6144cbed8dff4ec3dab0566e7c809d098/lib/contracts/tokens.ts#L237)
+[lib/contracts/tokens.ts:243](https://github.com/PufferFinance/puffer-sdk/blob/a9993be944ac446b4d1c31dcacdd83bc080f187a/lib/contracts/tokens.ts#L243)
