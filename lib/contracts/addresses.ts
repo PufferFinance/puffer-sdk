@@ -21,6 +21,7 @@ export const CONTRACT_ADDRESSES = {
     ValidatorTicket: '0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A',
     PufferOracleV2: '0x0BE2aE0edbeBb517541DF217EF0074FC9a9e994f',
     PufferProtocol: '0xf7b6B32492c2e13799D921E84202450131bd238B',
+    GuardianModule: '0x628b183F248a142A598AA2dcCCD6f7E480a7CcF2',
   },
   [Chain.Holesky as number]: {
     PufferVault: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
@@ -33,6 +34,7 @@ export const CONTRACT_ADDRESSES = {
     ValidatorTicket: '0xB028194785178a94Fe608994A4d5AD84c285A640',
     PufferOracleV2: '0x8e043ed3f06720615685d4978770cd5c8fe90fe3',
     PufferProtocol: '0xE00c79408B9De5BaD2FDEbB1688997a68eC988CD',
+    GuardianModule: '0x0910310130d1c062def8b807528bdac80203bc66',
   },
   [Chain.Base as number]: {
     L2RewardManager: '0xF9Dd335bF363b2E4ecFe3c94A86EBD7Dd3Dcf0e7',
