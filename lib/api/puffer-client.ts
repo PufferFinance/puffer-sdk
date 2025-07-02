@@ -25,6 +25,7 @@ import { ConcreteVaultHandler } from '../contracts/handlers/concrete-vault-handl
 import { ValidatorTicketHandler } from '../contracts/handlers/validator-ticket-handler';
 import { PufferOracleV2Handler } from '../contracts/handlers/puffer-oracle-v2-handler';
 import { PufferProtocolHandler } from '../contracts/handlers/puffer-protocol-handler';
+import { GuardianModuleHandler } from '../contracts/handlers/guardian-module-handler';
 
 /**
  * The core class and the main entry point of the Puffer SDK.
@@ -72,6 +73,8 @@ export class PufferClient {
   public pufferOracleV2: PufferOracleV2Handler;
   /** Handler for the `PufferProtocol` contract. */
   public pufferProtocol: PufferProtocolHandler;
+  /** Handler for the `GuardianModule` contract. */
+  public guardianModule: GuardianModuleHandler;
 
   /**
    * Create the Puffer Client.
@@ -194,6 +197,11 @@ export class PufferClient {
       this.publicClient,
     );
     this.pufferProtocol = new PufferProtocolHandler(
+      chain,
+      this.walletClient,
+      this.publicClient,
+    );
+    this.guardianModule = new GuardianModuleHandler(
       chain,
       this.walletClient,
       this.publicClient,
