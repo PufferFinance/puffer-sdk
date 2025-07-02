@@ -28,7 +28,7 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:85](https://github.com/PufferFinance/puffer-sdk/blob/dd889a0e191ba7a287d39dd4dceaeb2b76c96478/lib/api/puffer-client.ts#L85)
+[lib/api/puffer-client.ts:88](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/api/puffer-client.ts#L88)
 
 #### Properties
 
@@ -39,6 +39,7 @@ Create the Puffer Client.
 | `depositor` | `public` | [`PufferDepositorHandler`](../contracts/handlers/puffer-depositor-handler.md#pufferdepositorhandler) | Handler for the `PufferDepositor` contract. |
 | `distributor` | `public` | [`DistributorHandler`](../contracts/handlers/distributor-handler.md#distributorhandler) | Handler for the `Distributor` contract. |
 | `erc20Permit` | `public` | [`ERC20PermitHandler`](../contracts/handlers/erc20-permit-handler.md#erc20permithandler) | Handler for the `ERC20Permit` contract. |
+| `guardianModule` | `public` | [`GuardianModuleHandler`](../contracts/handlers/guardian-module-handler.md#guardianmodulehandler) | Handler for the `GuardianModule` contract. |
 | `l1RewardManager` | `public` | [`L1RewardManagerHandler`](../contracts/handlers/l1-reward-manager-handler.md#l1rewardmanagerhandler) | Handler for the `L1RewardManager` contract. |
 | `l2Depositor` | `public` | [`PufferL2DepositorHandler`](../contracts/handlers/puffer-l2-depositor-handler.md#pufferl2depositorhandler) | Handler for the `PufferL2Depositor` contract. |
 | `l2RewardManager` | `public` | [`L2RewardManagerHandler`](../contracts/handlers/l2-reward-manager-handler.md#l2rewardmanagerhandler) | Handler for the `L2RewardManager` contract. |
@@ -72,4 +73,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:208](https://github.com/PufferFinance/puffer-sdk/blob/dd889a0e191ba7a287d39dd4dceaeb2b76c96478/lib/api/puffer-client.ts#L208)
+[lib/api/puffer-client.ts:216](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/api/puffer-client.ts#L216)
