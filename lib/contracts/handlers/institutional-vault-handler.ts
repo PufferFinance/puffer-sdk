@@ -52,7 +52,7 @@ export class InstitutionalVaultHandler {
    * @param address The address of the contract.
    * @returns The handler.
    */
-  public setAddress(address: Address) {
+  public withAddress(address: Address) {
     this.address = address;
 
     return this;

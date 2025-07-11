@@ -30,7 +30,7 @@ describe('InstitutionalVaultHandler', () => {
 
   it('should set and get the address used by the handler', () => {
     const address = generateAddress();
-    handler.setAddress(address);
+    handler.withAddress(address);
 
     expect(handler.getAddress()).toBe(address);
   });
@@ -46,7 +46,7 @@ describe('InstitutionalVaultHandler', () => {
 
   describe('with address set', () => {
     beforeEach(() => {
-      handler.setAddress(generateAddress());
+      handler.withAddress(generateAddress());
     });
 
     it('should get the beacon deposit contract', async () => {
