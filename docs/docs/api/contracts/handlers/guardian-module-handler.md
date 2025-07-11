@@ -30,7 +30,7 @@ interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L31)
+[lib/contracts/handlers/guardian-module-handler.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L31)
 
 #### Properties
 
@@ -58,7 +58,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L45)
+[lib/contracts/handlers/guardian-module-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L45)
 
 ##### getEjectionThreshold()
 
@@ -74,7 +74,7 @@ The ejection threshold.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:62](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L62)
+[lib/contracts/handlers/guardian-module-handler.ts:62](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L62)
 
 ##### getGuardians()
 
@@ -90,7 +90,7 @@ The guardians.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L71)
+[lib/contracts/handlers/guardian-module-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L71)
 
 ##### getGuardiansEnclaveAddress()
 
@@ -112,7 +112,7 @@ The enclave address.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L81)
+[lib/contracts/handlers/guardian-module-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L81)
 
 ##### getGuardiansEnclaveAddresses()
 
@@ -128,7 +128,7 @@ The enclave addresses.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L90)
+[lib/contracts/handlers/guardian-module-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L90)
 
 ##### getGuardiansEnclavePubkeys()
 
@@ -144,7 +144,7 @@ The enclave pubkeys.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:99](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L99)
+[lib/contracts/handlers/guardian-module-handler.ts:99](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L99)
 
 ##### getMrenclave()
 
@@ -160,7 +160,7 @@ The mrenclave.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:125](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L125)
+[lib/contracts/handlers/guardian-module-handler.ts:125](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L125)
 
 ##### getMrsigner()
 
@@ -176,7 +176,7 @@ The mrsigner.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:134](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L134)
+[lib/contracts/handlers/guardian-module-handler.ts:134](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L134)
 
 ##### getThreshold()
 
@@ -192,7 +192,7 @@ The threshold.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:143](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L143)
+[lib/contracts/handlers/guardian-module-handler.ts:143](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L143)
 
 ##### isConsumingScheduledOp()
 
@@ -209,7 +209,7 @@ false otherwise.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:153](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L153)
+[lib/contracts/handlers/guardian-module-handler.ts:153](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L153)
 
 ##### isGuardian()
 
@@ -231,7 +231,7 @@ True if the account is a guardian, false otherwise.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:163](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L163)
+[lib/contracts/handlers/guardian-module-handler.ts:163](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L163)
 
 ##### removeGuardian()
 
@@ -254,7 +254,7 @@ The transaction receipt.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:174](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L174)
+[lib/contracts/handlers/guardian-module-handler.ts:174](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L174)
 
 ##### validateGuardiansEnclaveSignatures()
 
@@ -277,4 +277,4 @@ The validation result.
 
 ###### Source
 
-[lib/contracts/handlers/guardian-module-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/contracts/handlers/guardian-module-handler.ts#L110)
+[lib/contracts/handlers/guardian-module-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/contracts/handlers/guardian-module-handler.ts#L110)

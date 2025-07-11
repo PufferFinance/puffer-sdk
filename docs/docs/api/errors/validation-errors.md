@@ -31,7 +31,7 @@
 
 ###### Source
 
-[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/errors/base-error.ts#L9)
+[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/errors/base-error.ts#L9)
 
 #### Methods
 
@@ -56,7 +56,65 @@
 
 ###### Source
 
-[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/errors/base-error.ts#L14)
+[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/errors/base-error.ts#L14)
+
+***
+
+### InvalidContractAddressError
+
+#### Extends
+
+- [`BaseError`](base-error.md#baseerrort)
+
+#### Constructors
+
+##### new InvalidContractAddressError()
+
+> **new InvalidContractAddressError**(`message`, `params`): [`InvalidContractAddressError`](validation-errors.md#invalidcontractaddresserror)
+
+###### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `params` | [`ErrorBaseParameters`](types.md#errorbaseparameters) |
+
+###### Returns
+
+[`InvalidContractAddressError`](validation-errors.md#invalidcontractaddresserror)
+
+###### Inherited from
+
+[`BaseError`](base-error.md#baseerrort).[`constructor`](base-error.md#constructors)
+
+###### Source
+
+[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/errors/base-error.ts#L9)
+
+#### Methods
+
+##### compileMessage()
+
+> `protected` **compileMessage**(`message`, `params`): `string`
+
+###### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `message` | `string` |
+| `params` | [`ErrorBaseParameters`](types.md#errorbaseparameters) |
+
+###### Returns
+
+`string`
+
+###### Inherited from
+
+[`BaseError`](base-error.md#baseerrort).[`compileMessage`](base-error.md#compilemessage)
+
+###### Source
+
+[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/errors/base-error.ts#L14)
 
 ***
 
@@ -89,7 +147,7 @@
 
 ###### Source
 
-[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/errors/base-error.ts#L9)
+[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/errors/base-error.ts#L9)
 
 #### Methods
 
@@ -114,4 +172,4 @@
 
 ###### Source
 
-[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/df6b26991d48f80bae5309e3ae8ac28e944bf013/lib/errors/base-error.ts#L14)
+[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/errors/base-error.ts#L14)
