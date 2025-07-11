@@ -1,4 +1,4 @@
-import { Account, isHash, PublicClient, WalletClient } from 'viem';
+import { isHash, PublicClient, WalletClient } from 'viem';
 import {
   setupTestPublicClient,
   setupTestWalletClient,
@@ -17,11 +17,7 @@ describe('NucleusAtomicQueueHandler', () => {
 
   beforeEach(() => {
     testingUtils.mockConnectedWallet([mockAccount], { chainId: Chain.Mainnet });
-    walletClient = setupTestWalletClient(
-      Chain.Mainnet,
-      undefined,
-      mockAccount as unknown as Account,
-    );
+    walletClient = setupTestWalletClient(Chain.Mainnet, undefined, mockAccount);
     publicClient = setupTestPublicClient();
 
     handler = new NucleusAtomicQueueHandler(

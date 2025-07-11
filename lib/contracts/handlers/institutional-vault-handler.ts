@@ -10,6 +10,16 @@ import { InstitutionalVault } from '../abis/mainnet/InstitutionalVault';
 import { Chain, VIEM_CHAINS } from '../../chains/constants';
 import { InvalidContractAddressError } from '../../errors/validation-errors';
 
+export type QueuedWithdrawal = {
+  staker: Address;
+  delegatedTo: Address;
+  withdrawer: Address;
+  nonce: bigint;
+  startBlock: number;
+  strategies: Address[];
+  scaledShares: bigint[];
+};
+
 /**
  * Handler for the `InstitutionalVault` contract exposing methods to
  * interact with the contract.
@@ -36,8 +46,25 @@ export class InstitutionalVaultHandler {
     this.viemChain = VIEM_CHAINS[chain];
   }
 
+  /**
+   * Set the address of the contract for this handler.
+   *
+   * @param address The address of the contract.
+   * @returns The handler.
+   */
   public setAddress(address: Address) {
     this.address = address;
+
+    return this;
+  }
+
+  /**
+   * Get the address of the contract for this handler.
+   *
+   * @returns The address of the contract.
+   */
+  public getAddress() {
+    return this.address;
   }
 
   /**
@@ -166,10 +193,20 @@ export class InstitutionalVaultHandler {
   /**
    * Complete the queued withdrawals.
    *
-   * @returns The result of the operation.
+   * @param withdrawals The withdrawals to complete.
+   * @param receiveAsTokens Whether to receive the assets as tokens.
    */
-  public completeQueuedWithdrawals() {
-    throw new Error('Not implemented');
+  public completeQueuedWithdrawals(
+    withdrawals: QueuedWithdrawal[],
+    receiveAsTokens: boolean[],
+  ) {
+    return this.getContract().write.completeQueuedWithdrawals(
+      [withdrawals, receiveAsTokens],
+      {
+        account: this.walletClient.account!,
+        chain: this.viemChain,
+      },
+    );
   }
 
   /**
@@ -244,15 +281,6 @@ export class InstitutionalVaultHandler {
    */
   public getWithdrawalCredentials() {
     return this.getContract().read.getWithdrawalCredentials();
-  }
-
-  /**
-   * Check if the vault is consuming scheduled operations.
-   *
-   * @returns True if the vault is consuming scheduled operations, false otherwise.
-   */
-  public isConsumingScheduledOp() {
-    return this.getContract().read.isConsumingScheduledOp();
   }
 
   /**
