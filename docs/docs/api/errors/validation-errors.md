@@ -31,7 +31,7 @@
 
 ###### Source
 
-[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/errors/base-error.ts#L9)
+[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/19f0fba9a3d1ece7df9a883ebe6e251dd8e8d59f/lib/errors/base-error.ts#L9)
 
 #### Methods
 
@@ -56,7 +56,7 @@
 
 ###### Source
 
-[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/errors/base-error.ts#L14)
+[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/19f0fba9a3d1ece7df9a883ebe6e251dd8e8d59f/lib/errors/base-error.ts#L14)
 
 ***
 
@@ -89,7 +89,7 @@
 
 ###### Source
 
-[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/errors/base-error.ts#L9)
+[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/19f0fba9a3d1ece7df9a883ebe6e251dd8e8d59f/lib/errors/base-error.ts#L9)
 
 #### Methods
 
@@ -114,7 +114,7 @@
 
 ###### Source
 
-[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/errors/base-error.ts#L14)
+[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/19f0fba9a3d1ece7df9a883ebe6e251dd8e8d59f/lib/errors/base-error.ts#L14)
 
 ***
 
@@ -147,7 +147,7 @@
 
 ###### Source
 
-[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/errors/base-error.ts#L9)
+[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/19f0fba9a3d1ece7df9a883ebe6e251dd8e8d59f/lib/errors/base-error.ts#L9)
 
 #### Methods
 
@@ -172,4 +172,4 @@
 
 ###### Source
 
-[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/errors/base-error.ts#L14)
+[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/19f0fba9a3d1ece7df9a883ebe6e251dd8e8d59f/lib/errors/base-error.ts#L14)

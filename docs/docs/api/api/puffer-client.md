@@ -28,7 +28,7 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:88](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/api/puffer-client.ts#L88)
+[lib/api/puffer-client.ts:91](https://github.com/PufferFinance/puffer-sdk/blob/19f0fba9a3d1ece7df9a883ebe6e251dd8e8d59f/lib/api/puffer-client.ts#L91)
 
 #### Properties
 
@@ -40,6 +40,7 @@ Create the Puffer Client.
 | `distributor` | `public` | [`DistributorHandler`](../contracts/handlers/distributor-handler.md#distributorhandler) | Handler for the `Distributor` contract. |
 | `erc20Permit` | `public` | [`ERC20PermitHandler`](../contracts/handlers/erc20-permit-handler.md#erc20permithandler) | Handler for the `ERC20Permit` contract. |
 | `guardianModule` | `public` | [`GuardianModuleHandler`](../contracts/handlers/guardian-module-handler.md#guardianmodulehandler) | Handler for the `GuardianModule` contract. |
+| `institutionalVault` | `public` | [`InstitutionalVaultHandler`](../contracts/handlers/institutional-vault-handler.md#institutionalvaulthandler) | Handler for the `InstitutionalVault` contract. |
 | `l1RewardManager` | `public` | [`L1RewardManagerHandler`](../contracts/handlers/l1-reward-manager-handler.md#l1rewardmanagerhandler) | Handler for the `L1RewardManager` contract. |
 | `l2Depositor` | `public` | [`PufferL2DepositorHandler`](../contracts/handlers/puffer-l2-depositor-handler.md#pufferl2depositorhandler) | Handler for the `PufferL2Depositor` contract. |
 | `l2RewardManager` | `public` | [`L2RewardManagerHandler`](../contracts/handlers/l2-reward-manager-handler.md#l2rewardmanagerhandler) | Handler for the `L2RewardManager` contract. |
@@ -73,4 +74,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:216](https://github.com/PufferFinance/puffer-sdk/blob/43e7f367787f799b5da601ce6770851b1c19ba86/lib/api/puffer-client.ts#L216)
+[lib/api/puffer-client.ts:224](https://github.com/PufferFinance/puffer-sdk/blob/19f0fba9a3d1ece7df9a883ebe6e251dd8e8d59f/lib/api/puffer-client.ts#L224)
