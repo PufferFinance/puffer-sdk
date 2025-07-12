@@ -24,7 +24,7 @@
 
 #### Source
 
-[lib/utils/types.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/19f0fba9a3d1ece7df9a883ebe6e251dd8e8d59f/lib/utils/types.ts#L3)
+[lib/utils/types.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/55bd8bdaf6e75c120ca1b5264370a17138815443/lib/utils/types.ts#L3)
 
 ***
 
@@ -40,4 +40,4 @@
 
 #### Source
 
-[lib/utils/types.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/19f0fba9a3d1ece7df9a883ebe6e251dd8e8d59f/lib/utils/types.ts#L1)
+[lib/utils/types.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/55bd8bdaf6e75c120ca1b5264370a17138815443/lib/utils/types.ts#L1)
