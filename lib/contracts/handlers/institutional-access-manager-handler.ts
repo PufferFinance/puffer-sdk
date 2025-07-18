@@ -170,11 +170,13 @@ export class InstitutionalAccessManagerHandler {
   /**
    * Get access information for a role and account.
    *
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    * @param account The account address.
    * @returns The access information.
    */
-  public getAccess(roleId: bigint, account: Address) {
+  public getAccess(roleIdOrLabel: bigint | string, account: Address) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
     return this.getContract().read.getAccess([roleId, account]);
   }
 
@@ -191,30 +193,36 @@ export class InstitutionalAccessManagerHandler {
   /**
    * Get the admin role for a role ID.
    *
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    * @returns The admin role ID.
    */
-  public getRoleAdmin(roleId: bigint) {
+  public getRoleAdmin(roleIdOrLabel: bigint | string) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
     return this.getContract().read.getRoleAdmin([roleId]);
   }
 
   /**
    * Get the grant delay for a role ID.
    *
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    * @returns The grant delay.
    */
-  public getRoleGrantDelay(roleId: bigint) {
+  public getRoleGrantDelay(roleIdOrLabel: bigint | string) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
     return this.getContract().read.getRoleGrantDelay([roleId]);
   }
 
   /**
    * Get the guardian role for a role ID.
    *
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    * @returns The guardian role ID.
    */
-  public getRoleGuardian(roleId: bigint) {
+  public getRoleGuardian(roleIdOrLabel: bigint | string) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
     return this.getContract().read.getRoleGuardian([roleId]);
   }
 
@@ -252,11 +260,18 @@ export class InstitutionalAccessManagerHandler {
   /**
    * Grant a role to an account.
    *
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    * @param account The account address.
    * @param executionDelay The execution delay.
    */
-  public grantRole(roleId: bigint, account: Address, executionDelay: number) {
+  public grantRole(
+    roleIdOrLabel: bigint | string,
+    account: Address,
+    executionDelay: number,
+  ) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
+
     return this.getContract().write.grantRole(
       [roleId, account, executionDelay],
       {
@@ -269,11 +284,13 @@ export class InstitutionalAccessManagerHandler {
   /**
    * Check if an account has a role.
    *
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    * @param account The account address.
    * @returns Whether the account has the role and the execution delay.
    */
-  public hasRole(roleId: bigint, account: Address) {
+  public hasRole(roleIdOrLabel: bigint | string, account: Address) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
     return this.getContract().read.hasRole([roleId, account]);
   }
 
@@ -302,11 +319,14 @@ export class InstitutionalAccessManagerHandler {
   /**
    * Label a role.
    *
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    * @param label The label.
    * @returns The role ID.
    */
-  public labelRole(roleId: bigint, label: string) {
+  public labelRole(roleIdOrLabel: bigint | string, label: string) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
+
     return this.getContract().write.labelRole([roleId, label], {
       account: this.walletClient.account!,
       chain: this.viemChain,
@@ -338,10 +358,16 @@ export class InstitutionalAccessManagerHandler {
   /**
    * Renounce a role.
    *
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    * @param callerConfirmation The caller confirmation address.
    */
-  public renounceRole(roleId: bigint, callerConfirmation: Address) {
+  public renounceRole(
+    roleIdOrLabel: bigint | string,
+    callerConfirmation: Address,
+  ) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
+
     return this.getContract().write.renounceRole([roleId, callerConfirmation], {
       account: this.walletClient.account!,
       chain: this.viemChain,
@@ -351,10 +377,13 @@ export class InstitutionalAccessManagerHandler {
   /**
    * Revoke a role from an account.
    *
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    * @param account The account address.
    */
-  public revokeRole(roleId: bigint, account: Address) {
+  public revokeRole(roleIdOrLabel: bigint | string, account: Address) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
+
     return this.getContract().write.revokeRole([roleId, account], {
       account: this.walletClient.account!,
       chain: this.viemChain,
@@ -379,10 +408,13 @@ export class InstitutionalAccessManagerHandler {
   /**
    * Set the grant delay for a role.
    *
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    * @param newDelay The new delay.
    */
-  public setGrantDelay(roleId: bigint, newDelay: number) {
+  public setGrantDelay(roleIdOrLabel: bigint | string, newDelay: number) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
+
     return this.getContract().write.setGrantDelay([roleId, newDelay], {
       account: this.walletClient.account!,
       chain: this.viemChain,
@@ -392,10 +424,13 @@ export class InstitutionalAccessManagerHandler {
   /**
    * Set the admin role for a role.
    *
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    * @param admin The admin role ID.
    */
-  public setRoleAdmin(roleId: bigint, admin: bigint) {
+  public setRoleAdmin(roleIdOrLabel: bigint | string, admin: bigint) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
+
     return this.getContract().write.setRoleAdmin([roleId, admin], {
       account: this.walletClient.account!,
       chain: this.viemChain,
@@ -405,10 +440,13 @@ export class InstitutionalAccessManagerHandler {
   /**
    * Set the guardian role for a role.
    *
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    * @param guardian The guardian role ID.
    */
-  public setRoleGuardian(roleId: bigint, guardian: bigint) {
+  public setRoleGuardian(roleIdOrLabel: bigint | string, guardian: bigint) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
+
     return this.getContract().write.setRoleGuardian([roleId, guardian], {
       account: this.walletClient.account!,
       chain: this.viemChain,
@@ -446,13 +484,16 @@ export class InstitutionalAccessManagerHandler {
    *
    * @param target The target address.
    * @param selectors Array of function selectors.
-   * @param roleId The role ID.
+   * @param roleIdOrLabel The role ID or role label generated with
+   * `labelToRoleId`.
    */
   public setTargetFunctionRole(
     target: Address,
     selectors: Hex[],
-    roleId: bigint,
+    roleIdOrLabel: bigint | string,
   ) {
+    const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
+
     return this.getContract().write.setTargetFunctionRole(
       [target, selectors, roleId],
       {
@@ -533,5 +574,13 @@ export class InstitutionalAccessManagerHandler {
     return Object.entries(this.selectorsMap).find(
       ([key]) => key === selector,
     )?.[1];
+  }
+
+  private processRoleIdOrLabel(roleIdOrLabel: bigint | string) {
+    if (typeof roleIdOrLabel === 'string') {
+      return this.labelToRoleId(roleIdOrLabel);
+    }
+
+    return roleIdOrLabel;
   }
 }
