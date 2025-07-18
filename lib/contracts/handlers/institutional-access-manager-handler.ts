@@ -130,10 +130,16 @@ export class InstitutionalAccessManagerHandler {
    * @param caller The caller address.
    * @param target The target contract address.
    * @param selector The function selector.
-   * @returns Whether the caller can call the target and the delay.
+   * @returns Whether the caller can call the target immediately and the delay.
    */
-  public canCall(caller: Address, target: Address, selector: Hex) {
-    return this.getContract().read.canCall([caller, target, selector]);
+  public async canCall(caller: Address, target: Address, selector: Hex) {
+    const [immediate, delay] = await this.getContract().read.canCall([
+      caller,
+      target,
+      selector,
+    ]);
+
+    return { canCall: immediate, canCallDelay: delay };
   }
 
   /**
@@ -175,9 +181,12 @@ export class InstitutionalAccessManagerHandler {
    * @param account The account address.
    * @returns The access information.
    */
-  public getAccess(roleIdOrLabel: bigint | string, account: Address) {
+  public async getAccess(roleIdOrLabel: bigint | string, account: Address) {
     const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
-    return this.getContract().read.getAccess([roleId, account]);
+    const [since, currentDelay, pendingDelay, effect] =
+      await this.getContract().read.getAccess([roleId, account]);
+
+    return { since, currentDelay, pendingDelay, effect };
   }
 
   /**
@@ -289,9 +298,14 @@ export class InstitutionalAccessManagerHandler {
    * @param account The account address.
    * @returns Whether the account has the role and the execution delay.
    */
-  public hasRole(roleIdOrLabel: bigint | string, account: Address) {
+  public async hasRole(roleIdOrLabel: bigint | string, account: Address) {
     const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
-    return this.getContract().read.hasRole([roleId, account]);
+    const [isMember, executionDelay] = await this.getContract().read.hasRole([
+      roleId,
+      account,
+    ]);
+
+    return { isMember, executionDelay };
   }
 
   /**
@@ -322,7 +336,7 @@ export class InstitutionalAccessManagerHandler {
    * @param roleIdOrLabel The role ID or role label generated with
    * `labelToRoleId`.
    * @param label The label.
-   * @returns The role ID.
+   * @returns The transaction hash.
    */
   public labelRole(roleIdOrLabel: bigint | string, label: string) {
     const roleId = this.processRoleIdOrLabel(roleIdOrLabel);
