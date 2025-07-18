@@ -6,6 +6,12 @@ import {
   GetContractReturnType,
   Address,
   Hex,
+  stringToBytes,
+  bytesToHex,
+  hexToBigInt,
+  toHex,
+  toBytes,
+  bytesToString,
 } from 'viem';
 import { InstitutionalAccessManager } from '../abis/mainnet/InstitutionalAccessManager';
 import { Chain, VIEM_CHAINS } from '../../chains/constants';
@@ -18,6 +24,22 @@ import { InvalidContractAddressError } from '../../errors/validation-errors';
 export class InstitutionalAccessManagerHandler {
   private viemChain: ViemChain;
   private address?: Address;
+  private selectorsMap: Record<Hex, string> = {
+    '0x6056b271':
+      'completeQueuedWithdrawals((address,address,address,uint256,uint32,address[],uint256[])[],bool[])',
+    '0x29d85402': 'customExternalCall(address,bytes,uint256)',
+    '0x6e553f65': 'deposit(uint256,address)',
+    '0x2d2da806': 'depositETH(address)',
+    '0xba087652': 'redeem(uint256,address,address)',
+    '0xb460af94': 'withdraw(uint256,address,address)',
+    '0xa9059cbb': 'transfer(address,uint256)',
+    '0x23b872dd': 'transferFrom(address,address,uint256)',
+    '0x94bf804d': 'mint(uint256,address)',
+    '0x61c17990': 'startRestakingValidators(bytes[],bytes[],bytes32[])',
+    '0x3e5e60c6': 'startNonRestakingValidators(bytes[],bytes[],bytes32[])',
+    '0x852aa33d': 'queueWithdrawals(uint256)',
+    '0xad0cdf3e': 'setValidatorsETH(uint128,uint128)',
+  };
 
   /**
    * Create the handler for the Institutional `AccessManager` contract
@@ -422,7 +444,7 @@ export class InstitutionalAccessManagerHandler {
   /**
    * Set the function role for a target.
    *
-   * @param target The target contract address.
+   * @param target The target address.
    * @param selectors Array of function selectors.
    * @param roleId The role ID.
    */
@@ -443,7 +465,7 @@ export class InstitutionalAccessManagerHandler {
   /**
    * Update the authority for a target.
    *
-   * @param target The target contract address.
+   * @param target The target address.
    * @param newAuthority The new authority address.
    */
   public updateAuthority(target: Address, newAuthority: Address) {
@@ -451,5 +473,65 @@ export class InstitutionalAccessManagerHandler {
       account: this.walletClient.account!,
       chain: this.viemChain,
     });
+  }
+
+  /**************************************************/
+  /****************** Helper Methods ****************/
+  /**************************************************/
+
+  /**
+   * Convert a label to a role ID. Useful if you want to create a roleId
+   * from a label which can then be used to get the label back using
+   * `roleIdToLabel`.
+   *
+   * @param label The label to convert.
+   * @returns The role ID.
+   */
+  public labelToRoleId(label: string) {
+    const bytes = stringToBytes(label);
+    // Reverse the bytes to make it little-endian.
+    const leBytes = bytes.reverse();
+    const hex = bytesToHex(leBytes);
+
+    return hexToBigInt(hex);
+  }
+
+  /**
+   * Convert a role ID to a label. Only useful if the `roleId` was
+   * created using `labelToRoleId`.
+   *
+   * @param roleId The role ID to convert.
+   * @returns The label.
+   */
+  public roleIdToLabel(roleId: bigint) {
+    const hex = toHex(roleId);
+    // Reverse the bytes to make it little-endian.
+    const leBytes = toBytes(hex).reverse();
+
+    return bytesToString(leBytes);
+  }
+
+  /**
+   * Get the selector for a function name.
+   *
+   * @param functionName The function name.
+   * @returns The selector.
+   */
+  public getSelectorFromFunctionName(functionName: string) {
+    return Object.entries(this.selectorsMap).find(([, value]) =>
+      value.includes(functionName),
+    )?.[0];
+  }
+
+  /**
+   * Get the function name for a selector.
+   *
+   * @param selector The selector.
+   * @returns The function name.
+   */
+  public getFunctionNameFromSelector(selector: Hex) {
+    return Object.entries(this.selectorsMap).find(
+      ([key]) => key === selector,
+    )?.[1];
   }
 }
