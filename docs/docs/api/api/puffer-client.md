@@ -28,7 +28,7 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:91](https://github.com/PufferFinance/puffer-sdk/blob/55bd8bdaf6e75c120ca1b5264370a17138815443/lib/api/puffer-client.ts#L91)
+[lib/api/puffer-client.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/api/puffer-client.ts#L94)
 
 #### Properties
 
@@ -40,6 +40,7 @@ Create the Puffer Client.
 | `distributor` | `public` | [`DistributorHandler`](../contracts/handlers/distributor-handler.md#distributorhandler) | Handler for the `Distributor` contract. |
 | `erc20Permit` | `public` | [`ERC20PermitHandler`](../contracts/handlers/erc20-permit-handler.md#erc20permithandler) | Handler for the `ERC20Permit` contract. |
 | `guardianModule` | `public` | [`GuardianModuleHandler`](../contracts/handlers/guardian-module-handler.md#guardianmodulehandler) | Handler for the `GuardianModule` contract. |
+| `institutionalAccessManager` | `public` | [`InstitutionalAccessManagerHandler`](../contracts/handlers/institutional-access-manager-handler.md#institutionalaccessmanagerhandler) | Handler for the `InstitutionalAccessManager` contract. |
 | `institutionalVault` | `public` | [`InstitutionalVaultHandler`](../contracts/handlers/institutional-vault-handler.md#institutionalvaulthandler) | Handler for the `InstitutionalVault` contract. |
 | `l1RewardManager` | `public` | [`L1RewardManagerHandler`](../contracts/handlers/l1-reward-manager-handler.md#l1rewardmanagerhandler) | Handler for the `L1RewardManager` contract. |
 | `l2Depositor` | `public` | [`PufferL2DepositorHandler`](../contracts/handlers/puffer-l2-depositor-handler.md#pufferl2depositorhandler) | Handler for the `PufferL2Depositor` contract. |
@@ -74,4 +75,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:224](https://github.com/PufferFinance/puffer-sdk/blob/55bd8bdaf6e75c120ca1b5264370a17138815443/lib/api/puffer-client.ts#L224)
+[lib/api/puffer-client.ts:232](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/api/puffer-client.ts#L232)
