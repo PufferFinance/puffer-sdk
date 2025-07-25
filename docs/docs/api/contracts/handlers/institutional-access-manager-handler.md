@@ -30,7 +30,7 @@ exposing methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:54](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L54)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:54](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L54)
 
 #### Properties
 
@@ -74,7 +74,7 @@ Whether the caller can call the target immediately and the delay.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:135](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L135)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:135](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L135)
 
 ##### cancel()
 
@@ -98,7 +98,7 @@ The nonce.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:153](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L153)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:153](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L153)
 
 ##### execute()
 
@@ -122,7 +122,7 @@ The nonce.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:168](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L168)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:168](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L168)
 
 ##### getAccess()
 
@@ -161,7 +161,7 @@ The access information.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:184](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L184)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:184](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L184)
 
 ##### getAddress()
 
@@ -177,7 +177,7 @@ The address of the contract.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L79)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L79)
 
 ##### getAdminRole()
 
@@ -193,7 +193,7 @@ The admin role.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:114](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L114)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:114](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L114)
 
 ##### getContract()
 
@@ -210,7 +210,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L89)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L89)
 
 ##### getFunctionNameFromSelector()
 
@@ -232,7 +232,7 @@ The function name.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:587](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L587)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:587](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L587)
 
 ##### getMinSetback()
 
@@ -248,7 +248,7 @@ The minimum setback.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:355](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L355)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:355](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L355)
 
 ##### getNonce()
 
@@ -270,7 +270,7 @@ The nonce.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:198](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L198)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:198](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L198)
 
 ##### getPublicRole()
 
@@ -286,7 +286,7 @@ The public role.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L123)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L123)
 
 ##### getRoleAdmin()
 
@@ -308,7 +308,7 @@ The admin role ID.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:209](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L209)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:209](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L209)
 
 ##### getRoleGrantDelay()
 
@@ -330,7 +330,7 @@ The grant delay.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:221](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L221)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:221](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L221)
 
 ##### getRoleGuardian()
 
@@ -352,7 +352,7 @@ The guardian role ID.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:233](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L233)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:233](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L233)
 
 ##### getSchedule()
 
@@ -374,7 +374,7 @@ The schedule time.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:244](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L244)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:244](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L244)
 
 ##### getSelectorFromFunctionName()
 
@@ -396,7 +396,7 @@ The selector.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:575](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L575)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:575](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L575)
 
 ##### getTargetAdminDelay()
 
@@ -418,7 +418,7 @@ The admin delay.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:254](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L254)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:254](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L254)
 
 ##### getTargetFunctionRole()
 
@@ -441,7 +441,7 @@ The role ID.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:265](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L265)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:265](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L265)
 
 ##### grantRole()
 
@@ -463,7 +463,7 @@ Grant a role to an account.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:277](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L277)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:277](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L277)
 
 ##### hasRole()
 
@@ -494,7 +494,7 @@ Whether the account has the role and the execution delay.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:301](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L301)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:301](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L301)
 
 ##### hashOperation()
 
@@ -518,7 +518,7 @@ The operation hash.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:319](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L319)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:319](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L319)
 
 ##### isTargetClosed()
 
@@ -540,7 +540,7 @@ Whether the target is closed.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:329](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L329)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:329](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L329)
 
 ##### labelRole()
 
@@ -563,7 +563,7 @@ The transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:341](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L341)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:341](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L341)
 
 ##### labelToRoleId()
 
@@ -587,7 +587,7 @@ The role ID.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:545](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L545)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:545](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L545)
 
 ##### multicall()
 
@@ -609,7 +609,7 @@ Array of results.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:365](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L365)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:365](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L365)
 
 ##### processRoleIdOrLabel()
 
@@ -627,7 +627,7 @@ Array of results.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:593](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L593)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:593](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L593)
 
 ##### renounceRole()
 
@@ -648,7 +648,7 @@ Renounce a role.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:379](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L379)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:379](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L379)
 
 ##### revokeRole()
 
@@ -669,7 +669,7 @@ Revoke a role from an account.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:398](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L398)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:398](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L398)
 
 ##### roleIdToLabel()
 
@@ -692,7 +692,7 @@ The label.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:561](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L561)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:561](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L561)
 
 ##### schedule()
 
@@ -716,7 +716,7 @@ The operation ID and nonce.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:415](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L415)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:415](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L415)
 
 ##### setGrantDelay()
 
@@ -737,7 +737,7 @@ Set the grant delay for a role.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:429](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L429)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:429](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L429)
 
 ##### setRoleAdmin()
 
@@ -758,7 +758,7 @@ Set the admin role for a role.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:445](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L445)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:445](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L445)
 
 ##### setRoleGuardian()
 
@@ -779,7 +779,7 @@ Set the guardian role for a role.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:461](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L461)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:461](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L461)
 
 ##### setTargetAdminDelay()
 
@@ -800,7 +800,7 @@ Set the admin delay for a target.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:476](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L476)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:476](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L476)
 
 ##### setTargetClosed()
 
@@ -821,7 +821,7 @@ Set whether a target is closed.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:489](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L489)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:489](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L489)
 
 ##### setTargetFunctionRole()
 
@@ -843,7 +843,7 @@ Set the function role for a target.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:504](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L504)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:504](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L504)
 
 ##### updateAuthority()
 
@@ -864,7 +864,7 @@ Update the authority for a target.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:526](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L526)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:526](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L526)
 
 ##### withAddress()
 
@@ -886,4 +886,4 @@ The handler.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-access-manager-handler.ts:68](https://github.com/PufferFinance/puffer-sdk/blob/f115cf3efeddd486916ab654a3cda79a22042ad4/lib/contracts/handlers/institutional-access-manager-handler.ts#L68)
+[lib/contracts/handlers/institutional-access-manager-handler.ts:68](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/contracts/handlers/institutional-access-manager-handler.ts#L68)
