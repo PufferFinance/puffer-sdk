@@ -15,6 +15,7 @@
 | `Berachain` | `number` |
 | `Bsc` | `number` |
 | `Holesky` | `number` |
+| `Hoodi` | `number` |
 | `Mainnet` | `number` |
 | `OptimismSepolia` | `number` |
 | `Sepolia` | `number` |
@@ -29,4 +30,4 @@
 
 #### Source
 
-[lib/chains/constants.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/62bde8e1d595cc595a6469bcd5aabe3cd4cdb7cb/lib/chains/constants.ts#L32)
+[lib/chains/constants.ts:34](https://github.com/PufferFinance/puffer-sdk/blob/5ca3bf9fc7e146924123ef03a697b1830ab483a6/lib/chains/constants.ts#L34)
