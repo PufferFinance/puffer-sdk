@@ -48,7 +48,7 @@
     "docs:deploy": "pnpm --filter docs run deploy"
   },
   "dependencies": {
-    "viem": "^2.23.13"
+    "viem": "^2.33.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
