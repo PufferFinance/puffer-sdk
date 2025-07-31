@@ -75,6 +75,7 @@ export const TOKENS_ADDRESSES: {
   [Token.WETH]: {
     [Chain.Mainnet]: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
     [Chain.Holesky]: '0x1d181cBd1825e9eBC6AD966878D555A7215FF4F0',
+    [Chain.Hoodi]: '0x251609d3e04165CA5CfaBa5DEE70A4e47863D060',
   },
   [Token.stETH]: {
     [Chain.Mainnet]: '0xae7ab96520de3a18e5e111b5eaab095312d7fe84',
