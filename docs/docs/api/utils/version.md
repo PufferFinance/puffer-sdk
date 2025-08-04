@@ -8,4 +8,4 @@
 
 #### Source
 
-[lib/utils/version.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/utils/version.ts#L3)
+[lib/utils/version.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/utils/version.ts#L3)

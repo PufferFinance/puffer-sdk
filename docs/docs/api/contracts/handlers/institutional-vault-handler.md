@@ -30,7 +30,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:41](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L41)
+[lib/contracts/handlers/institutional-vault-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L42)
 
 #### Properties
 
@@ -64,7 +64,7 @@ The allowance of the owner for the spender.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:139](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L139)
+[lib/contracts/handlers/institutional-vault-handler.ts:140](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L140)
 
 ##### approve()
 
@@ -85,7 +85,7 @@ Approve the spender to spend the owner's tokens.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:149](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L149)
+[lib/contracts/handlers/institutional-vault-handler.ts:150](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L150)
 
 ##### asset()
 
@@ -101,7 +101,7 @@ The asset of the vault.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:161](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L161)
+[lib/contracts/handlers/institutional-vault-handler.ts:162](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L162)
 
 ##### authority()
 
@@ -117,7 +117,7 @@ The authority of the vault.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:170](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L170)
+[lib/contracts/handlers/institutional-vault-handler.ts:171](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L171)
 
 ##### balanceOf()
 
@@ -139,7 +139,7 @@ The balance of the address.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:180](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L180)
+[lib/contracts/handlers/institutional-vault-handler.ts:181](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L181)
 
 ##### completeQueuedWithdrawals()
 
@@ -160,7 +160,7 @@ Complete the queued withdrawals.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:199](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L199)
+[lib/contracts/handlers/institutional-vault-handler.ts:200](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L200)
 
 ##### convertToAssets()
 
@@ -182,7 +182,7 @@ The number of assets.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:218](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L218)
+[lib/contracts/handlers/institutional-vault-handler.ts:219](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L219)
 
 ##### convertToShares()
 
@@ -204,7 +204,29 @@ The number of shares.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:228](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L228)
+[lib/contracts/handlers/institutional-vault-handler.ts:229](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L229)
+
+##### customExternalCall()
+
+> **customExternalCall**(`target`, `data`, `value`): `Promise`\<\`0x$\{string\}\`\>
+
+Call a custom external function.
+
+###### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `target` | \`0x$\{string\}\` | The target contract address. |
+| `data` | \`0x$\{string\}\` | The calldata to send a transaction to the target contract. |
+| `value` | `bigint` | The amount of value to send to the target contract. |
+
+###### Returns
+
+`Promise`\<\`0x$\{string\}\`\>
+
+###### Source
+
+[lib/contracts/handlers/institutional-vault-handler.ts:551](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L551)
 
 ##### decimals()
 
@@ -220,7 +242,7 @@ The number of decimals of the token.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:189](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L189)
+[lib/contracts/handlers/institutional-vault-handler.ts:190](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L190)
 
 ##### deposit()
 
@@ -241,7 +263,7 @@ Deposit assets into the vault.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:238](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L238)
+[lib/contracts/handlers/institutional-vault-handler.ts:239](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L239)
 
 ##### depositETH()
 
@@ -262,7 +284,7 @@ Deposit ETH into the vault.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:251](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L251)
+[lib/contracts/handlers/institutional-vault-handler.ts:252](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L252)
 
 ##### getAddress()
 
@@ -278,7 +300,7 @@ The address of the contract.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:66](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L66)
+[lib/contracts/handlers/institutional-vault-handler.ts:67](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L67)
 
 ##### getBeaconDepositContract()
 
@@ -294,7 +316,7 @@ The beacon deposit contract address.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:101](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L101)
+[lib/contracts/handlers/institutional-vault-handler.ts:102](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L102)
 
 ##### getContract()
 
@@ -311,7 +333,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:76](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L76)
+[lib/contracts/handlers/institutional-vault-handler.ts:77](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L77)
 
 ##### getEigenDelegationManager()
 
@@ -327,7 +349,7 @@ The eigen delegation manager.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L110)
+[lib/contracts/handlers/institutional-vault-handler.ts:111](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L111)
 
 ##### getEigenPod()
 
@@ -343,7 +365,7 @@ The eigen pod address.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:128](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L128)
+[lib/contracts/handlers/institutional-vault-handler.ts:129](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L129)
 
 ##### getEigenPodManager()
 
@@ -359,7 +381,7 @@ The eigen pod manager contract address.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:119](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L119)
+[lib/contracts/handlers/institutional-vault-handler.ts:120](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L120)
 
 ##### getNonRestakedValidatorETH()
 
@@ -375,7 +397,7 @@ The non-restaked validator ETH.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:264](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L264)
+[lib/contracts/handlers/institutional-vault-handler.ts:265](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L265)
 
 ##### getRestakedValidatorETH()
 
@@ -391,7 +413,7 @@ The restaked validator ETH.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:273](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L273)
+[lib/contracts/handlers/institutional-vault-handler.ts:274](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L274)
 
 ##### getWithdrawalCredentials()
 
@@ -407,7 +429,7 @@ The withdrawal credentials.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:282](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L282)
+[lib/contracts/handlers/institutional-vault-handler.ts:283](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L283)
 
 ##### maxDeposit()
 
@@ -429,7 +451,7 @@ The maximum deposit amount for the address.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:292](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L292)
+[lib/contracts/handlers/institutional-vault-handler.ts:293](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L293)
 
 ##### maxMint()
 
@@ -451,7 +473,7 @@ The maximum mint amount for the address.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:302](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L302)
+[lib/contracts/handlers/institutional-vault-handler.ts:303](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L303)
 
 ##### maxRedeem()
 
@@ -473,7 +495,7 @@ The maximum redeem amount for the address.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:312](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L312)
+[lib/contracts/handlers/institutional-vault-handler.ts:313](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L313)
 
 ##### maxWithdraw()
 
@@ -495,7 +517,7 @@ The maximum withdraw amount for the address.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:322](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L322)
+[lib/contracts/handlers/institutional-vault-handler.ts:323](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L323)
 
 ##### mint()
 
@@ -516,7 +538,7 @@ Mint shares to the receiver.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:332](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L332)
+[lib/contracts/handlers/institutional-vault-handler.ts:333](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L333)
 
 ##### name()
 
@@ -532,7 +554,7 @@ The name of the contract.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:344](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L344)
+[lib/contracts/handlers/institutional-vault-handler.ts:345](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L345)
 
 ##### previewDeposit()
 
@@ -554,7 +576,7 @@ The number of shares to receive.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:354](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L354)
+[lib/contracts/handlers/institutional-vault-handler.ts:355](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L355)
 
 ##### previewMint()
 
@@ -576,7 +598,7 @@ The number of assets to receive.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:364](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L364)
+[lib/contracts/handlers/institutional-vault-handler.ts:365](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L365)
 
 ##### previewRedeem()
 
@@ -598,7 +620,7 @@ The number of assets to receive.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:374](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L374)
+[lib/contracts/handlers/institutional-vault-handler.ts:375](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L375)
 
 ##### previewWithdraw()
 
@@ -620,7 +642,7 @@ The number of assets to receive.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:384](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L384)
+[lib/contracts/handlers/institutional-vault-handler.ts:385](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L385)
 
 ##### queueWithdrawals()
 
@@ -640,7 +662,7 @@ Queue the withdrawals.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:393](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L393)
+[lib/contracts/handlers/institutional-vault-handler.ts:394](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L394)
 
 ##### redeem()
 
@@ -662,7 +684,7 @@ Redeem the shares to the receiver.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:407](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L407)
+[lib/contracts/handlers/institutional-vault-handler.ts:408](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L408)
 
 ##### setValidatorsETH()
 
@@ -683,7 +705,7 @@ Set the validators ETH.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:420](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L420)
+[lib/contracts/handlers/institutional-vault-handler.ts:421](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L421)
 
 ##### startNonRestakingValidators()
 
@@ -705,7 +727,7 @@ Start the non-restaking validators.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:440](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L440)
+[lib/contracts/handlers/institutional-vault-handler.ts:441](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L441)
 
 ##### startRestakingValidators()
 
@@ -727,7 +749,7 @@ Start the restaking validators.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:461](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L461)
+[lib/contracts/handlers/institutional-vault-handler.ts:462](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L462)
 
 ##### symbol()
 
@@ -743,7 +765,7 @@ The symbol of the contract.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:494](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L494)
+[lib/contracts/handlers/institutional-vault-handler.ts:495](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L495)
 
 ##### totalAssets()
 
@@ -759,7 +781,7 @@ The total assets of the vault.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:503](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L503)
+[lib/contracts/handlers/institutional-vault-handler.ts:504](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L504)
 
 ##### totalSupply()
 
@@ -775,7 +797,7 @@ The total supply of the vault.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:512](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L512)
+[lib/contracts/handlers/institutional-vault-handler.ts:513](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L513)
 
 ##### transfer()
 
@@ -796,7 +818,7 @@ Transfer the value to the to address.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:522](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L522)
+[lib/contracts/handlers/institutional-vault-handler.ts:523](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L523)
 
 ##### transferFrom()
 
@@ -818,7 +840,7 @@ Transfer the value from the from address to the to address.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:536](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L536)
+[lib/contracts/handlers/institutional-vault-handler.ts:537](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L537)
 
 ##### withAddress()
 
@@ -840,7 +862,7 @@ The handler.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:55](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L55)
+[lib/contracts/handlers/institutional-vault-handler.ts:56](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L56)
 
 ##### withdraw()
 
@@ -862,7 +884,7 @@ Withdraw the assets to the receiver.
 
 ###### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:482](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L482)
+[lib/contracts/handlers/institutional-vault-handler.ts:483](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L483)
 
 ## Type Aliases
 
@@ -902,4 +924,4 @@ Withdraw the assets to the receiver.
 
 #### Source
 
-[lib/contracts/handlers/institutional-vault-handler.ts:13](https://github.com/PufferFinance/puffer-sdk/blob/410bf38e2593e1176e1abd4cab197430645d2d1a/lib/contracts/handlers/institutional-vault-handler.ts#L13)
+[lib/contracts/handlers/institutional-vault-handler.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/4dadb8f49937bb2533b19e1e434d0fbb731c090f/lib/contracts/handlers/institutional-vault-handler.ts#L14)
