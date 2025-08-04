@@ -344,6 +344,7 @@ export const InstitutionalVault = <const>[
     inputs: [
       { internalType: 'bytes[]', name: 'pubKeys', type: 'bytes[]' },
       { internalType: 'bytes[]', name: 'signatures', type: 'bytes[]' },
+      { internalType: 'uint256[]', name: 'amountsInGwei', type: 'uint256[]' },
       {
         internalType: 'bytes32[]',
         name: 'depositDataRoots',
@@ -359,6 +360,7 @@ export const InstitutionalVault = <const>[
     inputs: [
       { internalType: 'bytes[]', name: 'pubKeys', type: 'bytes[]' },
       { internalType: 'bytes[]', name: 'signatures', type: 'bytes[]' },
+      { internalType: 'uint256[]', name: 'amountsInGwei', type: 'uint256[]' },
       {
         internalType: 'bytes32[]',
         name: 'depositDataRoots',
