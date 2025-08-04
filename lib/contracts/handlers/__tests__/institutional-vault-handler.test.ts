@@ -1,4 +1,4 @@
-import { WalletClient, PublicClient, isHash, padHex } from 'viem';
+import { WalletClient, PublicClient, isHash, padHex, stringToHex } from 'viem';
 import {
   setupTestWalletClient,
   setupTestPublicClient,
@@ -412,6 +412,16 @@ describe('InstitutionalVaultHandler', () => {
       contractTestingUtils.mockTransaction('transferFrom');
 
       const txHash = await handler.transferFrom(from, to, amount);
+      expect(isHash(txHash)).toBeTruthy();
+    });
+
+    it('should call a custom external function', async () => {
+      const target = generateAddress();
+      const data = stringToHex('startCheckpoint');
+      const value = 10n;
+      contractTestingUtils.mockTransaction('customExternalCall');
+
+      const txHash = await handler.customExternalCall(target, data, value);
       expect(isHash(txHash)).toBeTruthy();
     });
   });

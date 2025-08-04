@@ -5,6 +5,7 @@ import {
   getContract,
   GetContractReturnType,
   Address,
+  Hex,
 } from 'viem';
 import { InstitutionalVault } from '../abis/mainnet/InstitutionalVault';
 import { Chain, VIEM_CHAINS } from '../../chains/constants';
@@ -535,6 +536,20 @@ export class InstitutionalVaultHandler {
    */
   public transferFrom(from: Address, to: Address, value: bigint) {
     return this.getContract().write.transferFrom([from, to, value], {
+      account: this.walletClient.account!,
+      chain: this.viemChain,
+    });
+  }
+
+  /**
+   * Call a custom external function.
+   *
+   * @param target The target contract address.
+   * @param data The calldata to send a transaction to the target contract.
+   * @param value The amount of value to send to the target contract.
+   */
+  public customExternalCall(target: Address, data: Hex, value: bigint) {
+    return this.getContract().write.customExternalCall([target, data, value], {
       account: this.walletClient.account!,
       chain: this.viemChain,
     });
