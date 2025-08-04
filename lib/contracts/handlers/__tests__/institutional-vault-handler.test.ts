@@ -362,11 +362,13 @@ describe('InstitutionalVaultHandler', () => {
       const pubKeys = [generateAddress()];
       const signatures = [generateAddress()];
       const depositDataRoots = [generateAddress(32)];
+      const amountsInGwei = [BigInt(32_000_000_000)];
       contractTestingUtils.mockTransaction('startNonRestakingValidators');
 
       const txHash = await handler.startNonRestakingValidators(
         pubKeys,
         signatures,
+        amountsInGwei,
         depositDataRoots,
       );
       expect(isHash(txHash)).toBeTruthy();
@@ -376,11 +378,13 @@ describe('InstitutionalVaultHandler', () => {
       const pubKeys = [generateAddress()];
       const signatures = [generateAddress()];
       const depositDataRoots = [generateAddress(32)];
+      const amountsInGwei = [BigInt(32_000_000_000)];
       contractTestingUtils.mockTransaction('startRestakingValidators');
 
       const txHash = await handler.startRestakingValidators(
         pubKeys,
         signatures,
+        amountsInGwei,
         depositDataRoots,
       );
       expect(isHash(txHash)).toBeTruthy();
