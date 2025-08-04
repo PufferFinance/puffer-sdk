@@ -436,15 +436,17 @@ export class InstitutionalVaultHandler {
    *
    * @param pubKeys The public keys of the validators.
    * @param signatures The signatures of the validators.
+   * @param amountsInGwei The amounts of the validators.
    * @param depositDataRoots The deposit data roots of the validators.
    */
   public startNonRestakingValidators(
     pubKeys: Address[],
     signatures: Address[],
+    amountsInGwei: bigint[],
     depositDataRoots: Address[],
   ) {
     return this.getContract().write.startNonRestakingValidators(
-      [pubKeys, signatures, depositDataRoots],
+      [pubKeys, signatures, amountsInGwei, depositDataRoots],
       {
         account: this.walletClient.account!,
         chain: this.viemChain,
@@ -457,15 +459,17 @@ export class InstitutionalVaultHandler {
    *
    * @param pubKeys The public keys of the validators.
    * @param signatures The signatures of the validators.
+   * @param amountsInGwei The amounts of the validators.
    * @param depositDataRoots The deposit data roots of the validators.
    */
   public startRestakingValidators(
     pubKeys: Address[],
     signatures: Address[],
+    amountsInGwei: bigint[],
     depositDataRoots: Address[],
   ) {
     return this.getContract().write.startRestakingValidators(
-      [pubKeys, signatures, depositDataRoots],
+      [pubKeys, signatures, amountsInGwei, depositDataRoots],
       {
         account: this.walletClient.account!,
         chain: this.viemChain,
