@@ -558,4 +558,20 @@ export class InstitutionalVaultHandler {
       chain: this.viemChain,
     });
   }
+
+  /**
+   * Request EigenPod consolidation.
+   *
+   * @param srcPubkeys The source public keys.
+   * @param targetPubkeys The target public keys.
+   */
+  public requestEigenPodConsolidation(
+    srcPubkeys: Address[],
+    targetPubkeys: Address[],
+  ) {
+    return this.getContract().write.requestEigenPodConsolidation(
+      [srcPubkeys, targetPubkeys],
+      { account: this.walletClient.account!, chain: this.viemChain },
+    );
+  }
 }
