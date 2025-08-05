@@ -428,5 +428,17 @@ describe('InstitutionalVaultHandler', () => {
       const txHash = await handler.customExternalCall(target, data, value);
       expect(isHash(txHash)).toBeTruthy();
     });
+
+    it('should request EigenPod consolidation', async () => {
+      const srcPubkeys = [generateAddress(), generateAddress()];
+      const targetPubkeys = [generateAddress(), generateAddress()];
+      contractTestingUtils.mockTransaction('requestEigenPodConsolidation');
+
+      const txHash = await handler.requestEigenPodConsolidation(
+        srcPubkeys,
+        targetPubkeys,
+      );
+      expect(isHash(txHash)).toBeTruthy();
+    });
   });
 });

@@ -436,4 +436,14 @@ export const InstitutionalVault = <const>[
     type: 'function',
   },
   { stateMutability: 'payable', type: 'receive' },
+  {
+    inputs: [
+      { internalType: 'bytes[]', name: 'srcPubkeys', type: 'bytes[]' },
+      { internalType: 'bytes[]', name: 'targetPubkeys', type: 'bytes[]' },
+    ],
+    name: 'requestEigenPodConsolidation',
+    outputs: [],
+    stateMutability: 'payable',
+    type: 'function',
+  },
 ];
