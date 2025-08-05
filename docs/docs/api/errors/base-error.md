@@ -43,7 +43,7 @@
 
 ###### Source
 
-[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/a9a9d601e77e0efedabe0337a1d3883bc9358829/lib/errors/base-error.ts#L9)
+[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/103ecd1411182abf5373136fd4e080a21cd5c432/lib/errors/base-error.ts#L9)
 
 #### Methods
 
@@ -64,4 +64,4 @@
 
 ###### Source
 
-[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/a9a9d601e77e0efedabe0337a1d3883bc9358829/lib/errors/base-error.ts#L14)
+[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/103ecd1411182abf5373136fd4e080a21cd5c432/lib/errors/base-error.ts#L14)
