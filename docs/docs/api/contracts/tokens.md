@@ -9,6 +9,7 @@
 | Enumeration Member | Value |
 | :------ | :------ |
 | `ALT` | `"ALT"` |
+| `ARPA` | `"ARPA"` |
 | `CARROT` | `"CARROT"` |
 | `DAI` | `"DAI"` |
 | `EIGEN` | `"EIGEN"` |
@@ -60,7 +61,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/103ecd1411182abf5373136fd4e080a21cd5c432/lib/contracts/tokens.ts#L45)
+[lib/contracts/tokens.ts:46](https://github.com/PufferFinance/puffer-sdk/blob/e8750c292f48509dd33eef3a136eeb066c0b1d1d/lib/contracts/tokens.ts#L46)
 
 ## Variables
 
@@ -70,7 +71,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:47](https://github.com/PufferFinance/puffer-sdk/blob/103ecd1411182abf5373136fd4e080a21cd5c432/lib/contracts/tokens.ts#L47)
+[lib/contracts/tokens.ts:48](https://github.com/PufferFinance/puffer-sdk/blob/e8750c292f48509dd33eef3a136eeb066c0b1d1d/lib/contracts/tokens.ts#L48)
 
 ***
 
@@ -80,7 +81,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:196](https://github.com/PufferFinance/puffer-sdk/blob/103ecd1411182abf5373136fd4e080a21cd5c432/lib/contracts/tokens.ts#L196)
+[lib/contracts/tokens.ts:200](https://github.com/PufferFinance/puffer-sdk/blob/e8750c292f48509dd33eef3a136eeb066c0b1d1d/lib/contracts/tokens.ts#L200)
 
 ***
 
@@ -90,4 +91,4 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:249](https://github.com/PufferFinance/puffer-sdk/blob/103ecd1411182abf5373136fd4e080a21cd5c432/lib/contracts/tokens.ts#L249)
+[lib/contracts/tokens.ts:254](https://github.com/PufferFinance/puffer-sdk/blob/e8750c292f48509dd33eef3a136eeb066c0b1d1d/lib/contracts/tokens.ts#L254)
