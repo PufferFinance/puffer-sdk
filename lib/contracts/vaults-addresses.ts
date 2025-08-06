@@ -35,4 +35,9 @@ export const VAULTS_ADDRESSES = {
       ConcreteMultiStrategyVault: '0x78f314241df1ac151bfd0413eeb51979515f6abd',
     },
   },
+  [Token.tacpufETH]: {
+    [Chain.Mainnet]: {
+      LagoonVault: '0xf2e97704a567e003ed97f2d0976c45b2dda766a0',
+    },
+  },
 };

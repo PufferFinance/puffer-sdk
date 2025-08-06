@@ -15,6 +15,7 @@ export enum Token {
   pufETH = 'pufETH',
   xPufETH = 'xPufETH',
   ctTACpufETH = 'ctTACpufETH',
+  tacpufETH = 'tacpufETH',
   WBTC = 'WBTC',
   LBTC = 'LBTC',
   tBTC = 'tBTC',
@@ -120,6 +121,10 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x78f314241df1ac151bfd0413eeb51979515f6abd',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
+  [Token.tacpufETH]: {
+    [Chain.Mainnet]: '0xf2e97704a567e003ed97f2d0976c45b2dda766a0',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
   [Token.WBTC]: {
     [Chain.Mainnet]: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
@@ -219,6 +224,8 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.pufETH]: '1',
   [Token.xPufETH]: '1',
   [Token.ctTACpufETH]: '',
+  // https://etherscan.io/address/0xf2e97704a567e003ed97f2d0976c45b2dda766a0#readProxyContract#F39
+  [Token.tacpufETH]: 'v0.5.0',
   [Token.WBTC]: '',
   [Token.LBTC]: '',
   [Token.tBTC]: '',
