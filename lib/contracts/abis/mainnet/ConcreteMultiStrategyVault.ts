@@ -217,4 +217,22 @@ export const ConcreteMultiStrategyVault = <const>[
     stateMutability: 'nonpayable',
     type: 'function',
   },
+  {
+    inputs: [{ internalType: 'uint256', name: 'shares_', type: 'uint256' }],
+    name: 'redeem',
+    outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      { internalType: 'uint256', name: 'shares_', type: 'uint256' },
+      { internalType: 'address', name: 'receiver_', type: 'address' },
+      { internalType: 'address', name: 'owner_', type: 'address' },
+    ],
+    name: 'redeem',
+    outputs: [{ internalType: 'uint256', name: 'assets', type: 'uint256' }],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
 ];

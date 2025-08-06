@@ -128,13 +128,36 @@ export class ConcreteVaultHandler {
   }
 
   /**
-   * Withdraw an amount of the token.
+   * Withdraw the given amount of assets (pufETH) to the receiver.
    *
-   * @param amount The amount to withdraw.
+   * @param assets The amount of assets (pufETH) to withdraw.
    * @returns The transaction.
    */
-  public withdraw(amount: bigint) {
-    return this.getContract().write.withdraw([amount], {
+  public withdraw(assets: bigint) {
+    return this.getContract().write.withdraw([assets], {
+      account: this.walletClient.account as Account,
+      chain: this.viemChain,
+    });
+  }
+
+  /**
+   * Redeem the given amount of shares (ctTACpufETH) so the receiver
+   * gets the assets (pufETH).
+   *
+   * @param shares The amount of shares (ctTACpufETH) to redeem.
+   * @param receiver The optional receiver of the assets.
+   * @param owner The optional owner of the shares.
+   * @returns The transaction.
+   */
+  public redeem(shares: bigint, receiver?: Address, owner?: Address) {
+    if (receiver && owner) {
+      return this.getContract().write.redeem([shares, receiver, owner], {
+        account: this.walletClient.account as Account,
+        chain: this.viemChain,
+      });
+    }
+
+    return this.getContract().write.redeem([shares], {
       account: this.walletClient.account as Account,
       chain: this.viemChain,
     });

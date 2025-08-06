@@ -132,12 +132,12 @@ export class LagoonVaultHandler {
         account: this.walletClient.account as Account,
         chain: this.viemChain,
       });
-    } else {
-      return this.getContract().write.deposit([amount, receiver], {
-        account: this.walletClient.account as Account,
-        chain: this.viemChain,
-      });
     }
+
+    return this.getContract().write.deposit([amount, receiver], {
+      account: this.walletClient.account as Account,
+      chain: this.viemChain,
+    });
   }
 
   /**
