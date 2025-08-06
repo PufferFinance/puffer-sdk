@@ -32,6 +32,7 @@ export enum Token {
   TEST = 'TEST',
   VT = 'VT',
   EIGEN = 'EIGEN',
+  ARPA = 'ARPA',
 }
 
 export enum UnifiToken {
@@ -173,6 +174,9 @@ export const TOKENS_ADDRESSES: {
   [Token.EIGEN]: {
     [Chain.Mainnet]: '0xec53bF9167f50cDEB3Ae105f56099aaaB9061F83',
   },
+  [Token.ARPA]: {
+    [Chain.Mainnet]: '0xBA50933C268F567BDC86E1aC131BE072C6B0b71a',
+  },
 
   // UniFi Tokens
   [UnifiToken.unifiETH]: {
@@ -234,6 +238,7 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.TEST]: '',
   [Token.VT]: '1',
   [Token.EIGEN]: '1',
+  [Token.ARPA]: '1',
 
   // UniFi Tokens
   // https://etherscan.io/address/0x196ead472583bc1e9af7a05f860d9857e1bd3dcc#code#F7#L172
