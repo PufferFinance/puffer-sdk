@@ -564,14 +564,20 @@ export class InstitutionalVaultHandler {
    *
    * @param srcPubkeys The source public keys.
    * @param targetPubkeys The target public keys.
+   * @param value The amount to send to the target contract (small quantity of GWei)
    */
   public requestEigenPodConsolidation(
     srcPubkeys: Address[],
     targetPubkeys: Address[],
+    value: bigint,
   ) {
     return this.getContract().write.requestEigenPodConsolidation(
       [srcPubkeys, targetPubkeys],
-      { account: this.walletClient.account!, chain: this.viemChain },
+      {
+        account: this.walletClient.account!,
+        chain: this.viemChain,
+        value,
+      },
     );
   }
 }
