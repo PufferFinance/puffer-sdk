@@ -429,14 +429,16 @@ describe('InstitutionalVaultHandler', () => {
       expect(isHash(txHash)).toBeTruthy();
     });
 
-    it('should request EigenPod consolidation', async () => {
+    it('should request EigenPod consolidation with value', async () => {
       const srcPubkeys = [generateAddress(), generateAddress()];
       const targetPubkeys = [generateAddress(), generateAddress()];
+      const value = 5_000_000_000n; // 5 gwei
       contractTestingUtils.mockTransaction('requestEigenPodConsolidation');
 
       const txHash = await handler.requestEigenPodConsolidation(
         srcPubkeys,
         targetPubkeys,
+        value,
       );
       expect(isHash(txHash)).toBeTruthy();
     });
