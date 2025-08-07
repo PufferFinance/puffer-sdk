@@ -29,7 +29,7 @@ Create the handler for processing Lagoon vault.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L30)
+[lib/contracts/handlers/lagoon-vault-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L30)
 
 #### Properties
 
@@ -63,7 +63,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:63](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L63)
+[lib/contracts/handlers/lagoon-vault-handler.ts:63](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L63)
 
 ##### deposit()
 
@@ -88,7 +88,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:129](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L129)
+[lib/contracts/handlers/lagoon-vault-handler.ts:129](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L129)
 
 ##### getAllowance()
 
@@ -111,7 +111,7 @@ The allowance.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:77](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L77)
+[lib/contracts/handlers/lagoon-vault-handler.ts:77](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L77)
 
 ##### getBalance()
 
@@ -133,7 +133,7 @@ The balance.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:87](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L87)
+[lib/contracts/handlers/lagoon-vault-handler.ts:87](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L87)
 
 ##### getContract()
 
@@ -149,7 +149,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L43)
+[lib/contracts/handlers/lagoon-vault-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L43)
 
 ##### getTotalSupply()
 
@@ -165,7 +165,7 @@ The total supply.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L96)
+[lib/contracts/handlers/lagoon-vault-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L96)
 
 ##### isTotalAssetsValid()
 
@@ -182,7 +182,7 @@ True if the total assets are valid, false otherwise.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:106](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L106)
+[lib/contracts/handlers/lagoon-vault-handler.ts:106](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L106)
 
 ##### previewDeposit()
 
@@ -205,7 +205,7 @@ The preview.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:264](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L264)
+[lib/contracts/handlers/lagoon-vault-handler.ts:264](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L264)
 
 ##### previewRedeem()
 
@@ -230,7 +230,7 @@ The preview.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:288](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L288)
+[lib/contracts/handlers/lagoon-vault-handler.ts:288](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L288)
 
 ##### previewWithdraw()
 
@@ -253,7 +253,7 @@ The preview.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:275](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L275)
+[lib/contracts/handlers/lagoon-vault-handler.ts:275](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L275)
 
 ##### redeem()
 
@@ -278,7 +278,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:222](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L222)
+[lib/contracts/handlers/lagoon-vault-handler.ts:222](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L222)
 
 ##### requestDeposit()
 
@@ -304,7 +304,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L176)
+[lib/contracts/handlers/lagoon-vault-handler.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L176)
 
 ##### requestRedeem()
 
@@ -329,7 +329,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:243](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L243)
+[lib/contracts/handlers/lagoon-vault-handler.ts:243](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L243)
 
 ##### symbol()
 
@@ -345,7 +345,7 @@ The symbol.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:115](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L115)
+[lib/contracts/handlers/lagoon-vault-handler.ts:115](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L115)
 
 ##### syncDeposit()
 
@@ -371,7 +371,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:154](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L154)
+[lib/contracts/handlers/lagoon-vault-handler.ts:154](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L154)
 
 ##### withdraw()
 
@@ -396,4 +396,4 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/lagoon-vault-handler.ts:201](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/lagoon-vault-handler.ts#L201)
+[lib/contracts/handlers/lagoon-vault-handler.ts:201](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/lagoon-vault-handler.ts#L201)

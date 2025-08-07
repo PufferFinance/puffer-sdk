@@ -30,7 +30,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L30)
+[lib/contracts/handlers/puffer-oracle-v2-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L30)
 
 #### Properties
 
@@ -63,7 +63,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L109)
+[lib/contracts/handlers/puffer-oracle-v2-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L109)
 
 ##### getContract()
 
@@ -79,7 +79,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L43)
+[lib/contracts/handlers/puffer-oracle-v2-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L43)
 
 ##### getLockedEthAmount()
 
@@ -95,7 +95,7 @@ The locked ETH amount.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:78](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L78)
+[lib/contracts/handlers/puffer-oracle-v2-handler.ts:78](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L78)
 
 ##### getTotalNumberOfValidators()
 
@@ -111,7 +111,7 @@ The total number of validators.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:69](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L69)
+[lib/contracts/handlers/puffer-oracle-v2-handler.ts:69](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L69)
 
 ##### getValidatorTicketPrice()
 
@@ -127,7 +127,7 @@ The validator ticket price.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L60)
+[lib/contracts/handlers/puffer-oracle-v2-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L60)
 
 ##### isOverBurstThreshold()
 
@@ -143,7 +143,7 @@ True if over burst threshold.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:87](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L87)
+[lib/contracts/handlers/puffer-oracle-v2-handler.ts:87](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L87)
 
 ##### provisionNode()
 
@@ -159,7 +159,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L96)
+[lib/contracts/handlers/puffer-oracle-v2-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L96)
 
 ##### setMintPrice()
 
@@ -181,7 +181,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:122](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L122)
+[lib/contracts/handlers/puffer-oracle-v2-handler.ts:122](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L122)
 
 ##### setTotalNumberOfValidators()
 
@@ -205,4 +205,4 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:137](https://github.com/PufferFinance/puffer-sdk/blob/7a9bc01f2fed6f42384fd85ca26fb87e35c34fd2/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L137)
+[lib/contracts/handlers/puffer-oracle-v2-handler.ts:137](https://github.com/PufferFinance/puffer-sdk/blob/2f11fa17b9041e7d6a2da6a45fa76c8a187a855b/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L137)
