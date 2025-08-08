@@ -39,6 +39,9 @@ export const VAULTS_ADDRESSES = {
     [Chain.Mainnet]: {
       LagoonVault: '0xf2e97704a567e003ed97f2d0976c45b2dda766a0',
     },
+    [Chain.TAC]: {
+      LagoonVault: '0x85AF3C2755f17bA26D7326E8069Bf10719441068',
+    },
     [Chain.Holesky]: {
       LagoonVault: '0x0000000000000000000000000000000000000000',
     },
