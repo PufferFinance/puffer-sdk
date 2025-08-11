@@ -29,7 +29,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L28)
+[lib/contracts/handlers/mtw-carrot-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L28)
 
 #### Properties
 
@@ -63,7 +63,7 @@ The amount the spender is allowed to use on behalf of the owner.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L71)
+[lib/contracts/handlers/mtw-carrot-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L71)
 
 ##### approve()
 
@@ -87,7 +87,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:171](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L171)
+[lib/contracts/handlers/mtw-carrot-handler.ts:171](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L171)
 
 ##### balanceOf()
 
@@ -109,7 +109,7 @@ The balance of the specified address.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L60)
+[lib/contracts/handlers/mtw-carrot-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L60)
 
 ##### claim()
 
@@ -133,7 +133,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:192](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L192)
+[lib/contracts/handlers/mtw-carrot-handler.ts:192](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L192)
 
 ##### claimable()
 
@@ -156,7 +156,7 @@ The claimable amount for the user.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:84](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L84)
+[lib/contracts/handlers/mtw-carrot-handler.ts:84](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L84)
 
 ##### cliffDuration()
 
@@ -172,7 +172,7 @@ The cliff duration in seconds.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:97](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L97)
+[lib/contracts/handlers/mtw-carrot-handler.ts:97](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L97)
 
 ##### decreaseAllowance()
 
@@ -196,7 +196,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:214](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L214)
+[lib/contracts/handlers/mtw-carrot-handler.ts:214](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L214)
 
 ##### getContract()
 
@@ -213,7 +213,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L42)
+[lib/contracts/handlers/mtw-carrot-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L42)
 
 ##### getUserVestings()
 
@@ -243,7 +243,7 @@ An array of vesting schedules.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:107](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L107)
+[lib/contracts/handlers/mtw-carrot-handler.ts:107](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L107)
 
 ##### increaseAllowance()
 
@@ -267,7 +267,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:236](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L236)
+[lib/contracts/handlers/mtw-carrot-handler.ts:236](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L236)
 
 ##### isTokenWrapper()
 
@@ -283,7 +283,7 @@ True if the contract is a token wrapper, false otherwise.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:122](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L122)
+[lib/contracts/handlers/mtw-carrot-handler.ts:122](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L122)
 
 ##### recoverERC20()
 
@@ -308,7 +308,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:259](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L259)
+[lib/contracts/handlers/mtw-carrot-handler.ts:259](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L259)
 
 ##### symbol()
 
@@ -324,7 +324,7 @@ The token symbol.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:131](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L131)
+[lib/contracts/handlers/mtw-carrot-handler.ts:131](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L131)
 
 ##### token()
 
@@ -340,7 +340,7 @@ The address of the token.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:140](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L140)
+[lib/contracts/handlers/mtw-carrot-handler.ts:140](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L140)
 
 ##### transfer()
 
@@ -364,7 +364,7 @@ A promise that resolves to the transaction hash.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:282](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L282)
+[lib/contracts/handlers/mtw-carrot-handler.ts:282](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L282)
 
 ##### underlying()
 
@@ -380,7 +380,7 @@ The address of the underlying asset.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:149](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L149)
+[lib/contracts/handlers/mtw-carrot-handler.ts:149](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L149)
 
 ##### vestingData()
 
@@ -402,4 +402,4 @@ Next claim index.
 
 ###### Source
 
-[lib/contracts/handlers/mtw-carrot-handler.ts:159](https://github.com/PufferFinance/puffer-sdk/blob/fc057d86379058d9c0b7c3a42b9810a6fa64ef9d/lib/contracts/handlers/mtw-carrot-handler.ts#L159)
+[lib/contracts/handlers/mtw-carrot-handler.ts:159](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/handlers/mtw-carrot-handler.ts#L159)
