@@ -300,4 +300,52 @@ describe('LagoonVaultHandler', () => {
     const result = await handler.previewRedeem(shares);
     expect(result).toBe(preview);
   });
+
+  // Using spy as overloading functions are not supported otherwise.
+  it('should convert to assets', async () => {
+    const shares = 10n;
+    const assets = 20n;
+
+    const mockContract = {
+      read: {
+        convertToAssets: jest.fn().mockResolvedValue(assets),
+      },
+    };
+
+    const getContractSpy = jest
+      .spyOn(handler, 'getContract')
+      .mockReturnValue(mockContract as any);
+
+    const result = await handler.convertToAssets(shares);
+
+    expect(getContractSpy).toHaveBeenCalled();
+    expect(mockContract.read.convertToAssets).toHaveBeenCalledWith([shares]);
+    expect(result).toBe(assets);
+
+    getContractSpy.mockRestore();
+  });
+
+  // Using spy as overloading functions are not supported otherwise.
+  it('should convert to shares', async () => {
+    const assets = 10n;
+    const shares = 20n;
+
+    const mockContract = {
+      read: {
+        convertToShares: jest.fn().mockResolvedValue(shares),
+      },
+    };
+
+    const getContractSpy = jest
+      .spyOn(handler, 'getContract')
+      .mockReturnValue(mockContract as any);
+
+    const result = await handler.convertToShares(assets);
+
+    expect(getContractSpy).toHaveBeenCalled();
+    expect(mockContract.read.convertToShares).toHaveBeenCalledWith([assets]);
+    expect(result).toBe(shares);
+
+    getContractSpy.mockRestore();
+  });
 });
