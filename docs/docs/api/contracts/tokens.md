@@ -62,7 +62,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:47](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/tokens.ts#L47)
+[lib/contracts/tokens.ts:47](https://github.com/PufferFinance/puffer-sdk/blob/fa0a7df7054c55dadcb8ea5a4a2acff77f0087e7/lib/contracts/tokens.ts#L47)
 
 ## Variables
 
@@ -72,7 +72,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:49](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/tokens.ts#L49)
+[lib/contracts/tokens.ts:49](https://github.com/PufferFinance/puffer-sdk/blob/fa0a7df7054c55dadcb8ea5a4a2acff77f0087e7/lib/contracts/tokens.ts#L49)
 
 ***
 
@@ -82,7 +82,7 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:205](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/tokens.ts#L205)
+[lib/contracts/tokens.ts:206](https://github.com/PufferFinance/puffer-sdk/blob/fa0a7df7054c55dadcb8ea5a4a2acff77f0087e7/lib/contracts/tokens.ts#L206)
 
 ***
 
@@ -92,4 +92,4 @@
 
 #### Source
 
-[lib/contracts/tokens.ts:261](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/tokens.ts#L261)
+[lib/contracts/tokens.ts:262](https://github.com/PufferFinance/puffer-sdk/blob/fa0a7df7054c55dadcb8ea5a4a2acff77f0087e7/lib/contracts/tokens.ts#L262)

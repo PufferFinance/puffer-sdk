@@ -34,4 +34,4 @@
 
 #### Source
 
-[lib/contracts/vaults-addresses.ts:4](https://github.com/PufferFinance/puffer-sdk/blob/98122edc3ba140dd873a9312a311b44046586285/lib/contracts/vaults-addresses.ts#L4)
+[lib/contracts/vaults-addresses.ts:4](https://github.com/PufferFinance/puffer-sdk/blob/fa0a7df7054c55dadcb8ea5a4a2acff77f0087e7/lib/contracts/vaults-addresses.ts#L4)
