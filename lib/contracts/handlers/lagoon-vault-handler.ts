@@ -288,4 +288,24 @@ export class LagoonVaultHandler {
   public previewRedeem(shares: bigint) {
     return this.getContract().read.previewRedeem([shares]);
   }
+
+  /**
+   * Convert an amount of the shares (tacpufETH) to the assets (pufETH).
+   *
+   * @param shares The amount of shares (tacpufETH) to convert.
+   * @returns The amount of assets (pufETH).
+   */
+  public convertToAssets(shares: bigint) {
+    return this.getContract().read.convertToAssets([shares]);
+  }
+
+  /**
+   * Convert an amount of the assets (pufETH) to the shares (tacpufETH).
+   *
+   * @param assets The amount of assets (pufETH) to convert.
+   * @returns The amount of shares (tacpufETH).
+   */
+  public convertToShares(assets: bigint) {
+    return this.getContract().read.convertToShares([assets]);
+  }
 }
