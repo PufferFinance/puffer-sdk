@@ -377,4 +377,52 @@ describe('LagoonVaultHandler', () => {
     ]);
     expect(result).toBe(shares);
   });
+
+  it('should get the pending deposit request', async () => {
+    const requestId = 1n;
+    const controller = generateAddress();
+    const pending = 10n;
+    contractTestingUtils.mockCall('pendingDepositRequest', [pending]);
+
+    const result = await handler.pendingDepositRequest(requestId, controller);
+    expect(result).toBe(pending);
+  });
+
+  it('should get the pending redeem request', async () => {
+    const requestId = 1n;
+    const controller = generateAddress();
+    const pending = 10n;
+    contractTestingUtils.mockCall('pendingRedeemRequest', [pending]);
+
+    const result = await handler.pendingRedeemRequest(requestId, controller);
+    expect(result).toBe(pending);
+  });
+
+  it('should get the claimable deposit request', async () => {
+    const requestId = 1n;
+    const controller = generateAddress();
+    const claimable = 10n;
+    contractTestingUtils.mockCall('claimableDepositRequest', [claimable]);
+
+    const result = await handler.claimableDepositRequest(requestId, controller);
+    expect(result).toBe(claimable);
+  });
+
+  it('should get the claimable redeem request', async () => {
+    const requestId = 1n;
+    const controller = generateAddress();
+    const claimable = 10n;
+    contractTestingUtils.mockCall('claimableRedeemRequest', [claimable]);
+
+    const result = await handler.claimableRedeemRequest(requestId, controller);
+    expect(result).toBe(claimable);
+  });
+
+  it('should claim shares and request a redeem', async () => {
+    const shares = 10n;
+    contractTestingUtils.mockTransaction('claimSharesAndRequestRedeem');
+
+    const txHash = await handler.claimSharesAndRequestRedeem(shares);
+    expect(isHash(txHash)).toBeTruthy();
+  });
 });

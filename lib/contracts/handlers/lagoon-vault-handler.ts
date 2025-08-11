@@ -348,4 +348,61 @@ export class LagoonVaultHandler {
 
     return this.getContract().read.convertToShares([assets]);
   }
+
+  /**
+   * Get the claimable deposit request for the request id and controller.
+   *
+   * @param requestId The request id. Use `0` as wild card.
+   * @param controller The controller. Usually the depositor or user who
+   * initiated the deposit.
+   * @returns The claimable deposit request.
+   */
+  public claimableDepositRequest(requestId: bigint = 0n, controller: Address) {
+    return this.getContract().read.claimableDepositRequest([
+      requestId,
+      controller,
+    ]);
+  }
+
+  /**
+   * Get the claimable redeem request for the request id and controller.
+   *
+   * @param requestId The request id. Use `0` as wild card.
+   * @param controller The controller. Usually the redeemer or user who
+   * initiated the redeem.
+   * @returns The claimable redeem request.
+   */
+  public claimableRedeemRequest(requestId: bigint = 0n, controller: Address) {
+    return this.getContract().read.claimableRedeemRequest([
+      requestId,
+      controller,
+    ]);
+  }
+
+  /**
+   * Claim shares and request a redeem of an amount of the shares (tacpufETH)
+   * so the receiver gets the assets (pufETH).
+   *
+   * @param shares The amount of shares (tacpufETH) to claim.
+   * @returns The transaction.
+   */
+  public claimSharesAndRequestRedeem(shares: bigint) {
+    return this.getContract().write.claimSharesAndRequestRedeem([shares], {
+      account: this.walletClient.account as Account,
+      chain: this.viemChain,
+    });
+  }
+
+  /**
+   * Claim shares on behalf of multiple controllers.
+   *
+   * @param controllers The controllers to claim shares on behalf of.
+   * @returns The transaction.
+   */
+  public claimSharesOnBehalf(controllers: Address[]) {
+    return this.getContract().write.claimSharesOnBehalf([controllers], {
+      account: this.walletClient.account as Account,
+      chain: this.viemChain,
+    });
+  }
 }
