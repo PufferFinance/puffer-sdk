@@ -189,6 +189,21 @@ export class LagoonVaultHandler {
   }
 
   /**
+   * Get the pending deposit request for the request id and controller.
+   *
+   * @param requestId The request id. Use `0` as wild card.
+   * @param controller The controller. Usually the depositor or user who
+   * initiated the deposit.
+   * @returns The pending deposit request.
+   */
+  public pendingDepositRequest(requestId: bigint = 0n, controller: Address) {
+    return this.getContract().read.pendingDepositRequest([
+      requestId,
+      controller,
+    ]);
+  }
+
+  /**
    * Withdraw an amount of the shares (pufETH) so the receiver
    * gets the assets (pufETH).
    *
@@ -252,6 +267,21 @@ export class LagoonVaultHandler {
         chain: this.viemChain,
       },
     );
+  }
+
+  /**
+   * Get the pending redeem request for the request id and controller.
+   *
+   * @param requestId The request id. Use `0` as wild card.
+   * @param controller The controller. Usually the redeemer or user who
+   * initiated the redeem.
+   * @returns The pending redeem request.
+   */
+  public pendingRedeemRequest(requestId: bigint = 0n, controller: Address) {
+    return this.getContract().read.pendingRedeemRequest([
+      requestId,
+      controller,
+    ]);
   }
 
   /**
