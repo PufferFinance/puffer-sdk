@@ -14,12 +14,17 @@ describe('LagoonVaultHandler', () => {
   let handler: LagoonVaultHandler;
   let walletClient: WalletClient;
   let publicClient: PublicClient;
+  let getContractSpy: jest.SpyInstance;
 
   beforeEach(() => {
+    getContractSpy?.mockRestore();
+
     walletClient = setupTestWalletClient(Chain.Holesky, undefined, mockAccount);
     publicClient = setupTestPublicClient(Chain.Holesky);
 
     handler = new LagoonVaultHandler(Chain.Holesky, walletClient, publicClient);
+
+    getContractSpy = jest.spyOn(handler, 'getContract');
   });
 
   it('should get the allowance of the owner for the spender', async () => {
@@ -86,9 +91,7 @@ describe('LagoonVaultHandler', () => {
       },
     };
 
-    const getContractSpy = jest
-      .spyOn(handler, 'getContract')
-      .mockReturnValue(mockContract as any);
+    getContractSpy.mockReturnValue(mockContract as any);
 
     const txHash = await handler.deposit(amount, receiver, controller);
 
@@ -101,8 +104,6 @@ describe('LagoonVaultHandler', () => {
       },
     );
     expect(txHash).toBe(mockTxHash);
-
-    getContractSpy.mockRestore();
   });
 
   it('should deposit assets to the vault without controller', async () => {
@@ -116,9 +117,7 @@ describe('LagoonVaultHandler', () => {
       },
     };
 
-    const getContractSpy = jest
-      .spyOn(handler, 'getContract')
-      .mockReturnValue(mockContract as any);
+    getContractSpy.mockReturnValue(mockContract as any);
 
     const txHash = await handler.deposit(amount, receiver);
 
@@ -166,9 +165,7 @@ describe('LagoonVaultHandler', () => {
       },
     };
 
-    const getContractSpy = jest
-      .spyOn(handler, 'getContract')
-      .mockReturnValue(mockContract as any);
+    getContractSpy.mockReturnValue(mockContract as any);
 
     const txHash = await handler.requestDeposit(amount, receiver, controller);
 
@@ -182,8 +179,6 @@ describe('LagoonVaultHandler', () => {
       },
     );
     expect(txHash).toBe(mockTxHash);
-
-    getContractSpy.mockRestore();
   });
 
   it('should request an asynchronous deposit to the vault with default controller', async () => {
@@ -197,9 +192,7 @@ describe('LagoonVaultHandler', () => {
       },
     };
 
-    const getContractSpy = jest
-      .spyOn(handler, 'getContract')
-      .mockReturnValue(mockContract as any);
+    getContractSpy.mockReturnValue(mockContract as any);
 
     const txHash = await handler.requestDeposit(amount, receiver);
 
@@ -213,8 +206,6 @@ describe('LagoonVaultHandler', () => {
       },
     );
     expect(txHash).toBe(mockTxHash);
-
-    getContractSpy.mockRestore();
   });
 
   it('should withdraw assets from the vault', async () => {
@@ -302,7 +293,7 @@ describe('LagoonVaultHandler', () => {
   });
 
   // Using spy as overloading functions are not supported otherwise.
-  it('should convert to assets', async () => {
+  it('should convert to assets without request id', async () => {
     const shares = 10n;
     const assets = 20n;
 
@@ -312,21 +303,40 @@ describe('LagoonVaultHandler', () => {
       },
     };
 
-    const getContractSpy = jest
-      .spyOn(handler, 'getContract')
-      .mockReturnValue(mockContract as any);
+    getContractSpy.mockReturnValue(mockContract as any);
 
     const result = await handler.convertToAssets(shares);
 
     expect(getContractSpy).toHaveBeenCalled();
     expect(mockContract.read.convertToAssets).toHaveBeenCalledWith([shares]);
     expect(result).toBe(assets);
-
-    getContractSpy.mockRestore();
   });
 
   // Using spy as overloading functions are not supported otherwise.
-  it('should convert to shares', async () => {
+  it('should convert to assets with request id', async () => {
+    const shares = 10n;
+    const assets = 20n;
+    const requestId = 1n;
+    const mockContract = {
+      read: {
+        convertToAssets: jest.fn().mockResolvedValue(assets),
+      },
+    };
+
+    getContractSpy.mockReturnValue(mockContract as any);
+
+    const result = await handler.convertToAssets(shares, requestId);
+
+    expect(getContractSpy).toHaveBeenCalled();
+    expect(mockContract.read.convertToAssets).toHaveBeenCalledWith([
+      shares,
+      requestId,
+    ]);
+    expect(result).toBe(assets);
+  });
+
+  // Using spy as overloading functions are not supported otherwise.
+  it('should convert to shares without request id', async () => {
     const assets = 10n;
     const shares = 20n;
 
@@ -336,16 +346,35 @@ describe('LagoonVaultHandler', () => {
       },
     };
 
-    const getContractSpy = jest
-      .spyOn(handler, 'getContract')
-      .mockReturnValue(mockContract as any);
+    getContractSpy.mockReturnValue(mockContract as any);
 
     const result = await handler.convertToShares(assets);
 
     expect(getContractSpy).toHaveBeenCalled();
     expect(mockContract.read.convertToShares).toHaveBeenCalledWith([assets]);
     expect(result).toBe(shares);
+  });
 
-    getContractSpy.mockRestore();
+  // Using spy as overloading functions are not supported otherwise.
+  it('should convert to shares with request id', async () => {
+    const assets = 10n;
+    const shares = 20n;
+    const requestId = 1n;
+    const mockContract = {
+      read: {
+        convertToShares: jest.fn().mockResolvedValue(shares),
+      },
+    };
+
+    getContractSpy.mockReturnValue(mockContract as any);
+
+    const result = await handler.convertToShares(assets, requestId);
+
+    expect(getContractSpy).toHaveBeenCalled();
+    expect(mockContract.read.convertToShares).toHaveBeenCalledWith([
+      assets,
+      requestId,
+    ]);
+    expect(result).toBe(shares);
   });
 });

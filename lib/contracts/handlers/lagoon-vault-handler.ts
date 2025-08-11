@@ -293,9 +293,14 @@ export class LagoonVaultHandler {
    * Convert an amount of the shares (tacpufETH) to the assets (pufETH).
    *
    * @param shares The amount of shares (tacpufETH) to convert.
+   * @param requestId An optional request id for the conversion.
    * @returns The amount of assets (pufETH).
    */
-  public convertToAssets(shares: bigint) {
+  public convertToAssets(shares: bigint, requestId?: bigint) {
+    if (requestId) {
+      return this.getContract().read.convertToAssets([shares, requestId]);
+    }
+
     return this.getContract().read.convertToAssets([shares]);
   }
 
@@ -303,9 +308,14 @@ export class LagoonVaultHandler {
    * Convert an amount of the assets (pufETH) to the shares (tacpufETH).
    *
    * @param assets The amount of assets (pufETH) to convert.
+   * @param requestId An optional request id for the conversion.
    * @returns The amount of shares (tacpufETH).
    */
-  public convertToShares(assets: bigint) {
+  public convertToShares(assets: bigint, requestId?: bigint) {
+    if (requestId) {
+      return this.getContract().read.convertToShares([assets, requestId]);
+    }
+
     return this.getContract().read.convertToShares([assets]);
   }
 }
