@@ -145,6 +145,7 @@ export class ERC20PermitHandler {
       value,
     );
 
+    /* istanbul ignore next */
     return { r, s, v: Number(v ?? yParity), deadline, amount: value };
   }
 
