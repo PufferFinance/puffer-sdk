@@ -111,15 +111,6 @@ export class VLPufferHandler {
   }
 
   /**
-   * Get the EIP-712 domain.
-   *
-   * @returns The EIP-712 domain.
-   */
-  public eip712Domain() {
-    return this.getContract().read.eip712Domain();
-  }
-
-  /**
    * Transfer tokens from one address to another.
    *
    * @param from The address to transfer from.
@@ -167,8 +158,12 @@ export class VLPufferHandler {
    * @param user The user address.
    * @returns The lock information.
    */
-  public lockInfos(user: Address) {
-    return this.getContract().read.lockInfos([user]);
+  public async lockInfos(user: Address) {
+    const [pufferAmount, unlockTime] = await this.getContract().read.lockInfos([
+      user,
+    ]);
+
+    return { pufferAmount, unlockTime };
   }
 
   /**

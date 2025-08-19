@@ -425,4 +425,12 @@ describe('LagoonVaultHandler', () => {
     const txHash = await handler.claimSharesAndRequestRedeem(shares);
     expect(isHash(txHash)).toBeTruthy();
   });
+
+  it('should claim shares on behalf of the user', async () => {
+    const controllers = [generateAddress()];
+    contractTestingUtils.mockTransaction('claimSharesOnBehalf');
+
+    const txHash = await handler.claimSharesOnBehalf(controllers);
+    expect(isHash(txHash)).toBeTruthy();
+  });
 });
