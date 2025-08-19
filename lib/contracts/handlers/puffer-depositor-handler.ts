@@ -74,21 +74,13 @@ export class PufferDepositorHandler {
    * transaction.
    */
   public async depositStETH(walletAddress: Address, value: bigint) {
-    const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
+    const permitData = await this.erc20PermitHandler
       .withToken(Token.stETH)
-      .getPermitSignature(
+      .getPermitData(
         walletAddress,
         CONTRACT_ADDRESSES[this.chain].PufferDepositor as Address,
         value,
       );
-    /* istanbul ignore next */
-    const permitData = {
-      r,
-      s,
-      v: Number(v ?? yParity),
-      deadline,
-      amount: value,
-    };
 
     const transact = async () =>
       await this.getContract().write.depositStETH([permitData, walletAddress], {
@@ -118,21 +110,13 @@ export class PufferDepositorHandler {
    * transaction.
    */
   public async depositWstETH(walletAddress: Address, value: bigint) {
-    const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
+    const permitData = await this.erc20PermitHandler
       .withToken(Token.wstETH)
-      .getPermitSignature(
+      .getPermitData(
         walletAddress,
         CONTRACT_ADDRESSES[this.chain].PufferDepositor as Address,
         value,
       );
-    /* istanbul ignore next */
-    const permitData = {
-      r,
-      s,
-      v: Number(v ?? yParity),
-      deadline,
-      amount: value,
-    };
 
     const transact = async () =>
       await this.getContract().write.depositWstETH(

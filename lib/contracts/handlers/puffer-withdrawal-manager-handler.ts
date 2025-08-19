@@ -97,22 +97,13 @@ export class PufferWithdrawalManagerHandler {
     walletAddress: Address,
     amount: bigint,
   ) {
-    const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
+    const permitData = await this.erc20PermitHandler
       .withToken(Token.pufETH)
-      .getPermitSignature(
+      .getPermitData(
         walletAddress,
         CONTRACT_ADDRESSES[this.chain].PufferWithdrawalManager as Address,
         amount,
       );
-
-    /* istanbul ignore next */
-    const permitData = {
-      r,
-      s,
-      v: Number(v ?? yParity),
-      deadline,
-      amount,
-    };
 
     const transact = async () =>
       await this.getContract().write.requestWithdrawalWithPermit(
