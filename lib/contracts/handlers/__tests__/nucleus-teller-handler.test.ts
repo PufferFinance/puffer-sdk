@@ -97,7 +97,7 @@ describe('NucleusBoringVaultHandler', () => {
     const { transact, estimate } = handler.depositWithPermit({
       account: mockAccount,
       depositAsset: TOKENS_ADDRESSES[Token.pufETH][Chain.Mainnet],
-      depositAmount: 100n,
+      amount: 100n,
       minimumMint: 0n,
       deadline: 0n,
       v: 1,

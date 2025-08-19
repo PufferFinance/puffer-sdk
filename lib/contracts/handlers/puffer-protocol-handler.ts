@@ -5,18 +5,12 @@ import {
   Address,
   GetContractReturnType,
   Account,
+  Hex,
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { CONTRACT_ADDRESSES } from '../addresses';
 import { PufferProtocol } from '../abis/mainnet/PufferProtocol';
-
-export type PermitData = {
-  deadline: bigint;
-  amount: bigint;
-  v: number;
-  r: Address;
-  s: Address;
-};
+import { PermitData } from '../common/lib/types';
 
 export type ValidatorKeyData = {
   blsPubKey: `0x${string}`;
@@ -236,7 +230,7 @@ export class PufferProtocolHandler {
    */
   public registerValidatorKey(
     data: ValidatorKeyData,
-    moduleName: `0x${string}`,
+    moduleName: Hex,
     pufETHPermit: PermitData,
     vtPermit: PermitData,
   ) {

@@ -11,6 +11,7 @@ import { CONTRACT_ADDRESSES } from '../addresses';
 import { AnyToken, TOKENS_ADDRESSES } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
 import { PufLocker } from '../abis/mainnet/PufLocker';
+import { PermitData } from '../common/lib/types';
 
 export type LockerDepositParams = {
   token: AnyToken;
@@ -148,7 +149,7 @@ export class PufLockerHandler {
 
     // Only `amount` is needed if `Token.approve()` is already called.
     // So using mock values for other properties.
-    let permitData = {
+    let permitData: PermitData = {
       r: padHex('0x', { size: 32 }),
       s: padHex('0x', { size: 32 }),
       v: 0,
@@ -157,21 +158,13 @@ export class PufLockerHandler {
     };
 
     if (!isPreapproved) {
-      const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
+      permitData = await this.erc20PermitHandler
         .withToken(token)
-        .getPermitSignature(
+        .getPermitData(
           account,
           CONTRACT_ADDRESSES[this.chain].PufLocker as Address,
           value,
         );
-      /* istanbul ignore next */
-      permitData = {
-        r,
-        s,
-        v: Number(v ?? yParity),
-        deadline,
-        amount: value,
-      };
     }
 
     const depositArgs = <const>[

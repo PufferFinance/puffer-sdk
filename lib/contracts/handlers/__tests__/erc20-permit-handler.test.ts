@@ -58,6 +58,35 @@ describe('ERC20PermitHandler', () => {
     expect(typeof deadline).toBe('bigint');
   });
 
+  it('should get the permit data for the given token', async () => {
+    contractTestingUtils.mockCall('nonces', [10n]);
+    contractTestingUtils.mockCall('name', ['Ethereum Staking Mock']);
+
+    const mockSpender = padHex('0x', { size: 20 });
+    const mockSignature = serializeSignature({
+      r: '0x1',
+      s: '0x1',
+      v: 0n,
+      yParity: 1,
+    });
+    jest
+      .spyOn(walletClient, 'signTypedData')
+      .mockReturnValue(Promise.resolve(mockSignature));
+
+    const permitData = await handler.getPermitData(
+      mockAccount,
+      mockSpender,
+      1n,
+    );
+
+    const { r, s, v, deadline, amount } = permitData;
+    expect(isHex(r)).toBeTruthy();
+    expect(isHex(s)).toBeTruthy();
+    expect(typeof v).toBe('number');
+    expect(typeof deadline).toBe('bigint');
+    expect(typeof amount).toBe('bigint');
+  });
+
   it('should approve the usage of token for a spender', async () => {
     contractTestingUtils.mockTransaction('approve');
     const mockSpender = padHex('0x', { size: 20 });

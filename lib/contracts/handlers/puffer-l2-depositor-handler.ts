@@ -115,21 +115,13 @@ export class PufferL2DepositorHandler {
     };
 
     if (!isPreapproved) {
-      const { r, s, v, yParity, deadline } = await this.erc20PermitHandler
+      permitData = await this.erc20PermitHandler
         .withToken(token)
-        .getPermitSignature(
+        .getPermitData(
           account,
           CONTRACT_ADDRESSES[this.chain].PufferL2Depositor as Address,
           value,
         );
-      /* istanbul ignore next */
-      permitData = {
-        r,
-        s,
-        v: Number(v ?? yParity),
-        deadline,
-        amount: value,
-      };
     }
 
     const depositArgs = <const>[

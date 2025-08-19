@@ -95,7 +95,7 @@ describe('NucleusBoringVaultHandler', () => {
       account: mockAccount,
       owner: generateAddress(),
       spender: generateAddress(),
-      value: 1n,
+      amount: 1n,
       deadline: 1n,
       v: 1,
       r: generateAddress(32),

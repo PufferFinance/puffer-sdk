@@ -10,7 +10,9 @@ import {
 } from 'viem';
 import { Chain, VIEM_CHAINS } from '../../chains/constants';
 import { vlPUFFER } from '../abis/mainnet/vlPUFFER';
-import { CONTRACT_ADDRESSES } from '../addresses';
+import { ERC20PermitHandler } from './erc20-permit-handler';
+import { Token, TOKENS_ADDRESSES } from '../tokens';
+import { PermitData } from '../common/lib/types';
 
 /**
  * Handler for the `vlPUFFER` contract exposing methods to interact
@@ -18,6 +20,7 @@ import { CONTRACT_ADDRESSES } from '../addresses';
  */
 export class VLPufferHandler {
   private viemChain: ViemChain;
+  private erc20PermitHandler: ERC20PermitHandler;
 
   /**
    * Create the handler for the `vlPUFFER` contract exposing methods to
@@ -35,6 +38,11 @@ export class VLPufferHandler {
     private publicClient: PublicClient,
   ) {
     this.viemChain = VIEM_CHAINS[chain];
+    this.erc20PermitHandler = new ERC20PermitHandler(
+      chain,
+      walletClient,
+      publicClient,
+    );
   }
 
   /**
@@ -43,7 +51,7 @@ export class VLPufferHandler {
    * @returns The viem contract.
    */
   public getContract() {
-    const address = CONTRACT_ADDRESSES[this.chain].vlPUFFER as Address;
+    const address = TOKENS_ADDRESSES[Token.vlPUFFER][this.chain] as Address;
     const abi = vlPUFFER;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
@@ -133,20 +141,6 @@ export class VLPufferHandler {
    */
   public totalSupply() {
     return this.getContract().read.totalSupply();
-  }
-
-  /**
-   * Create a lock with the specified amount and multiplier.
-   *
-   * @param amount The amount to lock.
-   * @param multiplier The multiplier for the lock.
-   * @returns The transaction.
-   */
-  public createLock(amount: bigint, multiplier: bigint) {
-    return this.getContract().write.createLock([amount, multiplier], {
-      account: this.walletClient.account as Account,
-      chain: this.viemChain,
-    });
   }
 
   /**
@@ -351,6 +345,20 @@ export class VLPufferHandler {
   }
 
   /**
+   * Create a lock with the specified amount and multiplier.
+   *
+   * @param amount The amount to lock.
+   * @param multiplier The multiplier for the lock.
+   * @returns The transaction.
+   */
+  public createLock(amount: bigint, multiplier: bigint) {
+    return this.getContract().write.createLock([amount, multiplier], {
+      account: this.walletClient.account as Account,
+      chain: this.viemChain,
+    });
+  }
+
+  /**
    * Create a lock with permit.
    *
    * @param value The amount to lock.
@@ -361,14 +369,37 @@ export class VLPufferHandler {
   public createLockWithPermit(
     value: bigint,
     multiplier: bigint,
-    permitData: {
-      deadline: bigint;
-      amount: bigint;
-      v: number;
-      r: Hex;
-      s: Hex;
-    },
+    permitData: PermitData,
   ) {
+    return this.getContract().write.createLockWithPermit(
+      [value, multiplier, permitData],
+      {
+        account: this.walletClient.account as Account,
+        chain: this.viemChain,
+      },
+    );
+  }
+
+  /**
+   * Create a lock with permit.
+   *
+   * @param value The amount to lock.
+   * @param multiplier The multiplier for the lock.
+   * @param isPreapproved Whether the PUFFER token is preapproved.
+   * @returns The transaction.
+   */
+  public async lock(value: bigint, multiplier: bigint, isPreapproved: boolean) {
+    if (isPreapproved) {
+      return this.createLock(value, multiplier);
+    }
+
+    const account = this.walletClient.account as Account;
+    // Internally create a permit signature for the PUFFER token.
+    const permitData = await this.erc20PermitHandler
+      .withToken(Token.PUFFER)
+      .getPermitData(account.address, this.getContract().address, value);
+
+    // Create a lock with the permit data.
     return this.getContract().write.createLockWithPermit(
       [value, multiplier, permitData],
       {
