@@ -184,7 +184,7 @@ export class NucleusTellerHandler {
 
     const { r, s, v, deadline } = await this.erc20PermitHandler
       .withToken(token)
-      .getPermitSignature(
+      .getPermitData(
         account,
         // The UniFi token contract is the spender.
         TOKENS_ADDRESSES[unifiToken][this.chain],
@@ -196,7 +196,7 @@ export class NucleusTellerHandler {
       amount,
       minimumMint,
       deadline,
-      Number(v),
+      v,
       r,
       s,
     ];
