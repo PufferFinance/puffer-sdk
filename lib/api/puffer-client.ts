@@ -29,6 +29,7 @@ import { GuardianModuleHandler } from '../contracts/handlers/guardian-module-han
 import { InstitutionalVaultHandler } from '../contracts/handlers/institutional-vault-handler';
 import { InstitutionalAccessManagerHandler } from '../contracts/handlers/institutional-access-manager-handler';
 import { LagoonVaultHandler } from '../contracts/handlers/lagoon-vault-handler';
+import { VLPufferHandler } from '../contracts/handlers/vl-puffer-handler';
 
 /**
  * The core class and the main entry point of the Puffer SDK.
@@ -84,6 +85,8 @@ export class PufferClient {
   public institutionalAccessManager: InstitutionalAccessManagerHandler;
   /** Handler for the `LagoonVault` contract. */
   public lagoonVault: LagoonVaultHandler;
+  /** Handler for the `vlPUFFER` contract. */
+  public vlPuffer: VLPufferHandler;
 
   /**
    * Create the Puffer Client.
@@ -226,6 +229,11 @@ export class PufferClient {
       this.publicClient,
     );
     this.lagoonVault = new LagoonVaultHandler(
+      chain,
+      this.walletClient,
+      this.publicClient,
+    );
+    this.vlPuffer = new VLPufferHandler(
       chain,
       this.walletClient,
       this.publicClient,

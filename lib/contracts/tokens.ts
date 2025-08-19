@@ -34,6 +34,7 @@ export enum Token {
   VT = 'VT',
   EIGEN = 'EIGEN',
   ARPA = 'ARPA',
+  vlPUFFER = 'vlPUFFER',
 }
 
 export enum UnifiToken {
@@ -201,6 +202,9 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x62a4ce0722ee65635c0f8339dd814d549b6f6735',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
+  [Token.vlPUFFER]: {
+    [Chain.Mainnet]: '0xe4c36adb90e936041776ddb87851ec38affd1499',
+  },
 };
 
 export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
@@ -257,6 +261,7 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [UnifiToken.unifiBTC]: '1',
   // https://etherscan.io/address/0x62a4ce0722ee65635c0f8339dd814d549b6f6735#code#F7#L172
   [UnifiToken.pufETHs]: '1',
+  [Token.vlPUFFER]: '1',
 };
 
 export const TOKENS_SALT: Partial<{
