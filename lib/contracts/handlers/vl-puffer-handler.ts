@@ -167,19 +167,6 @@ export class VLPufferHandler {
   }
 
   /**
-   * Transfer ownership of the contract.
-   *
-   * @param newOwner The new owner address.
-   * @returns The transaction.
-   */
-  public transferOwnership(newOwner: Address) {
-    return this.getContract().write.transferOwnership([newOwner], {
-      account: this.walletClient.account as Account,
-      chain: this.viemChain,
-    });
-  }
-
-  /**
    * Get the past total supply at a specific timepoint.
    *
    * @param timepoint The timepoint to get the total supply for.
@@ -405,19 +392,6 @@ export class VLPufferHandler {
   }
 
   /**
-   * Kick users from the contract.
-   *
-   * @param users The array of user addresses to kick.
-   * @returns The transaction.
-   */
-  public kickUsers(users: Address[]) {
-    return this.getContract().write.kickUsers([users], {
-      account: this.walletClient.account as Account,
-      chain: this.viemChain,
-    });
-  }
-
-  /**
    * Get the current clock value.
    *
    * @returns The clock value.
@@ -437,15 +411,6 @@ export class VLPufferHandler {
       account: this.walletClient.account as Account,
       chain: this.viemChain,
     });
-  }
-
-  /**
-   * Get the pending owner of the contract.
-   *
-   * @returns The pending owner address.
-   */
-  public pendingOwner() {
-    return this.getContract().read.pendingOwner();
   }
 
   /**

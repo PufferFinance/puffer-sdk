@@ -114,14 +114,6 @@ describe('VLPufferHandler', () => {
     expect(result).toEqual(lockInfo);
   });
 
-  it('should transfer ownership of the contract', async () => {
-    const newOwner = generateAddress();
-    contractTestingUtils.mockTransaction('transferOwnership');
-
-    const txHash = await handler.transferOwnership(newOwner);
-    expect(isHash(txHash)).toBeTruthy();
-  });
-
   it('should get the past total supply at a specific timepoint', async () => {
     const timepoint = 1234567890n;
     const pastTotalSupply = 500n;
@@ -312,14 +304,6 @@ describe('VLPufferHandler', () => {
     expect(isHash(txHash)).toBeTruthy();
   });
 
-  it('should kick users from the contract', async () => {
-    const users = [generateAddress(), generateAddress()];
-    contractTestingUtils.mockTransaction('kickUsers');
-
-    const txHash = await handler.kickUsers(users);
-    expect(isHash(txHash)).toBeTruthy();
-  });
-
   it('should get the current clock value', async () => {
     const clock = 1234567890;
     contractTestingUtils.mockCall('clock', [clock]);
@@ -334,14 +318,6 @@ describe('VLPufferHandler', () => {
 
     const txHash = await handler.withdraw(recipient);
     expect(isHash(txHash)).toBeTruthy();
-  });
-
-  it('should get the pending owner of the contract', async () => {
-    const pendingOwner = generateAddress();
-    contractTestingUtils.mockCall('pendingOwner', [pendingOwner]);
-
-    const result = await handler.pendingOwner();
-    expect(result.toLowerCase()).toBe(pendingOwner.toLowerCase());
   });
 
   it('should delegate votes to another address', async () => {

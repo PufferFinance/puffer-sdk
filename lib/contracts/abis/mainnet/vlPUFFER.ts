@@ -1,13 +1,6 @@
 export const vlPUFFER = <const>[
   {
     type: 'function',
-    name: 'renounceOwnership',
-    stateMutability: 'nonpayable',
-    inputs: [],
-    outputs: [],
-  },
-  {
-    type: 'function',
     name: 'PUFFER',
     stateMutability: 'view',
     inputs: [],
@@ -36,13 +29,6 @@ export const vlPUFFER = <const>[
   },
   {
     type: 'function',
-    name: 'unpause',
-    stateMutability: 'nonpayable',
-    inputs: [],
-    outputs: [],
-  },
-  {
-    type: 'function',
     name: 'allowance',
     stateMutability: 'view',
     inputs: [
@@ -50,26 +36,6 @@ export const vlPUFFER = <const>[
       { type: 'address', name: 'spender', simpleType: 'address' },
     ],
     outputs: [{ type: 'uint256', name: '', simpleType: 'uint' }],
-  },
-  {
-    type: 'function',
-    name: 'eip712Domain',
-    stateMutability: 'view',
-    inputs: [],
-    outputs: [
-      { type: 'bytes1', name: 'fields', simpleType: 'bytes' },
-      { type: 'string', name: 'name', simpleType: 'string' },
-      { type: 'string', name: 'version', simpleType: 'string' },
-      { type: 'uint256', name: 'chainId', simpleType: 'uint' },
-      { type: 'address', name: 'verifyingContract', simpleType: 'address' },
-      { type: 'bytes32', name: 'salt', simpleType: 'bytes' },
-      {
-        type: 'uint256[]',
-        name: 'extensions',
-        simpleType: 'slice',
-        nestedType: { type: 'uint', count: 256 },
-      },
-    ],
   },
   {
     type: 'function',
@@ -125,13 +91,6 @@ export const vlPUFFER = <const>[
   },
   {
     type: 'function',
-    name: 'transferOwnership',
-    stateMutability: 'nonpayable',
-    inputs: [{ type: 'address', name: 'newOwner', simpleType: 'address' }],
-    outputs: [],
-  },
-  {
-    type: 'function',
     name: 'getPastTotalSupply',
     stateMutability: 'view',
     inputs: [{ type: 'uint256', name: 'timepoint', simpleType: 'uint' }],
@@ -175,13 +134,6 @@ export const vlPUFFER = <const>[
   {
     type: 'function',
     name: 'pause',
-    stateMutability: 'nonpayable',
-    inputs: [],
-    outputs: [],
-  },
-  {
-    type: 'function',
-    name: 'acceptOwnership',
     stateMutability: 'nonpayable',
     inputs: [],
     outputs: [],
@@ -291,20 +243,6 @@ export const vlPUFFER = <const>[
   },
   {
     type: 'function',
-    name: 'kickUsers',
-    stateMutability: 'nonpayable',
-    inputs: [
-      {
-        type: 'address[]',
-        name: 'users',
-        simpleType: 'slice',
-        nestedType: { type: 'address' },
-      },
-    ],
-    outputs: [],
-  },
-  {
-    type: 'function',
     name: 'clock',
     stateMutability: 'view',
     inputs: [],
@@ -316,13 +254,6 @@ export const vlPUFFER = <const>[
     stateMutability: 'nonpayable',
     inputs: [{ type: 'address', name: 'recipient', simpleType: 'address' }],
     outputs: [],
-  },
-  {
-    type: 'function',
-    name: 'pendingOwner',
-    stateMutability: 'view',
-    inputs: [],
-    outputs: [{ type: 'address', name: '', simpleType: 'address' }],
   },
   {
     type: 'function',
