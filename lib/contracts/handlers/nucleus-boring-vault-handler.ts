@@ -11,16 +11,12 @@ import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { VAULTS_ADDRESSES } from '../vaults-addresses';
 import { UnifiToken } from '../tokens';
 import { BoringVault } from '../abis/mainnet/BoringVault';
+import { PermitData } from '../common/lib/types';
 
-export type PermitParams = {
+export type PermitParams = PermitData & {
   account: Address;
   owner: Address;
   spender: Address;
-  value: bigint;
-  deadline: bigint;
-  v: number;
-  r: Address;
-  s: Address;
 };
 
 /**
@@ -207,15 +203,15 @@ export class NucleusBoringVaultHandler {
    * transaction.
    */
   public permit(params: PermitParams) {
-    const { account, owner, spender, value, deadline, v, r, s } = params;
+    const { account, owner, spender, amount, deadline, v, r, s } = params;
     const transact = () =>
       this.getContract().write.permit(
-        [owner, spender, value, deadline, v, r, s],
+        [owner, spender, amount, deadline, v, r, s],
         { account, chain: this.viemChain },
       );
     const estimate = () =>
       this.getContract().estimateGas.permit(
-        [owner, spender, value, deadline, v, r, s],
+        [owner, spender, amount, deadline, v, r, s],
         { account },
       );
 

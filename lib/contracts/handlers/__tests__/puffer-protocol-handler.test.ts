@@ -8,10 +8,10 @@ import { mainnet } from 'viem/chains';
 import { Chain } from '../../../chains/constants';
 import {
   PufferProtocolHandler,
-  type PermitData,
   type ValidatorKeyData,
   type StoppedValidatorInfo,
 } from '../puffer-protocol-handler';
+import { PermitData } from '../../common/lib/types';
 
 jest.mock('viem', () => {
   const actual = jest.requireActual('viem');

@@ -16,6 +16,7 @@ import {
 } from '../tokens';
 import { getTimestampInSeconds } from '../../utils/time';
 import { ERC20Permit } from '../abis/mainnet/ERC20Permit';
+import { PermitData } from '../common/lib/types';
 
 /**
  * Handler for performing operations for and with ERC20Permit tokens.
@@ -123,6 +124,28 @@ export class ERC20PermitHandler {
     });
 
     return { ...parseSignature(signature), deadline };
+  }
+
+  /**
+   * Get the permit data for the given owner, spender and value.
+   *
+   * @param ownerAddress Address of the token owner.
+   * @param spenderAddress Address of the spender who needs the permit.
+   * @param value Value/amount to be permitted.
+   * @returns Permit data in the form `{ r, s, v, deadline, amount }`.
+   */
+  public async getPermitData(
+    ownerAddress: Address,
+    spenderAddress: Address,
+    value: bigint,
+  ): Promise<PermitData> {
+    const { r, s, v, yParity, deadline } = await this.getPermitSignature(
+      ownerAddress,
+      spenderAddress,
+      value,
+    );
+
+    return { r, s, v: Number(v ?? yParity), deadline, amount: value };
   }
 
   /**

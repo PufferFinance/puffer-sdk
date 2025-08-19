@@ -9,14 +9,7 @@ import {
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { CONTRACT_ADDRESSES } from '../addresses';
 import { ValidatorTicket } from '../abis/mainnet/ValidatorTicket';
-
-export type PermitData = {
-  deadline: bigint;
-  amount: bigint;
-  v: number;
-  r: Address;
-  s: Address;
-};
+import { PermitData } from '../common/lib/types';
 
 /**
  * Handler for the `ValidatorTicket` contract exposing methods to interact

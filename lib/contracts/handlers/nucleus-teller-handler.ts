@@ -10,6 +10,7 @@ import { VAULTS_ADDRESSES } from '../vaults-addresses';
 import { Token, TOKENS_ADDRESSES, UnifiToken } from '../tokens';
 import { ERC20PermitHandler } from './erc20-permit-handler';
 import { Teller } from '../abis/mainnet/Teller';
+import { PermitData } from '../common/lib/types';
 
 export type DepositParams = {
   account: Address;
@@ -20,15 +21,10 @@ export type DepositParams = {
   isPreapproved?: boolean;
 };
 
-export type DepositWithPermitParams = {
+export type DepositWithPermitParams = PermitData & {
   account: Address;
   depositAsset: Address;
-  depositAmount: bigint;
   minimumMint: bigint;
-  deadline: bigint;
-  v: number;
-  r: Address;
-  s: Address;
 };
 
 /**
@@ -237,20 +233,12 @@ export class NucleusTellerHandler {
    * transaction.
    */
   public depositWithPermit(params: DepositWithPermitParams) {
-    const {
-      account,
-      depositAsset,
-      depositAmount,
-      minimumMint,
-      deadline,
-      v,
-      r,
-      s,
-    } = params;
+    const { account, depositAsset, amount, minimumMint, deadline, v, r, s } =
+      params;
 
     const transact = () =>
       this.getContract().write.depositWithPermit(
-        [depositAsset, depositAmount, minimumMint, deadline, v, r, s],
+        [depositAsset, amount, minimumMint, deadline, v, r, s],
         {
           account,
           chain: this.viemChain,
@@ -258,7 +246,7 @@ export class NucleusTellerHandler {
       );
     const estimate = () =>
       this.getContract().estimateGas.depositWithPermit(
-        [depositAsset, depositAmount, minimumMint, deadline, v, r, s],
+        [depositAsset, amount, minimumMint, deadline, v, r, s],
         {
           account,
         },
