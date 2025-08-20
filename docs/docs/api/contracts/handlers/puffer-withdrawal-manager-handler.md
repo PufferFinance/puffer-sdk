@@ -30,7 +30,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/fa0a7df7054c55dadcb8ea5a4a2acff77f0087e7/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L32)
+[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L32)
 
 #### Properties
 
@@ -81,7 +81,7 @@ The transaction hash of the withdrawal.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:141](https://github.com/PufferFinance/puffer-sdk/blob/fa0a7df7054c55dadcb8ea5a4a2acff77f0087e7/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L141)
+[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:132](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L132)
 
 ##### getContract()
 
@@ -97,7 +97,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:50](https://github.com/PufferFinance/puffer-sdk/blob/fa0a7df7054c55dadcb8ea5a4a2acff77f0087e7/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L50)
+[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:50](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L50)
 
 ##### getWithdrawal()
 
@@ -131,7 +131,7 @@ The withdrawal at the given index.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:166](https://github.com/PufferFinance/puffer-sdk/blob/fa0a7df7054c55dadcb8ea5a4a2acff77f0087e7/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L166)
+[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:157](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L157)
 
 ##### requestWithdrawal()
 
@@ -170,7 +170,7 @@ The transaction hash of the withdrawal.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/fa0a7df7054c55dadcb8ea5a4a2acff77f0087e7/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L70)
+[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L70)
 
 ##### requestWithdrawalWithPermit()
 
@@ -209,4 +209,4 @@ The transaction hash of the withdrawal.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/fa0a7df7054c55dadcb8ea5a4a2acff77f0087e7/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L96)
+[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L96)

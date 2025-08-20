@@ -2,10 +2,6 @@
 
 ## References
 
-### PermitData
-
-Re-exports [PermitData](puffer-protocol-handler.md#permitdata)
-
 ### PufferProtocolHandler
 
 Re-exports [PufferProtocolHandler](puffer-protocol-handler.md#pufferprotocolhandler)

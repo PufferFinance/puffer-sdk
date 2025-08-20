@@ -8,4 +8,4 @@
 
 #### Source
 
-[lib/contracts/abis/mainnet/GuardianModule.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/fa0a7df7054c55dadcb8ea5a4a2acff77f0087e7/lib/contracts/abis/mainnet/GuardianModule.ts#L1)
+[lib/contracts/abis/mainnet/GuardianModule.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/abis/mainnet/GuardianModule.ts#L1)
