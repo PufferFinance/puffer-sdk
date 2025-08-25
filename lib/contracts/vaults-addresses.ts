@@ -37,6 +37,7 @@ export const VAULTS_ADDRESSES = {
   },
   [Token.tacpufETH]: {
     [Chain.Mainnet]: {
+      // This is the pre-deposit contract.
       LagoonVault: '0xf2e97704a567e003ed97f2d0976c45b2dda766a0',
     },
     [Chain.TAC]: {
