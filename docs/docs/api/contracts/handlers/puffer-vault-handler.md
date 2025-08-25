@@ -30,7 +30,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:29](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L29)
+[lib/contracts/handlers/puffer-vault-handler.ts:29](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L29)
 
 #### Properties
 
@@ -63,7 +63,7 @@ pufETH balance in wei.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:116](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L116)
+[lib/contracts/handlers/puffer-vault-handler.ts:116](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L116)
 
 ##### convertToAssets()
 
@@ -86,7 +86,7 @@ Amount of equivalent WETH.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:273](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L273)
+[lib/contracts/handlers/puffer-vault-handler.ts:290](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L290)
 
 ##### deposit()
 
@@ -130,7 +130,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:67](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L67)
+[lib/contracts/handlers/puffer-vault-handler.ts:67](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L67)
 
 ##### depositETH()
 
@@ -180,7 +180,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L94)
+[lib/contracts/handlers/puffer-vault-handler.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L94)
 
 ##### getAllowance()
 
@@ -203,7 +203,7 @@ Allowance for the given owner and spender.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:137](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L137)
+[lib/contracts/handlers/puffer-vault-handler.ts:137](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L137)
 
 ##### getContract()
 
@@ -220,7 +220,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L43)
+[lib/contracts/handlers/puffer-vault-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L43)
 
 ##### getExitFeeBasisPoints()
 
@@ -229,7 +229,8 @@ The viem contract.
 Returns how many basis points of a fee there are when exiting. For
 example, a 1% fee would mean 1% of the user's requested pufETH is
 burned (which increases the value for all pufETH holders) before
-the ETH is redeemed. i.e., you get 1% less ETH back.
+the ETH is redeemed. i.e., you get 1% less ETH back. i.e., you get
+1% less ETH back.
 
 ###### Returns
 
@@ -239,7 +240,7 @@ Basis points of the exit fee.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:213](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L213)
+[lib/contracts/handlers/puffer-vault-handler.ts:214](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L214)
 
 ##### getPufETHRate()
 
@@ -255,23 +256,46 @@ Rate of pufETH compared to 1 ETH.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:125](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L125)
+[lib/contracts/handlers/puffer-vault-handler.ts:125](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L125)
 
-##### getRemainingAssetsDailyWithdrawalLimit()
+##### getTotalExitFeeBasisPoints()
 
-> **getRemainingAssetsDailyWithdrawalLimit**(): `Promise`\<`bigint`\>
+> **getTotalExitFeeBasisPoints**(): `Promise`\<`bigint`\>
 
-Returns how much WETH can still be withdrawn today.
+Returns how many basis points of a fee there are in total when
+exiting. For example, a 1% fee would mean 1% of the user's
+requested pufETH is burned (which increases the value for all
+pufETH holders) before the ETH is redeemed. i.e., you get 1% less
+ETH back.
 
 ###### Returns
 
 `Promise`\<`bigint`\>
 
-Remaining WETH daily withdrawal limit.
+Basis points of the exit fee.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:222](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L222)
+[lib/contracts/handlers/puffer-vault-handler.ts:239](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L239)
+
+##### getTreasuryExitFeeBasisPoints()
+
+> **getTreasuryExitFeeBasisPoints**(): `Promise`\<`bigint`\>
+
+Returns how many treasury basis points of a fee there are when
+exiting. For example, a 1% fee would mean 1% of the user's
+requested pufETH is burned (which increases the value for all
+pufETH holders) before the ETH is redeemed.
+
+###### Returns
+
+`Promise`\<`bigint`\>
+
+Basis points of the exit fee.
+
+###### Source
+
+[lib/contracts/handlers/puffer-vault-handler.ts:226](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L226)
 
 ##### maxRedeem()
 
@@ -294,7 +318,7 @@ Maximum amount of pufETH shares that can be redeemed.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:201](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L201)
+[lib/contracts/handlers/puffer-vault-handler.ts:201](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L201)
 
 ##### previewRedeem()
 
@@ -317,7 +341,7 @@ Preview of the amount of WETH that can be redeemed.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:190](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L190)
+[lib/contracts/handlers/puffer-vault-handler.ts:190](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L190)
 
 ##### redeem()
 
@@ -364,7 +388,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:241](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L241)
+[lib/contracts/handlers/puffer-vault-handler.ts:258](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L258)
 
 ##### withdraw()
 
@@ -410,4 +434,4 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-vault-handler.ts:158](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/puffer-vault-handler.ts#L158)
+[lib/contracts/handlers/puffer-vault-handler.ts:158](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/puffer-vault-handler.ts#L158)

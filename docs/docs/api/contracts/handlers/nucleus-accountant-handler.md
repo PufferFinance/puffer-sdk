@@ -28,7 +28,7 @@ Create the handler for processing tokens.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-accountant-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/nucleus-accountant-handler.ts#L30)
+[lib/contracts/handlers/nucleus-accountant-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/nucleus-accountant-handler.ts#L30)
 
 #### Properties
 
@@ -56,7 +56,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-accountant-handler.ts:56](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/nucleus-accountant-handler.ts#L56)
+[lib/contracts/handlers/nucleus-accountant-handler.ts:56](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/nucleus-accountant-handler.ts#L56)
 
 ##### getRate()
 
@@ -72,7 +72,7 @@ Rate for the given token address.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-accountant-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/nucleus-accountant-handler.ts#L96)
+[lib/contracts/handlers/nucleus-accountant-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/nucleus-accountant-handler.ts#L96)
 
 ##### getRateInQuote()
 
@@ -94,7 +94,7 @@ Rate for the given quote address.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-accountant-handler.ts:114](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/nucleus-accountant-handler.ts#L114)
+[lib/contracts/handlers/nucleus-accountant-handler.ts:114](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/nucleus-accountant-handler.ts#L114)
 
 ##### getRateInQuoteSafe()
 
@@ -116,7 +116,7 @@ Rate for the given quote address for safe.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-accountant-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/nucleus-accountant-handler.ts#L123)
+[lib/contracts/handlers/nucleus-accountant-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/nucleus-accountant-handler.ts#L123)
 
 ##### getRateSafe()
 
@@ -132,7 +132,7 @@ Rate for the given token address for safe.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-accountant-handler.ts:105](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/nucleus-accountant-handler.ts#L105)
+[lib/contracts/handlers/nucleus-accountant-handler.ts:105](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/nucleus-accountant-handler.ts#L105)
 
 ##### rateProviderData()
 
@@ -162,7 +162,7 @@ Rate provider data for the given token address.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-accountant-handler.ts:75](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/nucleus-accountant-handler.ts#L75)
+[lib/contracts/handlers/nucleus-accountant-handler.ts:75](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/nucleus-accountant-handler.ts#L75)
 
 ##### vault()
 
@@ -178,7 +178,7 @@ Vault for the given token address.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-accountant-handler.ts:87](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/nucleus-accountant-handler.ts#L87)
+[lib/contracts/handlers/nucleus-accountant-handler.ts:87](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/nucleus-accountant-handler.ts#L87)
 
 ##### withToken()
 
@@ -201,4 +201,4 @@ The handler.
 
 ###### Source
 
-[lib/contracts/handlers/nucleus-accountant-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/nucleus-accountant-handler.ts#L45)
+[lib/contracts/handlers/nucleus-accountant-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/nucleus-accountant-handler.ts#L45)

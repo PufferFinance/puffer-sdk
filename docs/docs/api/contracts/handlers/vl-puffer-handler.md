@@ -30,7 +30,7 @@ interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:35](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L35)
+[lib/contracts/handlers/vl-puffer-handler.ts:35](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L35)
 
 #### Properties
 
@@ -58,7 +58,7 @@ The PUFFER token address.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L70)
+[lib/contracts/handlers/vl-puffer-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L70)
 
 ##### allowance()
 
@@ -81,7 +81,7 @@ The allowance.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L109)
+[lib/contracts/handlers/vl-puffer-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L109)
 
 ##### approve()
 
@@ -104,7 +104,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:277](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L277)
+[lib/contracts/handlers/vl-puffer-handler.ts:316](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L316)
 
 ##### balanceOf()
 
@@ -126,7 +126,7 @@ The balance.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:185](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L185)
+[lib/contracts/handlers/vl-puffer-handler.ts:185](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L185)
 
 ##### checkpoints()
 
@@ -157,7 +157,7 @@ The checkpoint.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:316](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L316)
+[lib/contracts/handlers/vl-puffer-handler.ts:355](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L355)
 
 ##### createLock()
 
@@ -180,7 +180,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:336](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L336)
+[lib/contracts/handlers/vl-puffer-handler.ts:375](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L375)
 
 ##### createLockWithPermit()
 
@@ -204,7 +204,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:351](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L351)
+[lib/contracts/handlers/vl-puffer-handler.ts:390](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L390)
 
 ##### decimals()
 
@@ -220,11 +220,11 @@ The decimals.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L79)
+[lib/contracts/handlers/vl-puffer-handler.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L79)
 
 ##### delegate()
 
-> **delegate**(`delegatee`): `Promise`\<\`0x$\{string\}\`\>
+> **delegate**(`delegatee`, `isPreapproved`): `Promise`\<\`0x$\{string\}\`\>
 
 Delegate votes to another address.
 
@@ -233,6 +233,7 @@ Delegate votes to another address.
 | Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `delegatee` | \`0x$\{string\}\` | The delegatee address. |
+| `isPreapproved` | `boolean` | Whether the PUFFER token is preapproved or should use a permit signature. |
 
 ###### Returns
 
@@ -242,7 +243,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:422](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L422)
+[lib/contracts/handlers/vl-puffer-handler.ts:258](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L258)
 
 ##### delegateBySig()
 
@@ -269,7 +270,29 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:220](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L220)
+[lib/contracts/handlers/vl-puffer-handler.ts:220](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L220)
+
+##### delegatePreapproved()
+
+> **delegatePreapproved**(`delegatee`): `Promise`\<\`0x$\{string\}\`\>
+
+Delegate votes to another address.
+
+###### Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `delegatee` | \`0x$\{string\}\` | The delegatee address. |
+
+###### Returns
+
+`Promise`\<\`0x$\{string\}\`\>
+
+The transaction.
+
+###### Source
+
+[lib/contracts/handlers/vl-puffer-handler.ts:243](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L243)
 
 ##### delegates()
 
@@ -291,7 +314,7 @@ The delegate address.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L89)
+[lib/contracts/handlers/vl-puffer-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L89)
 
 ##### getClock()
 
@@ -307,7 +330,7 @@ The clock value.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:399](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L399)
+[lib/contracts/handlers/vl-puffer-handler.ts:438](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L438)
 
 ##### getClockMode()
 
@@ -323,7 +346,7 @@ The clock mode.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:256](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L256)
+[lib/contracts/handlers/vl-puffer-handler.ts:295](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L295)
 
 ##### getContract()
 
@@ -339,7 +362,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:53](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L53)
+[lib/contracts/handlers/vl-puffer-handler.ts:53](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L53)
 
 ##### getPastTotalSupply()
 
@@ -361,7 +384,7 @@ The past total supply.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:175](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L175)
+[lib/contracts/handlers/vl-puffer-handler.ts:175](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L175)
 
 ##### getPastVotes()
 
@@ -384,7 +407,7 @@ The past votes.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:305](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L305)
+[lib/contracts/handlers/vl-puffer-handler.ts:344](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L344)
 
 ##### isPaused()
 
@@ -400,7 +423,7 @@ True if paused, false otherwise.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:151](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L151)
+[lib/contracts/handlers/vl-puffer-handler.ts:151](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L151)
 
 ##### lock()
 
@@ -424,7 +447,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:373](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L373)
+[lib/contracts/handlers/vl-puffer-handler.ts:412](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L412)
 
 ##### lockInfos()
 
@@ -454,7 +477,7 @@ The lock information.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:161](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L161)
+[lib/contracts/handlers/vl-puffer-handler.ts:161](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L161)
 
 ##### name()
 
@@ -470,7 +493,7 @@ The name.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:325](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L325)
+[lib/contracts/handlers/vl-puffer-handler.ts:364](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L364)
 
 ##### nonces()
 
@@ -492,7 +515,7 @@ The nonce.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:195](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L195)
+[lib/contracts/handlers/vl-puffer-handler.ts:195](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L195)
 
 ##### numCheckpoints()
 
@@ -514,7 +537,7 @@ The number of checkpoints.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:266](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L266)
+[lib/contracts/handlers/vl-puffer-handler.ts:305](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L305)
 
 ##### owner()
 
@@ -530,7 +553,7 @@ The owner address.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L98)
+[lib/contracts/handlers/vl-puffer-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L98)
 
 ##### reLock()
 
@@ -553,7 +576,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:291](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L291)
+[lib/contracts/handlers/vl-puffer-handler.ts:330](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L330)
 
 ##### symbol()
 
@@ -569,7 +592,7 @@ The symbol.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:142](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L142)
+[lib/contracts/handlers/vl-puffer-handler.ts:142](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L142)
 
 ##### totalSupply()
 
@@ -585,7 +608,7 @@ The total supply.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:133](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L133)
+[lib/contracts/handlers/vl-puffer-handler.ts:133](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L133)
 
 ##### transfer()
 
@@ -608,7 +631,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:244](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L244)
+[lib/contracts/handlers/vl-puffer-handler.ts:283](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L283)
 
 ##### transferFrom()
 
@@ -632,7 +655,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L121)
+[lib/contracts/handlers/vl-puffer-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L121)
 
 ##### votes()
 
@@ -654,7 +677,7 @@ The votes.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:205](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L205)
+[lib/contracts/handlers/vl-puffer-handler.ts:205](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L205)
 
 ##### withdraw()
 
@@ -676,4 +699,4 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/vl-puffer-handler.ts:409](https://github.com/PufferFinance/puffer-sdk/blob/1695f0989bbc85c5de805d8ff3a9407c9d81710f/lib/contracts/handlers/vl-puffer-handler.ts#L409)
+[lib/contracts/handlers/vl-puffer-handler.ts:448](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/handlers/vl-puffer-handler.ts#L448)
