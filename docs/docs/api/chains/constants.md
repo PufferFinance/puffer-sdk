@@ -31,4 +31,4 @@
 
 #### Source
 
-[lib/chains/constants.ts:36](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/chains/constants.ts#L36)
+[lib/chains/constants.ts:36](https://github.com/PufferFinance/puffer-sdk/blob/45c6e132498ca94bfbd9c6e7764db129c3651333/lib/chains/constants.ts#L36)

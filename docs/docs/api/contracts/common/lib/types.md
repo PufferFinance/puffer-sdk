@@ -30,4 +30,4 @@
 
 #### Source
 
-[lib/contracts/common/lib/types.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/318ab800fd30e73d642634fd13ebb8d06a76860d/lib/contracts/common/lib/types.ts#L3)
+[lib/contracts/common/lib/types.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/45c6e132498ca94bfbd9c6e7764db129c3651333/lib/contracts/common/lib/types.ts#L3)
