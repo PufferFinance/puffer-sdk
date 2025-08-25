@@ -235,6 +235,45 @@ export class VLPufferHandler {
   }
 
   /**
+   * Delegate votes to another address.
+   *
+   * @param delegatee The delegatee address.
+   * @returns The transaction.
+   */
+  public delegatePreapproved(delegatee: Address) {
+    return this.getContract().write.delegate([delegatee], {
+      account: this.walletClient.account as Account,
+      chain: this.viemChain,
+    });
+  }
+
+  /**
+   * Delegate votes to another address.
+   *
+   * @param delegatee The delegatee address.
+   * @param isPreapproved Whether the PUFFER token is preapproved or
+   * should use a permit signature.
+   * @returns The transaction.
+   */
+  public async delegate(delegatee: Address, isPreapproved: boolean) {
+    if (isPreapproved) {
+      return this.delegatePreapproved(delegatee);
+    }
+
+    const account = this.walletClient.account as Account;
+    // Internally create a permit signature for the PUFFER token.
+    const permitHandler = this.erc20PermitHandler.withToken(Token.PUFFER);
+    const { r, s, v, deadline } = await permitHandler.getPermitData(
+      account.address,
+      this.getContract().address,
+      0n,
+    );
+    const nonces = await permitHandler.nonces(account.address);
+
+    return this.delegateBySig(delegatee, nonces, deadline, v, r, s);
+  }
+
+  /**
    * Transfer tokens to another address.
    *
    * @param to The address to transfer to.
@@ -408,19 +447,6 @@ export class VLPufferHandler {
    */
   public withdraw(recipient: Address) {
     return this.getContract().write.withdraw([recipient], {
-      account: this.walletClient.account as Account,
-      chain: this.viemChain,
-    });
-  }
-
-  /**
-   * Delegate votes to another address.
-   *
-   * @param delegatee The delegatee address.
-   * @returns The transaction.
-   */
-  public delegate(delegatee: Address) {
-    return this.getContract().write.delegate([delegatee], {
       account: this.walletClient.account as Account,
       chain: this.viemChain,
     });

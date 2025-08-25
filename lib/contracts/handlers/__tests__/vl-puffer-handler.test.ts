@@ -8,6 +8,7 @@ import { vlPUFFER } from '../../abis/mainnet/vlPUFFER';
 import { VLPufferHandler } from '../vl-puffer-handler';
 import { generateAddress } from '../../../../test/mocks/address';
 import { Chain } from '../../../chains/constants';
+import { mockPermitSignature } from '../../../../test/mocks/permit-signature';
 
 describe('VLPufferHandler', () => {
   const contractTestingUtils = testingUtils.generateContractUtils(vlPUFFER);
@@ -152,22 +153,36 @@ describe('VLPufferHandler', () => {
 
   it('should delegate by signature', async () => {
     const delegatee = generateAddress();
-    const nonce = 1n;
-    const expiry = 1234567890n;
-    const v = 27;
-    const r = padHex('0x', { size: 32 });
-    const s = padHex('0x', { size: 32 });
+    const delegateBySigSpy = jest.spyOn(handler, 'delegateBySig');
+    jest
+      .spyOn((handler as any).erc20PermitHandler, 'getPermitSignature')
+      .mockReturnValue(Promise.resolve(mockPermitSignature));
+    jest
+      .spyOn((handler as any).erc20PermitHandler, 'nonces')
+      .mockReturnValue(Promise.resolve(1n));
     contractTestingUtils.mockTransaction('delegateBySig');
 
-    const txHash = await handler.delegateBySig(
+    const txHash = await handler.delegate(delegatee, false);
+    expect(isHash(txHash)).toBeTruthy();
+    const { r, s, v, deadline } = mockPermitSignature;
+    expect(delegateBySigSpy).toHaveBeenCalledWith(
       delegatee,
-      nonce,
-      expiry,
-      v,
+      1n,
+      deadline,
+      Number(v),
       r,
       s,
     );
+  });
+
+  it('should delegate votes to another address with preapproval', async () => {
+    const delegatee = generateAddress();
+    const delegatePreapprovedSpy = jest.spyOn(handler, 'delegatePreapproved');
+    contractTestingUtils.mockTransaction('delegate');
+
+    const txHash = await handler.delegate(delegatee, true);
     expect(isHash(txHash)).toBeTruthy();
+    expect(delegatePreapprovedSpy).toHaveBeenCalledWith(delegatee);
   });
 
   it('should transfer tokens to another address', async () => {
@@ -317,14 +332,6 @@ describe('VLPufferHandler', () => {
     contractTestingUtils.mockTransaction('withdraw');
 
     const txHash = await handler.withdraw(recipient);
-    expect(isHash(txHash)).toBeTruthy();
-  });
-
-  it('should delegate votes to another address', async () => {
-    const delegatee = generateAddress();
-    contractTestingUtils.mockTransaction('delegate');
-
-    const txHash = await handler.delegate(delegatee);
     expect(isHash(txHash)).toBeTruthy();
   });
 });

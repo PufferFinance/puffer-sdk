@@ -73,6 +73,16 @@ export class ERC20PermitHandler {
   }
 
   /**
+   * Get the nonces for the given account.
+   *
+   * @param account Address of the account.
+   * @returns The nonces.
+   */
+  public nonces(account: Address) {
+    return this.getContract().read.nonces([account]);
+  }
+
+  /**
    * Process and get permit signature for the given token to perform
    * transactions without calling `approve()`.
    *
@@ -88,7 +98,7 @@ export class ERC20PermitHandler {
   ) {
     const contract = this.getContract();
 
-    const permitNonces = await contract.read.nonces([ownerAddress]);
+    const permitNonces = await this.nonces(ownerAddress);
     const name = await contract.read.name();
     const domain = <const>{
       name,
