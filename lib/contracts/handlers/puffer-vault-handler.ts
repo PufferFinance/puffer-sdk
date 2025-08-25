@@ -7,7 +7,7 @@ import {
 } from 'viem';
 import { Chain, VIEM_CHAINS, ViemChain } from '../../chains/constants';
 import { CONTRACT_ADDRESSES } from '../addresses';
-import { PufferVaultV2 } from '../abis/mainnet/PufferVaultV2';
+import { PufferVaultV5 } from '../abis/mainnet/PufferVaultV5';
 
 /**
  * Handler for the `PufferVaultV2` contract exposing methods to interact
@@ -42,7 +42,7 @@ export class PufferVaultHandler {
    */
   public getContract() {
     const address = CONTRACT_ADDRESSES[this.chain].PufferVault as Address;
-    const abi = PufferVaultV2;
+    const abi = PufferVaultV5;
     const client = { public: this.publicClient, wallet: this.walletClient };
 
     return getContract({ address, abi, client }) as GetContractReturnType<
@@ -206,7 +206,8 @@ export class PufferVaultHandler {
    * Returns how many basis points of a fee there are when exiting. For
    * example, a 1% fee would mean 1% of the user's requested pufETH is
    * burned (which increases the value for all pufETH holders) before
-   * the ETH is redeemed. i.e., you get 1% less ETH back.
+   * the ETH is redeemed. i.e., you get 1% less ETH back. i.e., you get
+   * 1% less ETH back.
    *
    * @returns Basis points of the exit fee.
    */
@@ -215,12 +216,28 @@ export class PufferVaultHandler {
   }
 
   /**
-   * Returns how much WETH can still be withdrawn today.
+   * Returns how many treasury basis points of a fee there are when
+   * exiting. For example, a 1% fee would mean 1% of the user's
+   * requested pufETH is burned (which increases the value for all
+   * pufETH holders) before the ETH is redeemed.
    *
-   * @returns Remaining WETH daily withdrawal limit.
+   * @returns Basis points of the exit fee.
    */
-  public getRemainingAssetsDailyWithdrawalLimit() {
-    return this.getContract().read.getRemainingAssetsDailyWithdrawalLimit();
+  public getTreasuryExitFeeBasisPoints() {
+    return this.getContract().read.getTreasuryExitFeeBasisPoints();
+  }
+
+  /**
+   * Returns how many basis points of a fee there are in total when
+   * exiting. For example, a 1% fee would mean 1% of the user's
+   * requested pufETH is burned (which increases the value for all
+   * pufETH holders) before the ETH is redeemed. i.e., you get 1% less
+   * ETH back.
+   *
+   * @returns Basis points of the exit fee.
+   */
+  public getTotalExitFeeBasisPoints() {
+    return this.getContract().read.getTotalExitFeeBasisPoints();
   }
 
   /**

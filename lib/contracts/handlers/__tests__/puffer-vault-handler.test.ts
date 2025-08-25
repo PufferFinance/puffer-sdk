@@ -6,10 +6,10 @@ import {
 import { Chain } from '../../../chains/constants';
 import { mockAccount, testingUtils } from '../../../../test/setup-tests';
 import { PufferVaultHandler } from '../puffer-vault-handler';
-import { PufferVaultV2 } from '../../abis/mainnet/PufferVaultV2';
+import { PufferVaultV5 } from '../../abis/mainnet/PufferVaultV5';
 
 describe('PufferVaultHandler', () => {
-  const vaultTestingUtils = testingUtils.generateContractUtils(PufferVaultV2);
+  const vaultTestingUtils = testingUtils.generateContractUtils(PufferVaultV5);
   let handler: PufferVaultHandler;
 
   beforeEach(() => {
@@ -109,15 +109,21 @@ describe('PufferVaultHandler', () => {
     expect(exitFeeBasisPoints).toBe(mockPoints);
   });
 
-  it('should get remaining assets daily withdrawal limit', async () => {
-    const mockLimit = 10n;
-    vaultTestingUtils.mockCall('getRemainingAssetsDailyWithdrawalLimit', [
-      mockLimit,
-    ]);
+  it('should get treasury exit fee basis points', async () => {
+    const mockPoints = 10n;
+    vaultTestingUtils.mockCall('getTreasuryExitFeeBasisPoints', [mockPoints]);
 
-    const withdrawalLimit =
-      await handler.getRemainingAssetsDailyWithdrawalLimit();
-    expect(withdrawalLimit).toBe(mockLimit);
+    const treasuryExitFeeBasisPoints =
+      await handler.getTreasuryExitFeeBasisPoints();
+    expect(treasuryExitFeeBasisPoints).toBe(mockPoints);
+  });
+
+  it('should get total exit fee basis points', async () => {
+    const mockPoints = 10n;
+    vaultTestingUtils.mockCall('getTotalExitFeeBasisPoints', [mockPoints]);
+
+    const totalExitFeeBasisPoints = await handler.getTotalExitFeeBasisPoints();
+    expect(totalExitFeeBasisPoints).toBe(mockPoints);
   });
 
   it('should redeem pufETH in exchange for WETH', async () => {
