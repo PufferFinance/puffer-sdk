@@ -30,6 +30,7 @@ import { InstitutionalVaultHandler } from '../contracts/handlers/institutional-v
 import { InstitutionalAccessManagerHandler } from '../contracts/handlers/institutional-access-manager-handler';
 import { LagoonVaultHandler } from '../contracts/handlers/lagoon-vault-handler';
 import { VLPufferHandler } from '../contracts/handlers/vl-puffer-handler';
+import { GaugeRegistryHandler } from '../contracts/handlers/gauge-registry-handler';
 
 /**
  * The core class and the main entry point of the Puffer SDK.
@@ -87,6 +88,8 @@ export class PufferClient {
   public lagoonVault: LagoonVaultHandler;
   /** Handler for the `vlPUFFER` contract. */
   public vlPuffer: VLPufferHandler;
+  /** Handler for the `GaugeRegistry` contract. */
+  public gaugeRegistry: GaugeRegistryHandler;
 
   /**
    * Create the Puffer Client.
@@ -234,6 +237,11 @@ export class PufferClient {
       this.publicClient,
     );
     this.vlPuffer = new VLPufferHandler(
+      chain,
+      this.walletClient,
+      this.publicClient,
+    );
+    this.gaugeRegistry = new GaugeRegistryHandler(
       chain,
       this.walletClient,
       this.publicClient,
