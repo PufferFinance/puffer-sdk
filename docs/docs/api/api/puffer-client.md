@@ -28,7 +28,7 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:100](https://github.com/PufferFinance/puffer-sdk/blob/0b3b86252c1edc6f41ebb27b139566f820c8b43f/lib/api/puffer-client.ts#L100)
+[lib/api/puffer-client.ts:103](https://github.com/PufferFinance/puffer-sdk/blob/aefe0b10082fca662f07e13dcc79dde5767cf806/lib/api/puffer-client.ts#L103)
 
 #### Properties
 
@@ -39,6 +39,7 @@ Create the Puffer Client.
 | `depositor` | `public` | [`PufferDepositorHandler`](../contracts/handlers/puffer-depositor-handler.md#pufferdepositorhandler) | Handler for the `PufferDepositor` contract. |
 | `distributor` | `public` | [`DistributorHandler`](../contracts/handlers/distributor-handler.md#distributorhandler) | Handler for the `Distributor` contract. |
 | `erc20Permit` | `public` | [`ERC20PermitHandler`](../contracts/handlers/erc20-permit-handler.md#erc20permithandler) | Handler for the `ERC20Permit` contract. |
+| `gaugeRegistry` | `public` | [`GaugeRegistryHandler`](../contracts/handlers/gauge-registry-handler.md#gaugeregistryhandler) | Handler for the `GaugeRegistry` contract. |
 | `guardianModule` | `public` | [`GuardianModuleHandler`](../contracts/handlers/guardian-module-handler.md#guardianmodulehandler) | Handler for the `GuardianModule` contract. |
 | `institutionalAccessManager` | `public` | [`InstitutionalAccessManagerHandler`](../contracts/handlers/institutional-access-manager-handler.md#institutionalaccessmanagerhandler) | Handler for the `InstitutionalAccessManager` contract. |
 | `institutionalVault` | `public` | [`InstitutionalVaultHandler`](../contracts/handlers/institutional-vault-handler.md#institutionalvaulthandler) | Handler for the `InstitutionalVault` contract. |
@@ -77,4 +78,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:248](https://github.com/PufferFinance/puffer-sdk/blob/0b3b86252c1edc6f41ebb27b139566f820c8b43f/lib/api/puffer-client.ts#L248)
+[lib/api/puffer-client.ts:256](https://github.com/PufferFinance/puffer-sdk/blob/aefe0b10082fca662f07e13dcc79dde5767cf806/lib/api/puffer-client.ts#L256)
