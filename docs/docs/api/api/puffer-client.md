@@ -28,13 +28,14 @@ Create the Puffer Client.
 
 ###### Source
 
-[lib/api/puffer-client.ts:103](https://github.com/PufferFinance/puffer-sdk/blob/aefe0b10082fca662f07e13dcc79dde5767cf806/lib/api/puffer-client.ts#L103)
+[lib/api/puffer-client.ts:106](https://github.com/PufferFinance/puffer-sdk/blob/c064685e03985a72986243aa59553d521eb404e7/lib/api/puffer-client.ts#L106)
 
 #### Properties
 
 | Property | Modifier | Type | Description |
 | :------ | :------ | :------ | :------ |
 | `carrotStaker` | `public` | [`CarrotStakingHandler`](../contracts/handlers/carrot-staking-handler.md#carrotstakinghandler) | Handler for the `CarrotStaker` contract. |
+| `carrotVesting` | `public` | [`CarrotVestingHandler`](../contracts/handlers/carrot-vesting-handler.md#carrotvestinghandler) | Handler for the `CarrotVesting` contract. |
 | `concreteVault` | `public` | [`ConcreteVaultHandler`](../contracts/handlers/concrete-vault-handler.md#concretevaulthandler) | Handler for the `ConcreteMultiStrategyVault` contract. |
 | `depositor` | `public` | [`PufferDepositorHandler`](../contracts/handlers/puffer-depositor-handler.md#pufferdepositorhandler) | Handler for the `PufferDepositor` contract. |
 | `distributor` | `public` | [`DistributorHandler`](../contracts/handlers/distributor-handler.md#distributorhandler) | Handler for the `Distributor` contract. |
@@ -78,4 +79,4 @@ An array of wallet addresses.
 
 ###### Source
 
-[lib/api/puffer-client.ts:256](https://github.com/PufferFinance/puffer-sdk/blob/aefe0b10082fca662f07e13dcc79dde5767cf806/lib/api/puffer-client.ts#L256)
+[lib/api/puffer-client.ts:264](https://github.com/PufferFinance/puffer-sdk/blob/c064685e03985a72986243aa59553d521eb404e7/lib/api/puffer-client.ts#L264)

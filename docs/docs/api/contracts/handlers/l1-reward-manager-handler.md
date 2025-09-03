@@ -29,7 +29,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/l1-reward-manager-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/aefe0b10082fca662f07e13dcc79dde5767cf806/lib/contracts/handlers/l1-reward-manager-handler.ts#L28)
+[lib/contracts/handlers/l1-reward-manager-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/c064685e03985a72986243aa59553d521eb404e7/lib/contracts/handlers/l1-reward-manager-handler.ts#L28)
 
 #### Properties
 
@@ -66,7 +66,7 @@ The bridge data.
 
 ###### Source
 
-[lib/contracts/handlers/l1-reward-manager-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/aefe0b10082fca662f07e13dcc79dde5767cf806/lib/contracts/handlers/l1-reward-manager-handler.ts#L60)
+[lib/contracts/handlers/l1-reward-manager-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/c064685e03985a72986243aa59553d521eb404e7/lib/contracts/handlers/l1-reward-manager-handler.ts#L60)
 
 ##### getContract()
 
@@ -83,7 +83,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/l1-reward-manager-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/aefe0b10082fca662f07e13dcc79dde5767cf806/lib/contracts/handlers/l1-reward-manager-handler.ts#L42)
+[lib/contracts/handlers/l1-reward-manager-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/c064685e03985a72986243aa59553d521eb404e7/lib/contracts/handlers/l1-reward-manager-handler.ts#L42)
 
 ##### setL2RewardClaimer()
 
@@ -129,4 +129,4 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/l1-reward-manager-handler.ts:78](https://github.com/PufferFinance/puffer-sdk/blob/aefe0b10082fca662f07e13dcc79dde5767cf806/lib/contracts/handlers/l1-reward-manager-handler.ts#L78)
+[lib/contracts/handlers/l1-reward-manager-handler.ts:78](https://github.com/PufferFinance/puffer-sdk/blob/c064685e03985a72986243aa59553d521eb404e7/lib/contracts/handlers/l1-reward-manager-handler.ts#L78)
