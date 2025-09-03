@@ -23,6 +23,8 @@ export const CONTRACT_ADDRESSES = {
     PufferProtocol: '0xf7b6B32492c2e13799D921E84202450131bd238B',
     GuardianModule: '0x628b183F248a142A598AA2dcCCD6f7E480a7CcF2',
     GaugeRegistry: '0x0000000000000000000000000000000000000000',
+    // TODO: Replace this tenderly address with the mainnet address.
+    CarrotVesting: '0xd5f8a4f8312a1745aebe89bb92e90806721322c3',
   },
   [Chain.Holesky as number]: {
     PufferVault: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
@@ -37,6 +39,7 @@ export const CONTRACT_ADDRESSES = {
     PufferProtocol: '0xE00c79408B9De5BaD2FDEbB1688997a68eC988CD',
     GuardianModule: '0x0910310130d1c062def8b807528bdac80203bc66',
     GaugeRegistry: '0x0000000000000000000000000000000000000000',
+    CarrotVesting: '0x0000000000000000000000000000000000000000',
   },
   [Chain.Sepolia as number]: {
     GaugeRegistry: '0x14b25b3a3C1e6032e7Fbf0309d1ef6881e9A8D7A',
