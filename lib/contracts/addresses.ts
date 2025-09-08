@@ -24,7 +24,7 @@ export const CONTRACT_ADDRESSES = {
     GuardianModule: '0x628b183F248a142A598AA2dcCCD6f7E480a7CcF2',
     GaugeRegistry: '0x0000000000000000000000000000000000000000',
     // TODO: Replace this tenderly address with the mainnet address.
-    CarrotVesting: '0xd5f8a4f8312a1745aebe89bb92e90806721322c3',
+    CarrotVesting: '0xb750236d1a8ed77a816992bf8d8711b91b7bbc38',
   },
   [Chain.Holesky as number]: {
     PufferVault: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',

@@ -151,7 +151,8 @@ export class CarrotVestingHandler {
    * Get vesting information for a user.
    *
    * @param user The user address.
-   * @returns The vesting information including deposited amount, claimed amount, last claimed timestamp, and deposited timestamp.
+   * @returns The vesting information including deposited amount,
+   * claimed amount, last claimed timestamp, and deposited timestamp.
    */
   public async vestings(user: Address) {
     const [
