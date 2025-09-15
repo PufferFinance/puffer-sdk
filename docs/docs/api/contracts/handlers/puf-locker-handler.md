@@ -30,7 +30,7 @@ interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/f4ce194cd20a53f9eba2ac9852dbc1815bb1a500/lib/contracts/handlers/puf-locker-handler.ts#L43)
+[lib/contracts/handlers/puf-locker-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puf-locker-handler.ts#L43)
 
 #### Properties
 
@@ -86,7 +86,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:140](https://github.com/PufferFinance/puffer-sdk/blob/f4ce194cd20a53f9eba2ac9852dbc1815bb1a500/lib/contracts/handlers/puf-locker-handler.ts#L140)
+[lib/contracts/handlers/puf-locker-handler.ts:140](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puf-locker-handler.ts#L140)
 
 ##### getAllDeposits()
 
@@ -109,7 +109,7 @@ The amount and deposits of the given account address.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/f4ce194cd20a53f9eba2ac9852dbc1815bb1a500/lib/contracts/handlers/puf-locker-handler.ts#L81)
+[lib/contracts/handlers/puf-locker-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puf-locker-handler.ts#L81)
 
 ##### getContract()
 
@@ -126,7 +126,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:62](https://github.com/PufferFinance/puffer-sdk/blob/f4ce194cd20a53f9eba2ac9852dbc1815bb1a500/lib/contracts/handlers/puf-locker-handler.ts#L62)
+[lib/contracts/handlers/puf-locker-handler.ts:62](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puf-locker-handler.ts#L62)
 
 ##### getDeposits()
 
@@ -151,7 +151,7 @@ The amount and release time of the deposits.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:97](https://github.com/PufferFinance/puffer-sdk/blob/f4ce194cd20a53f9eba2ac9852dbc1815bb1a500/lib/contracts/handlers/puf-locker-handler.ts#L97)
+[lib/contracts/handlers/puf-locker-handler.ts:97](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puf-locker-handler.ts#L97)
 
 ##### getLockPeriods()
 
@@ -168,7 +168,7 @@ The minimum and maximum lock period in seconds.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:117](https://github.com/PufferFinance/puffer-sdk/blob/f4ce194cd20a53f9eba2ac9852dbc1815bb1a500/lib/contracts/handlers/puf-locker-handler.ts#L117)
+[lib/contracts/handlers/puf-locker-handler.ts:117](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puf-locker-handler.ts#L117)
 
 ##### withdraw()
 
@@ -210,7 +210,7 @@ Hash of the withdrawal transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:200](https://github.com/PufferFinance/puffer-sdk/blob/f4ce194cd20a53f9eba2ac9852dbc1815bb1a500/lib/contracts/handlers/puf-locker-handler.ts#L200)
+[lib/contracts/handlers/puf-locker-handler.ts:200](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puf-locker-handler.ts#L200)
 
 ## Type Aliases
 
@@ -246,4 +246,4 @@ Hash of the withdrawal transaction.
 
 #### Source
 
-[lib/contracts/handlers/puf-locker-handler.ts:16](https://github.com/PufferFinance/puffer-sdk/blob/f4ce194cd20a53f9eba2ac9852dbc1815bb1a500/lib/contracts/handlers/puf-locker-handler.ts#L16)
+[lib/contracts/handlers/puf-locker-handler.ts:16](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puf-locker-handler.ts#L16)
