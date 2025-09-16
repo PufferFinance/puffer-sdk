@@ -30,7 +30,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L42)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L42)
 
 #### Properties
 
@@ -91,7 +91,7 @@ transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:97](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L97)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:97](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L97)
 
 ##### getContract()
 
@@ -108,7 +108,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L61)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L61)
 
 ## Type Aliases
 
@@ -144,4 +144,4 @@ The viem contract.
 
 #### Source
 
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L15)
+[lib/contracts/handlers/puffer-l2-depositor-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L15)

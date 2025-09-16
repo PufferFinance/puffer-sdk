@@ -30,7 +30,7 @@ interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L31)
+[lib/contracts/handlers/gauge-registry-handler.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L31)
 
 #### Properties
 
@@ -57,7 +57,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:186](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L186)
+[lib/contracts/handlers/gauge-registry-handler.ts:186](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L186)
 
 ##### activateGauge()
 
@@ -79,7 +79,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:134](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L134)
+[lib/contracts/handlers/gauge-registry-handler.ts:134](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L134)
 
 ##### deactivateGauge()
 
@@ -101,7 +101,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:147](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L147)
+[lib/contracts/handlers/gauge-registry-handler.ts:147](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L147)
 
 ##### gaugeExists()
 
@@ -123,7 +123,7 @@ True if the gauge exists, false otherwise.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L81)
+[lib/contracts/handlers/gauge-registry-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L81)
 
 ##### getContract()
 
@@ -139,7 +139,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:44](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L44)
+[lib/contracts/handlers/gauge-registry-handler.ts:44](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L44)
 
 ##### getGauge()
 
@@ -173,7 +173,7 @@ The gauge information including active status, creation time, and metadata URI.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:101](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L101)
+[lib/contracts/handlers/gauge-registry-handler.ts:101](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L101)
 
 ##### getGaugeList()
 
@@ -189,7 +189,7 @@ Array of gauge addresses.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L110)
+[lib/contracts/handlers/gauge-registry-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L110)
 
 ##### isActive()
 
@@ -211,7 +211,7 @@ True if the gauge is active, false otherwise.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:91](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L91)
+[lib/contracts/handlers/gauge-registry-handler.ts:91](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L91)
 
 ##### owner()
 
@@ -227,7 +227,7 @@ The owner address.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:62](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L62)
+[lib/contracts/handlers/gauge-registry-handler.ts:62](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L62)
 
 ##### pendingOwner()
 
@@ -243,7 +243,7 @@ The pending owner address.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L71)
+[lib/contracts/handlers/gauge-registry-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L71)
 
 ##### registerGauge()
 
@@ -266,7 +266,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L121)
+[lib/contracts/handlers/gauge-registry-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L121)
 
 ##### renounceOwnership()
 
@@ -282,7 +282,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:198](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L198)
+[lib/contracts/handlers/gauge-registry-handler.ts:198](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L198)
 
 ##### transferOwnership()
 
@@ -304,7 +304,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:174](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L174)
+[lib/contracts/handlers/gauge-registry-handler.ts:174](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L174)
 
 ##### updateGaugeMetadata()
 
@@ -327,4 +327,4 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/gauge-registry-handler.ts:161](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/gauge-registry-handler.ts#L161)
+[lib/contracts/handlers/gauge-registry-handler.ts:161](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/gauge-registry-handler.ts#L161)

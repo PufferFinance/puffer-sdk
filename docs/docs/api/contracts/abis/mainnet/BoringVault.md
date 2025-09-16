@@ -8,4 +8,4 @@
 
 #### Source
 
-[lib/contracts/abis/mainnet/BoringVault.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/abis/mainnet/BoringVault.ts#L1)
+[lib/contracts/abis/mainnet/BoringVault.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/abis/mainnet/BoringVault.ts#L1)

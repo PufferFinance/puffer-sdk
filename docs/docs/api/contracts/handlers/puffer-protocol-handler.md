@@ -30,7 +30,7 @@ methods to interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L51)
+[lib/contracts/handlers/puffer-protocol-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L51)
 
 #### Properties
 
@@ -64,7 +64,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:306](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L306)
+[lib/contracts/handlers/puffer-protocol-handler.ts:306](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L306)
 
 ##### createPufferModule()
 
@@ -86,7 +86,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:215](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L215)
+[lib/contracts/handlers/puffer-protocol-handler.ts:215](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L215)
 
 ##### depositValidatorTickets()
 
@@ -109,7 +109,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:275](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L275)
+[lib/contracts/handlers/puffer-protocol-handler.ts:275](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L275)
 
 ##### getContract()
 
@@ -125,7 +125,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:64](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L64)
+[lib/contracts/handlers/puffer-protocol-handler.ts:64](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L64)
 
 ##### getDepositDataRoot()
 
@@ -149,7 +149,7 @@ The deposit data root.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:197](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L197)
+[lib/contracts/handlers/puffer-protocol-handler.ts:197](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L197)
 
 ##### getMinimumVtAmount()
 
@@ -165,7 +165,7 @@ The minimum VT amount.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L81)
+[lib/contracts/handlers/puffer-protocol-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L81)
 
 ##### getModuleAddress()
 
@@ -187,7 +187,7 @@ The module address.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L110)
+[lib/contracts/handlers/puffer-protocol-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L110)
 
 ##### getModuleLimitInformation()
 
@@ -217,7 +217,7 @@ The module limit information.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:175](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L175)
+[lib/contracts/handlers/puffer-protocol-handler.ts:175](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L175)
 
 ##### getModuleWeights()
 
@@ -233,7 +233,7 @@ The module weights.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:119](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L119)
+[lib/contracts/handlers/puffer-protocol-handler.ts:119](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L119)
 
 ##### getNextValidatorToProvision()
 
@@ -249,7 +249,7 @@ Tuple of module name and index.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:128](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L128)
+[lib/contracts/handlers/puffer-protocol-handler.ts:128](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L128)
 
 ##### getNodeInfo()
 
@@ -283,7 +283,7 @@ The node information.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:138](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L138)
+[lib/contracts/handlers/puffer-protocol-handler.ts:138](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L138)
 
 ##### getVTPenalty()
 
@@ -299,7 +299,7 @@ The VT penalty amount.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L90)
+[lib/contracts/handlers/puffer-protocol-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L90)
 
 ##### getValidatorInfo()
 
@@ -342,7 +342,7 @@ The validator information.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:159](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L159)
+[lib/contracts/handlers/puffer-protocol-handler.ts:159](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L159)
 
 ##### getValidatorTicketsBalance()
 
@@ -364,7 +364,7 @@ The validator tickets balance.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:100](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L100)
+[lib/contracts/handlers/puffer-protocol-handler.ts:100](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L100)
 
 ##### getValidators()
 
@@ -386,7 +386,7 @@ The validators array.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:148](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L148)
+[lib/contracts/handlers/puffer-protocol-handler.ts:148](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L148)
 
 ##### getWithdrawalCredentials()
 
@@ -408,7 +408,7 @@ The withdrawal credentials.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:185](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L185)
+[lib/contracts/handlers/puffer-protocol-handler.ts:185](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L185)
 
 ##### provisionNode()
 
@@ -432,7 +432,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:254](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L254)
+[lib/contracts/handlers/puffer-protocol-handler.ts:254](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L254)
 
 ##### registerValidatorKey()
 
@@ -457,7 +457,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:231](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L231)
+[lib/contracts/handlers/puffer-protocol-handler.ts:231](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L231)
 
 ##### skipProvisioning()
 
@@ -480,7 +480,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:326](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L326)
+[lib/contracts/handlers/puffer-protocol-handler.ts:326](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L326)
 
 ##### withdrawValidatorTickets()
 
@@ -503,7 +503,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:289](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L289)
+[lib/contracts/handlers/puffer-protocol-handler.ts:289](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L289)
 
 ## Type Aliases
 
@@ -543,7 +543,7 @@ The transaction.
 
 #### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:24](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L24)
+[lib/contracts/handlers/puffer-protocol-handler.ts:24](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L24)
 
 ***
 
@@ -579,4 +579,4 @@ The transaction.
 
 #### Source
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/62d5f6ccb606e6594e1d24a1637cc116b43a958d/lib/contracts/handlers/puffer-protocol-handler.ts#L15)
+[lib/contracts/handlers/puffer-protocol-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/puffer-protocol-handler.ts#L15)
