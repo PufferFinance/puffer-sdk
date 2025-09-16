@@ -134,8 +134,8 @@ export class CarrotVestingHandler {
    *
    * @returns The number of vesting steps.
    */
-  public steps() {
-    return this.getContract().read.steps();
+  public getSteps() {
+    return this.getContract().read.getSteps();
   }
 
   /**
@@ -154,20 +154,8 @@ export class CarrotVestingHandler {
    * @returns The vesting information including deposited amount,
    * claimed amount, last claimed timestamp, and deposited timestamp.
    */
-  public async vestings(user: Address) {
-    const [
-      depositedAmount,
-      claimedAmount,
-      lastClaimedTimestamp,
-      depositedTimestamp,
-    ] = await this.getContract().read.vestings([user]);
-
-    return {
-      depositedAmount,
-      claimedAmount,
-      lastClaimedTimestamp,
-      depositedTimestamp,
-    };
+  public async getVestings(user: Address) {
+    return await this.getContract().read.getVestings([user]);
   }
 
   /**
@@ -175,8 +163,8 @@ export class CarrotVestingHandler {
    *
    * @returns The start timestamp.
    */
-  public startTimestamp() {
-    return this.getContract().read.startTimestamp();
+  public getStartTimestamp() {
+    return this.getContract().read.getStartTimestamp();
   }
 
   /**
@@ -231,8 +219,8 @@ export class CarrotVestingHandler {
    *
    * @returns The total deposited amount.
    */
-  public totalDepositedAmount() {
-    return this.getContract().read.totalDepositedAmount();
+  public getTotalDepositedAmount() {
+    return this.getContract().read.getTotalDepositedAmount();
   }
 
   /**
@@ -240,7 +228,7 @@ export class CarrotVestingHandler {
    *
    * @returns The duration of the vesting period.
    */
-  public duration() {
-    return this.getContract().read.duration();
+  public getDuration() {
+    return this.getContract().read.getDuration();
   }
 }

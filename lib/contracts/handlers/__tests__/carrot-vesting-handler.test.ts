@@ -87,9 +87,9 @@ describe('CarrotVestingHandler', () => {
 
   it('should get the number of vesting steps', async () => {
     const steps = 10;
-    contractTestingUtils.mockCall('steps', [steps]);
+    contractTestingUtils.mockCall('getSteps', [steps]);
 
-    const result = await handler.steps();
+    const result = await handler.getSteps();
     expect(result).toBe(steps);
   });
 
@@ -103,28 +103,23 @@ describe('CarrotVestingHandler', () => {
 
   it('should get vesting information for a user', async () => {
     const user = generateAddress();
-    const vestingInfo = {
+    const vestingInfo = <const>{
       depositedAmount: 1000n,
       claimedAmount: 500n,
       lastClaimedTimestamp: 1234567890,
       depositedTimestamp: 1234567890,
     };
-    contractTestingUtils.mockCall('vestings', [
-      vestingInfo.depositedAmount,
-      vestingInfo.claimedAmount,
-      vestingInfo.lastClaimedTimestamp,
-      vestingInfo.depositedTimestamp,
-    ]);
+    contractTestingUtils.mockCall('getVestings', [[vestingInfo]]);
 
-    const result = await handler.vestings(user);
-    expect(result).toEqual(vestingInfo);
+    const result = await handler.getVestings(user);
+    expect(result).toEqual([vestingInfo]);
   });
 
   it('should get the start timestamp', async () => {
     const startTimestamp = 1234567890;
-    contractTestingUtils.mockCall('startTimestamp', [startTimestamp]);
+    contractTestingUtils.mockCall('getStartTimestamp', [startTimestamp]);
 
-    const result = await handler.startTimestamp();
+    const result = await handler.getStartTimestamp();
     expect(result).toBe(startTimestamp);
   });
 
@@ -197,19 +192,19 @@ describe('CarrotVestingHandler', () => {
 
   it('should get the total deposited amount', async () => {
     const totalDepositedAmount = 50000n;
-    contractTestingUtils.mockCall('totalDepositedAmount', [
+    contractTestingUtils.mockCall('getTotalDepositedAmount', [
       totalDepositedAmount,
     ]);
 
-    const result = await handler.totalDepositedAmount();
+    const result = await handler.getTotalDepositedAmount();
     expect(result).toBe(totalDepositedAmount);
   });
 
   it('should get the duration of the vesting period', async () => {
     const duration = 365;
-    contractTestingUtils.mockCall('duration', [duration]);
+    contractTestingUtils.mockCall('getDuration', [duration]);
 
-    const result = await handler.duration();
+    const result = await handler.getDuration();
     expect(result).toBe(duration);
   });
 });

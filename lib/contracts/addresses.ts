@@ -23,7 +23,8 @@ export const CONTRACT_ADDRESSES = {
     PufferProtocol: '0xf7b6B32492c2e13799D921E84202450131bd238B',
     GuardianModule: '0x628b183F248a142A598AA2dcCCD6f7E480a7CcF2',
     GaugeRegistry: '0x0000000000000000000000000000000000000000',
-    CarrotVesting: '0xE4c36adB90E936041776Ddb87851Ec38aFfD1499',
+    // TODO: Replace this with the actual address when the contract is deployed.
+    CarrotVesting: '0x5e9c5f4553bceb4a1c3b66cc028e6ae2e2a52c6e',
   },
   [Chain.Holesky as number]: {
     PufferVault: '0x9196830bB4c05504E0A8475A0aD566AceEB6BeC9',
