@@ -1,8 +1,2 @@
 packages:
   - docs
-
-overrides:
-  brace-expansion@>=2.0.0 <=2.0.1: '>=2.0.2'
-  on-headers@<1.1.0: '>=1.1.0'
-  path-to-regexp@>=2.0.0 <3.3.0: '>=3.3.0'
-  webpack-dev-server@<=5.2.0: '>=5.2.1'
