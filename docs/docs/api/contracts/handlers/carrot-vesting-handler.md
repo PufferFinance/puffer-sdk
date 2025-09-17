@@ -30,7 +30,7 @@ interact with the contract.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:35](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L35)
+[lib/contracts/handlers/carrot-vesting-handler.ts:35](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L35)
 
 #### Properties
 
@@ -64,7 +64,7 @@ The claimable amount.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L80)
+[lib/contracts/handlers/carrot-vesting-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L80)
 
 ##### claim()
 
@@ -80,7 +80,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L98)
+[lib/contracts/handlers/carrot-vesting-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L98)
 
 ##### exchangeRate()
 
@@ -96,7 +96,7 @@ The exchange rate.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L89)
+[lib/contracts/handlers/carrot-vesting-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L89)
 
 ##### getCarrotAddress()
 
@@ -112,7 +112,7 @@ The CARROT token address.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L110)
+[lib/contracts/handlers/carrot-vesting-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L110)
 
 ##### getContract()
 
@@ -128,7 +128,7 @@ The viem contract.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:53](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L53)
+[lib/contracts/handlers/carrot-vesting-handler.ts:53](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L53)
 
 ##### getDuration()
 
@@ -144,7 +144,7 @@ The duration of the vesting period.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:231](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L231)
+[lib/contracts/handlers/carrot-vesting-handler.ts:231](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L231)
 
 ##### getPufferAddress()
 
@@ -160,7 +160,7 @@ The PUFFER token address.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:119](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L119)
+[lib/contracts/handlers/carrot-vesting-handler.ts:119](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L119)
 
 ##### getStartTimestamp()
 
@@ -176,7 +176,7 @@ The start timestamp.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:166](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L166)
+[lib/contracts/handlers/carrot-vesting-handler.ts:166](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L166)
 
 ##### getSteps()
 
@@ -192,7 +192,7 @@ The number of vesting steps.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:137](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L137)
+[lib/contracts/handlers/carrot-vesting-handler.ts:137](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L137)
 
 ##### getTotalDepositedAmount()
 
@@ -208,7 +208,7 @@ The total deposited amount.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:222](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L222)
+[lib/contracts/handlers/carrot-vesting-handler.ts:222](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L222)
 
 ##### getVestings()
 
@@ -231,7 +231,7 @@ claimed amount, last claimed timestamp, and deposited timestamp.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:157](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L157)
+[lib/contracts/handlers/carrot-vesting-handler.ts:157](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L157)
 
 ##### maxCarrotAmount()
 
@@ -247,7 +247,7 @@ The maximum carrot amount.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:146](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L146)
+[lib/contracts/handlers/carrot-vesting-handler.ts:146](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L146)
 
 ##### owner()
 
@@ -263,7 +263,7 @@ The owner address.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L70)
+[lib/contracts/handlers/carrot-vesting-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L70)
 
 ##### startVesting()
 
@@ -286,7 +286,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:204](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L204)
+[lib/contracts/handlers/carrot-vesting-handler.ts:204](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L204)
 
 ##### startVestingPreapproved()
 
@@ -308,7 +308,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L176)
+[lib/contracts/handlers/carrot-vesting-handler.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L176)
 
 ##### startVestingWithPermit()
 
@@ -330,7 +330,7 @@ The transaction.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:189](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L189)
+[lib/contracts/handlers/carrot-vesting-handler.ts:189](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L189)
 
 ##### totalPufferRewards()
 
@@ -346,4 +346,4 @@ The total puffer rewards.
 
 ###### Source
 
-[lib/contracts/handlers/carrot-vesting-handler.ts:128](https://github.com/PufferFinance/puffer-sdk/blob/21b77ab9e9e90f6697c3a8a84d3e5550b25407ec/lib/contracts/handlers/carrot-vesting-handler.ts#L128)
+[lib/contracts/handlers/carrot-vesting-handler.ts:128](https://github.com/PufferFinance/puffer-sdk/blob/d1d818887a153c4e95fcbe23c233149dda199ecd/lib/contracts/handlers/carrot-vesting-handler.ts#L128)
