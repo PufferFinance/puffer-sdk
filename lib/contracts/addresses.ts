@@ -22,7 +22,7 @@ export const CONTRACT_ADDRESSES = {
     PufferOracleV2: '0x0BE2aE0edbeBb517541DF217EF0074FC9a9e994f',
     PufferProtocol: '0xf7b6B32492c2e13799D921E84202450131bd238B',
     GuardianModule: '0x628b183F248a142A598AA2dcCCD6f7E480a7CcF2',
-    GaugeRegistry: '0x0000000000000000000000000000000000000000',
+    GaugeRegistry: '0x27ef0bc5eaa61dc6e7d08f17eb00de7d94398a25',
     CarrotVesting: '0xff00c2dd07d811bea632cb9f9e4919dd6fcbc82b',
   },
   [Chain.Holesky as number]: {
