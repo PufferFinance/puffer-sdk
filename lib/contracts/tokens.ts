@@ -205,7 +205,7 @@ export const TOKENS_ADDRESSES: {
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
   [Token.vlPUFFER]: {
-    [Chain.Mainnet]: '0xe4c36adb90e936041776ddb87851ec38affd1499',
+    [Chain.Mainnet]: '0x1e168460ea0cf3f126ddd3183dc2e376515a5e91',
   },
 };
 
