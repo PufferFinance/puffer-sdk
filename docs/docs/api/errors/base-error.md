@@ -2,7 +2,9 @@
 
 ## Classes
 
-### `abstract` BaseError\<T\>
+### `abstract` BaseError
+
+Defined in: [lib/errors/base-error.ts:6](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/base-error.ts#L6)
 
 #### Extends
 
@@ -14,36 +16,34 @@
 - [`InvalidInputError`](validation-errors.md#invalidinputerror)
 - [`InvalidContractAddressError`](validation-errors.md#invalidcontractaddresserror)
 
-#### Type parameters
+#### Type Parameters
 
-| Type parameter | Value |
-| :------ | :------ |
+| Type Parameter | Default type |
+| ------ | ------ |
 | `T` *extends* `object` | [`ErrorBaseParameters`](types.md#errorbaseparameters) |
 
 #### Constructors
 
-##### new BaseError()
+##### Constructor
 
-> **new BaseError**\<`T`\>(`message`, `params`): [`BaseError`](base-error.md#baseerrort)\<`T`\>
+> **new BaseError**\<`T`\>(`message`, `params`): [`BaseError`](#baseerror)\<`T`\>
+
+Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/base-error.ts#L9)
 
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `message` | `string` |
 | `params` | `T` |
 
 ###### Returns
 
-[`BaseError`](base-error.md#baseerrort)\<`T`\>
+[`BaseError`](#baseerror)\<`T`\>
 
 ###### Overrides
 
 `Error.constructor`
-
-###### Source
-
-[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/errors/base-error.ts#L9)
 
 #### Methods
 
@@ -51,17 +51,15 @@
 
 > `protected` **compileMessage**(`message`, `params`): `string`
 
+Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/base-error.ts#L14)
+
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `message` | `string` |
 | `params` | `T` |
 
 ###### Returns
 
 `string`
-
-###### Source
-
-[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/errors/base-error.ts#L14)

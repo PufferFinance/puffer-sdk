@@ -6,9 +6,13 @@
 
 Re-exports [AtomicRequest](nucleus-atomic-queue-handler.md#atomicrequest)
 
+***
+
 ### NucleusAtomicQueueHandler
 
 Re-exports [NucleusAtomicQueueHandler](nucleus-atomic-queue-handler.md#nucleusatomicqueuehandler)
+
+***
 
 ### SolveMetaData
 

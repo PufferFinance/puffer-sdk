@@ -4,30 +4,16 @@
 
 ### PermitData
 
-> **PermitData**: `object`
+> **PermitData** = `object`
 
-#### Type declaration
+Defined in: [lib/contracts/common/lib/types.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/common/lib/types.ts#L3)
 
-##### amount
+#### Properties
 
-> **amount**: `bigint`
-
-##### deadline
-
-> **deadline**: `bigint`
-
-##### r
-
-> **r**: `Address`
-
-##### s
-
-> **s**: `Address`
-
-##### v
-
-> **v**: `number`
-
-#### Source
-
-[lib/contracts/common/lib/types.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/common/lib/types.ts#L3)
+| Property | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="amount"></a> `amount` | `bigint` | [lib/contracts/common/lib/types.ts:5](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/common/lib/types.ts#L5) |
+| <a id="deadline"></a> `deadline` | `bigint` | [lib/contracts/common/lib/types.ts:4](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/common/lib/types.ts#L4) |
+| <a id="r"></a> `r` | `Address` | [lib/contracts/common/lib/types.ts:7](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/common/lib/types.ts#L7) |
+| <a id="s"></a> `s` | `Address` | [lib/contracts/common/lib/types.ts:8](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/common/lib/types.ts#L8) |
+| <a id="v"></a> `v` | `number` | [lib/contracts/common/lib/types.ts:6](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/common/lib/types.ts#L6) |

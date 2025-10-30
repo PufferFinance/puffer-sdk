@@ -4,8 +4,6 @@
 
 ### Accountant
 
-> `const` **Accountant**: readonly [`object`, `object`, `object`, `object`, `object`, `object`]
+> `const` **Accountant**: readonly \[\{ `inputs`: readonly \[\{ `internalType`: `"contract ERC20"`; `name`: `""`; `type`: `"address"`; \}\]; `name`: `"rateProviderData"`; `outputs`: readonly \[\{ `internalType`: `"bool"`; `name`: `"isPeggedToBase"`; `type`: `"bool"`; \}, \{ `internalType`: `"contract IRateProvider"`; `name`: `"rateProvider"`; `type`: `"address"`; \}\]; `stateMutability`: `"view"`; `type`: `"function"`; \}, \{ `inputs`: readonly \[\]; `name`: `"vault"`; `outputs`: readonly \[\{ `internalType`: `"contract BoringVault"`; `name`: `""`; `type`: `"address"`; \}\]; `stateMutability`: `"view"`; `type`: `"function"`; \}, \{ `inputs`: readonly \[\]; `name`: `"getRate"`; `outputs`: readonly \[\{ `internalType`: `"uint256"`; `name`: `"rate"`; `type`: `"uint256"`; \}\]; `stateMutability`: `"view"`; `type`: `"function"`; \}, \{ `inputs`: readonly \[\]; `name`: `"getRateSafe"`; `outputs`: readonly \[\{ `internalType`: `"uint256"`; `name`: `"rate"`; `type`: `"uint256"`; \}\]; `stateMutability`: `"view"`; `type`: `"function"`; \}, \{ `inputs`: readonly \[\{ `internalType`: `"contract ERC20"`; `name`: `"quote"`; `type`: `"address"`; \}\]; `name`: `"getRateInQuote"`; `outputs`: readonly \[\{ `internalType`: `"uint256"`; `name`: `"rateInQuote"`; `type`: `"uint256"`; \}\]; `stateMutability`: `"view"`; `type`: `"function"`; \}, \{ `inputs`: readonly \[\{ `internalType`: `"contract ERC20"`; `name`: `"quote"`; `type`: `"address"`; \}\]; `name`: `"getRateInQuoteSafe"`; `outputs`: readonly \[\{ `internalType`: `"uint256"`; `name`: `"rateInQuote"`; `type`: `"uint256"`; \}\]; `stateMutability`: `"view"`; `type`: `"function"`; \}\]
 
-#### Source
-
-[lib/contracts/abis/mainnet/Accountant.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/abis/mainnet/Accountant.ts#L1)
+Defined in: [lib/contracts/abis/mainnet/Accountant.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/abis/mainnet/Accountant.ts#L1)

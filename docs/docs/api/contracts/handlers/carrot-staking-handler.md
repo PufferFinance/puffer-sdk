@@ -4,13 +4,17 @@
 
 ### CarrotStakingHandler
 
+Defined in: [lib/contracts/handlers/carrot-staking-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/carrot-staking-handler.ts#L15)
+
 Handler for the `CarrotStaker` contract.
 
 #### Constructors
 
-##### new CarrotStakingHandler()
+##### Constructor
 
-> **new CarrotStakingHandler**(`chain`, `walletClient`, `publicClient`): [`CarrotStakingHandler`](carrot-staking-handler.md#carrotstakinghandler)
+> **new CarrotStakingHandler**(`chain`, `walletClient`, `publicClient`): [`CarrotStakingHandler`](#carrotstakinghandler)
+
+Defined in: [lib/contracts/handlers/carrot-staking-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/carrot-staking-handler.ts#L28)
 
 Create the handler for the `CarrotStaker` contract exposing
 methods to interact with the contract.
@@ -18,27 +22,14 @@ methods to interact with the contract.
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `chain` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `walletClient` | `object` | The wallet client to use for wallet interactions. |
-| `publicClient` | `object` | The public client to use for public interactions. |
+| `walletClient` | \{ \} | The wallet client to use for wallet interactions. |
+| `publicClient` | \{ \} | The public client to use for public interactions. |
 
 ###### Returns
 
-[`CarrotStakingHandler`](carrot-staking-handler.md#carrotstakinghandler)
-
-###### Source
-
-[lib/contracts/handlers/carrot-staking-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/carrot-staking-handler.ts#L28)
-
-#### Properties
-
-| Property | Modifier | Type | Description |
-| :------ | :------ | :------ | :------ |
-| `chain` | `private` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `publicClient` | `private` | `object` | The public client to use for public interactions. |
-| `viemChain` | `private` | `Chain` | - |
-| `walletClient` | `private` | `object` | The wallet client to use for wallet interactions. |
+[`CarrotStakingHandler`](#carrotstakinghandler)
 
 #### Methods
 
@@ -46,14 +37,16 @@ methods to interact with the contract.
 
 > **allowance**(`owner`, `spender`): `Promise`\<`bigint`\>
 
+Defined in: [lib/contracts/handlers/carrot-staking-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/carrot-staking-handler.ts#L61)
+
 Get the allowance for the spender to spend the owner's tokens.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `owner` | \`0x$\{string\}\` | The owner of the tokens. |
-| `spender` | \`0x$\{string\}\` | The spender of the tokens. |
+| ------ | ------ | ------ |
+| `owner` | `` `0x${string}` `` | The owner of the tokens. |
+| `spender` | `` `0x${string}` `` | The spender of the tokens. |
 
 ###### Returns
 
@@ -61,21 +54,19 @@ Get the allowance for the spender to spend the owner's tokens.
 
 The allowance of the owner for the spender.
 
-###### Source
-
-[lib/contracts/handlers/carrot-staking-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/carrot-staking-handler.ts#L61)
-
 ##### balanceOf()
 
 > **balanceOf**(`address`): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/carrot-staking-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/carrot-staking-handler.ts#L71)
 
 Get the balance of the address.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `address` | \`0x$\{string\}\` | The address to get the balance of. |
+| ------ | ------ | ------ |
+| `address` | `` `0x${string}` `` | The address to get the balance of. |
 
 ###### Returns
 
@@ -83,13 +74,11 @@ Get the balance of the address.
 
 The balance of the address.
 
-###### Source
-
-[lib/contracts/handlers/carrot-staking-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/carrot-staking-handler.ts#L71)
-
 ##### decimals()
 
 > **decimals**(): `Promise`\<`number`\>
+
+Defined in: [lib/contracts/handlers/carrot-staking-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/carrot-staking-handler.ts#L80)
 
 Get the number of decimals of the token.
 
@@ -99,13 +88,11 @@ Get the number of decimals of the token.
 
 The number of decimals of the token.
 
-###### Source
-
-[lib/contracts/handlers/carrot-staking-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/carrot-staking-handler.ts#L80)
-
 ##### getContract()
 
 > **getContract**(): `object`
+
+Defined in: [lib/contracts/handlers/carrot-staking-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/carrot-staking-handler.ts#L42)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
@@ -116,13 +103,11 @@ and lost when trying to make it a member.
 
 The viem contract.
 
-###### Source
-
-[lib/contracts/handlers/carrot-staking-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/carrot-staking-handler.ts#L42)
-
 ##### isUnstakingAllowed()
 
 > **isUnstakingAllowed**(): `Promise`\<`boolean`\>
+
+Defined in: [lib/contracts/handlers/carrot-staking-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/carrot-staking-handler.ts#L89)
 
 Get whether unstaking is allowed.
 
@@ -132,36 +117,32 @@ Get whether unstaking is allowed.
 
 Whether unstaking is allowed.
 
-###### Source
-
-[lib/contracts/handlers/carrot-staking-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/carrot-staking-handler.ts#L89)
-
 ##### stake()
 
-> **stake**(`account`, `amount`): `Promise`\<\`0x$\{string\}\`\>
+> **stake**(`account`, `amount`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/carrot-staking-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/carrot-staking-handler.ts#L109)
 
 Stake CARROT tokens.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `account` | \`0x$\{string\}\` | The account to stake CARROT tokens from. |
+| ------ | ------ | ------ |
+| `account` | `` `0x${string}` `` | The account to stake CARROT tokens from. |
 | `amount` | `bigint` | The amount of CARROT tokens to stake. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction hash.
-
-###### Source
-
-[lib/contracts/handlers/carrot-staking-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/carrot-staking-handler.ts#L109)
 
 ##### totalSupply()
 
 > **totalSupply**(): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/carrot-staking-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/carrot-staking-handler.ts#L98)
 
 Get the total supply of the token.
 
@@ -171,30 +152,24 @@ Get the total supply of the token.
 
 The total supply of the token.
 
-###### Source
-
-[lib/contracts/handlers/carrot-staking-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/carrot-staking-handler.ts#L98)
-
 ##### unstake()
 
-> **unstake**(`account`, `amount`, `recipient`): `Promise`\<\`0x$\{string\}\`\>
+> **unstake**(`account`, `amount`, `recipient`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/carrot-staking-handler.ts:124](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/carrot-staking-handler.ts#L124)
 
 Unstake CARROT tokens.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `account` | \`0x$\{string\}\` | The account to unstake CARROT tokens from. |
+| ------ | ------ | ------ |
+| `account` | `` `0x${string}` `` | The account to unstake CARROT tokens from. |
 | `amount` | `bigint` | The amount of CARROT tokens to unstake. |
-| `recipient` | \`0x$\{string\}\` | The recipient of the unstaked tokens. |
+| `recipient` | `` `0x${string}` `` | The recipient of the unstaked tokens. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction hash.
-
-###### Source
-
-[lib/contracts/handlers/carrot-staking-handler.ts:124](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/carrot-staking-handler.ts#L124)

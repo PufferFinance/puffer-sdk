@@ -4,14 +4,18 @@
 
 ### PufferL2DepositorHandler
 
+Defined in: [lib/contracts/handlers/puffer-l2-depositor-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L28)
+
 Handler for the `PufferL2Depositor` contract exposing methods to
 interact with the contract.
 
 #### Constructors
 
-##### new PufferL2DepositorHandler()
+##### Constructor
 
-> **new PufferL2DepositorHandler**(`chain`, `walletClient`, `publicClient`): [`PufferL2DepositorHandler`](puffer-l2-depositor-handler.md#pufferl2depositorhandler)
+> **new PufferL2DepositorHandler**(`chain`, `walletClient`, `publicClient`): [`PufferL2DepositorHandler`](#pufferl2depositorhandler)
+
+Defined in: [lib/contracts/handlers/puffer-l2-depositor-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L42)
 
 Create the handler for the `PufferL2Depositor` contract exposing
 methods to interact with the contract.
@@ -19,34 +23,22 @@ methods to interact with the contract.
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `chain` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `walletClient` | `object` | The wallet client to use for wallet interactions. |
-| `publicClient` | `object` | The public client to use for public interactions. |
+| `walletClient` | \{ \} | The wallet client to use for wallet interactions. |
+| `publicClient` | \{ \} | The public client to use for public interactions. |
 
 ###### Returns
 
-[`PufferL2DepositorHandler`](puffer-l2-depositor-handler.md#pufferl2depositorhandler)
-
-###### Source
-
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L42)
-
-#### Properties
-
-| Property | Modifier | Type | Description |
-| :------ | :------ | :------ | :------ |
-| `chain` | `private` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `erc20PermitHandler` | `private` | [`ERC20PermitHandler`](erc20-permit-handler.md#erc20permithandler) | - |
-| `publicClient` | `private` | `object` | The public client to use for public interactions. |
-| `viemChain` | `private` | `Chain` | - |
-| `walletClient` | `private` | `object` | The wallet client to use for wallet interactions. |
+[`PufferL2DepositorHandler`](#pufferl2depositorhandler)
 
 #### Methods
 
 ##### deposit()
 
-> **deposit**(`depositParams`): `Promise`\<`object`\>
+> **deposit**(`depositParams`): `Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
+
+Defined in: [lib/contracts/handlers/puffer-l2-depositor-handler.ts:97](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L97)
 
 Deposit the given token in exchange for the wrapped PufToken. This
 doesn't make the transaction but returns two methods namely
@@ -60,12 +52,12 @@ USDC). If a token's contract doesn't support permit signatures, use
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `depositParams` | [`L2DepositParams`](puffer-l2-depositor-handler.md#l2depositparams) |
+| ------ | ------ |
+| `depositParams` | [`L2DepositParams`](#l2depositparams) |
 
 ###### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
 
 `transact: () => Promise<Address>` - Used to make the
 transaction.
@@ -73,29 +65,11 @@ transaction.
 `estimate: () => Promise<bigint>` - Gas estimate of the
 transaction.
 
-###### estimate()
-
-> **estimate**: () => `Promise`\<`bigint`\>
-
-###### Returns
-
-`Promise`\<`bigint`\>
-
-###### transact()
-
-> **transact**: () => `Promise`\<\`0x$\{string\}\`\>
-
-###### Returns
-
-`Promise`\<\`0x$\{string\}\`\>
-
-###### Source
-
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:97](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L97)
-
 ##### getContract()
 
 > **getContract**(): `object`
+
+Defined in: [lib/contracts/handlers/puffer-l2-depositor-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L61)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
@@ -106,42 +80,21 @@ and lost when trying to make it a member.
 
 The viem contract.
 
-###### Source
-
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L61)
-
 ## Type Aliases
 
 ### L2DepositParams
 
-> **L2DepositParams**: `object`
+> **L2DepositParams** = `object`
 
-#### Type declaration
+Defined in: [lib/contracts/handlers/puffer-l2-depositor-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L15)
 
-##### account
+#### Properties
 
-> **account**: `Address`
-
-##### isPreapproved?
-
-> `optional` **isPreapproved**: `boolean`
-
-##### lockPeriod?
-
-> `optional` **lockPeriod**: `bigint`
-
-##### referralCode?
-
-> `optional` **referralCode**: `bigint`
-
-##### token
-
-> **token**: [`Token`](../tokens.md#token)
-
-##### value
-
-> **value**: `bigint`
-
-#### Source
-
-[lib/contracts/handlers/puffer-l2-depositor-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L15)
+| Property | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="account"></a> `account` | `Address` | [lib/contracts/handlers/puffer-l2-depositor-handler.ts:17](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L17) |
+| <a id="ispreapproved"></a> `isPreapproved?` | `boolean` | [lib/contracts/handlers/puffer-l2-depositor-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L21) |
+| <a id="lockperiod"></a> `lockPeriod?` | `bigint` | [lib/contracts/handlers/puffer-l2-depositor-handler.ts:20](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L20) |
+| <a id="referralcode"></a> `referralCode?` | `bigint` | [lib/contracts/handlers/puffer-l2-depositor-handler.ts:19](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L19) |
+| <a id="token"></a> `token` | [`Token`](../tokens.md#token) | [lib/contracts/handlers/puffer-l2-depositor-handler.ts:16](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L16) |
+| <a id="value"></a> `value` | `bigint` | [lib/contracts/handlers/puffer-l2-depositor-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-l2-depositor-handler.ts#L18) |

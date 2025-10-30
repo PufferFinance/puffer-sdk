@@ -4,14 +4,18 @@
 
 ### PufferProtocolHandler
 
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:38](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L38)
+
 Handler for the `PufferProtocol` contract exposing methods to interact
 with the contract.
 
 #### Constructors
 
-##### new PufferProtocolHandler()
+##### Constructor
 
-> **new PufferProtocolHandler**(`chain`, `walletClient`, `publicClient`): [`PufferProtocolHandler`](puffer-protocol-handler.md#pufferprotocolhandler)
+> **new PufferProtocolHandler**(`chain`, `walletClient`, `publicClient`): [`PufferProtocolHandler`](#pufferprotocolhandler)
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L51)
 
 Create the handler for the `PufferProtocol` contract exposing
 methods to interact with the contract.
@@ -19,101 +23,84 @@ methods to interact with the contract.
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `chain` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `walletClient` | `object` | The wallet client to use for wallet interactions. |
-| `publicClient` | `object` | The public client to use for public interactions. |
+| `walletClient` | \{ \} | The wallet client to use for wallet interactions. |
+| `publicClient` | \{ \} | The public client to use for public interactions. |
 
 ###### Returns
 
-[`PufferProtocolHandler`](puffer-protocol-handler.md#pufferprotocolhandler)
-
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L51)
-
-#### Properties
-
-| Property | Modifier | Type | Description |
-| :------ | :------ | :------ | :------ |
-| `chain` | `private` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `publicClient` | `private` | `object` | The public client to use for public interactions. |
-| `viemChain` | `private` | `Chain` | - |
-| `walletClient` | `private` | `object` | The wallet client to use for wallet interactions. |
+[`PufferProtocolHandler`](#pufferprotocolhandler)
 
 #### Methods
 
 ##### batchHandleWithdrawals()
 
-> **batchHandleWithdrawals**(`validatorInfos`, `guardianEOASignatures`): `Promise`\<\`0x$\{string\}\`\>
+> **batchHandleWithdrawals**(`validatorInfos`, `guardianEOASignatures`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:306](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L306)
 
 Batch handle withdrawals.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `validatorInfos` | [`StoppedValidatorInfo`](puffer-protocol-handler.md#stoppedvalidatorinfo)[] | The validator infos. |
-| `guardianEOASignatures` | \`0x$\{string\}\`[] | The guardian EOA signatures. |
+| ------ | ------ | ------ |
+| `validatorInfos` | [`StoppedValidatorInfo`](#stoppedvalidatorinfo)[] | The validator infos. |
+| `guardianEOASignatures` | `` `0x${string}` ``[] | The guardian EOA signatures. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
 
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:306](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L306)
-
 ##### createPufferModule()
 
-> **createPufferModule**(`moduleName`): `Promise`\<\`0x$\{string\}\`\>
+> **createPufferModule**(`moduleName`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:215](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L215)
 
 Create a new puffer module.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `moduleName` | \`0x$\{string\}\` | The module name. |
+| ------ | ------ | ------ |
+| `moduleName` | `` `0x${string}` `` | The module name. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
 
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:215](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L215)
-
 ##### depositValidatorTickets()
 
-> **depositValidatorTickets**(`permit`, `node`): `Promise`\<\`0x$\{string\}\`\>
+> **depositValidatorTickets**(`permit`, `node`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:275](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L275)
 
 Deposit validator tickets.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `permit` | [`PermitData`](../common/lib/types.md#permitdata) | The permit data. |
-| `node` | \`0x$\{string\}\` | The node address. |
+| `node` | `` `0x${string}` `` | The node address. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
-
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:275](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L275)
 
 ##### getContract()
 
 > **getContract**(): `object`
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:64](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L64)
 
 Get the contract.
 
@@ -123,37 +110,33 @@ Get the contract.
 
 The viem contract.
 
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:64](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L64)
-
 ##### getDepositDataRoot()
 
-> **getDepositDataRoot**(`pubKey`, `signature`, `withdrawalCredentials`): `Promise`\<\`0x$\{string\}\`\>
+> **getDepositDataRoot**(`pubKey`, `signature`, `withdrawalCredentials`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:197](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L197)
 
 Get deposit data root.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `pubKey` | \`0x$\{string\}\` | The public key. |
-| `signature` | \`0x$\{string\}\` | The signature. |
-| `withdrawalCredentials` | \`0x$\{string\}\` | The withdrawal credentials. |
+| ------ | ------ | ------ |
+| `pubKey` | `` `0x${string}` `` | The public key. |
+| `signature` | `` `0x${string}` `` | The signature. |
+| `withdrawalCredentials` | `` `0x${string}` `` | The withdrawal credentials. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The deposit data root.
-
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:197](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L197)
 
 ##### getMinimumVtAmount()
 
 > **getMinimumVtAmount**(): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L81)
 
 Get the minimum VT amount required.
 
@@ -163,131 +146,160 @@ Get the minimum VT amount required.
 
 The minimum VT amount.
 
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L81)
-
 ##### getModuleAddress()
 
-> **getModuleAddress**(`moduleName`): `Promise`\<\`0x$\{string\}\`\>
+> **getModuleAddress**(`moduleName`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L110)
 
 Get module address by name.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `moduleName` | \`0x$\{string\}\` | The module name. |
+| ------ | ------ | ------ |
+| `moduleName` | `` `0x${string}` `` | The module name. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The module address.
 
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L110)
-
 ##### getModuleLimitInformation()
 
-> **getModuleLimitInformation**(`moduleName`): `Promise`\<`object`\>
+> **getModuleLimitInformation**(`moduleName`): `Promise`\<\{ `allowedLimit`: `bigint`; `numberOfRegisteredValidators`: `bigint`; \}\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:175](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L175)
 
 Get module limit information.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `moduleName` | \`0x$\{string\}\` | The module name. |
+| ------ | ------ | ------ |
+| `moduleName` | `` `0x${string}` `` | The module name. |
 
 ###### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `allowedLimit`: `bigint`; `numberOfRegisteredValidators`: `bigint`; \}\>
 
 The module limit information.
 
-###### allowedLimit
-
-> **allowedLimit**: `bigint`
-
-###### numberOfRegisteredValidators
-
-> **numberOfRegisteredValidators**: `bigint`
-
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:175](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L175)
-
 ##### getModuleWeights()
 
-> **getModuleWeights**(): `Promise`\<readonly \`0x$\{string\}\`[]\>
+> **getModuleWeights**(): `Promise`\<readonly `` `0x${string}` ``[]\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:119](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L119)
 
 Get module weights.
 
 ###### Returns
 
-`Promise`\<readonly \`0x$\{string\}\`[]\>
+`Promise`\<readonly `` `0x${string}` ``[]\>
 
 The module weights.
 
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:119](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L119)
-
 ##### getNextValidatorToProvision()
 
-> **getNextValidatorToProvision**(): `Promise`\<readonly [\`0x$\{string\}\`, `bigint`]\>
+> **getNextValidatorToProvision**(): `Promise`\<readonly \[`` `0x${string}` ``, `bigint`\]\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:128](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L128)
 
 Get the next validator to be provisioned.
 
 ###### Returns
 
-`Promise`\<readonly [\`0x$\{string\}\`, `bigint`]\>
+`Promise`\<readonly \[`` `0x${string}` ``, `bigint`\]\>
 
 Tuple of module name and index.
 
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:128](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L128)
-
 ##### getNodeInfo()
 
-> **getNodeInfo**(`node`): `Promise`\<`object`\>
+> **getNodeInfo**(`node`): `Promise`\<\{ `activeValidatorCount`: `bigint`; `pendingValidatorCount`: `bigint`; `vtBalance`: `bigint`; \}\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:138](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L138)
 
 Get node information.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `node` | \`0x$\{string\}\` | The node address. |
+| ------ | ------ | ------ |
+| `node` | `` `0x${string}` `` | The node address. |
 
 ###### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `activeValidatorCount`: `bigint`; `pendingValidatorCount`: `bigint`; `vtBalance`: `bigint`; \}\>
 
 The node information.
 
-###### activeValidatorCount
+##### getValidatorInfo()
 
-> **activeValidatorCount**: `bigint`
+> **getValidatorInfo**(`moduleName`, `pufferModuleIndex`): `Promise`\<\{ `bond`: `bigint`; `module`: `` `0x${string}` ``; `node`: `` `0x${string}` ``; `pubKey`: `` `0x${string}` ``; `status`: `number`; \}\>
 
-###### pendingValidatorCount
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:159](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L159)
 
-> **pendingValidatorCount**: `bigint`
+Get validator information.
 
-###### vtBalance
+###### Parameters
 
-> **vtBalance**: `bigint`
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `moduleName` | `` `0x${string}` `` | The module name. |
+| `pufferModuleIndex` | `bigint` | The puffer module index. |
 
-###### Source
+###### Returns
 
-[lib/contracts/handlers/puffer-protocol-handler.ts:138](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L138)
+`Promise`\<\{ `bond`: `bigint`; `module`: `` `0x${string}` ``; `node`: `` `0x${string}` ``; `pubKey`: `` `0x${string}` ``; `status`: `number`; \}\>
+
+The validator information.
+
+##### getValidators()
+
+> **getValidators**(`moduleName`): `Promise`\<readonly `object`[]\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:148](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L148)
+
+Get validators for a module.
+
+###### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `moduleName` | `` `0x${string}` `` | The module name. |
+
+###### Returns
+
+`Promise`\<readonly `object`[]\>
+
+The validators array.
+
+##### getValidatorTicketsBalance()
+
+> **getValidatorTicketsBalance**(`owner`): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:100](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L100)
+
+Get validator tickets balance for an owner.
+
+###### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `owner` | `` `0x${string}` `` | The owner address. |
+
+###### Returns
+
+`Promise`\<`bigint`\>
+
+The validator tickets balance.
 
 ##### getVTPenalty()
 
 > **getVTPenalty**(): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L90)
 
 Get the VT penalty amount.
 
@@ -297,286 +309,148 @@ Get the VT penalty amount.
 
 The VT penalty amount.
 
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L90)
-
-##### getValidatorInfo()
-
-> **getValidatorInfo**(`moduleName`, `pufferModuleIndex`): `Promise`\<`object`\>
-
-Get validator information.
-
-###### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `moduleName` | \`0x$\{string\}\` | The module name. |
-| `pufferModuleIndex` | `bigint` | The puffer module index. |
-
-###### Returns
-
-`Promise`\<`object`\>
-
-The validator information.
-
-###### bond
-
-> **bond**: `bigint`
-
-###### module
-
-> **module**: \`0x$\{string\}\`
-
-###### node
-
-> **node**: \`0x$\{string\}\`
-
-###### pubKey
-
-> **pubKey**: \`0x$\{string\}\`
-
-###### status
-
-> **status**: `number`
-
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:159](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L159)
-
-##### getValidatorTicketsBalance()
-
-> **getValidatorTicketsBalance**(`owner`): `Promise`\<`bigint`\>
-
-Get validator tickets balance for an owner.
-
-###### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `owner` | \`0x$\{string\}\` | The owner address. |
-
-###### Returns
-
-`Promise`\<`bigint`\>
-
-The validator tickets balance.
-
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:100](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L100)
-
-##### getValidators()
-
-> **getValidators**(`moduleName`): `Promise`\<readonly `object`[]\>
-
-Get validators for a module.
-
-###### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `moduleName` | \`0x$\{string\}\` | The module name. |
-
-###### Returns
-
-`Promise`\<readonly `object`[]\>
-
-The validators array.
-
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:148](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L148)
-
 ##### getWithdrawalCredentials()
 
-> **getWithdrawalCredentials**(`module`): `Promise`\<\`0x$\{string\}\`\>
+> **getWithdrawalCredentials**(`module`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:185](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L185)
 
 Get withdrawal credentials for a module.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `module` | \`0x$\{string\}\` | The module address. |
+| ------ | ------ | ------ |
+| `module` | `` `0x${string}` `` | The module address. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The withdrawal credentials.
 
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:185](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L185)
-
 ##### provisionNode()
 
-> **provisionNode**(`guardianEnclaveSignatures`, `validatorSignature`, `depositRootHash`): `Promise`\<\`0x$\{string\}\`\>
+> **provisionNode**(`guardianEnclaveSignatures`, `validatorSignature`, `depositRootHash`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:254](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L254)
 
 Provision a node.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `guardianEnclaveSignatures` | \`0x$\{string\}\`[] | The guardian enclave signatures. |
-| `validatorSignature` | \`0x$\{string\}\` | The validator signature. |
-| `depositRootHash` | \`0x$\{string\}\` | The deposit root hash. |
+| ------ | ------ | ------ |
+| `guardianEnclaveSignatures` | `` `0x${string}` ``[] | The guardian enclave signatures. |
+| `validatorSignature` | `` `0x${string}` `` | The validator signature. |
+| `depositRootHash` | `` `0x${string}` `` | The deposit root hash. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
 
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:254](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L254)
-
 ##### registerValidatorKey()
 
-> **registerValidatorKey**(`data`, `moduleName`, `pufETHPermit`, `vtPermit`): `Promise`\<\`0x$\{string\}\`\>
+> **registerValidatorKey**(`data`, `moduleName`, `pufETHPermit`, `vtPermit`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:231](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L231)
 
 Register validator key.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `data` | [`ValidatorKeyData`](puffer-protocol-handler.md#validatorkeydata) | The validator key data. |
-| `moduleName` | \`0x$\{string\}\` | The module name. |
+| ------ | ------ | ------ |
+| `data` | [`ValidatorKeyData`](#validatorkeydata) | The validator key data. |
+| `moduleName` | `` `0x${string}` `` | The module name. |
 | `pufETHPermit` | [`PermitData`](../common/lib/types.md#permitdata) | The pufETH permit data. |
 | `vtPermit` | [`PermitData`](../common/lib/types.md#permitdata) | The VT permit data. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
 
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:231](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L231)
-
 ##### skipProvisioning()
 
-> **skipProvisioning**(`moduleName`, `guardianEOASignatures`): `Promise`\<\`0x$\{string\}\`\>
+> **skipProvisioning**(`moduleName`, `guardianEOASignatures`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:326](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L326)
 
 Skip provisioning for a module.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `moduleName` | \`0x$\{string\}\` | The module name. |
-| `guardianEOASignatures` | \`0x$\{string\}\`[] | The guardian EOA signatures. |
+| ------ | ------ | ------ |
+| `moduleName` | `` `0x${string}` `` | The module name. |
+| `guardianEOASignatures` | `` `0x${string}` ``[] | The guardian EOA signatures. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
 
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:326](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L326)
-
 ##### withdrawValidatorTickets()
 
-> **withdrawValidatorTickets**(`amount`, `recipient`): `Promise`\<\`0x$\{string\}\`\>
+> **withdrawValidatorTickets**(`amount`, `recipient`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:289](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L289)
 
 Withdraw validator tickets.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `amount` | `bigint` | The amount to withdraw. |
-| `recipient` | \`0x$\{string\}\` | The recipient address. |
+| `recipient` | `` `0x${string}` `` | The recipient address. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
-
-###### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:289](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L289)
 
 ## Type Aliases
 
 ### StoppedValidatorInfo
 
-> **StoppedValidatorInfo**: `object`
+> **StoppedValidatorInfo** = `object`
 
-#### Type declaration
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:24](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L24)
 
-##### endEpoch
+#### Properties
 
-> **endEpoch**: `bigint`
-
-##### module
-
-> **module**: `Address`
-
-##### moduleName
-
-> **moduleName**: \`0x$\{string\}\`
-
-##### pufferModuleIndex
-
-> **pufferModuleIndex**: `bigint`
-
-##### startEpoch
-
-> **startEpoch**: `bigint`
-
-##### wasSlashed
-
-> **wasSlashed**: `boolean`
-
-##### withdrawalAmount
-
-> **withdrawalAmount**: `bigint`
-
-#### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:24](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L24)
+| Property | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="endepoch"></a> `endEpoch` | `bigint` | [lib/contracts/handlers/puffer-protocol-handler.ts:27](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L27) |
+| <a id="module"></a> `module` | `Address` | [lib/contracts/handlers/puffer-protocol-handler.ts:25](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L25) |
+| <a id="modulename"></a> `moduleName` | `` `0x${string}` `` | [lib/contracts/handlers/puffer-protocol-handler.ts:29](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L29) |
+| <a id="puffermoduleindex"></a> `pufferModuleIndex` | `bigint` | [lib/contracts/handlers/puffer-protocol-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L30) |
+| <a id="startepoch"></a> `startEpoch` | `bigint` | [lib/contracts/handlers/puffer-protocol-handler.ts:26](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L26) |
+| <a id="wasslashed"></a> `wasSlashed` | `boolean` | [lib/contracts/handlers/puffer-protocol-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L28) |
+| <a id="withdrawalamount"></a> `withdrawalAmount` | `bigint` | [lib/contracts/handlers/puffer-protocol-handler.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L31) |
 
 ***
 
 ### ValidatorKeyData
 
-> **ValidatorKeyData**: `object`
+> **ValidatorKeyData** = `object`
 
-#### Type declaration
+Defined in: [lib/contracts/handlers/puffer-protocol-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L15)
 
-##### blsEncryptedPrivKeyShares
+#### Properties
 
-> **blsEncryptedPrivKeyShares**: \`0x$\{string\}\`[]
-
-##### blsPubKey
-
-> **blsPubKey**: \`0x$\{string\}\`
-
-##### blsPubKeySet
-
-> **blsPubKeySet**: \`0x$\{string\}\`
-
-##### depositDataRoot
-
-> **depositDataRoot**: \`0x$\{string\}\`
-
-##### raveEvidence
-
-> **raveEvidence**: \`0x$\{string\}\`
-
-##### signature
-
-> **signature**: \`0x$\{string\}\`
-
-#### Source
-
-[lib/contracts/handlers/puffer-protocol-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-protocol-handler.ts#L15)
+| Property | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="blsencryptedprivkeyshares"></a> `blsEncryptedPrivKeyShares` | `` `0x${string}` ``[] | [lib/contracts/handlers/puffer-protocol-handler.ts:19](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L19) |
+| <a id="blspubkey"></a> `blsPubKey` | `` `0x${string}` `` | [lib/contracts/handlers/puffer-protocol-handler.ts:16](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L16) |
+| <a id="blspubkeyset"></a> `blsPubKeySet` | `` `0x${string}` `` | [lib/contracts/handlers/puffer-protocol-handler.ts:20](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L20) |
+| <a id="depositdataroot"></a> `depositDataRoot` | `` `0x${string}` `` | [lib/contracts/handlers/puffer-protocol-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L18) |
+| <a id="raveevidence"></a> `raveEvidence` | `` `0x${string}` `` | [lib/contracts/handlers/puffer-protocol-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L21) |
+| <a id="signature"></a> `signature` | `` `0x${string}` `` | [lib/contracts/handlers/puffer-protocol-handler.ts:17](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-protocol-handler.ts#L17) |

@@ -4,13 +4,17 @@
 
 ### L1RewardManagerHandler
 
+Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/l1-reward-manager-handler.ts#L15)
+
 Handler for the `L1RewardManager` contract.
 
 #### Constructors
 
-##### new L1RewardManagerHandler()
+##### Constructor
 
-> **new L1RewardManagerHandler**(`chain`, `walletClient`, `publicClient`): [`L1RewardManagerHandler`](l1-reward-manager-handler.md#l1rewardmanagerhandler)
+> **new L1RewardManagerHandler**(`chain`, `walletClient`, `publicClient`): [`L1RewardManagerHandler`](#l1rewardmanagerhandler)
+
+Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/l1-reward-manager-handler.ts#L28)
 
 Create the handler for the `L1RewardManager` contract exposing
 methods to interact with the contract.
@@ -18,59 +22,42 @@ methods to interact with the contract.
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `chain` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `walletClient` | `object` | The wallet client to use for wallet interactions. |
-| `publicClient` | `object` | The public client to use for public interactions. |
+| `walletClient` | \{ \} | The wallet client to use for wallet interactions. |
+| `publicClient` | \{ \} | The public client to use for public interactions. |
 
 ###### Returns
 
-[`L1RewardManagerHandler`](l1-reward-manager-handler.md#l1rewardmanagerhandler)
-
-###### Source
-
-[lib/contracts/handlers/l1-reward-manager-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/l1-reward-manager-handler.ts#L28)
-
-#### Properties
-
-| Property | Modifier | Type | Description |
-| :------ | :------ | :------ | :------ |
-| `chain` | `private` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `publicClient` | `private` | `object` | The public client to use for public interactions. |
-| `viemChain` | `private` | `Chain` | - |
-| `walletClient` | `private` | `object` | The wallet client to use for wallet interactions. |
+[`L1RewardManagerHandler`](#l1rewardmanagerhandler)
 
 #### Methods
 
 ##### getBridge()
 
-> **getBridge**(`bridgeAddress`): `Promise`\<`object`\>
+> **getBridge**(`bridgeAddress`): `Promise`\<\{ `destinationDomainId`: `number`; \}\>
+
+Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/l1-reward-manager-handler.ts#L60)
 
 Get the bridge data for the given bridge address.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `bridgeAddress` | \`0x$\{string\}\` | Address of the bridge. |
+| ------ | ------ | ------ |
+| `bridgeAddress` | `` `0x${string}` `` | Address of the bridge. |
 
 ###### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `destinationDomainId`: `number`; \}\>
 
 The bridge data.
-
-###### destinationDomainId
-
-> **destinationDomainId**: `number`
-
-###### Source
-
-[lib/contracts/handlers/l1-reward-manager-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/l1-reward-manager-handler.ts#L60)
 
 ##### getContract()
 
 > **getContract**(): `object`
+
+Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/l1-reward-manager-handler.ts#L42)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
@@ -81,13 +68,11 @@ and lost when trying to make it a member.
 
 The viem contract.
 
-###### Source
-
-[lib/contracts/handlers/l1-reward-manager-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/l1-reward-manager-handler.ts#L42)
-
 ##### setL2RewardClaimer()
 
 > **setL2RewardClaimer**(`account`, `bridge`, `claimer`): `object`
+
+Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:78](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/l1-reward-manager-handler.ts#L78)
 
 Sets the rewards claimer on L2. Smart contracts might not be able
 to to own the same address on L2. This function allows to set a
@@ -96,10 +81,10 @@ different address as the claimer.
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `account` | \`0x$\{string\}\` | The account to make the transaction with. |
-| `bridge` | \`0x$\{string\}\` | Address of the bridge. |
-| `claimer` | \`0x$\{string\}\` | Address of the new claimer. |
+| ------ | ------ | ------ |
+| `account` | `` `0x${string}` `` | The account to make the transaction with. |
+| `bridge` | `` `0x${string}` `` | Address of the bridge. |
+| `claimer` | `` `0x${string}` `` | Address of the new claimer. |
 
 ###### Returns
 
@@ -121,12 +106,8 @@ transaction.
 
 ###### transact()
 
-> **transact**: () => `Promise`\<\`0x$\{string\}\`\>
+> **transact**: () => `Promise`\<`` `0x${string}` ``\>
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
-
-###### Source
-
-[lib/contracts/handlers/l1-reward-manager-handler.ts:78](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/l1-reward-manager-handler.ts#L78)
+`Promise`\<`` `0x${string}` ``\>

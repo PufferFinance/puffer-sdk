@@ -4,18 +4,13 @@
 
 ### ErrorBaseParameters
 
-> **ErrorBaseParameters**: `object`
+> **ErrorBaseParameters** = `object`
 
-#### Type declaration
+Defined in: [lib/errors/types.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/types.ts#L1)
 
-##### docsPath?
+#### Properties
 
-> `optional` **docsPath**: `string`
-
-##### fixMessage?
-
-> `optional` **fixMessage**: `string`
-
-#### Source
-
-[lib/errors/types.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/errors/types.ts#L1)
+| Property | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="docspath"></a> `docsPath?` | `string` | [lib/errors/types.ts:2](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/types.ts#L2) |
+| <a id="fixmessage"></a> `fixMessage?` | `string` | [lib/errors/types.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/types.ts#L3) |

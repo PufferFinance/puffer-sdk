@@ -4,17 +4,19 @@
 
 ### PufferClientHelpers
 
+Defined in: [lib/api/puffer-client-helpers.ts:25](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/api/puffer-client-helpers.ts#L25)
+
 Helper methods for the main `PufferClient`.
 
 #### Constructors
 
-##### new PufferClientHelpers()
+##### Constructor
 
-> **new PufferClientHelpers**(): [`PufferClientHelpers`](puffer-client-helpers.md#pufferclienthelpers)
+> **new PufferClientHelpers**(): [`PufferClientHelpers`](#pufferclienthelpers)
 
 ###### Returns
 
-[`PufferClientHelpers`](puffer-client-helpers.md#pufferclienthelpers)
+[`PufferClientHelpers`](#pufferclienthelpers)
 
 #### Methods
 
@@ -22,14 +24,16 @@ Helper methods for the main `PufferClient`.
 
 > `static` **createPublicClient**(`config`): `object`
 
+Defined in: [lib/api/puffer-client-helpers.ts:33](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/api/puffer-client-helpers.ts#L33)
+
 Helper method for creating a public client based on the
 configuration
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `config` | [`ClientConfig`](puffer-client-helpers.md#clientconfig) | Configuration for the public client. |
+| ------ | ------ | ------ |
+| `config` | [`ClientConfig`](#clientconfig) | Configuration for the public client. |
 
 ###### Returns
 
@@ -37,13 +41,11 @@ configuration
 
 The public client created with viem.
 
-###### Source
-
-[lib/api/puffer-client-helpers.ts:33](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/api/puffer-client-helpers.ts#L33)
-
 ##### createWalletClient()
 
 > `static` **createWalletClient**(`config`): `object`
+
+Defined in: [lib/api/puffer-client-helpers.ts:47](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/api/puffer-client-helpers.ts#L47)
 
 Helper method for creating a wallet client based on the
 configuration
@@ -51,8 +53,8 @@ configuration
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `config` | [`ClientConfig`](puffer-client-helpers.md#clientconfig) | Configuration for the wallet client. |
+| ------ | ------ | ------ |
+| `config` | [`ClientConfig`](#clientconfig) | Configuration for the wallet client. |
 
 ###### Returns
 
@@ -60,40 +62,16 @@ configuration
 
 The wallet client created with viem.
 
-###### Source
-
-[lib/api/puffer-client-helpers.ts:47](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/api/puffer-client-helpers.ts#L47)
-
-##### extractTransportConfig()
-
-> `static` `private` **extractTransportConfig**(`config`): `Transport`
-
-###### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `config` | [`ClientConfig`](puffer-client-helpers.md#clientconfig) |
-
-###### Returns
-
-`Transport`
-
-###### Source
-
-[lib/api/puffer-client-helpers.ts:54](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/api/puffer-client-helpers.ts#L54)
-
 ## Type Aliases
 
 ### ClientConfig
 
-> **ClientConfig**: `object` & `object` \| `object`
+> **ClientConfig** = `object` & \{ `rpcUrls`: `string`[]; \} \| \{ `config?`: `CustomTransportConfig`; `provider`: [`TransportProvider`](../utils/types.md#transportprovider); \}
 
-#### Type declaration
+Defined in: [lib/api/puffer-client-helpers.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/api/puffer-client-helpers.ts#L15)
+
+#### Type Declaration
 
 ##### chain
 
 > **chain**: [`Chain`](../chains/constants.md#chain)
-
-#### Source
-
-[lib/api/puffer-client-helpers.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/api/puffer-client-helpers.ts#L15)

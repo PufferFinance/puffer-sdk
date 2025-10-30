@@ -6,13 +6,19 @@
 
 Re-exports [ClaimInfo](distributor-handler.md#claiminfo)
 
+***
+
 ### ClaimParams
 
 Re-exports [ClaimParams](distributor-handler.md#claimparams)
 
+***
+
 ### DistributorHandler
 
 Re-exports [DistributorHandler](distributor-handler.md#distributorhandler)
+
+***
 
 ### MerkleTree
 

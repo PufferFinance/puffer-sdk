@@ -4,14 +4,18 @@
 
 ### PufferWithdrawalManagerHandler
 
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L18)
+
 Handler for the `PufferWithdrawalsManager` contract exposing methods to
 interact with the contract.
 
 #### Constructors
 
-##### new PufferWithdrawalManagerHandler()
+##### Constructor
 
-> **new PufferWithdrawalManagerHandler**(`chain`, `walletClient`, `publicClient`): [`PufferWithdrawalManagerHandler`](puffer-withdrawal-manager-handler.md#pufferwithdrawalmanagerhandler)
+> **new PufferWithdrawalManagerHandler**(`chain`, `walletClient`, `publicClient`): [`PufferWithdrawalManagerHandler`](#pufferwithdrawalmanagerhandler)
+
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L32)
 
 Create the handler for the `PufferWithdrawalsManager` contract exposing
 methods to interact with the contract.
@@ -19,73 +23,43 @@ methods to interact with the contract.
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `chain` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `walletClient` | `object` | The wallet client to use for wallet interactions. |
-| `publicClient` | `object` | The public client to use for public interactions. |
+| `walletClient` | \{ \} | The wallet client to use for wallet interactions. |
+| `publicClient` | \{ \} | The public client to use for public interactions. |
 
 ###### Returns
 
-[`PufferWithdrawalManagerHandler`](puffer-withdrawal-manager-handler.md#pufferwithdrawalmanagerhandler)
-
-###### Source
-
-[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L32)
-
-#### Properties
-
-| Property | Modifier | Type | Description |
-| :------ | :------ | :------ | :------ |
-| `chain` | `private` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `erc20PermitHandler` | `private` | [`ERC20PermitHandler`](erc20-permit-handler.md#erc20permithandler) | - |
-| `publicClient` | `private` | `object` | The public client to use for public interactions. |
-| `viemChain` | `private` | `Chain` | - |
-| `walletClient` | `private` | `object` | The wallet client to use for wallet interactions. |
+[`PufferWithdrawalManagerHandler`](#pufferwithdrawalmanagerhandler)
 
 #### Methods
 
 ##### completeQueuedWithdrawal()
 
-> **completeQueuedWithdrawal**(`walletAddress`, `withdrawalIdx`): `Promise`\<`object`\>
+> **completeQueuedWithdrawal**(`walletAddress`, `withdrawalIdx`): `Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
+
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:132](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L132)
 
 Complete a withdrawal from the queue.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `walletAddress` | \`0x$\{string\}\` | - |
+| ------ | ------ | ------ |
+| `walletAddress` | `` `0x${string}` `` | - |
 | `withdrawalIdx` | `bigint` | The index of the withdrawal to complete. |
 
 ###### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
 
 The transaction hash of the withdrawal.
-
-###### estimate()
-
-> **estimate**: () => `Promise`\<`bigint`\>
-
-###### Returns
-
-`Promise`\<`bigint`\>
-
-###### transact()
-
-> **transact**: () => `Promise`\<\`0x$\{string\}\`\>
-
-###### Returns
-
-`Promise`\<\`0x$\{string\}\`\>
-
-###### Source
-
-[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:132](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L132)
 
 ##### getContract()
 
 > **getContract**(): `object`
+
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:50](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L50)
 
 Get the contract.
 
@@ -95,118 +69,64 @@ Get the contract.
 
 The viem contract.
 
-###### Source
-
-[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:50](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L50)
-
 ##### getWithdrawal()
 
-> **getWithdrawal**(`withdrawalIdx`): `Promise`\<`object`\>
+> **getWithdrawal**(`withdrawalIdx`): `Promise`\<\{ `pufETHAmount`: `bigint`; `pufETHToETHExchangeRate`: `bigint`; `recipient`: `` `0x${string}` ``; \}\>
+
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:157](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L157)
 
 Get the withdrawal at the given index.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `withdrawalIdx` | `bigint` | The index of the withdrawal to get. |
 
 ###### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `pufETHAmount`: `bigint`; `pufETHToETHExchangeRate`: `bigint`; `recipient`: `` `0x${string}` ``; \}\>
 
 The withdrawal at the given index.
 
-###### pufETHAmount
-
-> **pufETHAmount**: `bigint`
-
-###### pufETHToETHExchangeRate
-
-> **pufETHToETHExchangeRate**: `bigint`
-
-###### recipient
-
-> **recipient**: \`0x$\{string\}\`
-
-###### Source
-
-[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:157](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L157)
-
 ##### requestWithdrawal()
 
-> **requestWithdrawal**(`walletAddress`, `amount`): `Promise`\<`object`\>
+> **requestWithdrawal**(`walletAddress`, `amount`): `Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
+
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L70)
 
 Request a withdrawal of the given amount to the given address, with a permit.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `walletAddress` | \`0x$\{string\}\` | The account address to request the withdrawal for. |
+| ------ | ------ | ------ |
+| `walletAddress` | `` `0x${string}` `` | The account address to request the withdrawal for. |
 | `amount` | `bigint` | The pufETH amount to request the withdrawal for. |
 
 ###### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
 
 The transaction hash of the withdrawal.
 
-###### estimate()
-
-> **estimate**: () => `Promise`\<`bigint`\>
-
-###### Returns
-
-`Promise`\<`bigint`\>
-
-###### transact()
-
-> **transact**: () => `Promise`\<\`0x$\{string\}\`\>
-
-###### Returns
-
-`Promise`\<\`0x$\{string\}\`\>
-
-###### Source
-
-[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L70)
-
 ##### requestWithdrawalWithPermit()
 
-> **requestWithdrawalWithPermit**(`walletAddress`, `amount`): `Promise`\<`object`\>
+> **requestWithdrawalWithPermit**(`walletAddress`, `amount`): `Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
+
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L96)
 
 Request a withdrawal of the given amount to the given address.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `walletAddress` | \`0x$\{string\}\` | The account address to request the withdrawal for. |
+| ------ | ------ | ------ |
+| `walletAddress` | `` `0x${string}` `` | The account address to request the withdrawal for. |
 | `amount` | `bigint` | The pufETHamount to request the withdrawal for. |
 
 ###### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
 
 The transaction hash of the withdrawal.
-
-###### estimate()
-
-> **estimate**: () => `Promise`\<`bigint`\>
-
-###### Returns
-
-`Promise`\<`bigint`\>
-
-###### transact()
-
-> **transact**: () => `Promise`\<\`0x$\{string\}\`\>
-
-###### Returns
-
-`Promise`\<\`0x$\{string\}\`\>
-
-###### Source
-
-[lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L96)

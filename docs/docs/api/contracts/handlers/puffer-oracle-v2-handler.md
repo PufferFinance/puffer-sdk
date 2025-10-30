@@ -4,14 +4,18 @@
 
 ### PufferOracleV2Handler
 
+Defined in: [lib/contracts/handlers/puffer-oracle-v2-handler.ts:17](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L17)
+
 Handler for the `PufferOracleV2` contract exposing methods to interact
 with the contract.
 
 #### Constructors
 
-##### new PufferOracleV2Handler()
+##### Constructor
 
-> **new PufferOracleV2Handler**(`chain`, `walletClient`, `publicClient`): [`PufferOracleV2Handler`](puffer-oracle-v2-handler.md#pufferoraclev2handler)
+> **new PufferOracleV2Handler**(`chain`, `walletClient`, `publicClient`): [`PufferOracleV2Handler`](#pufferoraclev2handler)
+
+Defined in: [lib/contracts/handlers/puffer-oracle-v2-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L30)
 
 Create the handler for the `PufferOracleV2` contract exposing
 methods to interact with the contract.
@@ -19,55 +23,42 @@ methods to interact with the contract.
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `chain` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `walletClient` | `object` | The wallet client to use for wallet interactions. |
-| `publicClient` | `object` | The public client to use for public interactions. |
+| `walletClient` | \{ \} | The wallet client to use for wallet interactions. |
+| `publicClient` | \{ \} | The public client to use for public interactions. |
 
 ###### Returns
 
-[`PufferOracleV2Handler`](puffer-oracle-v2-handler.md#pufferoraclev2handler)
-
-###### Source
-
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L30)
-
-#### Properties
-
-| Property | Modifier | Type | Description |
-| :------ | :------ | :------ | :------ |
-| `chain` | `private` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `publicClient` | `private` | `object` | The public client to use for public interactions. |
-| `viemChain` | `private` | `Chain` | - |
-| `walletClient` | `private` | `object` | The wallet client to use for wallet interactions. |
+[`PufferOracleV2Handler`](#pufferoraclev2handler)
 
 #### Methods
 
 ##### exitValidators()
 
-> **exitValidators**(`numberOfExits`): `Promise`\<\`0x$\{string\}\`\>
+> **exitValidators**(`numberOfExits`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-oracle-v2-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L109)
 
 Exit validators.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `numberOfExits` | `bigint` | The number of validators to exit. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
-
-###### Source
-
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L109)
 
 ##### getContract()
 
 > **getContract**(): `object`
+
+Defined in: [lib/contracts/handlers/puffer-oracle-v2-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L43)
 
 Get the contract.
 
@@ -77,13 +68,11 @@ Get the contract.
 
 The viem contract.
 
-###### Source
-
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L43)
-
 ##### getLockedEthAmount()
 
 > **getLockedEthAmount**(): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/puffer-oracle-v2-handler.ts:78](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L78)
 
 Get the locked ETH amount.
 
@@ -93,13 +82,11 @@ Get the locked ETH amount.
 
 The locked ETH amount.
 
-###### Source
-
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:78](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L78)
-
 ##### getTotalNumberOfValidators()
 
 > **getTotalNumberOfValidators**(): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/puffer-oracle-v2-handler.ts:69](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L69)
 
 Get the total number of validators.
 
@@ -109,13 +96,11 @@ Get the total number of validators.
 
 The total number of validators.
 
-###### Source
-
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:69](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L69)
-
 ##### getValidatorTicketPrice()
 
 > **getValidatorTicketPrice**(): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/puffer-oracle-v2-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L60)
 
 Get the validator ticket price.
 
@@ -125,13 +110,11 @@ Get the validator ticket price.
 
 The validator ticket price.
 
-###### Source
-
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L60)
-
 ##### isOverBurstThreshold()
 
 > **isOverBurstThreshold**(): `Promise`\<`boolean`\>
+
+Defined in: [lib/contracts/handlers/puffer-oracle-v2-handler.ts:87](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L87)
 
 Check if the system is over burst threshold.
 
@@ -141,68 +124,58 @@ Check if the system is over burst threshold.
 
 True if over burst threshold.
 
-###### Source
-
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:87](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L87)
-
 ##### provisionNode()
 
-> **provisionNode**(): `Promise`\<\`0x$\{string\}\`\>
+> **provisionNode**(): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-oracle-v2-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L96)
 
 Provision a new node.
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
 
-###### Source
-
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L96)
-
 ##### setMintPrice()
 
-> **setMintPrice**(`newPrice`): `Promise`\<\`0x$\{string\}\`\>
+> **setMintPrice**(`newPrice`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-oracle-v2-handler.ts:122](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L122)
 
 Set the mint price for validator tickets.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `newPrice` | `bigint` | The new mint price. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
 
-###### Source
-
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:122](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L122)
-
 ##### setTotalNumberOfValidators()
 
-> **setTotalNumberOfValidators**(`newTotalNumberOfValidators`, `epochNumber`, `guardianEOASignatures`): `Promise`\<\`0x$\{string\}\`\>
+> **setTotalNumberOfValidators**(`newTotalNumberOfValidators`, `epochNumber`, `guardianEOASignatures`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/puffer-oracle-v2-handler.ts:137](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L137)
 
 Set the total number of validators.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `newTotalNumberOfValidators` | `bigint` | The new total number of validators. |
 | `epochNumber` | `bigint` | The epoch number. |
-| `guardianEOASignatures` | \`0x$\{string\}\`[] | The guardian EOA signatures. |
+| `guardianEOASignatures` | `` `0x${string}` ``[] | The guardian EOA signatures. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
-
-###### Source
-
-[lib/contracts/handlers/puffer-oracle-v2-handler.ts:137](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/puffer-oracle-v2-handler.ts#L137)

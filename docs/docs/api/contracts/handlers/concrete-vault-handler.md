@@ -4,102 +4,90 @@
 
 ### ConcreteVaultHandler
 
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L21)
+
 Handler for the `ConcreteMultStrategyVault` contract for a given token (pufETH) exposing
 methods to interact with the contract.
 
 #### Constructors
 
-##### new ConcreteVaultHandler()
+##### Constructor
 
-> **new ConcreteVaultHandler**(`chain`, `walletClient`, `publicClient`): [`ConcreteVaultHandler`](concrete-vault-handler.md#concretevaulthandler)
+> **new ConcreteVaultHandler**(`chain`, `walletClient`, `publicClient`): [`ConcreteVaultHandler`](#concretevaulthandler)
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:34](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L34)
 
 Create the handler for processing UniFi tokens.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `chain` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `walletClient` | `object` | The wallet client to use for wallet interactions. |
-| `publicClient` | `object` | The public client to use for public interactions. |
+| `walletClient` | \{ \} | The wallet client to use for wallet interactions. |
+| `publicClient` | \{ \} | The public client to use for public interactions. |
 
 ###### Returns
 
-[`ConcreteVaultHandler`](concrete-vault-handler.md#concretevaulthandler)
-
-###### Source
-
-[lib/contracts/handlers/concrete-vault-handler.ts:34](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L34)
-
-#### Properties
-
-| Property | Modifier | Type | Description |
-| :------ | :------ | :------ | :------ |
-| `chain` | `private` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `publicClient` | `private` | `object` | The public client to use for public interactions. |
-| `token` | `private` | `ctTACpufETH` | - |
-| `viemChain` | `private` | `Chain` | - |
-| `walletClient` | `private` | `object` | The wallet client to use for wallet interactions. |
+[`ConcreteVaultHandler`](#concretevaulthandler)
 
 #### Methods
 
 ##### approve()
 
-> **approve**(`spender`, `amount`): `Promise`\<\`0x$\{string\}\`\>
+> **approve**(`spender`, `amount`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L80)
 
 Approve a spender to spend the token.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `spender` | \`0x$\{string\}\` | The spender of the token. |
+| ------ | ------ | ------ |
+| `spender` | `` `0x${string}` `` | The spender of the token. |
 | `amount` | `bigint` | The amount to approve. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
 
-###### Source
-
-[lib/contracts/handlers/concrete-vault-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L80)
-
 ##### deposit()
 
-> **deposit**(`amount`): `Promise`\<\`0x$\{string\}\`\>
+> **deposit**(`amount`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L123)
 
 Deposit an amount of the token.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `amount` | `bigint` | The amount to deposit. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
-
-###### Source
-
-[lib/contracts/handlers/concrete-vault-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L123)
 
 ##### getAllowance()
 
 > **getAllowance**(`owner`, `spender`): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L94)
 
 Get the allowance of the owner for the spender.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `owner` | \`0x$\{string\}\` | The owner of the allowance. |
-| `spender` | \`0x$\{string\}\` | The spender of the allowance. |
+| ------ | ------ | ------ |
+| `owner` | `` `0x${string}` `` | The owner of the allowance. |
+| `spender` | `` `0x${string}` `` | The spender of the allowance. |
 
 ###### Returns
 
@@ -107,21 +95,19 @@ Get the allowance of the owner for the spender.
 
 The allowance.
 
-###### Source
-
-[lib/contracts/handlers/concrete-vault-handler.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L94)
-
 ##### getBalance()
 
 > **getBalance**(`address`): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:104](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L104)
 
 Get the balance for the address.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `address` | \`0x$\{string\}\` | The address to get the balance of. |
+| ------ | ------ | ------ |
+| `address` | `` `0x${string}` `` | The address to get the balance of. |
 
 ###### Returns
 
@@ -129,13 +115,11 @@ Get the balance for the address.
 
 The balance.
 
-###### Source
-
-[lib/contracts/handlers/concrete-vault-handler.ts:104](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L104)
-
 ##### getContract()
 
 > **getContract**(): `object`
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L60)
 
 Get the contract.
 
@@ -145,13 +129,11 @@ Get the contract.
 
 The viem contract.
 
-###### Source
-
-[lib/contracts/handlers/concrete-vault-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L60)
-
 ##### getTotalSupply()
 
 > **getTotalSupply**(): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:113](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L113)
 
 Get the total supply of the token.
 
@@ -161,20 +143,18 @@ Get the total supply of the token.
 
 The total supply.
 
-###### Source
-
-[lib/contracts/handlers/concrete-vault-handler.ts:113](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L113)
-
 ##### previewDeposit()
 
 > **previewDeposit**(`amount`): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:172](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L172)
 
 Provides a preview of the number of shares that would be minted for a given deposit amount, after fees.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `amount` | `bigint` | The amount to deposit. |
 
 ###### Returns
@@ -183,13 +163,11 @@ Provides a preview of the number of shares that would be minted for a given depo
 
 The preview.
 
-###### Source
-
-[lib/contracts/handlers/concrete-vault-handler.ts:172](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L172)
-
 ##### previewRedeem()
 
 > **previewRedeem**(`amount`): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:195](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L195)
 
 Provides a preview of the amount of assets that would be redeemed
 for a specific number of shares, after withdrawal fees. Subtracts
@@ -199,7 +177,7 @@ shares for asset conversion.
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `amount` | `bigint` | The amount to redeem. |
 
 ###### Returns
@@ -208,20 +186,18 @@ shares for asset conversion.
 
 The preview.
 
-###### Source
-
-[lib/contracts/handlers/concrete-vault-handler.ts:195](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L195)
-
 ##### previewWithdraw()
 
 > **previewWithdraw**(`amount`): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:182](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L182)
 
 Provides a preview of the number of shares that would be burned for a given withdrawal amount, after fees.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `amount` | `bigint` | The amount to withdraw. |
 
 ###### Returns
@@ -230,13 +206,11 @@ Provides a preview of the number of shares that would be burned for a given with
 
 The preview.
 
-###### Source
-
-[lib/contracts/handlers/concrete-vault-handler.ts:182](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L182)
-
 ##### redeem()
 
-> **redeem**(`shares`, `receiver`?, `owner`?): `Promise`\<\`0x$\{string\}\`\>
+> **redeem**(`shares`, `receiver?`, `owner?`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:152](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L152)
 
 Redeem the given amount of shares (ctTACpufETH) so the receiver
 gets the assets (pufETH).
@@ -244,24 +218,42 @@ gets the assets (pufETH).
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `shares` | `bigint` | The amount of shares (ctTACpufETH) to redeem. |
-| `receiver`? | \`0x$\{string\}\` | The optional receiver of the assets. |
-| `owner`? | \`0x$\{string\}\` | The optional owner of the shares. |
+| `receiver?` | `` `0x${string}` `` | The optional receiver of the assets. |
+| `owner?` | `` `0x${string}` `` | The optional owner of the shares. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction.
 
-###### Source
+##### withdraw()
 
-[lib/contracts/handlers/concrete-vault-handler.ts:152](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L152)
+> **withdraw**(`assets`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:136](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L136)
+
+Withdraw the given amount of assets (pufETH) to the receiver.
+
+###### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `assets` | `bigint` | The amount of assets (pufETH) to withdraw. |
+
+###### Returns
+
+`Promise`\<`` `0x${string}` ``\>
+
+The transaction.
 
 ##### withToken()
 
-> **withToken**(`token`): [`ConcreteVaultHandler`](concrete-vault-handler.md#concretevaulthandler)
+> **withToken**(`token`): [`ConcreteVaultHandler`](#concretevaulthandler)
+
+Defined in: [lib/contracts/handlers/concrete-vault-handler.ts:50](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/concrete-vault-handler.ts#L50)
 
 Set the UniFi token to use for executing transactions on the
 contract.
@@ -269,37 +261,11 @@ contract.
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `token` | `ctTACpufETH` | UniFi token to use for the handler. |
+| ------ | ------ | ------ |
+| `token` | [`ctTACpufETH`](../tokens.md#cttacpufeth) | UniFi token to use for the handler. |
 
 ###### Returns
 
-[`ConcreteVaultHandler`](concrete-vault-handler.md#concretevaulthandler)
+[`ConcreteVaultHandler`](#concretevaulthandler)
 
 The handler.
-
-###### Source
-
-[lib/contracts/handlers/concrete-vault-handler.ts:50](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L50)
-
-##### withdraw()
-
-> **withdraw**(`assets`): `Promise`\<\`0x$\{string\}\`\>
-
-Withdraw the given amount of assets (pufETH) to the receiver.
-
-###### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `assets` | `bigint` | The amount of assets (pufETH) to withdraw. |
-
-###### Returns
-
-`Promise`\<\`0x$\{string\}\`\>
-
-The transaction.
-
-###### Source
-
-[lib/contracts/handlers/concrete-vault-handler.ts:136](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/concrete-vault-handler.ts#L136)

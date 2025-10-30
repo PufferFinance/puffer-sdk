@@ -4,14 +4,18 @@
 
 ### GuardianModuleHandler
 
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L18)
+
 Handler for the `GuardianModule` contract exposing methods to
 interact with the contract.
 
 #### Constructors
 
-##### new GuardianModuleHandler()
+##### Constructor
 
-> **new GuardianModuleHandler**(`chain`, `walletClient`, `publicClient`): [`GuardianModuleHandler`](guardian-module-handler.md#guardianmodulehandler)
+> **new GuardianModuleHandler**(`chain`, `walletClient`, `publicClient`): [`GuardianModuleHandler`](#guardianmodulehandler)
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L31)
 
 Create the handler for the `PufLocker` contract exposing methods to
 interact with the contract.
@@ -19,33 +23,22 @@ interact with the contract.
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `chain` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `walletClient` | `object` | The wallet client to use for wallet interactions. |
-| `publicClient` | `object` | The public client to use for public interactions. |
+| `walletClient` | \{ \} | The wallet client to use for wallet interactions. |
+| `publicClient` | \{ \} | The public client to use for public interactions. |
 
 ###### Returns
 
-[`GuardianModuleHandler`](guardian-module-handler.md#guardianmodulehandler)
-
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L31)
-
-#### Properties
-
-| Property | Modifier | Type | Description |
-| :------ | :------ | :------ | :------ |
-| `chain` | `private` | [`Chain`](../../chains/constants.md#chain) | Chain to use for the client. |
-| `publicClient` | `private` | `object` | The public client to use for public interactions. |
-| `viemChain` | `private` | `Chain` | - |
-| `walletClient` | `private` | `object` | The wallet client to use for wallet interactions. |
+[`GuardianModuleHandler`](#guardianmodulehandler)
 
 #### Methods
 
 ##### getContract()
 
 > **getContract**(): `object`
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L45)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
@@ -56,13 +49,11 @@ and lost when trying to make it a member.
 
 The viem contract.
 
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L45)
-
 ##### getEjectionThreshold()
 
 > **getEjectionThreshold**(): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:62](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L62)
 
 Get the ejection threshold.
 
@@ -72,115 +63,101 @@ Get the ejection threshold.
 
 The ejection threshold.
 
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:62](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L62)
-
 ##### getGuardians()
 
-> **getGuardians**(): `Promise`\<readonly \`0x$\{string\}\`[]\>
+> **getGuardians**(): `Promise`\<readonly `` `0x${string}` ``[]\>
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L71)
 
 Get the guardians.
 
 ###### Returns
 
-`Promise`\<readonly \`0x$\{string\}\`[]\>
+`Promise`\<readonly `` `0x${string}` ``[]\>
 
 The guardians.
 
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L71)
-
 ##### getGuardiansEnclaveAddress()
 
-> **getGuardiansEnclaveAddress**(`guardian`): `Promise`\<\`0x$\{string\}\`\>
+> **getGuardiansEnclaveAddress**(`guardian`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L81)
 
 Get the enclave address for a guardian.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `guardian` | \`0x$\{string\}\` | The guardian address. |
+| ------ | ------ | ------ |
+| `guardian` | `` `0x${string}` `` | The guardian address. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The enclave address.
 
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L81)
-
 ##### getGuardiansEnclaveAddresses()
 
-> **getGuardiansEnclaveAddresses**(): `Promise`\<readonly \`0x$\{string\}\`[]\>
+> **getGuardiansEnclaveAddresses**(): `Promise`\<readonly `` `0x${string}` ``[]\>
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L90)
 
 Get the enclave addresses for all guardians.
 
 ###### Returns
 
-`Promise`\<readonly \`0x$\{string\}\`[]\>
+`Promise`\<readonly `` `0x${string}` ``[]\>
 
 The enclave addresses.
 
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:90](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L90)
-
 ##### getGuardiansEnclavePubkeys()
 
-> **getGuardiansEnclavePubkeys**(): `Promise`\<readonly \`0x$\{string\}\`[]\>
+> **getGuardiansEnclavePubkeys**(): `Promise`\<readonly `` `0x${string}` ``[]\>
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:99](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L99)
 
 Get the enclave pubkeys for all guardians.
 
 ###### Returns
 
-`Promise`\<readonly \`0x$\{string\}\`[]\>
+`Promise`\<readonly `` `0x${string}` ``[]\>
 
 The enclave pubkeys.
 
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:99](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L99)
-
 ##### getMrenclave()
 
-> **getMrenclave**(): `Promise`\<\`0x$\{string\}\`\>
+> **getMrenclave**(): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:125](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L125)
 
 Get the mrenclave.
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The mrenclave.
 
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:125](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L125)
-
 ##### getMrsigner()
 
-> **getMrsigner**(): `Promise`\<\`0x$\{string\}\`\>
+> **getMrsigner**(): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:134](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L134)
 
 Get the mrsigner.
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The mrsigner.
-
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:134](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L134)
 
 ##### getThreshold()
 
 > **getThreshold**(): `Promise`\<`bigint`\>
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:143](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L143)
 
 Get the threshold.
 
@@ -190,38 +167,34 @@ Get the threshold.
 
 The threshold.
 
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:143](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L143)
-
 ##### isConsumingScheduledOp()
 
-> **isConsumingScheduledOp**(): `Promise`\<\`0x$\{string\}\`\>
+> **isConsumingScheduledOp**(): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:153](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L153)
 
 Check if the guardian module is consuming scheduled operations.
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 True if the guardian module is consuming scheduled operations,
 false otherwise.
 
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:153](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L153)
-
 ##### isGuardian()
 
 > **isGuardian**(`account`): `Promise`\<`boolean`\>
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:163](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L163)
 
 Check if an account is a guardian.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `account` | \`0x$\{string\}\` | The account address. |
+| ------ | ------ | ------ |
+| `account` | `` `0x${string}` `` | The account address. |
 
 ###### Returns
 
@@ -229,52 +202,44 @@ Check if an account is a guardian.
 
 True if the account is a guardian, false otherwise.
 
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:163](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L163)
-
 ##### removeGuardian()
 
-> **removeGuardian**(`guardian`, `account`): `Promise`\<\`0x$\{string\}\`\>
+> **removeGuardian**(`guardian`, `account`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:174](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L174)
 
 Remove a guardian.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `guardian` | \`0x$\{string\}\` | The guardian address. |
-| `account` | \`0x$\{string\}\` | The account address to make the transaction with. |
+| ------ | ------ | ------ |
+| `guardian` | `` `0x${string}` `` | The guardian address. |
+| `account` | `` `0x${string}` `` | The account address to make the transaction with. |
 
 ###### Returns
 
-`Promise`\<\`0x$\{string\}\`\>
+`Promise`\<`` `0x${string}` ``\>
 
 The transaction receipt.
-
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:174](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L174)
 
 ##### validateGuardiansEnclaveSignatures()
 
 > **validateGuardiansEnclaveSignatures**(`enclaveSignatures`, `signedMessageHash`): `Promise`\<`boolean`\>
+
+Defined in: [lib/contracts/handlers/guardian-module-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/guardian-module-handler.ts#L110)
 
 Validate the enclave signatures for a signed message.
 
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `enclaveSignatures` | \`0x$\{string\}\`[] | The enclave signatures. |
-| `signedMessageHash` | \`0x$\{string\}\` | The signed message hash. |
+| ------ | ------ | ------ |
+| `enclaveSignatures` | `` `0x${string}` ``[] | The enclave signatures. |
+| `signedMessageHash` | `` `0x${string}` `` | The signed message hash. |
 
 ###### Returns
 
 `Promise`\<`boolean`\>
 
 The validation result.
-
-###### Source
-
-[lib/contracts/handlers/guardian-module-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/contracts/handlers/guardian-module-handler.ts#L110)

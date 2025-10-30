@@ -4,34 +4,34 @@
 
 ### AccountError
 
+Defined in: [lib/errors/validation-errors.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/validation-errors.ts#L3)
+
 #### Extends
 
-- [`BaseError`](base-error.md#baseerrort)
+- [`BaseError`](base-error.md#baseerror)
 
 #### Constructors
 
-##### new AccountError()
+##### Constructor
 
-> **new AccountError**(`message`, `params`): [`AccountError`](validation-errors.md#accounterror)
+> **new AccountError**(`message`, `params`): [`AccountError`](#accounterror)
+
+Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/base-error.ts#L9)
 
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `message` | `string` |
 | `params` | [`ErrorBaseParameters`](types.md#errorbaseparameters) |
 
 ###### Returns
 
-[`AccountError`](validation-errors.md#accounterror)
+[`AccountError`](#accounterror)
 
 ###### Inherited from
 
-[`BaseError`](base-error.md#baseerrort).[`constructor`](base-error.md#constructors)
-
-###### Source
-
-[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/errors/base-error.ts#L9)
+[`BaseError`](base-error.md#baseerror).[`constructor`](base-error.md#constructor)
 
 #### Methods
 
@@ -39,10 +39,12 @@
 
 > `protected` **compileMessage**(`message`, `params`): `string`
 
+Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/base-error.ts#L14)
+
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `message` | `string` |
 | `params` | [`ErrorBaseParameters`](types.md#errorbaseparameters) |
 
@@ -52,44 +54,40 @@
 
 ###### Inherited from
 
-[`BaseError`](base-error.md#baseerrort).[`compileMessage`](base-error.md#compilemessage)
-
-###### Source
-
-[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/errors/base-error.ts#L14)
+[`BaseError`](base-error.md#baseerror).[`compileMessage`](base-error.md#compilemessage)
 
 ***
 
 ### InvalidContractAddressError
 
+Defined in: [lib/errors/validation-errors.ts:7](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/validation-errors.ts#L7)
+
 #### Extends
 
-- [`BaseError`](base-error.md#baseerrort)
+- [`BaseError`](base-error.md#baseerror)
 
 #### Constructors
 
-##### new InvalidContractAddressError()
+##### Constructor
 
-> **new InvalidContractAddressError**(`message`, `params`): [`InvalidContractAddressError`](validation-errors.md#invalidcontractaddresserror)
+> **new InvalidContractAddressError**(`message`, `params`): [`InvalidContractAddressError`](#invalidcontractaddresserror)
+
+Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/base-error.ts#L9)
 
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `message` | `string` |
 | `params` | [`ErrorBaseParameters`](types.md#errorbaseparameters) |
 
 ###### Returns
 
-[`InvalidContractAddressError`](validation-errors.md#invalidcontractaddresserror)
+[`InvalidContractAddressError`](#invalidcontractaddresserror)
 
 ###### Inherited from
 
-[`BaseError`](base-error.md#baseerrort).[`constructor`](base-error.md#constructors)
-
-###### Source
-
-[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/errors/base-error.ts#L9)
+[`BaseError`](base-error.md#baseerror).[`constructor`](base-error.md#constructor)
 
 #### Methods
 
@@ -97,10 +95,12 @@
 
 > `protected` **compileMessage**(`message`, `params`): `string`
 
+Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/base-error.ts#L14)
+
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `message` | `string` |
 | `params` | [`ErrorBaseParameters`](types.md#errorbaseparameters) |
 
@@ -110,44 +110,40 @@
 
 ###### Inherited from
 
-[`BaseError`](base-error.md#baseerrort).[`compileMessage`](base-error.md#compilemessage)
-
-###### Source
-
-[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/errors/base-error.ts#L14)
+[`BaseError`](base-error.md#baseerror).[`compileMessage`](base-error.md#compilemessage)
 
 ***
 
 ### InvalidInputError
 
+Defined in: [lib/errors/validation-errors.ts:5](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/validation-errors.ts#L5)
+
 #### Extends
 
-- [`BaseError`](base-error.md#baseerrort)
+- [`BaseError`](base-error.md#baseerror)
 
 #### Constructors
 
-##### new InvalidInputError()
+##### Constructor
 
-> **new InvalidInputError**(`message`, `params`): [`InvalidInputError`](validation-errors.md#invalidinputerror)
+> **new InvalidInputError**(`message`, `params`): [`InvalidInputError`](#invalidinputerror)
+
+Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/base-error.ts#L9)
 
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `message` | `string` |
 | `params` | [`ErrorBaseParameters`](types.md#errorbaseparameters) |
 
 ###### Returns
 
-[`InvalidInputError`](validation-errors.md#invalidinputerror)
+[`InvalidInputError`](#invalidinputerror)
 
 ###### Inherited from
 
-[`BaseError`](base-error.md#baseerrort).[`constructor`](base-error.md#constructors)
-
-###### Source
-
-[lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/errors/base-error.ts#L9)
+[`BaseError`](base-error.md#baseerror).[`constructor`](base-error.md#constructor)
 
 #### Methods
 
@@ -155,10 +151,12 @@
 
 > `protected` **compileMessage**(`message`, `params`): `string`
 
+Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/errors/base-error.ts#L14)
+
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `message` | `string` |
 | `params` | [`ErrorBaseParameters`](types.md#errorbaseparameters) |
 
@@ -168,8 +166,4 @@
 
 ###### Inherited from
 
-[`BaseError`](base-error.md#baseerrort).[`compileMessage`](base-error.md#compilemessage)
-
-###### Source
-
-[lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/449784c31a97604a353356c9c6e9d78ef59a6a6d/lib/errors/base-error.ts#L14)
+[`BaseError`](base-error.md#baseerror).[`compileMessage`](base-error.md#compilemessage)
