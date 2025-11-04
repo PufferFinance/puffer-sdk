@@ -207,4 +207,28 @@ describe('CarrotVestingHandler', () => {
     const result = await handler.getDuration();
     expect(result).toBe(duration);
   });
+
+  it('should get the new duration of the vesting period', async () => {
+    const newDuration = 365;
+    contractTestingUtils.mockCall('getNewDuration', [newDuration]);
+
+    const result = await handler.getNewDuration();
+    expect(result).toBe(newDuration);
+  });
+
+  it('should get the new steps of the vesting period', async () => {
+    const newSteps = 10;
+    contractTestingUtils.mockCall('getNewSteps', [newSteps]);
+
+    const result = await handler.getNewSteps();
+    expect(result).toBe(newSteps);
+  });
+
+  it('should get the upgrade timestamp', async () => {
+    const upgradeTimestamp = 1234567890;
+    contractTestingUtils.mockCall('getUpgradeTimestamp', [upgradeTimestamp]);
+
+    const result = await handler.getUpgradeTimestamp();
+    expect(result).toBe(upgradeTimestamp);
+  });
 });

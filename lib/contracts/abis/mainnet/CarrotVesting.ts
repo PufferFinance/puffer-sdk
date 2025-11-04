@@ -70,6 +70,13 @@ export const CarrotVesting = <const>[
   },
   {
     type: 'function',
+    name: 'getNewDuration',
+    stateMutability: 'view',
+    outputs: [{ internalType: 'uint32', name: '', type: 'uint32' }],
+    inputs: [],
+  },
+  {
+    type: 'function',
     name: 'startVesting',
     stateMutability: 'nonpayable',
     inputs: [{ type: 'uint256', name: 'amount', simpleType: 'uint' }],
@@ -81,6 +88,20 @@ export const CarrotVesting = <const>[
     stateMutability: 'view',
     outputs: [{ type: 'uint32', name: '', simpleType: 'uint' }],
     inputs: [],
+  },
+  {
+    inputs: [],
+    name: 'getNewSteps',
+    outputs: [{ internalType: 'uint32', name: '', type: 'uint32' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'getUpgradeTimestamp',
+    outputs: [{ internalType: 'uint48', name: '', type: 'uint48' }],
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     type: 'function',
