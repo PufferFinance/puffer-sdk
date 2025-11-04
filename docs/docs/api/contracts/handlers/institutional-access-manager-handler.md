@@ -4,7 +4,7 @@
 
 ### InstitutionalAccessManagerHandler
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:24](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L24)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:24](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L24)
 
 Handler for the `InstitutionalAccessManager` contract exposing methods to
 interact with the contract.
@@ -15,7 +15,7 @@ interact with the contract.
 
 > **new InstitutionalAccessManagerHandler**(`chain`, `walletClient`, `publicClient`): [`InstitutionalAccessManagerHandler`](#institutionalaccessmanagerhandler)
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:54](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L54)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:54](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L54)
 
 Create the handler for the Institutional `AccessManager` contract
 exposing methods to interact with the contract.
@@ -38,7 +38,7 @@ exposing methods to interact with the contract.
 
 > **canCall**(`caller`, `target`, `selector`): `Promise`\<\{ `canCall`: `boolean`; `canCallDelay`: `number`; \}\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:135](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L135)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:135](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L135)
 
 Check if a caller can call a target with a specific selector.
 
@@ -60,7 +60,7 @@ Whether the caller can call the target immediately and the delay.
 
 > **cancel**(`caller`, `target`, `data`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:153](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L153)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:153](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L153)
 
 Cancel a scheduled operation.
 
@@ -82,7 +82,7 @@ The nonce.
 
 > **execute**(`target`, `data`, `value?`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:168](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L168)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:168](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L168)
 
 Execute a target with data.
 
@@ -104,7 +104,7 @@ The nonce.
 
 > **getAccess**(`roleIdOrLabel`, `account`): `Promise`\<\{ `currentDelay`: `number`; `effect`: `number`; `pendingDelay`: `number`; `since`: `number`; \}\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:184](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L184)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:184](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L184)
 
 Get access information for a role and account.
 
@@ -125,7 +125,7 @@ The access information.
 
 > **getAddress**(): `` `0x${string}` `` \| `undefined`
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L79)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L79)
 
 Get the address of the contract for this handler.
 
@@ -139,7 +139,7 @@ The address of the contract.
 
 > **getAdminRole**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:114](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L114)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:114](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L114)
 
 Get the admin role.
 
@@ -153,7 +153,7 @@ The admin role.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L89)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L89)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
@@ -168,7 +168,7 @@ The viem contract.
 
 > **getFunctionNameFromSelector**(`selector`): `string` \| `undefined`
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:587](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L587)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:587](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L587)
 
 Get the function name for a selector.
 
@@ -188,7 +188,7 @@ The function name.
 
 > **getMinSetback**(): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:355](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L355)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:355](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L355)
 
 Get the minimum setback.
 
@@ -202,7 +202,7 @@ The minimum setback.
 
 > **getNonce**(`id`): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:198](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L198)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:198](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L198)
 
 Get the nonce for an operation ID.
 
@@ -222,7 +222,7 @@ The nonce.
 
 > **getPublicRole**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L123)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L123)
 
 Get the public role.
 
@@ -236,7 +236,7 @@ The public role.
 
 > **getRoleAdmin**(`roleIdOrLabel`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:209](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L209)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:209](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L209)
 
 Get the admin role for a role ID.
 
@@ -256,7 +256,7 @@ The admin role ID.
 
 > **getRoleGrantDelay**(`roleIdOrLabel`): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:221](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L221)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:221](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L221)
 
 Get the grant delay for a role ID.
 
@@ -276,7 +276,7 @@ The grant delay.
 
 > **getRoleGuardian**(`roleIdOrLabel`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:233](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L233)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:233](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L233)
 
 Get the guardian role for a role ID.
 
@@ -296,7 +296,7 @@ The guardian role ID.
 
 > **getSchedule**(`id`): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:244](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L244)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:244](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L244)
 
 Get the schedule for an operation ID.
 
@@ -316,7 +316,7 @@ The schedule time.
 
 > **getSelectorFromFunctionName**(`functionName`): `string` \| `undefined`
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:575](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L575)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:575](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L575)
 
 Get the selector for a function name.
 
@@ -336,7 +336,7 @@ The selector.
 
 > **getTargetAdminDelay**(`target`): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:254](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L254)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:254](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L254)
 
 Get the admin delay for a target.
 
@@ -356,7 +356,7 @@ The admin delay.
 
 > **getTargetFunctionRole**(`target`, `selector`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:265](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L265)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:265](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L265)
 
 Get the function role for a target and selector.
 
@@ -377,7 +377,7 @@ The role ID.
 
 > **grantRole**(`roleIdOrLabel`, `account`, `executionDelay`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:277](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L277)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:277](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L277)
 
 Grant a role to an account.
 
@@ -397,7 +397,7 @@ Grant a role to an account.
 
 > **hashOperation**(`caller`, `target`, `data`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:319](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L319)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:319](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L319)
 
 Hash an operation.
 
@@ -419,7 +419,7 @@ The operation hash.
 
 > **hasRole**(`roleIdOrLabel`, `account`): `Promise`\<\{ `executionDelay`: `number`; `isMember`: `boolean`; \}\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:301](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L301)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:301](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L301)
 
 Check if an account has a role.
 
@@ -440,7 +440,7 @@ Whether the account has the role and the execution delay.
 
 > **isTargetClosed**(`target`): `Promise`\<`boolean`\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:329](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L329)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:329](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L329)
 
 Check if a target is closed.
 
@@ -460,7 +460,7 @@ Whether the target is closed.
 
 > **labelRole**(`roleIdOrLabel`, `label`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:341](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L341)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:341](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L341)
 
 Label a role.
 
@@ -481,7 +481,7 @@ The transaction hash.
 
 > **labelToRoleId**(`label`): `bigint`
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:545](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L545)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:545](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L545)
 
 Convert a label to a role ID. Useful if you want to create a roleId
 from a label which can then be used to get the label back using
@@ -503,7 +503,7 @@ The role ID.
 
 > **multicall**(`data`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:365](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L365)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:365](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L365)
 
 Execute multiple calls.
 
@@ -523,7 +523,7 @@ Array of results.
 
 > **renounceRole**(`roleIdOrLabel`, `callerConfirmation`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:379](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L379)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:379](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L379)
 
 Renounce a role.
 
@@ -542,7 +542,7 @@ Renounce a role.
 
 > **revokeRole**(`roleIdOrLabel`, `account`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:398](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L398)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:398](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L398)
 
 Revoke a role from an account.
 
@@ -561,7 +561,7 @@ Revoke a role from an account.
 
 > **roleIdToLabel**(`roleId`): `string`
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:561](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L561)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:561](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L561)
 
 Convert a role ID to a label. Only useful if the `roleId` was
 created using `labelToRoleId`.
@@ -582,7 +582,7 @@ The label.
 
 > **schedule**(`target`, `data`, `when`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:415](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L415)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:415](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L415)
 
 Schedule an operation.
 
@@ -604,7 +604,7 @@ The operation ID and nonce.
 
 > **setGrantDelay**(`roleIdOrLabel`, `newDelay`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:429](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L429)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:429](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L429)
 
 Set the grant delay for a role.
 
@@ -623,7 +623,7 @@ Set the grant delay for a role.
 
 > **setRoleAdmin**(`roleIdOrLabel`, `admin`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:445](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L445)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:445](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L445)
 
 Set the admin role for a role.
 
@@ -642,7 +642,7 @@ Set the admin role for a role.
 
 > **setRoleGuardian**(`roleIdOrLabel`, `guardian`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:461](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L461)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:461](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L461)
 
 Set the guardian role for a role.
 
@@ -661,7 +661,7 @@ Set the guardian role for a role.
 
 > **setTargetAdminDelay**(`target`, `newDelay`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:476](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L476)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:476](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L476)
 
 Set the admin delay for a target.
 
@@ -680,7 +680,7 @@ Set the admin delay for a target.
 
 > **setTargetClosed**(`target`, `closed`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:489](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L489)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:489](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L489)
 
 Set whether a target is closed.
 
@@ -699,7 +699,7 @@ Set whether a target is closed.
 
 > **setTargetFunctionRole**(`target`, `selectors`, `roleIdOrLabel`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:504](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L504)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:504](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L504)
 
 Set the function role for a target.
 
@@ -719,7 +719,7 @@ Set the function role for a target.
 
 > **updateAuthority**(`target`, `newAuthority`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:526](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L526)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:526](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L526)
 
 Update the authority for a target.
 
@@ -738,7 +738,7 @@ Update the authority for a target.
 
 > **withAddress**(`address`): [`InstitutionalAccessManagerHandler`](#institutionalaccessmanagerhandler)
 
-Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:68](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/institutional-access-manager-handler.ts#L68)
+Defined in: [lib/contracts/handlers/institutional-access-manager-handler.ts:68](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/institutional-access-manager-handler.ts#L68)
 
 Set the address of the contract for this handler.
 

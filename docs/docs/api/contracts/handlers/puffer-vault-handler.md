@@ -4,7 +4,7 @@
 
 ### PufferVaultHandler
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:16](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L16)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:16](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L16)
 
 Handler for the `PufferVaultV2` contract exposing methods to interact
 with the contract.
@@ -15,7 +15,7 @@ with the contract.
 
 > **new PufferVaultHandler**(`chain`, `walletClient`, `publicClient`): [`PufferVaultHandler`](#puffervaulthandler)
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:29](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L29)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:29](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L29)
 
 Create the handler for the `PufferVaultV2` contract exposing
 methods to interact with the contract.
@@ -38,7 +38,7 @@ methods to interact with the contract.
 
 > **balanceOf**(`walletAddress`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:116](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L116)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:116](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L116)
 
 Check the pufETH balance of the wallet.
 
@@ -58,7 +58,7 @@ pufETH balance in wei.
 
 > **convertToAssets**(`amount`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:290](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L290)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:290](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L290)
 
 Gives exchange rate of pufETH relative to WETH.
 This does not include any fees, as compared to previewRedeem method.
@@ -79,7 +79,7 @@ Amount of equivalent WETH.
 
 > **deposit**(`walletAddress`, `value`): `object`
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:67](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L67)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:67](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L67)
 
 Deposit tokens(e.g. WETH) in exchange for pufETH. This doesn't make the
 transaction but returns two methods namely `transact` and
@@ -121,7 +121,7 @@ transaction.
 
 > **depositETH**(`walletAddress`): `object`
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L94)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L94)
 
 Deposit ETH in exchange for pufETH. This doesn't make the
 transaction but returns two methods namely `transact` and
@@ -169,7 +169,7 @@ transaction.
 
 > **getAllowance**(`ownerAddress`, `spenderAddress`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:137](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L137)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:137](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L137)
 
 Get the allowance for the given owner and spender.
 
@@ -190,7 +190,7 @@ Allowance for the given owner and spender.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L43)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L43)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
@@ -205,7 +205,7 @@ The viem contract.
 
 > **getExitFeeBasisPoints**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:214](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L214)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:214](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L214)
 
 Returns how many basis points of a fee there are when exiting. For
 example, a 1% fee would mean 1% of the user's requested pufETH is
@@ -223,7 +223,7 @@ Basis points of the exit fee.
 
 > **getPufETHRate**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:125](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L125)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:125](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L125)
 
 Get the rate of pufETH compared to ETH.
 
@@ -237,7 +237,7 @@ Rate of pufETH compared to 1 ETH.
 
 > **getTotalExitFeeBasisPoints**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:239](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L239)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:239](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L239)
 
 Returns how many basis points of a fee there are in total when
 exiting. For example, a 1% fee would mean 1% of the user's
@@ -255,7 +255,7 @@ Basis points of the exit fee.
 
 > **getTreasuryExitFeeBasisPoints**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:226](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L226)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:226](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L226)
 
 Returns how many treasury basis points of a fee there are when
 exiting. For example, a 1% fee would mean 1% of the user's
@@ -272,7 +272,7 @@ Basis points of the exit fee.
 
 > **maxRedeem**(`ownerAddress`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:201](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L201)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:201](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L201)
 
 Calculates the maximum amount of pufETH shares that can be redeemed
 by the owner.
@@ -293,7 +293,7 @@ Maximum amount of pufETH shares that can be redeemed.
 
 > **previewRedeem**(`value`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:190](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L190)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:190](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L190)
 
 Preview the amount of WETH that can be redeemed for the given
 amount of pufETH using the `.redeem()` method.
@@ -314,7 +314,7 @@ Preview of the amount of WETH that can be redeemed.
 
 > **redeem**(`ownerAddress`, `receiverAddress`, `shares`): `object`
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:258](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L258)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:258](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L258)
 
 Redeems pufETH shares in exchange for WETH assets from the vault.
 In the process, the pufETH shares of the owner are burned. This
@@ -359,7 +359,7 @@ transaction.
 
 > **withdraw**(`ownerAddress`, `walletAddress`, `value`): `object`
 
-Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:158](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/puffer-vault-handler.ts#L158)
+Defined in: [lib/contracts/handlers/puffer-vault-handler.ts:158](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/puffer-vault-handler.ts#L158)
 
 Withdraw pufETH to the given wallet address. This doesn't make the
 transaction but returns two methods namely `transact` and

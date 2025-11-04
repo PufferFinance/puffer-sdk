@@ -4,7 +4,7 @@
 
 ### DistributorHandler
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:33](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L33)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:33](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L33)
 
 Handler for the Merkle Distributor contract, for claiming rewards, e.g. mtwCARROT.
 
@@ -14,7 +14,7 @@ Handler for the Merkle Distributor contract, for claiming rewards, e.g. mtwCARRO
 
 > **new DistributorHandler**(`chain`, `walletClient`, `publicClient`): [`DistributorHandler`](#distributorhandler)
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:44](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L44)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:44](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L44)
 
 Create the handler for the Distributor contract exposing
 methods to interact with the contract.
@@ -37,7 +37,7 @@ methods to interact with the contract.
 
 > **claim**(`account`, `params`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:76](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L76)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:76](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L76)
 
 Claim tokens for multiple users.
 
@@ -58,7 +58,7 @@ A promise that resolves to the transaction hash.
 
 > **claimed**(`user`, `token`): `Promise`\<[`ClaimInfo`](#claiminfo)\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:93](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L93)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:93](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L93)
 
 Get claim information for a user and token.
 
@@ -79,7 +79,7 @@ The claim information.
 
 > **core**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:108](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L108)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:108](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L108)
 
 Get the core contract address.
 
@@ -93,7 +93,7 @@ The core contract address.
 
 > **disputeAmount**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:117](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L117)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:117](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L117)
 
 Get the dispute amount.
 
@@ -107,7 +107,7 @@ The dispute amount.
 
 > **disputePeriod**(): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:126](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L126)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:126](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L126)
 
 Get the dispute period.
 
@@ -121,7 +121,7 @@ The dispute period in seconds.
 
 > **disputer**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:158](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L158)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:158](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L158)
 
 Get the current disputer address.
 
@@ -135,7 +135,7 @@ The disputer address.
 
 > **disputeToken**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:135](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L135)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:135](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L135)
 
 Get the dispute token address.
 
@@ -149,7 +149,7 @@ The dispute token address.
 
 > **disputeTree**(`account`, `reason`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:146](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L146)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:146](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L146)
 
 Dispute the current tree.
 
@@ -170,7 +170,7 @@ A promise that resolves to the transaction hash.
 
 > **endOfDisputePeriod**(): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:167](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L167)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:167](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L167)
 
 Get the end of the dispute period.
 
@@ -184,7 +184,7 @@ The timestamp when the dispute period ends.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:57](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L57)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:57](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L57)
 
 Get the contract.
 
@@ -198,7 +198,7 @@ The viem contract.
 
 > **getMerkleRoot**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L176)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L176)
 
 Get the current merkle root.
 
@@ -212,7 +212,7 @@ The current merkle root.
 
 > **lastTree**(): `Promise`\<[`MerkleTree`](#merkletree)\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:185](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L185)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:185](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L185)
 
 Get the last tree information.
 
@@ -226,7 +226,7 @@ The last tree information.
 
 > **onlyOperatorCanClaim**(`user`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:199](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L199)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:199](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L199)
 
 Check if only operators can claim for a user.
 
@@ -246,7 +246,7 @@ Whether only operators can claim for the user.
 
 > **toggleOnlyOperatorCanClaim**(`account`, `user`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:210](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L210)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:210](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L210)
 
 Toggle whether only operators can claim for a user.
 
@@ -267,7 +267,7 @@ A promise that resolves to the transaction hash.
 
 > **toggleOperator**(`account`, `user`, `operator`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:225](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L225)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:225](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L225)
 
 Toggle an operator for a user.
 
@@ -289,7 +289,7 @@ A promise that resolves to the transaction hash.
 
 > **toggleTrusted**(`account`, `eoa`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:239](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L239)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:239](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L239)
 
 Toggle whether an address is trusted.
 
@@ -310,7 +310,7 @@ A promise that resolves to the transaction hash.
 
 > **tree**(): `Promise`\<[`MerkleTree`](#merkletree)\>
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:251](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L251)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:251](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L251)
 
 Get the current tree information.
 
@@ -324,40 +324,40 @@ The current tree information.
 
 ### ClaimInfo
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:17](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L17)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:17](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L17)
 
 #### Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="amount"></a> `amount` | `bigint` | [lib/contracts/handlers/distributor-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L18) |
-| <a id="merkleroot"></a> `merkleRoot` | `` `0x${string}` `` | [lib/contracts/handlers/distributor-handler.ts:20](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L20) |
-| <a id="timestamp"></a> `timestamp` | `bigint` | [lib/contracts/handlers/distributor-handler.ts:19](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L19) |
+| <a id="amount"></a> `amount` | `bigint` | [lib/contracts/handlers/distributor-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L18) |
+| <a id="merkleroot"></a> `merkleRoot` | `` `0x${string}` `` | [lib/contracts/handlers/distributor-handler.ts:20](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L20) |
+| <a id="timestamp"></a> `timestamp` | `bigint` | [lib/contracts/handlers/distributor-handler.ts:19](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L19) |
 
 ***
 
 ### ClaimParams
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:23](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L23)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:23](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L23)
 
 #### Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="amounts"></a> `amounts` | `bigint`[] | [lib/contracts/handlers/distributor-handler.ts:26](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L26) |
-| <a id="proofs"></a> `proofs` | `` `0x${string}` ``[][] | [lib/contracts/handlers/distributor-handler.ts:27](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L27) |
-| <a id="tokens"></a> `tokens` | `` `0x${string}` ``[] | [lib/contracts/handlers/distributor-handler.ts:25](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L25) |
-| <a id="users"></a> `users` | `` `0x${string}` ``[] | [lib/contracts/handlers/distributor-handler.ts:24](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L24) |
+| <a id="amounts"></a> `amounts` | `bigint`[] | [lib/contracts/handlers/distributor-handler.ts:26](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L26) |
+| <a id="proofs"></a> `proofs` | `` `0x${string}` ``[][] | [lib/contracts/handlers/distributor-handler.ts:27](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L27) |
+| <a id="tokens"></a> `tokens` | `` `0x${string}` ``[] | [lib/contracts/handlers/distributor-handler.ts:25](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L25) |
+| <a id="users"></a> `users` | `` `0x${string}` ``[] | [lib/contracts/handlers/distributor-handler.ts:24](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L24) |
 
 ***
 
 ### MerkleTree
 
-Defined in: [lib/contracts/handlers/distributor-handler.ts:12](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L12)
+Defined in: [lib/contracts/handlers/distributor-handler.ts:12](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L12)
 
 #### Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="ipfshash"></a> `ipfsHash` | `` `0x${string}` `` | [lib/contracts/handlers/distributor-handler.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L14) |
-| <a id="merkleroot-1"></a> `merkleRoot` | `` `0x${string}` `` | [lib/contracts/handlers/distributor-handler.ts:13](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/distributor-handler.ts#L13) |
+| <a id="ipfshash"></a> `ipfsHash` | `` `0x${string}` `` | [lib/contracts/handlers/distributor-handler.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L14) |
+| <a id="merkleroot-1"></a> `merkleRoot` | `` `0x${string}` `` | [lib/contracts/handlers/distributor-handler.ts:13](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/distributor-handler.ts#L13) |

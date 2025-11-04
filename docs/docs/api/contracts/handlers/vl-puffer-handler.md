@@ -4,7 +4,7 @@
 
 ### VLPufferHandler
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L21)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L21)
 
 Handler for the `vlPUFFER` contract exposing methods to interact
 with the contract.
@@ -15,7 +15,7 @@ with the contract.
 
 > **new VLPufferHandler**(`chain`, `walletClient`, `publicClient`): [`VLPufferHandler`](#vlpufferhandler)
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:35](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L35)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:35](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L35)
 
 Create the handler for the `vlPUFFER` contract exposing methods to
 interact with the contract.
@@ -38,7 +38,7 @@ interact with the contract.
 
 > **allowance**(`owner`, `spender`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L109)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:109](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L109)
 
 Get the allowance of the owner for the spender.
 
@@ -59,7 +59,7 @@ The allowance.
 
 > **approve**(`spender`, `value`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:316](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L316)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:316](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L316)
 
 Approve a spender to spend tokens.
 
@@ -80,7 +80,7 @@ The transaction.
 
 > **balanceOf**(`account`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:185](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L185)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:185](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L185)
 
 Get the balance for an address.
 
@@ -100,7 +100,7 @@ The balance.
 
 > **checkpoints**(`account`, `pos`): `Promise`\<\{ `_key`: `number`; `_value`: `bigint`; \}\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:355](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L355)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:355](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L355)
 
 Get the checkpoints for an account at a specific position.
 
@@ -121,7 +121,7 @@ The checkpoint.
 
 > **createLock**(`amount`, `multiplier`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:375](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L375)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:375](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L375)
 
 Create a lock with the specified amount and multiplier.
 
@@ -142,7 +142,7 @@ The transaction.
 
 > **createLockWithPermit**(`value`, `multiplier`, `permitData`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:390](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L390)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:390](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L390)
 
 Create a lock with permit.
 
@@ -164,7 +164,7 @@ The transaction.
 
 > **decimals**(): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L79)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L79)
 
 Get the decimals of the token.
 
@@ -178,7 +178,7 @@ The decimals.
 
 > **delegate**(`delegatee`, `isPreapproved`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:258](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L258)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:258](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L258)
 
 Delegate votes to another address.
 
@@ -199,7 +199,7 @@ The transaction.
 
 > **delegateBySig**(`delegatee`, `nonce`, `expiry`, `v`, `r`, `s`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:220](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L220)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:220](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L220)
 
 Delegate by signature.
 
@@ -224,7 +224,7 @@ The transaction.
 
 > **delegatePreapproved**(`delegatee`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:243](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L243)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:243](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L243)
 
 Delegate votes to another address.
 
@@ -244,7 +244,7 @@ The transaction.
 
 > **delegates**(`account`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L89)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L89)
 
 Get the delegates for an account.
 
@@ -264,7 +264,7 @@ The delegate address.
 
 > **getClock**(): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:438](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L438)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:438](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L438)
 
 Get the current clock value.
 
@@ -278,7 +278,7 @@ The clock value.
 
 > **getClockMode**(): `Promise`\<`string`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:295](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L295)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:295](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L295)
 
 Get the clock mode.
 
@@ -292,7 +292,7 @@ The clock mode.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:53](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L53)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:53](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L53)
 
 Get the contract.
 
@@ -306,7 +306,7 @@ The viem contract.
 
 > **getPastTotalSupply**(`timepoint`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:175](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L175)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:175](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L175)
 
 Get the past total supply at a specific timepoint.
 
@@ -326,7 +326,7 @@ The past total supply.
 
 > **getPastVotes**(`account`, `timepoint`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:344](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L344)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:344](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L344)
 
 Get the past votes for an account at a specific timepoint.
 
@@ -347,7 +347,7 @@ The past votes.
 
 > **isPaused**(): `Promise`\<`boolean`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:151](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L151)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:151](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L151)
 
 Check if the contract is paused.
 
@@ -361,7 +361,7 @@ True if paused, false otherwise.
 
 > **lock**(`value`, `multiplier`, `isPreapproved`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:412](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L412)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:412](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L412)
 
 Create a lock with permit.
 
@@ -383,7 +383,7 @@ The transaction.
 
 > **lockInfos**(`user`): `Promise`\<\{ `pufferAmount`: `bigint`; `unlockTime`: `bigint`; \}\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:161](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L161)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:161](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L161)
 
 Get the lock information for a user.
 
@@ -403,7 +403,7 @@ The lock information.
 
 > **name**(): `Promise`\<`string`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:364](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L364)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:364](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L364)
 
 Get the name of the token.
 
@@ -417,7 +417,7 @@ The name.
 
 > **nonces**(`owner`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:195](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L195)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:195](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L195)
 
 Get the nonce for an owner.
 
@@ -437,7 +437,7 @@ The nonce.
 
 > **numCheckpoints**(`account`): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:305](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L305)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:305](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L305)
 
 Get the number of checkpoints for an account.
 
@@ -457,7 +457,7 @@ The number of checkpoints.
 
 > **owner**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L98)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L98)
 
 Get the owner of the contract.
 
@@ -471,7 +471,7 @@ The owner address.
 
 > **PUFFER**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L70)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L70)
 
 Get the PUFFER token address.
 
@@ -485,7 +485,7 @@ The PUFFER token address.
 
 > **reLock**(`amount`, `multiplier`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:330](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L330)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:330](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L330)
 
 Re-lock with the specified amount and multiplier.
 
@@ -506,7 +506,7 @@ The transaction.
 
 > **symbol**(): `Promise`\<`string`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:142](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L142)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:142](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L142)
 
 Get the symbol of the token.
 
@@ -520,7 +520,7 @@ The symbol.
 
 > **totalSupply**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:133](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L133)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:133](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L133)
 
 Get the total supply of the token.
 
@@ -534,7 +534,7 @@ The total supply.
 
 > **transfer**(`to`, `value`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:283](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L283)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:283](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L283)
 
 Transfer tokens to another address.
 
@@ -555,7 +555,7 @@ The transaction.
 
 > **transferFrom**(`from`, `to`, `value`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L121)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L121)
 
 Transfer tokens from one address to another.
 
@@ -577,7 +577,7 @@ The transaction.
 
 > **votes**(`account`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:205](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L205)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:205](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L205)
 
 Get the votes for an account.
 
@@ -597,7 +597,7 @@ The votes.
 
 > **withdraw**(`recipient`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:448](https://github.com/PufferFinance/puffer-sdk/blob/223ebcacaaa7a75a3bf8ba08116f6393411fc0ab/lib/contracts/handlers/vl-puffer-handler.ts#L448)
+Defined in: [lib/contracts/handlers/vl-puffer-handler.ts:448](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/vl-puffer-handler.ts#L448)
 
 Withdraw tokens to a recipient.
 
