@@ -4,7 +4,7 @@
 
 ### AccountError
 
-Defined in: [lib/errors/validation-errors.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/errors/validation-errors.ts#L3)
+Defined in: [lib/errors/validation-errors.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/errors/validation-errors.ts#L3)
 
 #### Extends
 
@@ -16,7 +16,7 @@ Defined in: [lib/errors/validation-errors.ts:3](https://github.com/PufferFinance
 
 > **new AccountError**(`message`, `params`): [`AccountError`](#accounterror)
 
-Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/errors/base-error.ts#L9)
+Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/errors/base-error.ts#L9)
 
 ###### Parameters
 
@@ -39,7 +39,7 @@ Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer
 
 > `protected` **compileMessage**(`message`, `params`): `string`
 
-Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/errors/base-error.ts#L14)
+Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/errors/base-error.ts#L14)
 
 ###### Parameters
 
@@ -60,7 +60,7 @@ Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffe
 
 ### InvalidContractAddressError
 
-Defined in: [lib/errors/validation-errors.ts:7](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/errors/validation-errors.ts#L7)
+Defined in: [lib/errors/validation-errors.ts:7](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/errors/validation-errors.ts#L7)
 
 #### Extends
 
@@ -72,7 +72,7 @@ Defined in: [lib/errors/validation-errors.ts:7](https://github.com/PufferFinance
 
 > **new InvalidContractAddressError**(`message`, `params`): [`InvalidContractAddressError`](#invalidcontractaddresserror)
 
-Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/errors/base-error.ts#L9)
+Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/errors/base-error.ts#L9)
 
 ###### Parameters
 
@@ -95,7 +95,7 @@ Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer
 
 > `protected` **compileMessage**(`message`, `params`): `string`
 
-Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/errors/base-error.ts#L14)
+Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/errors/base-error.ts#L14)
 
 ###### Parameters
 
@@ -116,7 +116,7 @@ Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffe
 
 ### InvalidInputError
 
-Defined in: [lib/errors/validation-errors.ts:5](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/errors/validation-errors.ts#L5)
+Defined in: [lib/errors/validation-errors.ts:5](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/errors/validation-errors.ts#L5)
 
 #### Extends
 
@@ -128,7 +128,7 @@ Defined in: [lib/errors/validation-errors.ts:5](https://github.com/PufferFinance
 
 > **new InvalidInputError**(`message`, `params`): [`InvalidInputError`](#invalidinputerror)
 
-Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/errors/base-error.ts#L9)
+Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/errors/base-error.ts#L9)
 
 ###### Parameters
 
@@ -151,7 +151,7 @@ Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer
 
 > `protected` **compileMessage**(`message`, `params`): `string`
 
-Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/errors/base-error.ts#L14)
+Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/errors/base-error.ts#L14)
 
 ###### Parameters
 

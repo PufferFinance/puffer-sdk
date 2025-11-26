@@ -4,7 +4,7 @@
 
 ### NucleusAccountantHandler
 
-Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/nucleus-accountant-handler.ts#L18)
+Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-accountant-handler.ts#L18)
 
 Handler for the `Accountant` contract from nucleus.
 
@@ -14,7 +14,7 @@ Handler for the `Accountant` contract from nucleus.
 
 > **new NucleusAccountantHandler**(`chain`, `walletClient`, `publicClient`): [`NucleusAccountantHandler`](#nucleusaccountanthandler)
 
-Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/nucleus-accountant-handler.ts#L30)
+Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-accountant-handler.ts#L30)
 
 Create the handler for processing tokens.
 
@@ -36,7 +36,7 @@ Create the handler for processing tokens.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:56](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/nucleus-accountant-handler.ts#L56)
+Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:56](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-accountant-handler.ts#L56)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
@@ -51,7 +51,7 @@ The viem contract.
 
 > **getRate**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/nucleus-accountant-handler.ts#L96)
+Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-accountant-handler.ts#L96)
 
 Get the rate for the given token address.
 
@@ -65,7 +65,7 @@ Rate for the given token address.
 
 > **getRateInQuote**(`quoteAddress`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:114](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/nucleus-accountant-handler.ts#L114)
+Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:114](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-accountant-handler.ts#L114)
 
 Get the rate from the given quote address.
 
@@ -85,7 +85,7 @@ Rate for the given quote address.
 
 > **getRateInQuoteSafe**(`quoteAddress`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/nucleus-accountant-handler.ts#L123)
+Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:123](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-accountant-handler.ts#L123)
 
 Get the rate from the given quote address for safe.
 
@@ -105,7 +105,7 @@ Rate for the given quote address for safe.
 
 > **getRateSafe**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:105](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/nucleus-accountant-handler.ts#L105)
+Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:105](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-accountant-handler.ts#L105)
 
 Get the rate for the given token address for safe.
 
@@ -119,7 +119,7 @@ Rate for the given token address for safe.
 
 > **rateProviderData**(`tokenAddress`): `Promise`\<\{ `isPeggedToBase`: `boolean`; `rateProvider`: `` `0x${string}` ``; \}\>
 
-Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:75](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/nucleus-accountant-handler.ts#L75)
+Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:75](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-accountant-handler.ts#L75)
 
 Get the rate provider data for the given token address.
 
@@ -139,7 +139,7 @@ Rate provider data for the given token address.
 
 > **vault**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:87](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/nucleus-accountant-handler.ts#L87)
+Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:87](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-accountant-handler.ts#L87)
 
 Get the vault for the given token address.
 
@@ -153,7 +153,7 @@ Vault for the given token address.
 
 > **withToken**(`token`): [`NucleusAccountantHandler`](#nucleusaccountanthandler)
 
-Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/nucleus-accountant-handler.ts#L45)
+Defined in: [lib/contracts/handlers/nucleus-accountant-handler.ts:45](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-accountant-handler.ts#L45)
 
 Set the UniFi token to use for executing transactions on the
 contract.

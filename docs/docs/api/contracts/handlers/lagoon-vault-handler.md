@@ -4,7 +4,7 @@
 
 ### LagoonVaultHandler
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L18)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L18)
 
 Handler for the `LagoonVault` contract exposing methods to interact
 with the contract.
@@ -15,7 +15,7 @@ with the contract.
 
 > **new LagoonVaultHandler**(`chain`, `walletClient`, `publicClient`): [`LagoonVaultHandler`](#lagoonvaulthandler)
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L30)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:30](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L30)
 
 Create the handler for processing Lagoon vault.
 
@@ -37,7 +37,7 @@ Create the handler for processing Lagoon vault.
 
 > **approve**(`spender`, `amount`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:63](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L63)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:63](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L63)
 
 Approve a spender to spend the token.
 
@@ -58,7 +58,7 @@ The transaction.
 
 > **claimableDepositRequest**(`requestId`, `controller`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:360](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L360)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:360](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L360)
 
 Get the claimable deposit request for the request id and controller.
 
@@ -79,7 +79,7 @@ The claimable deposit request.
 
 > **claimableRedeemRequest**(`requestId`, `controller`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:375](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L375)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:375](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L375)
 
 Get the claimable redeem request for the request id and controller.
 
@@ -100,7 +100,7 @@ The claimable redeem request.
 
 > **claimSharesAndRequestRedeem**(`shares`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:389](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L389)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:389](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L389)
 
 Claim shares and request a redeem of an amount of the shares (tacpufETH)
 so the receiver gets the assets (pufETH).
@@ -121,7 +121,7 @@ The transaction.
 
 > **claimSharesOnBehalf**(`controllers`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:402](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L402)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:402](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L402)
 
 Claim shares on behalf of multiple controllers.
 
@@ -141,7 +141,7 @@ The transaction.
 
 > **convertToAssets**(`shares`, `requestId?`): `Promise`\<`never`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:329](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L329)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:329](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L329)
 
 Convert an amount of the shares (tacpufETH) to the assets (pufETH).
 
@@ -162,7 +162,7 @@ The amount of assets (pufETH).
 
 > **convertToShares**(`assets`, `requestId?`): `Promise`\<`never`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:344](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L344)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:344](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L344)
 
 Convert an amount of the assets (pufETH) to the shares (tacpufETH).
 
@@ -183,7 +183,7 @@ The amount of shares (tacpufETH).
 
 > **deposit**(`amount`, `receiver`, `controller?`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:129](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L129)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:129](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L129)
 
 Deposit an amount of the assets (pufETH) to the vault to get shares
 (tacpufETH).
@@ -206,7 +206,7 @@ The transaction.
 
 > **getAllowance**(`owner`, `spender`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:77](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L77)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:77](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L77)
 
 Get the allowance of the owner for the spender.
 
@@ -227,7 +227,7 @@ The allowance.
 
 > **getBalance**(`address`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:87](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L87)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:87](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L87)
 
 Get the balance for the address.
 
@@ -247,7 +247,7 @@ The balance.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L43)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:43](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L43)
 
 Get the contract.
 
@@ -261,7 +261,7 @@ The viem contract.
 
 > **getTotalSupply**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L96)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L96)
 
 Get the total supply of the token.
 
@@ -275,7 +275,7 @@ The total supply.
 
 > **isTotalAssetsValid**(): `Promise`\<`boolean`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:106](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L106)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:106](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L106)
 
 Check if the total assets are valid. Used for checking if
 synchronous deposit is possible.
@@ -290,7 +290,7 @@ True if the total assets are valid, false otherwise.
 
 > **pendingDepositRequest**(`requestId`, `controller`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:199](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L199)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:199](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L199)
 
 Get the pending deposit request for the request id and controller.
 
@@ -311,7 +311,7 @@ The pending deposit request.
 
 > **pendingRedeemRequest**(`requestId`, `controller`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:280](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L280)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:280](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L280)
 
 Get the pending redeem request for the request id and controller.
 
@@ -332,7 +332,7 @@ The pending redeem request.
 
 > **previewDeposit**(`amount`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:294](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L294)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:294](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L294)
 
 Provides a preview of the number of shares that would be minted for
 a given deposit amount, after fees.
@@ -353,7 +353,7 @@ The preview.
 
 > **previewRedeem**(`shares`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:318](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L318)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:318](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L318)
 
 Provides a preview of the amount of assets (pufETH) that would be redeemed
 for the given shares (tacpufETH), after withdrawal fees. Subtracts
@@ -376,7 +376,7 @@ The preview.
 
 > **previewWithdraw**(`assets`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:305](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L305)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:305](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L305)
 
 Provides a preview of the number of shares (tacpufETH) that would be
 burned for the given amount of assets (pufETH).
@@ -397,7 +397,7 @@ The preview.
 
 > **redeem**(`shares`, `receiver`, `controller`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:237](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L237)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:237](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L237)
 
 Redeem an amount of the shares (tacpufETH) so the receiver
 gets the assets (pufETH).
@@ -420,7 +420,7 @@ The transaction.
 
 > **requestDeposit**(`amount`, `receiver`, `controller`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L176)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L176)
 
 Request an asynchronous deposit of an amount of the assets (pufETH)
 to the vault to get shares (tacpufETH). This should be used if
@@ -444,7 +444,7 @@ The transaction.
 
 > **requestRedeem**(`shares`, `receiver`, `controller`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:258](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L258)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:258](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L258)
 
 Request an asynchronous redeem of an amount of the shares (tacpufETH)
 so the receiver gets the assets (pufETH).
@@ -467,7 +467,7 @@ The transaction.
 
 > **symbol**(): `Promise`\<`string`\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:115](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L115)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:115](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L115)
 
 Get the symbol of the token. (tacpufETH)
 
@@ -481,7 +481,7 @@ The symbol.
 
 > **syncDeposit**(`amount`, `receiver`, `referral`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:154](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L154)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:154](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L154)
 
 Synchronously deposit an amount of the assets (pufETH) to the vault
 to get shares (tacpufETH). This is only possible if `isTotalAssetsValid`
@@ -505,7 +505,7 @@ The transaction.
 
 > **withdraw**(`assets`, `receiver`, `controller`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:216](https://github.com/PufferFinance/puffer-sdk/blob/e6845b3da08d17a7c5d54966cd7800adabb594de/lib/contracts/handlers/lagoon-vault-handler.ts#L216)
+Defined in: [lib/contracts/handlers/lagoon-vault-handler.ts:216](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/lagoon-vault-handler.ts#L216)
 
 Withdraw an amount of the shares (pufETH) so the receiver
 gets the assets (pufETH).
