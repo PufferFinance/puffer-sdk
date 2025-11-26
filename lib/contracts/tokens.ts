@@ -22,6 +22,7 @@ export enum Token {
   cbBTC = 'cbBTC',
   pumpBTC = 'pumpBTC',
   SolvBTC = 'SolvBTC',
+  FBTC = 'FBTC',
   PUFFER = 'PUFFER',
   vePUFFER = 'vePUFFER',
   CARROT = 'CARROT',
@@ -153,6 +154,10 @@ export const TOKENS_ADDRESSES: {
     [Chain.Mainnet]: '0x7a56e1c57c7475ccf742a1832b028f0456652f97',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
   },
+  [Token.FBTC]: {
+    [Chain.Mainnet]: '0xC96dE26018A54D51c097160568752c4E3BD6C364',
+    [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
+  },
   [Token.PUFFER]: {
     [Chain.Mainnet]: '0x4d1c297d39c5c1277964d0e3f8aa901493664530',
     [Chain.Holesky]: '0x0000000000000000000000000000000000000000',
@@ -239,6 +244,7 @@ export const TOKENS_PERMIT_VERSION: { [key in AnyToken]: string } = {
   [Token.cbBTC]: '',
   [Token.pumpBTC]: '',
   [Token.SolvBTC]: '',
+  [Token.FBTC]: '',
   [Token.PUFFER]: '1',
   [Token.vePUFFER]: '1',
   [Token.CARROT]: '1',
