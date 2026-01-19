@@ -508,21 +508,6 @@ export const PufferProtocol = <const>[
             type: 'bytes32',
             internalType: 'bytes32',
           },
-          {
-            name: 'blsEncryptedPrivKeyShares',
-            type: 'bytes[]',
-            internalType: 'bytes[]',
-          },
-          {
-            name: 'blsPubKeySet',
-            type: 'bytes',
-            internalType: 'bytes',
-          },
-          {
-            name: 'raveEvidence',
-            type: 'bytes',
-            internalType: 'bytes',
-          },
         ],
       },
       {
