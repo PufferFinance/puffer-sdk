@@ -112,6 +112,7 @@ export const TOKENS_ADDRESSES: {
     [Chain.Arbitrum]: '0x37D6382B6889cCeF8d6871A8b60E667115eDDBcF',
     [Chain.Berachain]: '0x417b0Ff8358Eb72867Da92225CaB99BCD5e6F205',
     [Chain.TAC]: '0x37D6382B6889cCeF8d6871A8b60E667115eDDBcF',
+    [Chain.Hoodi]: '0xe8870da7ceabDC16016bdF22b1528cA7625Dbc9C',
   },
   [Token.xPufETH]: {
     [Chain.Mainnet]: '0xD7D2802f6b19843ac4DfE25022771FD83b5A7464',
