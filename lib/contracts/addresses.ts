@@ -48,7 +48,7 @@ export const CONTRACT_ADDRESSES = {
   },
   [Chain.Hoodi as number]: {
     PufferDepositor: '0x17F59c077Ae609afA34633408562510CE7b1C336',
-    PufferModuleManager: '0x900c4D9003a6e90dF64163100E997cBd4d7913B4',
+    PufferModuleManager: '0xCf6265030F12ebd79541F8fD6bBb2AfB3359e5D1',
     PufferModule: '0x0cf7cfa8a3b3c4e2a41c88917f835553abff8ab8',
     PufferModuleBeacon: '0xE526d80Dc834371f11B64A491d8f654a46e86Fc9',
     PufferOracle: '0x87ec630a808fe748bede5faD5E2621B7C84047C6',
