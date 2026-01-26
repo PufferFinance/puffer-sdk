@@ -51,7 +51,7 @@ export const CONTRACT_ADDRESSES = {
     PufferModuleManager: '0xCf6265030F12ebd79541F8fD6bBb2AfB3359e5D1',
     PufferModule: '0x0cf7cfa8a3b3c4e2a41c88917f835553abff8ab8',
     PufferModuleBeacon: '0xE526d80Dc834371f11B64A491d8f654a46e86Fc9',
-    PufferOracle: '0x87ec630a808fe748bede5faD5E2621B7C84047C6',
+    PufferOracleV2: '0x87ec630a808fe748bede5faD5E2621B7C84047C6',
     PufferProtocol: '0x9D362e5CA054e03aa27327732b764F2104334942',
     RestakingOperatorController: '0x309bED770Ef408F258F75139CE44237AD29536d8',
     RestakingOperator: '0xE6518d6d43fb2Fc052552fdc7981cA4B5fFD0751',
