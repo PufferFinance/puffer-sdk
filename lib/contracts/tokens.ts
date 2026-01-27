@@ -54,7 +54,7 @@ export const TOKENS_ADDRESSES: {
   [Token.VT]: {
     [Chain.Mainnet]: '0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A',
     [Chain.Holesky]: '0xB028194785178a94Fe608994A4d5AD84c285A640',
-    [Chain.Hoodi]: '0x34E70AcAEa2046F1c9E27894Ed8E05535A44DD41',
+    [Chain.Hoodi]: '0x2246a5CF6050F6980719a62b53D6261e35650fdd',
   },
   [Token.TEST]: {
     [Chain.Sepolia]: '0xd26e3540a0a368845b234736a0700e0a5a821bba',
