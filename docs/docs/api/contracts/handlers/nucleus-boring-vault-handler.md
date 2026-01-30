@@ -4,7 +4,7 @@
 
 ### NucleusBoringVaultHandler
 
-Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:26](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L26)
+Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:26](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L26)
 
 Handler for the `BoringVault` contract for a given token exposing
 methods to interact with the contract.
@@ -15,7 +15,7 @@ methods to interact with the contract.
 
 > **new NucleusBoringVaultHandler**(`chain`, `walletClient`, `publicClient`): [`NucleusBoringVaultHandler`](#nucleusboringvaulthandler)
 
-Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:39](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L39)
+Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:39](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L39)
 
 Create the handler for processing UniFi tokens.
 
@@ -37,7 +37,7 @@ Create the handler for processing UniFi tokens.
 
 > **approve**(`walletAddress`, `spenderAddress`, `value`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:117](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L117)
+Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:117](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L117)
 
 Approve transaction for the spender to spend the owner's tokens.
 
@@ -59,7 +59,7 @@ Hash of the transaction.
 
 > **balanceOf**(`walletAddress`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L96)
+Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L96)
 
 Check the token balance of the wallet.
 
@@ -79,7 +79,7 @@ Token balance in wei.
 
 > **getAllowance**(`owner`, `spender`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:86](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L86)
+Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:86](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L86)
 
 Get the allowance for the given owner and spender.
 
@@ -100,7 +100,7 @@ Allowance for the given owner and spender.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:66](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L66)
+Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:66](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L66)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
@@ -115,7 +115,7 @@ The viem contract.
 
 > **permit**(`params`): `object`
 
-Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:205](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L205)
+Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:205](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L205)
 
 Get permit to be able to use the token.
 
@@ -155,7 +155,7 @@ transaction.
 
 > **totalSupply**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:105](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L105)
+Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:105](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L105)
 
 Get the total supply of the token.
 
@@ -169,7 +169,7 @@ Total supply of the token.
 
 > **transfer**(`walletAddress`, `toAddress`, `value`): `object`
 
-Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:140](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L140)
+Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:140](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L140)
 
 Transfer tokens from the owner's wallet to the given address.
 
@@ -211,7 +211,7 @@ transaction.
 
 > **transferFrom**(`walletAddress`, `fromAddress`, `toAddress`, `value`): `object`
 
-Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:167](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L167)
+Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:167](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L167)
 
 Transfer tokens from the given address to another address.
 
@@ -254,7 +254,7 @@ transaction.
 
 > **withToken**(`token`): [`NucleusBoringVaultHandler`](#nucleusboringvaulthandler)
 
-Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:55](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L55)
+Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:55](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L55)
 
 Set the UniFi token to use for executing transactions on the
 contract.
@@ -277,7 +277,7 @@ The handler.
 
 > **PermitParams** = [`PermitData`](../common/lib/types.md#permitdata) & `object`
 
-Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:16](https://github.com/PufferFinance/puffer-sdk/blob/39dec897eb96a4855c431a4d5bd7f14243882190/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L16)
+Defined in: [lib/contracts/handlers/nucleus-boring-vault-handler.ts:16](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/nucleus-boring-vault-handler.ts#L16)
 
 #### Type Declaration
 
