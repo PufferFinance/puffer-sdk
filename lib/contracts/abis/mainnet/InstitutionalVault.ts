@@ -237,13 +237,6 @@ export const InstitutionalVault = <const>[
     type: 'function',
   },
   {
-    inputs: [],
-    name: 'isConsumingScheduledOp',
-    outputs: [{ internalType: 'bytes4', name: '', type: 'bytes4' }],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
     inputs: [{ internalType: 'address', name: '', type: 'address' }],
     name: 'maxDeposit',
     outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
@@ -317,13 +310,6 @@ export const InstitutionalVault = <const>[
     type: 'function',
   },
   {
-    inputs: [],
-    name: 'proxiableUUID',
-    outputs: [{ internalType: 'bytes32', name: '', type: 'bytes32' }],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
     inputs: [{ internalType: 'uint256', name: 'shareAmount', type: 'uint256' }],
     name: 'queueWithdrawals',
     outputs: [],
@@ -356,15 +342,6 @@ export const InstitutionalVault = <const>[
     name: 'requestWithdrawal',
     outputs: [],
     stateMutability: 'payable',
-    type: 'function',
-  },
-  {
-    inputs: [
-      { internalType: 'address', name: 'newAuthority', type: 'address' },
-    ],
-    name: 'setAuthority',
-    outputs: [],
-    stateMutability: 'nonpayable',
     type: 'function',
   },
   {
