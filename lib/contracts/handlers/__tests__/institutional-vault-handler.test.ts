@@ -73,11 +73,52 @@ describe('InstitutionalVaultHandler', () => {
       expect(result.toLowerCase()).toBe(address);
     });
 
+    it('should get the non-restaking withdrawal credentials factory', async () => {
+      const address = generateAddress();
+      contractTestingUtils.mockCall(
+        'NON_RESTORAKING_WITHDRAWAL_CREDENTIALS_FACTORY',
+        [address],
+      );
+
+      const result =
+        await handler.getNonRestakingWithdrawalCredentialsFactory();
+      expect(result.toLowerCase()).toBe(address);
+    });
+
+    it('should get the WETH contract address', async () => {
+      const address = generateAddress();
+      contractTestingUtils.mockCall('WETH', [address]);
+
+      const result = await handler.getWeth();
+      expect(result.toLowerCase()).toBe(address);
+    });
+
     it('should get the eigen pod', async () => {
       const address = generateAddress();
       contractTestingUtils.mockCall('getEigenPod', [address]);
 
       const result = await handler.getEigenPod();
+      expect(result.toLowerCase()).toBe(address);
+    });
+
+    it('should get the eigen pod withdrawal credentials', async () => {
+      const credentials =
+        '0x010000000000000000000000abcdef1234567890abcdef1234567890abcdef12';
+      contractTestingUtils.mockCall('getEigenPodWithdrawalCredentials', [
+        credentials,
+      ]);
+
+      const result = await handler.getEigenPodWithdrawalCredentials();
+      expect(result.toLowerCase()).toBe(credentials);
+    });
+
+    it('should get the no-restaking withdrawal credentials', async () => {
+      const address = generateAddress();
+      contractTestingUtils.mockCall('getNoRestakingWithdrawalCredentials', [
+        address,
+      ]);
+
+      const result = await handler.getNoRestakingWithdrawalCredentials();
       expect(result.toLowerCase()).toBe(address);
     });
 
@@ -336,6 +377,21 @@ describe('InstitutionalVaultHandler', () => {
       expect(isHash(txHash)).toBeTruthy();
     });
 
+    it('should request withdrawal from the EigenPod', async () => {
+      const requests = [
+        {
+          pubkey:
+            '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef' as `0x${string}`,
+          amountGwei: BigInt(32_000_000_000),
+        },
+      ];
+      const value = 1_000_000_000n; // 1 gwei
+      contractTestingUtils.mockTransaction('requestWithdrawal');
+
+      const txHash = await handler.requestWithdrawal(requests, value);
+      expect(isHash(txHash)).toBeTruthy();
+    });
+
     it('should redeem shares to the receiver', async () => {
       const shares = 10n;
       const receiver = generateAddress();
@@ -440,6 +496,13 @@ describe('InstitutionalVaultHandler', () => {
         targetPubkeys,
         value,
       );
+      expect(isHash(txHash)).toBeTruthy();
+    });
+
+    it('should withdraw non-restaked ETH', async () => {
+      contractTestingUtils.mockTransaction('withdrawNonRestakedETH');
+
+      const txHash = await handler.withdrawNonRestakedETH();
       expect(isHash(txHash)).toBeTruthy();
     });
   });
