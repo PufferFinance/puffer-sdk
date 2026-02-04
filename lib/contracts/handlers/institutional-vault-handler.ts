@@ -21,6 +21,11 @@ export type QueuedWithdrawal = {
   scaledShares: bigint[];
 };
 
+export type WithdrawalRequest = {
+  pubkey: Hex;
+  amountGwei: bigint;
+};
+
 /**
  * Handler for the `InstitutionalVault` contract exposing methods to
  * interact with the contract.
@@ -104,6 +109,24 @@ export class InstitutionalVaultHandler {
   }
 
   /**
+   * Get the non-restaking withdrawal credentials factory address.
+   *
+   * @returns The non-restaking withdrawal credentials factory address.
+   */
+  public getNonRestakingWithdrawalCredentialsFactory() {
+    return this.getContract().read.NON_RESTORAKING_WITHDRAWAL_CREDENTIALS_FACTORY();
+  }
+
+  /**
+   * Get the WETH contract address.
+   *
+   * @returns The WETH contract address.
+   */
+  public getWeth() {
+    return this.getContract().read.WETH();
+  }
+
+  /**
    * Get the eigen delegation manager contract address.
    *
    * @returns The eigen delegation manager.
@@ -128,6 +151,24 @@ export class InstitutionalVaultHandler {
    */
   public getEigenPod() {
     return this.getContract().read.getEigenPod();
+  }
+
+  /**
+   * Get the eigen pod withdrawal credentials.
+   *
+   * @returns The eigen pod withdrawal credentials as bytes.
+   */
+  public getEigenPodWithdrawalCredentials() {
+    return this.getContract().read.getEigenPodWithdrawalCredentials();
+  }
+
+  /**
+   * Get the no-restaking withdrawal credentials address.
+   *
+   * @returns The no-restaking withdrawal credentials address.
+   */
+  public getNoRestakingWithdrawalCredentials() {
+    return this.getContract().read.getNoRestakingWithdrawalCredentials();
   }
 
   /**
@@ -399,6 +440,20 @@ export class InstitutionalVaultHandler {
   }
 
   /**
+   * Request withdrawal from the EigenPod.
+   *
+   * @param requests The withdrawal requests containing pubkey and amountGwei.
+   * @param value The amount of ETH to send with the transaction.
+   */
+  public requestWithdrawal(requests: WithdrawalRequest[], value: bigint) {
+    return this.getContract().write.requestWithdrawal([requests], {
+      account: this.walletClient.account!,
+      chain: this.viemChain,
+      value,
+    });
+  }
+
+  /**
    * Redeem the shares to the receiver.
    *
    * @param shares The number of shares to redeem.
@@ -579,5 +634,15 @@ export class InstitutionalVaultHandler {
         value,
       },
     );
+  }
+
+  /**
+   * Withdraw non-restaked ETH from the vault.
+   */
+  public withdrawNonRestakedETH() {
+    return this.getContract().write.withdrawNonRestakedETH({
+      account: this.walletClient.account!,
+      chain: this.viemChain,
+    });
   }
 }

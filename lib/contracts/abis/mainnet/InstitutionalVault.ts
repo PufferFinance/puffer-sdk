@@ -36,6 +36,13 @@ export const InstitutionalVault = <const>[
   },
   {
     inputs: [],
+    name: 'NON_RESTORAKING_WITHDRAWAL_CREDENTIALS_FACTORY',
+    outputs: [{ internalType: 'address', name: '', type: 'address' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
     name: 'UPGRADE_INTERFACE_VERSION',
     outputs: [{ internalType: 'string', name: '', type: 'string' }],
     stateMutability: 'view',
@@ -178,6 +185,20 @@ export const InstitutionalVault = <const>[
   },
   {
     inputs: [],
+    name: 'getEigenPodWithdrawalCredentials',
+    outputs: [{ internalType: 'bytes', name: '', type: 'bytes' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'getNoRestakingWithdrawalCredentials',
+    outputs: [{ internalType: 'address', name: '', type: 'address' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
     name: 'getNonRestakedValidatorETH',
     outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'view',
@@ -204,6 +225,13 @@ export const InstitutionalVault = <const>[
       { internalType: 'string', name: 'shareTokenSymbol', type: 'string' },
     ],
     name: 'initialize',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'initializerV2',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
@@ -311,6 +339,23 @@ export const InstitutionalVault = <const>[
     name: 'redeem',
     outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        components: [
+          { internalType: 'bytes', name: 'pubkey', type: 'bytes' },
+          { internalType: 'uint64', name: 'amountGwei', type: 'uint64' },
+        ],
+        internalType: 'struct IEigenPodTypes.WithdrawalRequest[]',
+        name: 'requests',
+        type: 'tuple[]',
+      },
+    ],
+    name: 'requestWithdrawal',
+    outputs: [],
+    stateMutability: 'payable',
     type: 'function',
   },
   {
@@ -435,7 +480,13 @@ export const InstitutionalVault = <const>[
     stateMutability: 'nonpayable',
     type: 'function',
   },
-  { stateMutability: 'payable', type: 'receive' },
+  {
+    inputs: [],
+    name: 'withdrawNonRestakedETH',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
   {
     inputs: [
       { internalType: 'bytes[]', name: 'srcPubkeys', type: 'bytes[]' },
