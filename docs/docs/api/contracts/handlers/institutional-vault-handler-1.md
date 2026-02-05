@@ -11,3 +11,9 @@ Re-exports [InstitutionalVaultHandler](institutional-vault-handler.md#institutio
 ### QueuedWithdrawal
 
 Re-exports [QueuedWithdrawal](institutional-vault-handler.md#queuedwithdrawal)
+
+***
+
+### WithdrawalRequest
+
+Re-exports [WithdrawalRequest](institutional-vault-handler.md#withdrawalrequest)

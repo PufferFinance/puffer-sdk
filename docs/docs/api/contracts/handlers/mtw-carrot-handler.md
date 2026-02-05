@@ -4,7 +4,7 @@
 
 ### MtwCarrotHandler
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L15)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L15)
 
 Handler for the `mtwCARROT` token contract.
 
@@ -14,7 +14,7 @@ Handler for the `mtwCARROT` token contract.
 
 > **new MtwCarrotHandler**(`chain`, `walletClient`, `publicClient`): [`MtwCarrotHandler`](#mtwcarrothandler)
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L28)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L28)
 
 Create the handler for the `mtwCARROT` token contract exposing
 methods to interact with the contract.
@@ -37,7 +37,7 @@ methods to interact with the contract.
 
 > **allowance**(`owner`, `spender`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L71)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L71)
 
 Retrieve the allowance a spender has from an owner.
 
@@ -58,7 +58,7 @@ The amount the spender is allowed to use on behalf of the owner.
 
 > **approve**(`ownerAddress`, `spenderAddress`, `amount`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:171](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L171)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:171](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L171)
 
 Approve a spender to use a specific amount of the owner's tokens.
 
@@ -80,7 +80,7 @@ A promise that resolves to the transaction hash.
 
 > **balanceOf**(`address`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L60)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L60)
 
 Retrieve the balance of a given address.
 
@@ -100,7 +100,7 @@ The balance of the specified address.
 
 > **claim**(`account`, `user`, `maxClaimIndex?`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:192](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L192)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:192](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L192)
 
 Claim tokens for a user.
 
@@ -122,7 +122,7 @@ A promise that resolves to the transaction hash.
 
 > **claimable**(`user`, `maxClaimIndex?`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:84](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L84)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:84](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L84)
 
 Retrieve the claimable amount for a user, optionally at a specific index.
 
@@ -143,7 +143,7 @@ The claimable amount for the user.
 
 > **cliffDuration**(): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:97](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L97)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:97](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L97)
 
 Retrieve the cliff duration of the vesting schedule.
 
@@ -157,7 +157,7 @@ The cliff duration in seconds.
 
 > **decreaseAllowance**(`ownerAddress`, `spenderAddress`, `subtractedValue`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:214](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L214)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:214](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L214)
 
 Decrease the allowance for a spender.
 
@@ -179,7 +179,7 @@ A promise that resolves to the transaction hash.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L42)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L42)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
@@ -194,7 +194,7 @@ The viem contract.
 
 > **getUserVestings**(`user`): `Promise`\<\{ `allVestings`: readonly `object`[]; `nextClaimIndex`: `bigint`; \}\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:107](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L107)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:107](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L107)
 
 Retrieve all vesting schedules associated with a user.
 
@@ -214,7 +214,7 @@ An array of vesting schedules.
 
 > **increaseAllowance**(`ownerAddress`, `spenderAddress`, `addedValue`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:236](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L236)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:236](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L236)
 
 Increase the allowance for a spender.
 
@@ -236,7 +236,7 @@ A promise that resolves to the transaction hash.
 
 > **isTokenWrapper**(): `Promise`\<`boolean`\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:122](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L122)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:122](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L122)
 
 Check if the contract is a token wrapper.
 
@@ -250,7 +250,7 @@ True if the contract is a token wrapper, false otherwise.
 
 > **recoverERC20**(`account`, `tokenAddress`, `to`, `amountToRecover`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:259](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L259)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:259](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L259)
 
 Recover ERC20 tokens sent to this contract.
 
@@ -273,7 +273,7 @@ A promise that resolves to the transaction hash.
 
 > **symbol**(): `Promise`\<`string`\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:131](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L131)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:131](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L131)
 
 Retrieve the symbol of the token.
 
@@ -287,7 +287,7 @@ The token symbol.
 
 > **token**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:140](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L140)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:140](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L140)
 
 Retrieve the token address this contract wraps or represents.
 
@@ -301,7 +301,7 @@ The address of the token.
 
 > **transfer**(`ownerAddress`, `to`, `amount`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:282](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L282)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:282](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L282)
 
 Transfer tokens to another address.
 
@@ -323,7 +323,7 @@ A promise that resolves to the transaction hash.
 
 > **underlying**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:149](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L149)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:149](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L149)
 
 Retrieve the underlying asset for the token.
 
@@ -337,7 +337,7 @@ The address of the underlying asset.
 
 > **vestingData**(`address`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:159](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/mtw-carrot-handler.ts#L159)
+Defined in: [lib/contracts/handlers/mtw-carrot-handler.ts:159](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/mtw-carrot-handler.ts#L159)
 
 Retrieve vesting data for a given address.
 

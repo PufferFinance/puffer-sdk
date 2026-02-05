@@ -6,7 +6,7 @@
 
 > `const` **VAULTS\_ADDRESSES**: `object`
 
-Defined in: [lib/contracts/vaults-addresses.ts:4](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/vaults-addresses.ts#L4)
+Defined in: [lib/contracts/vaults-addresses.ts:4](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/vaults-addresses.ts#L4)
 
 #### Type Declaration
 

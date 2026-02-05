@@ -4,7 +4,7 @@
 
 ### PufferWithdrawalManagerHandler
 
-Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L18)
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L18)
 
 Handler for the `PufferWithdrawalsManager` contract exposing methods to
 interact with the contract.
@@ -15,7 +15,7 @@ interact with the contract.
 
 > **new PufferWithdrawalManagerHandler**(`chain`, `walletClient`, `publicClient`): [`PufferWithdrawalManagerHandler`](#pufferwithdrawalmanagerhandler)
 
-Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L32)
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L32)
 
 Create the handler for the `PufferWithdrawalsManager` contract exposing
 methods to interact with the contract.
@@ -38,7 +38,7 @@ methods to interact with the contract.
 
 > **completeQueuedWithdrawal**(`walletAddress`, `withdrawalIdx`): `Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
 
-Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:132](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L132)
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:132](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L132)
 
 Complete a withdrawal from the queue.
 
@@ -59,7 +59,7 @@ The transaction hash of the withdrawal.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:50](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L50)
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:50](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L50)
 
 Get the contract.
 
@@ -73,7 +73,7 @@ The viem contract.
 
 > **getWithdrawal**(`withdrawalIdx`): `Promise`\<\{ `pufETHAmount`: `bigint`; `pufETHToETHExchangeRate`: `bigint`; `recipient`: `` `0x${string}` ``; \}\>
 
-Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:157](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L157)
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:157](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L157)
 
 Get the withdrawal at the given index.
 
@@ -93,7 +93,7 @@ The withdrawal at the given index.
 
 > **requestWithdrawal**(`walletAddress`, `amount`): `Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
 
-Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L70)
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L70)
 
 Request a withdrawal of the given amount to the given address, with a permit.
 
@@ -114,7 +114,7 @@ The transaction hash of the withdrawal.
 
 > **requestWithdrawalWithPermit**(`walletAddress`, `amount`): `Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
 
-Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L96)
+Defined in: [lib/contracts/handlers/puffer-withdrawal-manager-handler.ts:96](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/puffer-withdrawal-manager-handler.ts#L96)
 
 Request a withdrawal of the given amount to the given address.
 

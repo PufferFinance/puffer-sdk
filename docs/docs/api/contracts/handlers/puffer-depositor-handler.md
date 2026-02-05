@@ -4,7 +4,7 @@
 
 ### PufferDepositorHandler
 
-Defined in: [lib/contracts/handlers/puffer-depositor-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/puffer-depositor-handler.ts#L18)
+Defined in: [lib/contracts/handlers/puffer-depositor-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/puffer-depositor-handler.ts#L18)
 
 Handler for the `PufferDepositor` contract exposing methods to
 interact with the contract.
@@ -15,7 +15,7 @@ interact with the contract.
 
 > **new PufferDepositorHandler**(`chain`, `walletClient`, `publicClient`): [`PufferDepositorHandler`](#pufferdepositorhandler)
 
-Defined in: [lib/contracts/handlers/puffer-depositor-handler.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/puffer-depositor-handler.ts#L32)
+Defined in: [lib/contracts/handlers/puffer-depositor-handler.ts:32](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/puffer-depositor-handler.ts#L32)
 
 Create the handler for the `PufferDepositor` contract exposing
 methods to interact with the contract.
@@ -38,7 +38,7 @@ methods to interact with the contract.
 
 > **depositStETH**(`walletAddress`, `value`): `Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
 
-Defined in: [lib/contracts/handlers/puffer-depositor-handler.ts:76](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/puffer-depositor-handler.ts#L76)
+Defined in: [lib/contracts/handlers/puffer-depositor-handler.ts:76](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/puffer-depositor-handler.ts#L76)
 
 Deposit stETH in exchange for pufETH. This doesn't make the
 transaction but returns two methods namely `transact` and
@@ -65,7 +65,7 @@ transaction.
 
 > **depositWstETH**(`walletAddress`, `value`): `Promise`\<\{ `estimate`: () => `Promise`\<`bigint`\>; `transact`: () => `Promise`\<`` `0x${string}` ``\>; \}\>
 
-Defined in: [lib/contracts/handlers/puffer-depositor-handler.ts:112](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/puffer-depositor-handler.ts#L112)
+Defined in: [lib/contracts/handlers/puffer-depositor-handler.ts:112](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/puffer-depositor-handler.ts#L112)
 
 Deposit wstETH in exchange for pufETH. This doesn't make the
 transaction but returns two methods namely `transact` and
@@ -92,7 +92,7 @@ transaction.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/puffer-depositor-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/4c59271734406b6bfb4654c6b8aa006219d80994/lib/contracts/handlers/puffer-depositor-handler.ts#L51)
+Defined in: [lib/contracts/handlers/puffer-depositor-handler.ts:51](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/puffer-depositor-handler.ts#L51)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
