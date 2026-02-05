@@ -4,7 +4,7 @@
 
 ### GaugeRegistryHandler
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L18)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L18)
 
 Handler for the `GaugeRegistry` contract exposing methods to interact
 with the contract.
@@ -15,7 +15,7 @@ with the contract.
 
 > **new GaugeRegistryHandler**(`chain`, `walletClient`, `publicClient`): [`GaugeRegistryHandler`](#gaugeregistryhandler)
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L31)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L31)
 
 Create the handler for the `GaugeRegistry` contract exposing methods to
 interact with the contract.
@@ -38,7 +38,7 @@ interact with the contract.
 
 > **acceptOwnership**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:186](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L186)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:186](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L186)
 
 Accept ownership transfer.
 
@@ -52,7 +52,7 @@ The transaction.
 
 > **activateGauge**(`gauge`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:134](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L134)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:134](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L134)
 
 Activate a gauge.
 
@@ -72,7 +72,7 @@ The transaction.
 
 > **deactivateGauge**(`gauge`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:147](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L147)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:147](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L147)
 
 Deactivate a gauge.
 
@@ -92,7 +92,7 @@ The transaction.
 
 > **gaugeExists**(`gauge`): `Promise`\<`boolean`\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L81)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L81)
 
 Check if a gauge exists.
 
@@ -112,7 +112,7 @@ True if the gauge exists, false otherwise.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:44](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L44)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:44](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L44)
 
 Get the contract.
 
@@ -126,7 +126,7 @@ The viem contract.
 
 > **getGauge**(`gauge`): `Promise`\<\{ `active`: `boolean`; `created`: `number`; `metadataURI`: `string`; \}\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:101](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L101)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:101](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L101)
 
 Get gauge information.
 
@@ -146,7 +146,7 @@ The gauge information including active status, creation time, and metadata URI.
 
 > **getGaugeList**(): `Promise`\<readonly `` `0x${string}` ``[]\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L110)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L110)
 
 Get the list of all gauges.
 
@@ -160,7 +160,7 @@ Array of gauge addresses.
 
 > **isActive**(`gauge`): `Promise`\<`boolean`\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:91](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L91)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:91](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L91)
 
 Check if a gauge is active.
 
@@ -180,7 +180,7 @@ True if the gauge is active, false otherwise.
 
 > **owner**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:62](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L62)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:62](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L62)
 
 Get the owner of the contract.
 
@@ -194,7 +194,7 @@ The owner address.
 
 > **pendingOwner**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L71)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:71](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L71)
 
 Get the pending owner of the contract.
 
@@ -208,7 +208,7 @@ The pending owner address.
 
 > **registerGauge**(`gauge`, `metadataURI`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L121)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L121)
 
 Register a new gauge.
 
@@ -229,7 +229,7 @@ The transaction.
 
 > **renounceOwnership**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:198](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L198)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:198](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L198)
 
 Renounce ownership.
 
@@ -243,7 +243,7 @@ The transaction.
 
 > **transferOwnership**(`newOwner`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:174](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L174)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:174](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L174)
 
 Transfer ownership to a new owner.
 
@@ -263,7 +263,7 @@ The transaction.
 
 > **updateGaugeMetadata**(`gauge`, `metadataURI`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:161](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/gauge-registry-handler.ts#L161)
+Defined in: [lib/contracts/handlers/gauge-registry-handler.ts:161](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/gauge-registry-handler.ts#L161)
 
 Update gauge metadata.
 

@@ -4,7 +4,7 @@
 
 ### NucleusAtomicQueueHandler
 
-Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L31)
+Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:31](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L31)
 
 Handler for the `AtomicQueue` contract.
 
@@ -14,7 +14,7 @@ Handler for the `AtomicQueue` contract.
 
 > **new NucleusAtomicQueueHandler**(`chain`, `walletClient`, `publicClient`): [`NucleusAtomicQueueHandler`](#nucleusatomicqueuehandler)
 
-Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:34](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L34)
+Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:34](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L34)
 
 ###### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:34](https://
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L42)
+Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L42)
 
 ###### Returns
 
@@ -44,7 +44,7 @@ Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:42](https://
 
 > **getUserAtomicRequest**(`user`, `offerToken`, `wantToken`): `Promise`\<\{ `atomicPrice`: `bigint`; `deadline`: `bigint`; `inSolve`: `boolean`; `offerAmount`: `bigint`; \}\>
 
-Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L61)
+Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:61](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L61)
 
 Get the atomic request details for a specific user (wallet address).
 
@@ -64,7 +64,7 @@ Get the atomic request details for a specific user (wallet address).
 
 > **isAtomicRequestValid**(`offerToken`, `user`, `request`): `Promise`\<`boolean`\>
 
-Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L79)
+Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:79](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L79)
 
 Check if an atomic request is valid.
 
@@ -84,7 +84,7 @@ Check if an atomic request is valid.
 
 > **solve**(`offerToken`, `wantToken`, `users`, `runData`, `solver`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:99](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L99)
+Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:99](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L99)
 
 Solve atomic requests for multiple users.
 
@@ -106,7 +106,7 @@ Solve atomic requests for multiple users.
 
 > **updateAtomicRequest**(`offerToken`, `wantToken`, `request`, `ownerAddress`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L121)
+Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:121](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L121)
 
 Update an atomic request.
 
@@ -127,7 +127,7 @@ Update an atomic request.
 
 > **userAtomicRequest**(`user`, `offerToken`, `wantToken`): `Promise`\<readonly \[`bigint`, `bigint`, `bigint`, `boolean`\]\>
 
-Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:139](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L139)
+Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:139](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L139)
 
 Get user's atomic request details directly from storage.
 
@@ -149,16 +149,16 @@ Get user's atomic request details directly from storage.
 
 > **AtomicRequest** = `object`
 
-Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L14)
+Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L14)
 
 #### Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="atomicprice"></a> `atomicPrice` | `bigint` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:16](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L16) |
-| <a id="deadline"></a> `deadline` | `bigint` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L15) |
-| <a id="insolve"></a> `inSolve` | `boolean` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L18) |
-| <a id="offeramount"></a> `offerAmount` | `bigint` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:17](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L17) |
+| <a id="atomicprice"></a> `atomicPrice` | `bigint` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:16](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L16) |
+| <a id="deadline"></a> `deadline` | `bigint` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L15) |
+| <a id="insolve"></a> `inSolve` | `boolean` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:18](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L18) |
+| <a id="offeramount"></a> `offerAmount` | `bigint` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:17](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L17) |
 
 ***
 
@@ -166,13 +166,13 @@ Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:14](https://
 
 > **SolveMetaData** = `object`
 
-Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L21)
+Defined in: [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L21)
 
 #### Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="assetsforwant"></a> `assetsForWant` | `bigint` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:25](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L25) |
-| <a id="assetstooffer"></a> `assetsToOffer` | `bigint` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:24](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L24) |
-| <a id="flags"></a> `flags` | `number` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:23](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L23) |
-| <a id="user"></a> `user` | `Address` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:22](https://github.com/PufferFinance/puffer-sdk/blob/9d2f7fbaf009892d79773bce1ebb2080bfa02347/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L22) |
+| <a id="assetsforwant"></a> `assetsForWant` | `bigint` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:25](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L25) |
+| <a id="assetstooffer"></a> `assetsToOffer` | `bigint` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:24](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L24) |
+| <a id="flags"></a> `flags` | `number` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:23](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L23) |
+| <a id="user"></a> `user` | `Address` | [lib/contracts/handlers/nucleus-atomic-queue-handler.ts:22](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/nucleus-atomic-queue-handler.ts#L22) |
