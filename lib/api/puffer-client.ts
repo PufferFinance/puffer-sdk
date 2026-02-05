@@ -32,6 +32,7 @@ import { LagoonVaultHandler } from '../contracts/handlers/lagoon-vault-handler';
 import { VLPufferHandler } from '../contracts/handlers/vl-puffer-handler';
 import { GaugeRegistryHandler } from '../contracts/handlers/gauge-registry-handler';
 import { CarrotVestingHandler } from '../contracts/handlers/carrot-vesting-handler';
+import { NonRestakingWithdrawalCredentialsHandler } from '../contracts/handlers/non-restaking-withdrawal-credentials-handler';
 
 /**
  * The core class and the main entry point of the Puffer SDK.
@@ -93,6 +94,8 @@ export class PufferClient {
   public gaugeRegistry: GaugeRegistryHandler;
   /** Handler for the `CarrotVesting` contract. */
   public carrotVesting: CarrotVestingHandler;
+  /** Handler for the `NonRestakingWithdrawalCredentials` contract. */
+  public nonRestakingWithdrawalCredentials: NonRestakingWithdrawalCredentialsHandler;
 
   /**
    * Create the Puffer Client.
@@ -254,6 +257,12 @@ export class PufferClient {
       this.walletClient,
       this.publicClient,
     );
+    this.nonRestakingWithdrawalCredentials =
+      new NonRestakingWithdrawalCredentialsHandler(
+        chain,
+        this.walletClient,
+        this.publicClient,
+      );
   }
 
   /**
