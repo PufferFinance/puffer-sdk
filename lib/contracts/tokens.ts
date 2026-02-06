@@ -54,6 +54,7 @@ export const TOKENS_ADDRESSES: {
   [Token.VT]: {
     [Chain.Mainnet]: '0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A',
     [Chain.Holesky]: '0xB028194785178a94Fe608994A4d5AD84c285A640',
+    [Chain.Hoodi]: '0x2246a5CF6050F6980719a62b53D6261e35650fdd',
   },
   [Token.TEST]: {
     [Chain.Sepolia]: '0xd26e3540a0a368845b234736a0700e0a5a821bba',
@@ -84,6 +85,7 @@ export const TOKENS_ADDRESSES: {
   [Token.stETH]: {
     [Chain.Mainnet]: '0xae7ab96520de3a18e5e111b5eaab095312d7fe84',
     [Chain.Holesky]: '0x3F1c547b21f65e10480dE3ad8E19fAAC46C95034',
+    [Chain.Hoodi]: '0x3508A952176b3c15387C97BE809eaffB1982176a',
   },
   [Token.wstETH]: {
     [Chain.Mainnet]: '0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0',
@@ -112,6 +114,7 @@ export const TOKENS_ADDRESSES: {
     [Chain.Arbitrum]: '0x37D6382B6889cCeF8d6871A8b60E667115eDDBcF',
     [Chain.Berachain]: '0x417b0Ff8358Eb72867Da92225CaB99BCD5e6F205',
     [Chain.TAC]: '0x37D6382B6889cCeF8d6871A8b60E667115eDDBcF',
+    [Chain.Hoodi]: '0xe8870da7ceabDC16016bdF22b1528cA7625Dbc9C',
   },
   [Token.xPufETH]: {
     [Chain.Mainnet]: '0xD7D2802f6b19843ac4DfE25022771FD83b5A7464',
