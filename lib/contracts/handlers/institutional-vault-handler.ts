@@ -611,6 +611,7 @@ export class InstitutionalVaultHandler {
     return this.getContract().write.customExternalCall([target, data, value], {
       account: this.walletClient.account!,
       chain: this.viemChain,
+      value,
     });
   }
 
