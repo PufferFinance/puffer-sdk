@@ -4,7 +4,7 @@
 
 ### NonRestakingWithdrawalCredentialsHandler
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L28)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L28)
 
 Handler for the `NonRestakingWithdrawalCredentials` contract exposing methods to
 interact with the contract.
@@ -15,7 +15,7 @@ interact with the contract.
 
 > **new NonRestakingWithdrawalCredentialsHandler**(`chain`, `walletClient`, `publicClient`): [`NonRestakingWithdrawalCredentialsHandler`](#nonrestakingwithdrawalcredentialshandler)
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L42)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L42)
 
 Create the handler for the `NonRestakingWithdrawalCredentials` contract exposing
 methods to interact with the contract.
@@ -38,7 +38,7 @@ methods to interact with the contract.
 
 > **authority**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:102](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L102)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:102](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L102)
 
 Get the authority of the contract.
 
@@ -52,7 +52,7 @@ The authority address.
 
 > **getAddress**(): `` `0x${string}` `` \| `undefined`
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:67](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L67)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:67](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L67)
 
 Get the address of the contract for this handler.
 
@@ -66,7 +66,7 @@ The address of the contract.
 
 > **getConsolidationRequestFee**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:111](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L111)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:111](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L111)
 
 Get the consolidation request fee.
 
@@ -80,7 +80,7 @@ The consolidation request fee.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:77](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L77)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:77](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L77)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
@@ -95,7 +95,7 @@ The viem contract.
 
 > **getWithdrawalRequestFee**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:120](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L120)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:120](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L120)
 
 Get the withdrawal request fee.
 
@@ -109,7 +109,7 @@ The withdrawal request fee.
 
 > **requestConsolidation**(`requests`, `value`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:139](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L139)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:139](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L139)
 
 Request consolidation of validators.
 
@@ -128,7 +128,7 @@ Request consolidation of validators.
 
 > **requestWithdrawal**(`requests`, `value`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:153](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L153)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:153](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L153)
 
 Request withdrawal from validators.
 
@@ -147,7 +147,7 @@ Request withdrawal from validators.
 
 > **vault**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:129](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L129)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:129](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L129)
 
 Get the vault address.
 
@@ -161,7 +161,7 @@ The vault address.
 
 > **withAddress**(`address`): [`NonRestakingWithdrawalCredentialsHandler`](#nonrestakingwithdrawalcredentialshandler)
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:56](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L56)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:56](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L56)
 
 Set the address of the contract for this handler.
 
@@ -181,7 +181,7 @@ The handler.
 
 > **withdrawETH**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:164](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L164)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:164](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L164)
 
 Withdraw ETH from the contract.
 
@@ -195,14 +195,14 @@ Withdraw ETH from the contract.
 
 > **ConsolidationRequest** = `object`
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L14)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L14)
 
 #### Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="srcpubkey"></a> `srcPubkey` | `Hex` | [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L15) |
-| <a id="targetpubkey"></a> `targetPubkey` | `Hex` | [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:16](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L16) |
+| <a id="srcpubkey"></a> `srcPubkey` | `Hex` | [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L15) |
+| <a id="targetpubkey"></a> `targetPubkey` | `Hex` | [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:16](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L16) |
 
 ***
 
@@ -210,11 +210,11 @@ Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler
 
 > **WithdrawalRequest** = `object`
 
-Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:19](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L19)
+Defined in: [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:19](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L19)
 
 #### Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="amountgwei"></a> `amountGwei` | `bigint` | [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L21) |
-| <a id="pubkey"></a> `pubkey` | `Hex` | [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:20](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L20) |
+| <a id="amountgwei"></a> `amountGwei` | `bigint` | [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L21) |
+| <a id="pubkey"></a> `pubkey` | `Hex` | [lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts:20](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/non-restaking-withdrawal-credentials-handler.ts#L20) |

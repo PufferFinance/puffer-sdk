@@ -4,7 +4,7 @@
 
 ### L1RewardManagerHandler
 
-Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/l1-reward-manager-handler.ts#L15)
+Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/l1-reward-manager-handler.ts#L15)
 
 Handler for the `L1RewardManager` contract.
 
@@ -14,7 +14,7 @@ Handler for the `L1RewardManager` contract.
 
 > **new L1RewardManagerHandler**(`chain`, `walletClient`, `publicClient`): [`L1RewardManagerHandler`](#l1rewardmanagerhandler)
 
-Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/l1-reward-manager-handler.ts#L28)
+Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:28](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/l1-reward-manager-handler.ts#L28)
 
 Create the handler for the `L1RewardManager` contract exposing
 methods to interact with the contract.
@@ -37,7 +37,7 @@ methods to interact with the contract.
 
 > **getBridge**(`bridgeAddress`): `Promise`\<\{ `destinationDomainId`: `number`; \}\>
 
-Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/l1-reward-manager-handler.ts#L60)
+Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:60](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/l1-reward-manager-handler.ts#L60)
 
 Get the bridge data for the given bridge address.
 
@@ -57,7 +57,7 @@ The bridge data.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/l1-reward-manager-handler.ts#L42)
+Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:42](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/l1-reward-manager-handler.ts#L42)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
@@ -72,7 +72,7 @@ The viem contract.
 
 > **setL2RewardClaimer**(`account`, `bridge`, `claimer`): `object`
 
-Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:78](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/l1-reward-manager-handler.ts#L78)
+Defined in: [lib/contracts/handlers/l1-reward-manager-handler.ts:78](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/l1-reward-manager-handler.ts#L78)
 
 Sets the rewards claimer on L2. Smart contracts might not be able
 to to own the same address on L2. This function allows to set a

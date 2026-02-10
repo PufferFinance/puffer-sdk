@@ -6,7 +6,7 @@
 
 > `const` **CONTRACT\_ADDRESSES**: `object`
 
-Defined in: [lib/contracts/addresses.ts:5](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/addresses.ts#L5)
+Defined in: [lib/contracts/addresses.ts:5](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/addresses.ts#L5)
 
 #### Index Signature
 

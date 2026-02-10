@@ -4,7 +4,7 @@
 
 ### ERC20PermitHandler
 
-Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:24](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/erc20-permit-handler.ts#L24)
+Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:24](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/erc20-permit-handler.ts#L24)
 
 Handler for performing operations for and with ERC20Permit tokens.
 
@@ -14,7 +14,7 @@ Handler for performing operations for and with ERC20Permit tokens.
 
 > **new ERC20PermitHandler**(`chain`, `walletClient`, `publicClient`): [`ERC20PermitHandler`](#erc20permithandler)
 
-Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:37](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/erc20-permit-handler.ts#L37)
+Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:37](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/erc20-permit-handler.ts#L37)
 
 Create the handler for processing tokens.
 
@@ -36,7 +36,7 @@ Create the handler for processing tokens.
 
 > **approve**(`ownerAddress`, `spenderAddress`, `value`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:170](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/erc20-permit-handler.ts#L170)
+Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:170](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/erc20-permit-handler.ts#L170)
 
 Approve transaction for the spender to spend the owner's tokens.
 
@@ -58,7 +58,7 @@ Hash of the transaction.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:63](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/erc20-permit-handler.ts#L63)
+Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:63](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/erc20-permit-handler.ts#L63)
 
 Get the contract. This is a method because the typings are complex
 and lost when trying to make it a member.
@@ -73,7 +73,7 @@ The viem contract.
 
 > **getPermitData**(`ownerAddress`, `spenderAddress`, `value`): `Promise`\<[`PermitData`](../common/lib/types.md#permitdata)\>
 
-Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:147](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/erc20-permit-handler.ts#L147)
+Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:147](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/erc20-permit-handler.ts#L147)
 
 Get the permit data for the given owner, spender and value.
 
@@ -95,7 +95,7 @@ Permit data in the form `{ r, s, v, deadline, amount }`.
 
 > **getPermitSignature**(`ownerAddress`, `spenderAddress`, `value`): `Promise`\<\{ `deadline`: `bigint`; \} \| \{ `deadline`: `bigint`; \}\>
 
-Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/erc20-permit-handler.ts#L94)
+Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:94](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/erc20-permit-handler.ts#L94)
 
 Process and get permit signature for the given token to perform
 transactions without calling `approve()`.
@@ -118,7 +118,7 @@ Permit signature in the form `{ r, s, v?, yParity }`.
 
 > **nonces**(`account`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/erc20-permit-handler.ts#L81)
+Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:81](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/erc20-permit-handler.ts#L81)
 
 Get the nonces for the given account.
 
@@ -138,7 +138,7 @@ The nonces.
 
 > **withToken**(`token`): [`ERC20PermitHandler`](#erc20permithandler)
 
-Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:52](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/erc20-permit-handler.ts#L52)
+Defined in: [lib/contracts/handlers/erc20-permit-handler.ts:52](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/erc20-permit-handler.ts#L52)
 
 Set the token to use for executing transactions on the contract.
 

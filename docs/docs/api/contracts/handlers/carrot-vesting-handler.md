@@ -4,7 +4,7 @@
 
 ### CarrotVestingHandler
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L21)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:21](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L21)
 
 Handler for the `CarrotVesting` contract exposing methods to interact
 with the contract.
@@ -15,7 +15,7 @@ with the contract.
 
 > **new CarrotVestingHandler**(`chain`, `walletClient`, `publicClient`): [`CarrotVestingHandler`](#carrotvestinghandler)
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:35](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L35)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:35](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L35)
 
 Create the handler for the `CarrotVesting` contract exposing methods to
 interact with the contract.
@@ -38,7 +38,7 @@ interact with the contract.
 
 > **calculateClaimableAmount**(`user`): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L80)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:80](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L80)
 
 Calculate the claimable amount for a user.
 
@@ -58,7 +58,7 @@ The claimable amount.
 
 > **claim**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L98)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:98](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L98)
 
 Claim vested tokens.
 
@@ -72,7 +72,7 @@ The transaction.
 
 > **exchangeRate**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L89)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:89](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L89)
 
 Get the exchange rate.
 
@@ -86,7 +86,7 @@ The exchange rate.
 
 > **getCarrotAddress**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L110)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:110](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L110)
 
 Get the CARROT token address.
 
@@ -100,7 +100,7 @@ The CARROT token address.
 
 > **getContract**(): `object`
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:53](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L53)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:53](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L53)
 
 Get the contract.
 
@@ -114,7 +114,7 @@ The viem contract.
 
 > **getDuration**(): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:231](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L231)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:231](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L231)
 
 Get the duration of the vesting period.
 
@@ -128,7 +128,7 @@ The duration of the vesting period.
 
 > **getNewDuration**(): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:241](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L241)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:241](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L241)
 
 Get the new duration of the vesting period. This is a new function
 added after contract upgrade.
@@ -143,7 +143,7 @@ The new duration of the vesting period.
 
 > **getNewSteps**(): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:251](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L251)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:251](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L251)
 
 Get the upgrade timestamp. This is a new function added after
 contract upgrade.
@@ -158,7 +158,7 @@ The upgrade timestamp.
 
 > **getPufferAddress**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:119](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L119)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:119](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L119)
 
 Get the PUFFER token address.
 
@@ -172,7 +172,7 @@ The PUFFER token address.
 
 > **getStartTimestamp**(): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:166](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L166)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:166](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L166)
 
 Get the start timestamp.
 
@@ -186,7 +186,7 @@ The start timestamp.
 
 > **getSteps**(): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:137](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L137)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:137](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L137)
 
 Get the number of vesting steps.
 
@@ -200,7 +200,7 @@ The number of vesting steps.
 
 > **getTotalDepositedAmount**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:222](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L222)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:222](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L222)
 
 Get the total deposited amount.
 
@@ -214,7 +214,7 @@ The total deposited amount.
 
 > **getUpgradeTimestamp**(): `Promise`\<`number`\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:261](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L261)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:261](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L261)
 
 Get the upgrade timestamp. This is a new function added after
 contract upgrade.
@@ -229,7 +229,7 @@ The upgrade timestamp.
 
 > **getVestings**(`user`): `Promise`\<readonly `object`[]\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:157](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L157)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:157](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L157)
 
 Get vesting information for a user.
 
@@ -250,7 +250,7 @@ claimed amount, last claimed timestamp, and deposited timestamp.
 
 > **maxCarrotAmount**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:146](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L146)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:146](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L146)
 
 Get the maximum carrot amount.
 
@@ -264,7 +264,7 @@ The maximum carrot amount.
 
 > **owner**(): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L70)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:70](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L70)
 
 Get the owner of the contract.
 
@@ -278,7 +278,7 @@ The owner address.
 
 > **startVesting**(`amount`, `isPreapproved`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:204](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L204)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:204](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L204)
 
 Start vesting.
 
@@ -299,7 +299,7 @@ The transaction.
 
 > **startVestingPreapproved**(`amount`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L176)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:176](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L176)
 
 Start vesting for a user.
 
@@ -319,7 +319,7 @@ The transaction.
 
 > **startVestingWithPermit**(`permitData`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:189](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L189)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:189](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L189)
 
 Start vesting with permit.
 
@@ -339,7 +339,7 @@ The transaction.
 
 > **totalPufferRewards**(): `Promise`\<`bigint`\>
 
-Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:128](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/contracts/handlers/carrot-vesting-handler.ts#L128)
+Defined in: [lib/contracts/handlers/carrot-vesting-handler.ts:128](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/contracts/handlers/carrot-vesting-handler.ts#L128)
 
 Get the total puffer rewards.
 

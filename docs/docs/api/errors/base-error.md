@@ -4,7 +4,7 @@
 
 ### `abstract` BaseError
 
-Defined in: [lib/errors/base-error.ts:6](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/errors/base-error.ts#L6)
+Defined in: [lib/errors/base-error.ts:6](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/errors/base-error.ts#L6)
 
 #### Extends
 
@@ -28,7 +28,7 @@ Defined in: [lib/errors/base-error.ts:6](https://github.com/PufferFinance/puffer
 
 > **new BaseError**\<`T`\>(`message`, `params`): [`BaseError`](#baseerror)\<`T`\>
 
-Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/errors/base-error.ts#L9)
+Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/errors/base-error.ts#L9)
 
 ###### Parameters
 
@@ -51,7 +51,7 @@ Defined in: [lib/errors/base-error.ts:9](https://github.com/PufferFinance/puffer
 
 > `protected` **compileMessage**(`message`, `params`): `string`
 
-Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/9ee8ac690358c3c04505ec3826132d307d04cdec/lib/errors/base-error.ts#L14)
+Defined in: [lib/errors/base-error.ts:14](https://github.com/PufferFinance/puffer-sdk/blob/f8ec7f54737214ab2700bf33b7a282ea3fc355b8/lib/errors/base-error.ts#L14)
 
 ###### Parameters
 
