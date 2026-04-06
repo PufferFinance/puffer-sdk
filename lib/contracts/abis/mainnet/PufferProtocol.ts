@@ -518,11 +518,6 @@ export const PufferProtocol = <const>[
             type: 'bytes',
             internalType: 'bytes',
           },
-          {
-            name: 'raveEvidence',
-            type: 'bytes',
-            internalType: 'bytes',
-          },
         ],
       },
       {
