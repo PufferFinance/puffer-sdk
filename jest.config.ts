@@ -18,6 +18,11 @@ const config: Config = {
   },
   // Coverage is not collected for these.
   coveragePathIgnorePatterns: ['lib/errors', 'lib/main.ts'],
+  globals: {
+    'ts-jest': {
+      tsConfig: { ignoreDeprecations: '6.0' },
+    },
+  },
 };
 
 export default config;
