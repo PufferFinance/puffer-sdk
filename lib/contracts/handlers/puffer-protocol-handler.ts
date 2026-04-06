@@ -18,7 +18,6 @@ export type ValidatorKeyData = {
   depositDataRoot: `0x${string}`;
   blsEncryptedPrivKeyShares: `0x${string}`[];
   blsPubKeySet: `0x${string}`;
-  raveEvidence: `0x${string}`;
 };
 
 export type StoppedValidatorInfo = {
