@@ -27,6 +27,20 @@ export type DepositWithPermitParams = PermitData & {
   minimumMint: bigint;
 };
 
+export type BulkDepositParams = {
+  account: Address;
+  depositAsset: Address;
+  depositAmount: bigint;
+  minimumMint: bigint;
+};
+
+export type BulkWithdrawParams = {
+  account: Address;
+  withdrawAsset: Address;
+  shareAmount: bigint;
+  minimumAssets: bigint;
+};
+
 /**
  * Handler for the `Teller` contract from nucleus.
  */
@@ -239,17 +253,46 @@ export class NucleusTellerHandler {
     const transact = () =>
       this.getContract().write.depositWithPermit(
         [depositAsset, amount, minimumMint, deadline, v, r, s],
-        {
-          account,
-          chain: this.viemChain,
-        },
+        { account, chain: this.viemChain },
       );
     const estimate = () =>
       this.getContract().estimateGas.depositWithPermit(
         [depositAsset, amount, minimumMint, deadline, v, r, s],
-        {
-          account,
-        },
+        { account },
+      );
+
+    return { transact, estimate };
+  }
+
+  public async bulkWithdraw(params: BulkWithdrawParams) {
+    const { account, withdrawAsset, shareAmount, minimumAssets } = params;
+
+    const transact = () =>
+      this.getContract().write.bulkWithdraw(
+        [withdrawAsset, shareAmount, minimumAssets, account],
+        { account, chain: this.viemChain },
+      );
+    const estimate = () =>
+      this.getContract().estimateGas.bulkWithdraw(
+        [withdrawAsset, shareAmount, minimumAssets, account],
+        { account },
+      );
+
+    return { transact, estimate };
+  }
+
+  public async bulkDeposit(params: BulkDepositParams) {
+    const { account, depositAsset, depositAmount, minimumMint } = params;
+
+    const transact = () =>
+      this.getContract().write.bulkDeposit(
+        [depositAsset, depositAmount, minimumMint, account],
+        { account, chain: this.viemChain },
+      );
+    const estimate = () =>
+      this.getContract().estimateGas.bulkDeposit(
+        [depositAsset, depositAmount, minimumMint, account],
+        { account },
       );
 
     return { transact, estimate };
