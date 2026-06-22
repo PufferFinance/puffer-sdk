@@ -16,6 +16,7 @@ import {
   tac,
   monad,
   hyperEvm,
+  linea,
 } from 'viem/chains';
 
 export enum Chain {
@@ -35,6 +36,7 @@ export enum Chain {
   TAC = tac.id,
   Monad = monad.id,
   HyperEVM = hyperEvm.id,
+  Linea = linea.id,
 }
 
 export const VIEM_CHAINS: { [key in Chain]: ViemChain } = {
@@ -54,6 +56,7 @@ export const VIEM_CHAINS: { [key in Chain]: ViemChain } = {
   [Chain.TAC]: tac,
   [Chain.Monad]: monad,
   [Chain.HyperEVM]: hyperEvm,
+  [Chain.Linea]: linea,
 };
 
 export { type ViemChain };

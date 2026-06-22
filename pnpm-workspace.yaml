@@ -1,6 +1,12 @@
 packages:
   - docs
 
+allowBuilds:
+  core-js: true
+  core-js-pure: true
+  esbuild: true
+  unrs-resolver: true
+
 overrides:
   diff@<4.0.4: '>=4.0.4'
   lodash@>=4.0.0 <=4.17.22: '>=4.17.23'
