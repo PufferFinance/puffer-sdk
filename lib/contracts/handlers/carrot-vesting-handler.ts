@@ -261,4 +261,24 @@ export class CarrotVestingHandler {
   public getUpgradeTimestamp() {
     return this.getContract().read.getUpgradeTimestamp();
   }
+
+  /**
+   * Get the new duration of the vesting period. This is a new function
+   * added after the second contract upgrade.
+   *
+   * @returns The new duration of the vesting period.
+   */
+  public getNewDuration2() {
+    return this.getContract().read.getNewDuration2();
+  }
+
+  /**
+   * Get the upgrade timestamp. This is a new function added after the
+   * second contract upgrade.
+   *
+   * @returns The upgrade timestamp.
+   */
+  public getUpgradeTimestamp2() {
+    return this.getContract().read.getUpgradeTimestamp2();
+  }
 }

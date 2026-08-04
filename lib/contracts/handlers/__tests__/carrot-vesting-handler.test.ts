@@ -231,4 +231,20 @@ describe('CarrotVestingHandler', () => {
     const result = await handler.getUpgradeTimestamp();
     expect(result).toBe(upgradeTimestamp);
   });
+
+  it('should get the new duration of the vesting period after the second upgrade', async () => {
+    const newDuration = 730;
+    contractTestingUtils.mockCall('getNewDuration2', [newDuration]);
+
+    const result = await handler.getNewDuration2();
+    expect(result).toBe(newDuration);
+  });
+
+  it('should get the upgrade timestamp after the second upgrade', async () => {
+    const upgradeTimestamp = 1234567891;
+    contractTestingUtils.mockCall('getUpgradeTimestamp2', [upgradeTimestamp]);
+
+    const result = await handler.getUpgradeTimestamp2();
+    expect(result).toBe(upgradeTimestamp);
+  });
 });
