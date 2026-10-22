@@ -2,6 +2,7 @@ packages:
   - docs
 
 allowBuilds:
+  '@parcel/watcher': false
   core-js: true
   core-js-pure: true
   esbuild: true
@@ -9,18 +10,24 @@ allowBuilds:
 
 # All of these are transitive dev-only dependencies (docs/docusaurus, release-it,
 # vite/vite-plugin-dts, eth-testing). The published package only ships viem.
-# Each override is pinned within the affected major so nothing crosses a breaking change.
+# Each override is pinned within the affected major so nothing crosses a breaking change,
+# except basic-ftp, postcss-selector-parser and tinypool, whose fixes exist only in a newer major.
 overrides:
   '@babel/core@<7.29.1': '^7.29.1'
   '@babel/plugin-transform-modules-systemjs@<7.29.4': '^7.29.4'
+  # js-yaml 3 pulls in argparse 1 and sprintf-js, which has no patched release. This package only calls load().
+  '@istanbuljs/load-nyc-config>js-yaml': '^4.3.2'
   ajv@>=7.0.0 <8.18.0: '^8.18.0'
-  basic-ftp@<5.3.1: '^5.3.1'
+  baseline-browser-mapping@>=2.0.0 <2.11.0: '^2.11.0'
+  basic-ftp@<6.2.1: '^6.2.1'
   bn.js@<4.12.3: '^4.12.3'
   bn.js@>=5.0.0 <5.2.3: '^5.2.3'
   body-parser@<1.20.6: '^1.20.6'
   brace-expansion@<1.1.18: '^1.1.18'
   brace-expansion@>=2.0.0 <2.1.4: '^2.1.4'
   brace-expansion@>=3.0.0 <5.0.9: '^5.0.9'
+  browserslist@<4.28.7: '^4.28.7'
+  colord@<2.9.4: '^2.9.4'
   defu@<6.1.5: '^6.1.5'
   diff@<4.0.4: '>=4.0.4'
   fast-uri@>=3.0.0 <3.1.5: '^3.1.5'
@@ -29,8 +36,8 @@ overrides:
   http-proxy-middleware@>=0.16.0 <2.0.10: '^2.0.10'
   ip-address@<10.3.1: '^10.3.1'
   joi@<17.13.4: '^17.13.4'
-  js-yaml@<3.15.0: '^3.15.0'
-  js-yaml@>=4.0.0 <4.3.0: '^4.3.0'
+  js-yaml@<3.15.2: '^3.15.2'
+  js-yaml@>=4.0.0 <4.3.2: '^4.3.2'
   launch-editor@<2.14.1: '^2.14.1'
   linkify-it@<5.0.2: '^5.0.2'
   lodash@<=4.17.23: '^4.17.24'
@@ -43,11 +50,14 @@ overrides:
   picomatch@<2.3.2: '^2.3.2'
   picomatch@>=4.0.0 <4.0.4: '^4.0.4'
   postcss@<8.5.23: '^8.5.23'
+  postcss-selector-parser@<7.1.6: '^7.1.6'
   qs@<6.15.2: '^6.15.2'
   rollup@>=4.0.0 <4.59.0: '^4.59.0'
   serialize-javascript@<7.0.5: '^7.0.5'
   shell-quote@<1.9.0: '^1.9.0'
-  svgo@>=3.0.0 <3.3.4: '^3.3.4'
+  source-map-js@<1.2.2: '^1.2.2'
+  svgo@>=3.0.0 <3.3.5: '^3.3.5'
+  tinypool@<2.1.2: '^2.1.2'
   undici@>=6.0.0 <6.28.0: '^6.28.0'
   undici@>=7.0.0 <7.29.0: '^7.29.0'
   uuid@<11.1.1: '^11.1.1'
