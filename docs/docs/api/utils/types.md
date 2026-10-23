@@ -6,13 +6,13 @@
 
 > **TransportProvider** = `object`
 
-Defined in: [lib/utils/types.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/3e4f0215014f8f0e8110b6eabfc17cbc32c35d40/lib/utils/types.ts#L3)
+Defined in: [utils/types.ts:3](https://github.com/PufferFinance/puffer-sdk/blob/8359ed70e558c33cbc9451335df83b48ddf85652/lib/utils/types.ts#L3)
 
 #### Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="request"></a> `request` | (...`args`) => `Promise`\<`any`\> | [lib/utils/types.ts:4](https://github.com/PufferFinance/puffer-sdk/blob/3e4f0215014f8f0e8110b6eabfc17cbc32c35d40/lib/utils/types.ts#L4) |
+| <a id="request"></a> `request` | (...`args`) => `Promise`\<`any`\> | [utils/types.ts:4](https://github.com/PufferFinance/puffer-sdk/blob/8359ed70e558c33cbc9451335df83b48ddf85652/lib/utils/types.ts#L4) |
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [lib/utils/types.ts:3](https://github.com/PufferFinance/puffer-sdk/b
 
 > **ValueOf**\<`T`\> = `T`\[keyof `T`\]
 
-Defined in: [lib/utils/types.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/3e4f0215014f8f0e8110b6eabfc17cbc32c35d40/lib/utils/types.ts#L1)
+Defined in: [utils/types.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/8359ed70e558c33cbc9451335df83b48ddf85652/lib/utils/types.ts#L1)
 
 #### Type Parameters
 

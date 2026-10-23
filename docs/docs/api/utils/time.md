@@ -6,7 +6,7 @@
 
 > **getTimestampInSeconds**(): `number`
 
-Defined in: [lib/utils/time.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/3e4f0215014f8f0e8110b6eabfc17cbc32c35d40/lib/utils/time.ts#L1)
+Defined in: [utils/time.ts:1](https://github.com/PufferFinance/puffer-sdk/blob/8359ed70e558c33cbc9451335df83b48ddf85652/lib/utils/time.ts#L1)
 
 #### Returns
 

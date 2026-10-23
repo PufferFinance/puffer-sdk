@@ -4,7 +4,7 @@
 
 ### PufferClientHelpers
 
-Defined in: [lib/api/puffer-client-helpers.ts:25](https://github.com/PufferFinance/puffer-sdk/blob/3e4f0215014f8f0e8110b6eabfc17cbc32c35d40/lib/api/puffer-client-helpers.ts#L25)
+Defined in: [api/puffer-client-helpers.ts:25](https://github.com/PufferFinance/puffer-sdk/blob/8359ed70e558c33cbc9451335df83b48ddf85652/lib/api/puffer-client-helpers.ts#L25)
 
 Helper methods for the main `PufferClient`.
 
@@ -24,7 +24,7 @@ Helper methods for the main `PufferClient`.
 
 > `static` **createPublicClient**(`config`): `object`
 
-Defined in: [lib/api/puffer-client-helpers.ts:33](https://github.com/PufferFinance/puffer-sdk/blob/3e4f0215014f8f0e8110b6eabfc17cbc32c35d40/lib/api/puffer-client-helpers.ts#L33)
+Defined in: [api/puffer-client-helpers.ts:33](https://github.com/PufferFinance/puffer-sdk/blob/8359ed70e558c33cbc9451335df83b48ddf85652/lib/api/puffer-client-helpers.ts#L33)
 
 Helper method for creating a public client based on the
 configuration
@@ -45,7 +45,7 @@ The public client created with viem.
 
 > `static` **createWalletClient**(`config`): `object`
 
-Defined in: [lib/api/puffer-client-helpers.ts:47](https://github.com/PufferFinance/puffer-sdk/blob/3e4f0215014f8f0e8110b6eabfc17cbc32c35d40/lib/api/puffer-client-helpers.ts#L47)
+Defined in: [api/puffer-client-helpers.ts:47](https://github.com/PufferFinance/puffer-sdk/blob/8359ed70e558c33cbc9451335df83b48ddf85652/lib/api/puffer-client-helpers.ts#L47)
 
 Helper method for creating a wallet client based on the
 configuration
@@ -68,7 +68,7 @@ The wallet client created with viem.
 
 > **ClientConfig** = `object` & \{ `rpcUrls`: `string`[]; \} \| \{ `config?`: `CustomTransportConfig`; `provider`: [`TransportProvider`](../utils/types.md#transportprovider); \}
 
-Defined in: [lib/api/puffer-client-helpers.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/3e4f0215014f8f0e8110b6eabfc17cbc32c35d40/lib/api/puffer-client-helpers.ts#L15)
+Defined in: [api/puffer-client-helpers.ts:15](https://github.com/PufferFinance/puffer-sdk/blob/8359ed70e558c33cbc9451335df83b48ddf85652/lib/api/puffer-client-helpers.ts#L15)
 
 #### Type Declaration
 
